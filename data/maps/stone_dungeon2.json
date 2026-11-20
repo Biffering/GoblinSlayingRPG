@@ -1,0 +1,108 @@
+{
+ "id": "stone_dungeon2",
+ "name": "The Gilded Throne: Depths",
+ "world": "stone",
+ "kind": "dungeon",
+ "w": 36,
+ "h": 28,
+ "tiles": [
+  "####################################",
+  "##_________#########################",
+  "##_________#_____bb__##______#######",
+  "##_________#_______S_##______#######",
+  "##_________#_________##___bb_#######",
+  "##_________#_P_____P_________#######",
+  "##_________#_________##______#######",
+  "######_#########_######______#######",
+  "######_######t##_###t#####_#########",
+  "###t##_t####_________##_________####",
+  "###______###_P_______##_S__b__P_####",
+  "###_P__S_###_________##_________####",
+  "###_P_b_____b______b_##_______S_####",
+  "###______###_P_______##_________####",
+  "#####_######_________######_########",
+  "#####_#####################_########",
+  "#####_########t############_########",
+  "#t###_########______#######_########",
+  "#_________####______####t##_########",
+  "#_________####_________________#####",
+  "#b________####_b____####_______#####",
+  "#_________#######_######______b#####",
+  "#_________#######_######_____b_#####",
+  "#__b______#######_######_______#####",
+  "#################_##################",
+  "#################_##################",
+  "#################_##################",
+  "#################>##################"
+ ],
+ "music": "stone_dungeon",
+ "bg": "stone_in",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 17,
+   "y": 27,
+   "to": "stone_dungeon",
+   "tx": 33,
+   "ty": 5,
+   "face": "down"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "stone_dungeon2_c0",
+   "x": 8,
+   "y": 21,
+   "item": "gear:ungilded_crown"
+  },
+  {
+   "id": "stone_dungeon2_c1",
+   "x": 28,
+   "y": 20,
+   "item": "elixir"
+  },
+  {
+   "id": "stone_dungeon2_c2",
+   "x": 16,
+   "y": 12,
+   "item": "gear:granite_plate"
+  }
+ ],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "ostrum",
+   "kind": "boss",
+   "x": 6,
+   "y": 4,
+   "sprite": "ostrum",
+   "name": "King Ostrum, the Gilded",
+   "world": "stone",
+   "cond": [
+    "q:main_stone=active",
+    "!flag:beat_ostrum"
+   ],
+   "pre": [
+    "A king sits on a throne of coins. Gold runs in veins across his stone skin like a disease.",
+    "OSTRUM: \"Do you know what a mountain is worth? I do. To the copper. I had it appraised.\"",
+    "OSTRUM: \"Everything has a price. Let's find yours.\""
+   ],
+   "post": [
+    "The gold flakes away. Underneath, King Ostrum is plain grey granite, cracked and very old.",
+    "OSTRUM: \"...I was a miner, once. Before the crown. I liked the smell of rock.\"",
+    "The Stone Heartstone is clean granite again, with no gold in it.",
+    "Beside the Heart, a crude goblin totem crumbles to dust. King Goblin's mark."
+   ],
+   "win_do": [
+    "set:beat_ostrum"
+   ],
+   "encounter": "enc_ostrum"
+  }
+ ],
+ "start": [
+  17,
+  26
+ ],
+ "habitat": []
+}

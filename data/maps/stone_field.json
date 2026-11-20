@@ -1,0 +1,145 @@
+{
+ "id": "stone_field",
+ "name": "Rustvein Canyon",
+ "world": "stone",
+ "kind": "field",
+ "w": 46,
+ "h": 34,
+ "tiles": [
+  "TTTTTTTTTTTTTT^TT^TTTTTTT^TTTTTTT^TTTTTTTTTTTT",
+  "^TTTTTTTTTTT^TTTTTT^TTTT^TT^TTTTT^T^TTTTT^^TTT",
+  "TT..\".^\"..\"..\"\".....\".\"^^^~~~.....^E^\"...\"\".TT",
+  "TT..^^^^^\"F....\"\"...TT^^^^~~~..TT..,\".....\".TT",
+  "T^.^^^^^^^......\".TTTT^^^^~~~\"TTT,,,....\"..\"^T",
+  "TT\"^^^^^\"^.........TT^^^^^~~~^T,,,TTT...F...TT",
+  "^T^^..^F^.^......\"..T.^\"^~~~^TT,.TTT.T\".....^T",
+  "TT^.^^^^............\"F^^.~~~^.,,TTTTT\"......TT",
+  "T^...\"^^^^........\"...T.~~~^.,,.TTTTT......\"TT",
+  "TT.^..^^F..\"\"......\".TT~~~..,,.TTT.T..\".....TT",
+  "^T^E,,T........\"..\"TTT.T~\"\",,...\"T..F...\"\".FT^",
+  "^TKKKYYYKKKKKKKKKKKKKKKVVYYYKKKKKKKKKKKKKKKK^T",
+  "TTKKKKKYKKKKKKKKKKKKKKKKVYYYKKKKKKKKKKKKKKKKT^",
+  "TT^^^^T,,.......T..T.T\"~~\"F,..\"T...\".....\".\"TT",
+  "T^^^^.T.,,...\".TTT.TTTT~~~,,.TT.T\"\"....\"...\"^T",
+  "TT^......,,...TTTTT\"TF~~~.,..T.T..\"\"\"...\"...^T",
+  "^T........,,,,,,,,,\".~~~.\",..TTTTT.........\"TT",
+  "TT.\"........\"...T^,^^~~~.\",...TTT..T.T......TT",
+  "T^.....\"........^^,,,===,,,..T\"TTT\"TTTT...\"TTT",
+  "T^......F\"........^.^....,,....T^T\"TTTTT...TTT",
+  "TT.....\"....\".....^^...,,,,..\".^^^TTTTT..\"TTTT",
+  "^TF\"\"....\"..T...\"^^^~..L.,,\"..^^^^^TTT..\"...TT",
+  "TT........TTTTT.^^^~~..,,,.\"...^^TTTTT.....TTT",
+  "TT..\".\"...TTTTT..^~~~\".,,\".\"....^..T.FF....\"^T",
+  "TT.....F.TT..TTT.F~~~..,T..F\"....T........\".^T",
+  "TT\"..\"\"\"TTT\".TT..~~~.\"T,.TT...FTT.T.......\".TT",
+  "TT....\"T.TTT.TT..~~~FTT,.TTT.\"T.TTTTT.......TT",
+  "T^..F...T.T.T.\".~~~\".TT,TTTT.\"TTTT.TT..\"...\"T^",
+  "TT.......T..F.\"T~~~.TTT,TTTTTTTTTTTT.T......^T",
+  "TT.\"..........T.~~~..TT,TTTT.\"TTTTTT..\".....TT",
+  "TT...\"\".\".....TTT~~~.TT,.TTT.\"TTTTTTT.......T^",
+  "^T..\".......TTT.T~~~T\".,..T..TTTTTTT.....\"T.TT",
+  "TT.\".......\".T.\"~~~T...,...\"\"TTT.TTT\"...\"TT.T^",
+  "TTTT^^^^^TTTTTTT^^TTTT,,TT^TTTTTT^T^TTTTTTTTTT"
+ ],
+ "music": "stone_field",
+ "bg": "stone_out",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 23,
+   "y": 33,
+   "to": "stone_town",
+   "tx": 20,
+   "ty": 28,
+   "face": "up"
+  },
+  {
+   "x": 22,
+   "y": 33,
+   "to": "stone_town",
+   "tx": 20,
+   "ty": 28,
+   "face": "up"
+  },
+  {
+   "x": 3,
+   "y": 10,
+   "to": "stone_cave",
+   "tx": 11,
+   "ty": 18,
+   "face": "up"
+  },
+  {
+   "x": 35,
+   "y": 2,
+   "to": "stone_area2",
+   "tx": 23,
+   "ty": 32,
+   "face": "up"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "stone_field_c0",
+   "x": 28,
+   "y": 24,
+   "item": "potion:2"
+  },
+  {
+   "id": "stone_field_c1",
+   "x": 19,
+   "y": 28,
+   "item": "gear:bedrock_bow"
+  },
+  {
+   "id": "stone_field_c2",
+   "x": 39,
+   "y": 9,
+   "item": "ether"
+  }
+ ],
+ "hidden": [
+  {
+   "x": 23,
+   "y": 19,
+   "item": "gear:geode_heart",
+   "flag": "hidden_stone"
+  }
+ ],
+ "entities": [
+  {
+   "id": "iron_overseer",
+   "kind": "mini",
+   "x": 9,
+   "y": 29,
+   "sprite": "fknight",
+   "name": "The Iron Overseer",
+   "world": "stone",
+   "cond": [
+    "q:side_stone=active",
+    "!flag:beat_iron_overseer"
+   ],
+   "pre": [
+    "A figure in sleek future-armor stands over a chain-gang of exhausted miners.",
+    "OVERSEER: \"Quota is quota. The king wants more gold, the king gets more gold.\""
+   ],
+   "post": [
+    "The Overseer's armor sparks and dies. The chained miners shake loose and run for Copperdeep."
+   ],
+   "win_do": [
+    "set:beat_iron_overseer"
+   ],
+   "encounter": "enc_iron_overseer"
+  }
+ ],
+ "start": [
+  23,
+  32
+ ],
+ "landmark": [
+  23,
+  21
+ ],
+ "habitat": []
+}

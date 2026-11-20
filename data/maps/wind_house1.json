@@ -1,0 +1,81 @@
+{
+ "id": "wind_house1",
+ "name": "Kitefall: A Cozy House",
+ "world": "wind",
+ "kind": "interior",
+ "w": 12,
+ "h": 9,
+ "tiles": [
+  "############",
+  "##kk##i##p##",
+  "#__________#",
+  "#________B_#",
+  "#__ouo___B_#",
+  "#__________#",
+  "#___rrrr___#",
+  "#x__rrrr__Q#",
+  "######m#####"
+ ],
+ "music": "wind_town",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 6,
+   "y": 8,
+   "to": "wind_town",
+   "tx": 6,
+   "ty": 26,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "wind_h1",
+   "name": "Weather-Watcher",
+   "look": {
+    "body": "elder",
+    "hair": "#f0f0f0",
+    "outfit": "#4a7a9a",
+    "accent": "#e0e0a0",
+    "skin": 0,
+    "hat": "wide",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Wind's from the east today. Means the Steppes will be gusty. Watch your footing on the cliffs."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 7,
+   "y": 3
+  }
+ ],
+ "chests": [
+  {
+   "id": "wind_house1_c0",
+   "x": 10,
+   "y": 6,
+   "item": "gear:cloudspire_rod"
+  }
+ ],
+ "hidden": [
+  {
+   "x": 5,
+   "y": 7,
+   "item": "gear:skysplitter",
+   "flag": "hidden_wind_house1",
+   "text": "One of the floorboards is loose. You pry it up..."
+  }
+ ],
+ "entities": [],
+ "start": [
+  6,
+  7
+ ]
+}

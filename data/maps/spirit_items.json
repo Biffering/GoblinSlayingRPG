@@ -1,0 +1,70 @@
+{
+ "id": "spirit_items",
+ "name": "Hallowmere: Item Shop",
+ "world": "spirit",
+ "kind": "interior",
+ "w": 14,
+ "h": 10,
+ "tiles": [
+  "##############",
+  "##y###i###y###",
+  "#qqq______qqq#",
+  "#___cccccc___#",
+  "#___________q#",
+  "#____rrrr____#",
+  "#x___rrrr___z#",
+  "#x___rrrr____#",
+  "#____________#",
+  "#######m######"
+ ],
+ "music": "spirit_shop",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 7,
+   "y": 9,
+   "to": "spirit_town",
+   "tx": 33,
+   "ty": 18,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "items_spirit_k",
+   "name": "Sister Wren",
+   "look": {
+    "body": "woman",
+    "hair": "#3a2a1a",
+    "outfit": "#e0e0e0",
+    "accent": "#80a0e0",
+    "skin": 1,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Phoenix Feathers are our specialty. Everyone deserves a second chance."
+     ],
+     "do": [
+      "shop:items"
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 6,
+   "y": 2
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  7,
+  8
+ ]
+}

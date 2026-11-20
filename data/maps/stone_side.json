@@ -1,0 +1,104 @@
+{
+ "id": "stone_side",
+ "name": "The Forgotten Tunnel",
+ "world": "stone",
+ "kind": "dungeon",
+ "w": 30,
+ "h": 22,
+ "tiles": [
+  "##############################",
+  "##############################",
+  "#######t######################",
+  "#__b____######t###############",
+  "#_______####_____####______###",
+  "#_______####_____####_C__C_###",
+  "#_b__________b___#t##______###",
+  "#_C___P_####____b_____C__P_###",
+  "#_______####_____####______###",
+  "#####_######_____#######_#####",
+  "#####_##################_#####",
+  "#####_##################_#####",
+  "#####_#####____####______#####",
+  "##______###____####______#####",
+  "##___b__###____####_b____#####",
+  "##______###____####______#####",
+  "##_____________####______#####",
+  "##______###____####______#####",
+  "##b_____###____####______#####",
+  "##______###____###############",
+  "#############_################",
+  "#############>################"
+ ],
+ "music": "stone_dungeon",
+ "bg": "stone_in",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 13,
+   "y": 21,
+   "to": "stone_house3",
+   "tx": 2,
+   "ty": 2,
+   "face": "right"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "stone_side_c0",
+   "x": 25,
+   "y": 8,
+   "item": "gear:mountainheart_plate"
+  },
+  {
+   "id": "stone_side_c1",
+   "x": 15,
+   "y": 9,
+   "item": "hi_potion:2"
+  },
+  {
+   "id": "stone_side_c2",
+   "x": 7,
+   "y": 7,
+   "item": "gear:lode_compass"
+  },
+  {
+   "id": "stone_side_c3",
+   "x": 2,
+   "y": 14,
+   "item": "ether:2"
+  }
+ ],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "rustbiter",
+   "kind": "mini",
+   "x": 22,
+   "y": 15,
+   "sprite": "rustbiter",
+   "name": "Rustbiter",
+   "world": "stone",
+   "cond": [
+    "!flag:beat_rustbiter"
+   ],
+   "pre": [
+    "A huge armored worm coils around a pile of chewed mine-props. Rust flakes off its jaws.",
+    "It turns toward the smell of your weapons."
+   ],
+   "post": [
+    "Rustbiter curls up and goes still. Its shell is full of half-digested iron.",
+    "The tunnel creaks, then holds. Copperdeep is safe again."
+   ],
+   "win_do": [
+    "set:beat_rustbiter"
+   ],
+   "encounter": "enc_rustbiter"
+  }
+ ],
+ "start": [
+  13,
+  20
+ ],
+ "habitat": []
+}

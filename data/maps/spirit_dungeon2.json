@@ -1,0 +1,134 @@
+{
+ "id": "spirit_dungeon2",
+ "name": "Ascent of the Unfinished: Depths",
+ "world": "spirit",
+ "kind": "dungeon",
+ "w": 36,
+ "h": 28,
+ "tiles": [
+  "####################################",
+  "########t###########################",
+  "##_________#############____b_######",
+  "##_P_____P_##_____######____S_######",
+  "##_________##_b___######_____b######",
+  "##_Pb____S____________________######",
+  "##______b__##____b######_P____######",
+  "######_########_########______######",
+  "#####t_#tt#####_###########_t#######",
+  "####_______####_##t######_____######",
+  "####_P_____####_______###_____######",
+  "####_______####_S___P_###b____######",
+  "####_______####_______________######",
+  "####_P_____####_P___P_###_____######",
+  "####_______####_______###b____######",
+  "######_#####################_#######",
+  "######_#####################_#######",
+  "######_####################t_#######",
+  "####_____###############_________###",
+  "####_____####______#####_________###",
+  "####__b_b###t_P__Sb#####_________###",
+  "####_______________#####_________###",
+  "#############_S__P_#####_________###",
+  "#############______#####_________###",
+  "################_###################",
+  "################_###################",
+  "################_###################",
+  "################>###################"
+ ],
+ "music": "spirit_dungeon",
+ "bg": "spirit_in",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 16,
+   "y": 27,
+   "to": "spirit_dungeon",
+   "tx": 15,
+   "ty": 5,
+   "face": "down"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "spirit_dungeon2_c0",
+   "x": 2,
+   "y": 2,
+   "item": "gear:raiment_of_the_finished"
+  },
+  {
+   "id": "spirit_dungeon2_c1",
+   "x": 8,
+   "y": 20,
+   "item": "elixir"
+  },
+  {
+   "id": "spirit_dungeon2_c2",
+   "x": 29,
+   "y": 13,
+   "item": "gear:mirror_shard"
+  }
+ ],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "iris",
+   "kind": "boss",
+   "x": 28,
+   "y": 21,
+   "sprite": "iris",
+   "name": "Iris, the Unfinished",
+   "world": "spirit",
+   "cond": [
+    "q:main_spirit=active",
+    "!flag:beat_iris"
+   ],
+   "pre": [
+    "A woman of white light kneels over half-carved statues of people. Their faces are blank.",
+    "IRIS: \"Everyone could be so much MORE. I can see it. I just need to keep carving.\"",
+    "IRIS: \"I'll start with you. Hold still. I can almost see who you're supposed to be.\""
+   ],
+   "post": [
+    "Iris's chisel falls. She looks at her hands, which are also unfinished.",
+    "IRIS: \"...If I'm never finished, then I never have to be judged. That was it. That was always it.\"",
+    "She lets herself be what she is, just for now. The Spirit Heartstone begins, very slowly, to become.",
+    "Beside the Heart, a crude goblin totem crumbles to dust. King Goblin's mark."
+   ],
+   "win_do": [
+    "set:beat_iris"
+   ],
+   "encounter": "enc_iris"
+  },
+  {
+   "id": "seal_spirit",
+   "kind": "seal",
+   "x": 28,
+   "y": 2,
+   "sprite": "seal_spirit",
+   "name": "Sealed Door",
+   "world": "spirit",
+   "cond": [],
+   "keys": [
+    "key_memory",
+    "key_breath"
+   ],
+   "flag": "open_sanctum_spirit",
+   "quest": "omni_spirit",
+   "locked": [
+    "A great white door. Two keyholes: one shaped like a memory, one shaped like a breath.",
+    "Carved beneath them, four figures hold hands. A door for four, then."
+   ],
+   "open": [
+    "The Keys of Memory and Breath turn together. The door sighs open onto light."
+   ],
+   "to": "spirit_sanctum",
+   "tx": 9,
+   "ty": 13
+  }
+ ],
+ "start": [
+  16,
+  26
+ ],
+ "habitat": []
+}

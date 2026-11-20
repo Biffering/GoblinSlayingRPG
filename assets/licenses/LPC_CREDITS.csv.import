@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://hbbujqd3rccc"
+
+[deps]
+
+files=["res://assets/licenses/LPC_CREDITS.file.translation", "res://assets/licenses/LPC_CREDITS.authors.translation", "res://assets/licenses/LPC_CREDITS.licenses.translation", "res://assets/licenses/LPC_CREDITS.urls.translation"]
+
+source_file="res://assets/licenses/LPC_CREDITS.csv"
+dest_files=["res://assets/licenses/LPC_CREDITS.file.translation", "res://assets/licenses/LPC_CREDITS.authors.translation", "res://assets/licenses/LPC_CREDITS.licenses.translation", "res://assets/licenses/LPC_CREDITS.urls.translation"]
+
+[params]
+
+compress=true
+delimiter=0

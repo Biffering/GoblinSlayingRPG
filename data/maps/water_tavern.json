@@ -1,0 +1,213 @@
+{
+ "id": "water_tavern",
+ "name": "Saltmere: The Salted Gull",
+ "world": "water",
+ "kind": "interior",
+ "w": 18,
+ "h": 12,
+ "tiles": [
+  "##################",
+  "##igggi###y###p###",
+  "#_e___ec_________#",
+  "#______c_________#",
+  "#_cccccc__ouoouo_#",
+  "#________________#",
+  "#________________#",
+  "#________________#",
+  "#__ouo____ouoouo_#",
+  "#_______________x#",
+  "#X______________x#",
+  "#########m########"
+ ],
+ "music": "water_tavern",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 9,
+   "y": 11,
+   "to": "water_town",
+   "tx": 7,
+   "ty": 8,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "barkeep_water",
+   "name": "Barkeep Moira",
+   "look": {
+    "body": "woman",
+    "hair": "#3a2a2a",
+    "outfit": "#2a5a7a",
+    "accent": "#f0f0e0",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "wander": false,
+   "face": "down",
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "The Salted Gull! Chowder's fresh. Tea's fresher."
+     ],
+     "do": [
+      "shop:tavern_water"
+     ]
+    }
+   ],
+   "x": 4,
+   "y": 3
+  },
+  {
+   "id": "bard_water",
+   "name": "Shanty-Singer Hob",
+   "look": {
+    "body": "man",
+    "hair": "#d0d0d0",
+    "outfit": "#2a3a6a",
+    "accent": "#e0e0e0",
+    "skin": 1,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "~ Oh the tide goes out, and the tide comes in... ~",
+      "The waterfall in the north has a sound behind it. Like an echo with no wall."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 15,
+   "y": 3
+  },
+  {
+   "id": "patron_water2",
+   "name": "Net-Mender Oswin",
+   "look": {
+    "body": "elder",
+    "hair": "#e0e0e0",
+    "outfit": "#4a5a6a",
+    "accent": "#d0a060",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "North past the Shoals is the Weeping Falls. The Cradle's beyond.",
+      "Fire creatures out there are rare. It's mostly water. Bring wind... no, stone. Stone beats water."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 5,
+   "y": 9
+  },
+  {
+   "id": "patron_water3",
+   "name": "Dock-Hand Pia",
+   "look": {
+    "body": "child",
+    "hair": "#3a2a1a",
+    "outfit": "#c05050",
+    "accent": "#f0f0f0",
+    "skin": 2,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Mister Tobiah's house has a squeaky floorboard. He says it's nothing. It squeaks like it's hiding something."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 15,
+   "y": 9
+  },
+  {
+   "id": "linnea",
+   "name": "Fisher Linnea",
+   "look": {
+    "body": "woman",
+    "hair": "#c07040",
+    "outfit": "#3a6a5a",
+    "accent": "#f0e0a0",
+    "skin": 1,
+    "hat": "wide",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "q:side2_water=none"
+     ],
+     "say": [
+      "My grandmother swore there's a door behind the Weeping Falls. North of the Shoals.",
+      "You can walk along the ledge right behind the water. Look for the seam in the rock.",
+      "She said a guardian of stone keeps it. Bring me back proof and I'll give you her old charm."
+     ],
+     "do": [
+      "quest:side2_water"
+     ]
+    },
+    {
+     "if": [
+      "q:side2_water=active"
+     ],
+     "say": [
+      "Walk the ledge behind the Weeping Falls. The door is right in the middle."
+     ]
+    },
+    {
+     "if": [
+      "q:side2_water=ready"
+     ],
+     "say": [
+      "You found it! Grandmother wasn't just telling stories.",
+      "Here. She'd want it to keep going places.",
+      "Take it. (Mantle of the Deep)"
+     ],
+     "do": [
+      "done:side2_water",
+      "give:gear:mantle_of_the_deep",
+      "gold:300",
+      "sfx:chest"
+     ]
+    },
+    {
+     "if": [
+      "q:side2_water=done"
+     ],
+     "say": [
+      "I'm going to go see the falls myself. From the outside, though."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 12,
+   "y": 5
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  9,
+  10
+ ]
+}

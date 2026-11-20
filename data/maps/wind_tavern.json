@@ -1,0 +1,212 @@
+{
+ "id": "wind_tavern",
+ "name": "Kitefall: The Tangled String",
+ "world": "wind",
+ "kind": "interior",
+ "w": 18,
+ "h": 12,
+ "tiles": [
+  "##################",
+  "##igggi###y###p###",
+  "#_e___ec_________#",
+  "#______c_________#",
+  "#_cccccc__ouoouo_#",
+  "#________________#",
+  "#________________#",
+  "#________________#",
+  "#__ouo____ouoouo_#",
+  "#_______________x#",
+  "#X______________x#",
+  "#########m########"
+ ],
+ "music": "wind_tavern",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 9,
+   "y": 11,
+   "to": "wind_town",
+   "tx": 32,
+   "ty": 8,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "barkeep_wind",
+   "name": "Barkeep Wren-Feather",
+   "look": {
+    "body": "man",
+    "hair": "#f0e0a0",
+    "outfit": "#2a8a7a",
+    "accent": "#ffffff",
+    "skin": 0,
+    "hat": null,
+    "beard": false
+   },
+   "wander": false,
+   "face": "down",
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "The Tangled String! Named for my kite. Still tangled. Have a tart."
+     ],
+     "do": [
+      "shop:tavern_wind"
+     ]
+    }
+   ],
+   "x": 4,
+   "y": 3
+  },
+  {
+   "id": "bard_wind",
+   "name": "Piper Lisle",
+   "look": {
+    "body": "woman",
+    "hair": "#8a4a2a",
+    "outfit": "#e0b040",
+    "accent": "#40a0c0",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "~ Up where the strings all sing... ~",
+      "The Cloud Steppes are all cliffs. Look for the carved steps; they always lead somewhere."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 15,
+   "y": 3
+  },
+  {
+   "id": "patron_wind2",
+   "name": "Retired Courier",
+   "look": {
+    "body": "elder",
+    "hair": "#c0c0c0",
+    "outfit": "#3a7a5a",
+    "accent": "#e0c050",
+    "skin": 1,
+    "hat": "cap",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Beyond the meadow are the Cloud Steppes, then the Aviary. Corvane's up top."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 5,
+   "y": 9
+  },
+  {
+   "id": "patron_wind3",
+   "name": "Gambling Gull-Tamer",
+   "look": {
+    "body": "man",
+    "hair": "#2a2a2a",
+    "outfit": "#6a6a8a",
+    "accent": "#f0d060",
+    "skin": 2,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Gear with the gold glow is the real prize. I've seen one in my life. Lost it in a bet."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 15,
+   "y": 9
+  },
+  {
+   "id": "tess",
+   "name": "Kite-Maker Tess",
+   "look": {
+    "body": "woman",
+    "hair": "#f0d060",
+    "outfit": "#c05a8a",
+    "accent": "#40b0a0",
+    "skin": 0,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "q:side2_wind=none"
+     ],
+     "say": [
+      "Every kite I make, gone! Snatched right out of the sky!",
+      "There's a harpy in the old belfry. The stairs are in the empty house on the east side.",
+      "Get my kites back and I'll give you something that really flies."
+     ],
+     "do": [
+      "quest:side2_wind"
+     ]
+    },
+    {
+     "if": [
+      "q:side2_wind=active"
+     ],
+     "say": [
+      "The belfry stairs are in the empty house on the east side."
+     ]
+    },
+    {
+     "if": [
+      "q:side2_wind=ready"
+     ],
+     "say": [
+      "My kites! And the strings are only a little chewed!",
+      "Here, take this. You earned the sky.",
+      "Take it. (Cage-Breaker's Ring)"
+     ],
+     "do": [
+      "done:side2_wind",
+      "give:gear:cage_breakers_ring",
+      "gold:300",
+      "sfx:chest"
+     ]
+    },
+    {
+     "if": [
+      "q:side2_wind=done"
+     ],
+     "say": [
+      "The sky's full of kites again. Look up sometime."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 12,
+   "y": 5
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  9,
+  10
+ ]
+}

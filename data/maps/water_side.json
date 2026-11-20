@@ -1,0 +1,106 @@
+{
+ "id": "water_side",
+ "name": "Grotto Behind the Falls",
+ "world": "water",
+ "kind": "dungeon",
+ "w": 30,
+ "h": 22,
+ "tiles": [
+  "##############################",
+  "##############################",
+  "##############################",
+  "#______#############_____#####",
+  "#______####______###_____#####",
+  "#b_____####______###_____#####",
+  "#______####______###_____#####",
+  "#__b_________b___________#####",
+  "#______####______###_____#####",
+  "####_######______###_____#####",
+  "####_################t_#######",
+  "####_################____#####",
+  "##_____##############____#####",
+  "##__b__##############____#####",
+  "##_____####_____#####_b__#####",
+  "##_____####_____#####____#####",
+  "##_____####_____##t##____#####",
+  "##_____####___b__________#####",
+  "##_____####_____#####b___#####",
+  "###########_____##############",
+  "#############_################",
+  "#############>################"
+ ],
+ "music": "water_dungeon",
+ "bg": "water_in",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 13,
+   "y": 21,
+   "to": "water_area2",
+   "tx": 11,
+   "ty": 11,
+   "face": "down"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "water_side_c0",
+   "x": 23,
+   "y": 6,
+   "item": "gear:abyssal_cutlass"
+  },
+  {
+   "id": "water_side_c1",
+   "x": 14,
+   "y": 9,
+   "item": "hi_potion:2"
+  },
+  {
+   "id": "water_side_c2",
+   "x": 22,
+   "y": 11,
+   "item": "gear:tidecallers_shell"
+  },
+  {
+   "id": "water_side_c3",
+   "x": 1,
+   "y": 4,
+   "item": "ether:2"
+  }
+ ],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "falls_guardian",
+   "kind": "mini",
+   "x": 4,
+   "y": 15,
+   "sprite": "falls_guardian",
+   "name": "The Falls Guardian",
+   "world": "water",
+   "cond": [
+    "!flag:beat_falls_guardian"
+   ],
+   "pre": [
+    "A figure of mossy stone stands up out of the pool. Water pours endlessly from its shoulders.",
+    "GUARDIAN: \"Turn back. What is behind the falls was hidden for a reason.\""
+   ],
+   "post": [
+    "The guardian sinks back into the pool, its water finally still.",
+    "GUARDIAN: \"...Then carry it gently. It was someone's.\""
+   ],
+   "win_do": [
+    "set:beat_falls_guardian"
+   ],
+   "encounter": "enc_falls_guardian"
+  }
+ ],
+ "start": [
+  13,
+  20
+ ],
+ "habitat": [
+  "coast"
+ ]
+}

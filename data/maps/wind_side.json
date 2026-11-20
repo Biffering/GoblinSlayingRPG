@@ -1,0 +1,104 @@
+{
+ "id": "wind_side",
+ "name": "The Old Belfry",
+ "world": "wind",
+ "kind": "dungeon",
+ "w": 30,
+ "h": 22,
+ "tiles": [
+  "##############################",
+  "#_____########################",
+  "#_____################t##t####",
+  "#_____##############_______###",
+  "#_____####______t###_______###",
+  "#_________b________________###",
+  "#_____####______####_______###",
+  "#_____####______####_______###",
+  "#_____####______#######_######",
+  "###_######b_____#######_######",
+  "###_###################_t#####",
+  "###_########_____###______####",
+  "###_########_b___###_C__P_####",
+  "###_____####_____###______####",
+  "###_____####__________b___####",
+  "###_____####_____###____b_####",
+  "###_____####_____###_P____####",
+  "###_____######_#####______####",
+  "##############_###############",
+  "##############_###############",
+  "##############_###############",
+  "##############>###############"
+ ],
+ "music": "wind_dungeon",
+ "bg": "wind_in",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 14,
+   "y": 21,
+   "to": "wind_house4",
+   "tx": 2,
+   "ty": 2,
+   "face": "right"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "wind_side_c0",
+   "x": 5,
+   "y": 6,
+   "item": "gear:rocs_eye"
+  },
+  {
+   "id": "wind_side_c1",
+   "x": 24,
+   "y": 14,
+   "item": "hi_potion:2"
+  },
+  {
+   "id": "wind_side_c2",
+   "x": 26,
+   "y": 4,
+   "item": "gear:storm_mail"
+  },
+  {
+   "id": "wind_side_c3",
+   "x": 10,
+   "y": 8,
+   "item": "ether:2"
+  }
+ ],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "storm_harpy",
+   "kind": "mini",
+   "x": 5,
+   "y": 15,
+   "sprite": "storm_harpy",
+   "name": "The Storm Harpy",
+   "world": "wind",
+   "cond": [
+    "!flag:beat_storm_harpy"
+   ],
+   "pre": [
+    "A harpy perched on the great bell screeches. Her nest is woven entirely from kite strings.",
+    "HARPY: \"Mine, mine, all the pretty strings are MINE!\""
+   ],
+   "post": [
+    "The harpy flees through the belfry window, leaving the kites behind.",
+    "The bell rings once in the wind, like it's saying thank you."
+   ],
+   "win_do": [
+    "set:beat_storm_harpy"
+   ],
+   "encounter": "enc_storm_harpy"
+  }
+ ],
+ "start": [
+  14,
+  20
+ ],
+ "habitat": []
+}

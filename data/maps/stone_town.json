@@ -1,0 +1,827 @@
+{
+ "id": "stone_town",
+ "name": "Copperdeep",
+ "world": "stone",
+ "kind": "town",
+ "w": 40,
+ "h": 30,
+ "tiles": [
+  "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+  "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+  "K^.RRRRRRRRR\".......\"......\"RRRRRRRRR.^K",
+  "K^.RRRRRRRRR....\"..O,.......RRRRRRRRR..K",
+  "K^.RRRRRRRRR......l,,l......RRRRRRRRR\"^K",
+  "K^.RRRRRRRRR\"......,,.\"F....RRRRRRRRR..K",
+  "K..HWHWHWHWH.......,,.\".....HWHWHWHWH.^K",
+  "K^.HHHHdHHHH...F...,,.......HHHHdHHHH..K",
+  "K^.\"...,...\".......,,...........,......K",
+  "K..,,,,,,,,,,l,,,,,,,,,,,,l,,,,,,,,,.F.K",
+  "K.\".........\".,,,,,,,,,,,,.............K",
+  "K..^^^..l....\",,n,,,,,,n,,.F...l...^^^.K",
+  "K..^^^........,,,,,,,,,,,,.........^^^.K",
+  "K..RRRRRRRR...,,,,,ww,,,,,...RRRRRRRR.^K",
+  "K..RRRRRRRR...,,,,,ww,,,,,...RRRRRRRR..K",
+  "K^\"RRRRRRRR..\",,,,,,,,,,,,...RRRRRRRR.^K",
+  "K..WHWHWHWH...,,,,,,,,,,,,...WHWHWHWH\".K",
+  "K^.HHHdHHHH..\",,n,,,,,,n,,...HHHdHHHH..K",
+  "K.G...,...\"...,,,,,,,,,,,,...\"..,......K",
+  "K.\",,,,,,,,,,l,,,,,,,,,,,,l,,,,,,,,,..^K",
+  "K^....\"....F\",...\".,,...,...\".........AK",
+  "K^\"RRRRRRR...,.....,,...,.....RRRRRRR..K",
+  "K^.RRRRRRR.RR,RRR..,,.RR,RRR..RRRRRRR..K",
+  "K..RRRRRRR.RR,RRR..,,.RR,RRR..RRRRRRR.^K",
+  "K..HWHWHWH.RR,RRR..,,.RR,RRR..HWHWHWH..K",
+  "K..HHHdHHH.WH,HWH..,,.WH,HWH\".HHHdHHH..K",
+  "K.....,..\".HHdHHH..,,.HHdHHH.....,...\"^K",
+  "K.M.M.M..\"...,\"....,,.ff,fff.........\".K",
+  "K.^..^.....^^^...^^,,.^^..^....^...^^.^K",
+  "KKKKKKKKKKKKKKKKKKK,,KKKKKKKKKKKKKKKKKKK"
+ ],
+ "music": "stone_town",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 19,
+   "y": 3,
+   "to": "nexus",
+   "tx": 14,
+   "ty": 19,
+   "face": "down"
+  },
+  {
+   "x": 32,
+   "y": 7,
+   "to": "stone_inn",
+   "tx": 8,
+   "ty": 9,
+   "face": "up"
+  },
+  {
+   "x": 7,
+   "y": 7,
+   "to": "stone_tavern",
+   "tx": 9,
+   "ty": 10,
+   "face": "up"
+  },
+  {
+   "x": 32,
+   "y": 17,
+   "to": "stone_pawn",
+   "tx": 7,
+   "ty": 8,
+   "face": "up"
+  },
+  {
+   "x": 6,
+   "y": 17,
+   "to": "stone_items",
+   "tx": 7,
+   "ty": 8,
+   "face": "up"
+  },
+  {
+   "x": 33,
+   "y": 25,
+   "to": "stone_house1",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 6,
+   "y": 25,
+   "to": "stone_house2",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 24,
+   "y": 26,
+   "to": "stone_house3",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 13,
+   "y": 26,
+   "to": "stone_house4",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 20,
+   "y": 29,
+   "to": "stone_field",
+   "tx": 23,
+   "ty": 32,
+   "face": "up"
+  },
+  {
+   "x": 19,
+   "y": 29,
+   "to": "stone_field",
+   "tx": 23,
+   "ty": 32,
+   "face": "up"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "marta",
+   "name": "Union Elder Marta",
+   "look": {
+    "body": "elder",
+    "hair": "#a0a0a0",
+    "outfit": "#4a5a3a",
+    "accent": "#d0a040",
+    "skin": 2,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "q:main_stone=none"
+     ],
+     "say": [
+      "Copperdeep used to mine to live. Now we mine for King Ostrum's hoard, and we never stop.",
+      "He sold the Heart of Stone to the gold in the deep veins. The gold got into him. Now it's getting into everyone.",
+      "The greedy ones go first. Then the tired ones. Then everyone else.",
+      "He sits in the Gilded Throne at the end of Rustvein Canyon. End this."
+     ],
+     "do": [
+      "quest:main_stone"
+     ]
+    },
+    {
+     "if": [
+      "q:main_stone=active",
+      "!flag:beat_ostrum"
+     ],
+     "say": [
+      "The Gilded Throne is beyond Rustvein Canyon.",
+      "Stone things crumble in the wind. Erosion's the oldest weapon there is.",
+      "The way there is long: through the Rustvein Canyon, then the Old Mine Shaft, and down into its depths."
+     ]
+    },
+    {
+     "if": [
+      "q:main_stone=ready"
+     ],
+     "say": [
+      "The gold's gone out of the walls. I can see real rock again. Beautiful, plain rock.",
+      "The Stone Heartstone is yours, and the union's thanks. And this, which we're not calling a bribe."
+     ],
+     "do": [
+      "done:main_stone",
+      "give:heart_stone",
+      "gold:600",
+      "give:ward_elixir:2"
+     ]
+    },
+    {
+     "if": [
+      "q:main_stone=done"
+     ],
+     "say": [
+      "We voted to mine half as much and nap twice as much. It passed unanimously."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 19,
+   "y": 8
+  },
+  {
+   "id": "durga",
+   "name": "Durga",
+   "look": {
+    "body": "woman",
+    "hair": "#8a3a1a",
+    "outfit": "#5a6a3a",
+    "accent": "#c0c0c0",
+    "skin": 2,
+    "hat": "helm",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "!member:durga"
+     ],
+     "say": [
+      "Durga Flintmantle. Foreman. My crew went into the Glimmering Seam on the king's orders. Twelve of them.",
+      "A cave-in. And behind it, something that grinds. They're alive. I can hear them knocking.",
+      "I hold the line. That's what I do. I'll hold it for you, too, if you help me dig."
+     ],
+     "ask": {
+      "q": "Let Durga join your party?",
+      "yes": {
+       "say": [
+        "DURGA: \"Right. Helmets on. We're going down.\"",
+        "Durga joined the party! Gravelmaw blocks the tunnel deep in the Glimmering Seam."
+       ],
+       "do": [
+        "recruit:durga",
+        "quest:comp_stone",
+        "sfx:recruit"
+       ]
+      },
+      "no": {
+       "say": [
+        "DURGA: \"I'll keep knocking back to them. Don't take too long.\""
+       ]
+      }
+     }
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "cond": [
+    "!member:durga"
+   ],
+   "x": 24,
+   "y": 12
+  },
+  {
+   "id": "breck",
+   "name": "Breck",
+   "look": {
+    "body": "man",
+    "hair": "#3a2a1a",
+    "outfit": "#6a4a2a",
+    "accent": "#a04030",
+    "skin": 1,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [
+      "q:side_stone=none"
+     ],
+     "say": [
+      "Name's Breck. Union organizer. The king's got an Overseer running a chain-gang in Rustvein Canyon.",
+      "Future-armor, they say. Shrugs off swords. But stone-born things can't stand a hard wind.",
+      "Break those chains and I'll give you the Rootstone Ring. The union's been saving it for a hero. You'll do."
+     ],
+     "do": [
+      "quest:side_stone"
+     ]
+    },
+    {
+     "if": [
+      "q:side_stone=active",
+      "!flag:beat_iron_overseer"
+     ],
+     "say": [
+      "The Overseer's out in Rustvein Canyon. Bring the wind."
+     ]
+    },
+    {
+     "if": [
+      "q:side_stone=ready"
+     ],
+     "say": [
+      "They're home! All of them, and they're already complaining about the food. Perfect.",
+      "The Rootstone Ring. Wear it with pride."
+     ],
+     "do": [
+      "done:side_stone",
+      "give:gear:rootstone_ring",
+      "sfx:chest"
+     ]
+    },
+    {
+     "if": [
+      "q:side_stone=done"
+     ],
+     "say": [
+      "Solidarity, friend. Solidarity."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 14,
+   "y": 12
+  },
+  {
+   "id": "old_vein",
+   "name": "Retired Prospector",
+   "look": {
+    "body": "elder",
+    "hair": "#d0d0d0",
+    "outfit": "#5a4a3a",
+    "accent": "#90a060",
+    "skin": 1,
+    "hat": "cap",
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Forty years I prospected these hills. Want to know rule one?",
+      "Never dig where the gold tells you. Gold lies. Dig where the moss grows.",
+      "Moss only grows on the cold side of things. Take that big split geode out in the canyon.",
+      "Two strides out from its cold side, I left something there for whoever listened. Nobody ever listens."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 27,
+   "y": 19
+  },
+  {
+   "id": "garrick",
+   "name": "Old Garrick",
+   "look": {
+    "body": "elder",
+    "hair": "#8a8a8a",
+    "outfit": "#3a3a3a",
+    "accent": "#d09030",
+    "skin": 2,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [
+      "q:key_stone=none"
+     ],
+     "say": [
+      "Lost my lucky pick in the Glimmering Seam. Fifty years I swung that thing. Never had a cave-in.",
+      "First day without it, the Seam collapsed. Coincidence? Maybe. Get it back anyway.",
+      "I'll trade you for it: an old key I dug up from the deepest bedrock. Felt wrong to keep it."
+     ],
+     "do": [
+      "quest:key_stone"
+     ]
+    },
+    {
+     "if": [
+      "q:key_stone=active",
+      "!item:lucky_pick"
+     ],
+     "say": [
+      "Glimmering Seam. West of Rustvein Canyon."
+     ]
+    },
+    {
+     "if": [
+      "q:key_stone=ready"
+     ],
+     "say": [
+      "Ha! There she is. Chipped, ugly, lucky.",
+      "The Key of Bedrock. Whatever it opens, it's deep. Deeper than rock."
+     ],
+     "do": [
+      "take:lucky_pick",
+      "done:key_stone",
+      "give:key_bedrock",
+      "sfx:key"
+     ]
+    },
+    {
+     "if": [
+      "q:key_stone=done"
+     ],
+     "say": [
+      "No cave-ins since I got it back. Science."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 11,
+   "y": 19
+  },
+  {
+   "id": "stone_f1",
+   "name": "Tired Miner",
+   "look": {
+    "body": "man",
+    "hair": "#2a2a2a",
+    "outfit": "#5a5a4a",
+    "accent": "#c08040",
+    "skin": 1,
+    "hat": "helm",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Granite beasts out in the canyon? Wind wears them down. Everything gets worn down eventually."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 22,
+   "y": 18
+  },
+  {
+   "id": "stone_f2",
+   "name": "Union Guard",
+   "look": {
+    "body": "guard",
+    "hair": "#4a3a2a",
+    "outfit": "#5a6a4a",
+    "accent": "#c0c0c0",
+    "skin": 2,
+    "hat": "helm",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Future Knights shrug off steel. Their armor hates magic, though. Remember that."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 16,
+   "y": 9
+  },
+  {
+   "id": "stone_f3",
+   "name": "Miner's Kid",
+   "look": {
+    "body": "child",
+    "hair": "#4a2a1a",
+    "outfit": "#7a6a4a",
+    "accent": "#e0e040",
+    "skin": 2,
+    "hat": "helm",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "I found a shiny rock! Dad made me throw it away. He said shiny rocks make people mean."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 28,
+   "y": 11
+  },
+  {
+   "id": "stone_f4",
+   "name": "Former Courtier",
+   "look": {
+    "body": "man",
+    "hair": "#d0c080",
+    "outfit": "#8a6a2a",
+    "accent": "#f0e080",
+    "skin": 0,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "!flag:beat_ostrum"
+     ],
+     "say": [
+      "I was a courtier. I polished gold. Every day the king asked, 'Is it enough?' It never was."
+     ]
+    },
+    {
+     "if": [],
+     "say": [
+      "I polish rocks now. Ordinary rocks. They don't ask for anything."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 9,
+   "y": 11
+  },
+  {
+   "id": "amb_stone_0",
+   "name": "Deep Miner",
+   "look": {
+    "body": "elder",
+    "hair": "#2a2420",
+    "outfit": "#5a5550",
+    "accent": "#6a5a4a",
+    "skin": 0,
+    "hat": "cap",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Hear that knocking? That's not us."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "right",
+   "x": 2,
+   "y": 12,
+   "ambient": true,
+   "job": "mine",
+   "jface": "right"
+  },
+  {
+   "id": "amb_stone_1",
+   "name": "Deep Miner",
+   "look": {
+    "body": "man",
+    "hair": "#3a3430",
+    "outfit": "#3a3430",
+    "accent": "#a09080",
+    "skin": 2,
+    "hat": "cap",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Hear that knocking? That's not us."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "left",
+   "x": 6,
+   "y": 11,
+   "ambient": true,
+   "job": "mine",
+   "jface": "left"
+  },
+  {
+   "id": "amb_stone_2",
+   "name": "Deep Miner",
+   "look": {
+    "body": "man",
+    "hair": "#6a5a4a",
+    "outfit": "#3a3430",
+    "accent": "#8a7a6a",
+    "skin": 2,
+    "hat": "cap",
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Struck a goblin tunnel last week. Sealed it with three men inside. Not our men.",
+      "Every swing, the mountain swings back."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "right",
+   "x": 34,
+   "y": 12,
+   "ambient": true,
+   "job": "mine",
+   "jface": "right"
+  },
+  {
+   "id": "amb_stone_3",
+   "name": "Deep Miner",
+   "look": {
+    "body": "man",
+    "hair": "#a09080",
+    "outfit": "#6a6058",
+    "accent": "#a09080",
+    "skin": 3,
+    "hat": "cap",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Ore's black this deep. Black and warm."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "left",
+   "x": 38,
+   "y": 11,
+   "ambient": true,
+   "job": "mine",
+   "jface": "left"
+  },
+  {
+   "id": "amb_stone_4",
+   "name": "Smith",
+   "look": {
+    "body": "man",
+    "hair": "#a09080",
+    "outfit": "#5a5550",
+    "accent": "#8a7a6a",
+    "skin": 1,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Bring me goblin iron. It's bad iron, but it's iron.",
+      "Hold still, I'm working. Unless you've coin."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "right",
+   "x": 37,
+   "y": 20,
+   "ambient": true,
+   "job": "smith",
+   "jface": "right"
+  },
+  {
+   "id": "amb_stone_5",
+   "name": "Gravedigger",
+   "look": {
+    "body": "woman",
+    "hair": "#6a5a4a",
+    "outfit": "#5a5550",
+    "accent": "#8a7a6a",
+    "skin": 0,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Busy season. Always busy season now.",
+      "Six deep, no fewer. They climb out otherwise."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 3,
+   "y": 28,
+   "ambient": true,
+   "job": "dig",
+   "jface": "down"
+  },
+  {
+   "id": "amb_stone_6",
+   "name": "Woodcutter",
+   "look": {
+    "body": "man",
+    "hair": "#a09080",
+    "outfit": "#5a5550",
+    "accent": "#8a7a6a",
+    "skin": 4,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Stand back. Axes don't care who they hit.",
+      "This tree had a face in it. Swear it did."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "right",
+   "x": 1,
+   "y": 18,
+   "ambient": true,
+   "job": "chop",
+   "jface": "right"
+  },
+  {
+   "id": "amb_stone_7",
+   "name": "Townsfolk",
+   "look": {
+    "body": "woman",
+    "hair": "#a09080",
+    "outfit": "#3a3430",
+    "accent": "#a09080",
+    "skin": 3,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "My uncle went to the Wilds. Came back wrong."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 6,
+   "y": 9,
+   "ambient": true,
+   "roam": 5
+  },
+  {
+   "id": "amb_stone_8",
+   "name": "Townsfolk",
+   "look": {
+    "body": "man",
+    "hair": "#6a5a4a",
+    "outfit": "#3a3430",
+    "accent": "#6a5a4a",
+    "skin": 3,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Lovely weather. For a funeral."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 14,
+   "y": 19,
+   "ambient": true,
+   "roam": 5
+  },
+  {
+   "id": "amb_stone_9",
+   "name": "Townsfolk",
+   "look": {
+    "body": "woman",
+    "hair": "#3a3430",
+    "outfit": "#4a4038",
+    "accent": "#8a7a6a",
+    "skin": 4,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Lovely weather. For a funeral.",
+      "Keep your blade close after dark."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 18,
+   "y": 15,
+   "ambient": true,
+   "roam": 5
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  19,
+  4
+ ],
+ "signs": [
+  {
+   "x": 33,
+   "y": 6,
+   "tile": "sign_inn"
+  },
+  {
+   "x": 8,
+   "y": 6,
+   "tile": "sign_tavern"
+  },
+  {
+   "x": 33,
+   "y": 16,
+   "tile": "sign_pawn"
+  },
+  {
+   "x": 7,
+   "y": 16,
+   "tile": "sign_items"
+  }
+ ]
+}

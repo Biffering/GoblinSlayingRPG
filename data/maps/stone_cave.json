@@ -1,0 +1,111 @@
+{
+ "id": "stone_cave",
+ "name": "Glimmering Seam",
+ "world": "stone",
+ "kind": "cave",
+ "w": 28,
+ "h": 20,
+ "tiles": [
+  "############################",
+  "#########______####____#####",
+  "##_____##_C____tt##____#####",
+  "##___b_______C_____b___#####",
+  "##_____##______####____#####",
+  "##_____############____#####",
+  "##_____############_########",
+  "##_____############_########",
+  "##____b############_########",
+  "####_##############_########",
+  "####_t#############_########",
+  "##____###_____#####_########",
+  "##____###_____###t#_########",
+  "##_b__###_____###_b__#######",
+  "##____________###____#######",
+  "##____#####_#####____#######",
+  "##____#####_#####____#######",
+  "##____#####_################",
+  "###########_################",
+  "###########>################"
+ ],
+ "music": "stone_field",
+ "bg": "stone_in",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 11,
+   "y": 19,
+   "to": "stone_field",
+   "tx": 4,
+   "ty": 10,
+   "face": "right"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "stone_cave_c0",
+   "x": 5,
+   "y": 15,
+   "item": "summon:basaltus"
+  },
+  {
+   "id": "stone_cave_c1",
+   "x": 5,
+   "y": 2,
+   "item": "lucky_pick"
+  },
+  {
+   "id": "stone_cave_c2",
+   "x": 20,
+   "y": 2,
+   "item": "hi_potion"
+  },
+  {
+   "id": "stone_cave_c3",
+   "x": 9,
+   "y": 4,
+   "item": "gear:quartz_staff"
+  }
+ ],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "gravelmaw",
+   "kind": "mini",
+   "x": 19,
+   "y": 15,
+   "sprite": "gravelmaw",
+   "name": "Gravelmaw",
+   "world": "stone",
+   "cond": [
+    "q:comp_stone=active",
+    "!flag:beat_gravelmaw"
+   ],
+   "need": [
+    "member:durga"
+   ],
+   "need_fail": [
+    "You sense Durga should be here for this."
+   ],
+   "pre": [
+    "A massive beast of grinding stone blocks a collapsed tunnel. Behind it, you hear voices calling for help.",
+    "DURGA: \"Hold on, lads! The foreman's here, and she's brought friends.\""
+   ],
+   "post": [
+    "Gravelmaw crumbles. The tunnel opens, and twelve dusty miners stumble out cheering.",
+    "DURGA: \"Every one of them. Every single one.\" She hands you her family's old axe. \"You've earned the weight.\""
+   ],
+   "win_do": [
+    "set:beat_gravelmaw",
+    "done:comp_stone",
+    "give:gear:flintmantle_axe"
+   ],
+   "encounter": "enc_gravelmaw"
+  }
+ ],
+ "start": [
+  11,
+  18
+ ],
+ "habitat": []
+}

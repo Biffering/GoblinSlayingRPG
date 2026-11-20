@@ -1,0 +1,805 @@
+{
+ "id": "fire_town",
+ "name": "Emberfall",
+ "world": "fire",
+ "kind": "town",
+ "w": 40,
+ "h": 30,
+ "tiles": [
+  "KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+  "K^KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK",
+  "K^FRRRRRRRRR......\".........RRRRRRRRR..K",
+  "K^.RRRRRRRRR.....\"F,O.....\".RRRRRRRRR.^K",
+  "K^.RRRRRRRRR......l,,l......RRRRRRRRR.^K",
+  "K^.RRRRRRRRR.......,,..\"....RRRRRRRRR..K",
+  "K..HWHWHWHWH.......,,.......HWHWHWHWH..K",
+  "K..HHHHdHHHH\"......,,.......HHHHdHHHH..K",
+  "K...\".\",.........F.,,...\".......,\"...\".K",
+  "K...,,,,,,,,,l,,,,,,,,,,,,l,,,,,,,,,,..K",
+  "K...^^^F\".\"...,,,,,,,,,,,,.....\"...^^^.K",
+  "K^..^^^.l\"....,,n,,,,,,n,,.....l.\".^^^^K",
+  "K^............,,,,,,,,,,,,....\".....\"\".K",
+  "K..RRRRRRRR...,,,,,ww,,,,,...RRRRRRRR..K",
+  "K.\"RRRRRRRR...,,,,,ww,,,,,...RRRRRRRR\"^K",
+  "K..RRRRRRRR..F,,,,,,,,,,,,...RRRRRRRR..K",
+  "K..HWHWHWHW...,,,,,,,,,,,,..\"HWHWHWHW..K",
+  "K^.HHHHdHHH\"..,,n,,,,,,n,,...HHHHdHHH.^K",
+  "K.A..\".,......,,,,,,,,,,,,..\"....,....AK",
+  "K...,,,,,,,,,l,,,,,,,,,,,,l,,,,,,,,,,..K",
+  "K.......\".F....,...,,.....,...........^K",
+  "K..RRRRRRR.\"...,...,,....\",...RRRRRRR..K",
+  "K..RRRRRRR..RRR,RR.,,..RRR,RR.RRRRRRR.^K",
+  "K..RRRRRRR..RRR,RR.,,..RRR,RR.RRRRRRR..K",
+  "K..HWHWHWH\".RRR,RR.,,..RRR,RR.HWHWHWH.^K",
+  "K^.HHHdHHH..HWH,HW.,,\".HWH,HW.HHHdHHH..K",
+  "K^F\"F.,...\".HHHdHH.,,\".HHHdHH....,.....K",
+  "K^..\".......fff,f\".,,.....,...........^K",
+  "K^^....^^^.^.^^^...,,.^..^.........^...K",
+  "KKKKKKKKKKKKKKKKKKK,,KKKKKKKKKKKKKKKKKKK"
+ ],
+ "music": "fire_town",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 20,
+   "y": 3,
+   "to": "nexus",
+   "tx": 13,
+   "ty": 4,
+   "face": "down"
+  },
+  {
+   "x": 7,
+   "y": 7,
+   "to": "fire_inn",
+   "tx": 8,
+   "ty": 9,
+   "face": "up"
+  },
+  {
+   "x": 32,
+   "y": 7,
+   "to": "fire_tavern",
+   "tx": 9,
+   "ty": 10,
+   "face": "up"
+  },
+  {
+   "x": 7,
+   "y": 17,
+   "to": "fire_pawn",
+   "tx": 7,
+   "ty": 8,
+   "face": "up"
+  },
+  {
+   "x": 33,
+   "y": 17,
+   "to": "fire_items",
+   "tx": 7,
+   "ty": 8,
+   "face": "up"
+  },
+  {
+   "x": 6,
+   "y": 25,
+   "to": "fire_house1",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 33,
+   "y": 25,
+   "to": "fire_house2",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 15,
+   "y": 26,
+   "to": "fire_house3",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 26,
+   "y": 26,
+   "to": "fire_house4",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 19,
+   "y": 29,
+   "to": "fire_field",
+   "tx": 23,
+   "ty": 32,
+   "face": "up"
+  },
+  {
+   "x": 20,
+   "y": 29,
+   "to": "fire_field",
+   "tx": 23,
+   "ty": 32,
+   "face": "up"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "ignatia",
+   "name": "Ignatia",
+   "look": {
+    "body": "woman",
+    "hair": "#8a2b14",
+    "outfit": "#5a2e1e",
+    "accent": "#e0a040",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "q:main_fire=none"
+     ],
+     "say": [
+      "I'm Ignatia, forgemistress of Emberfall. Everyone knows my name. That's the problem.",
+      "My little brother Vulkar was a better smith than me when we were children. Nobody noticed. They only ever noticed me.",
+      "He went to the old forge north of the Wilds, the one the Heart of Fire sleeps under, and asked it to make him matter.",
+      "Now the fire in Cinderreach burns green and hungry. It eats anything anyone ever praised.",
+      "Please. Go to the Envy Forge, north through the Ashen Wilds. Bring my brother back... or at least stop him."
+     ],
+     "do": [
+      "quest:main_fire"
+     ]
+    },
+    {
+     "if": [
+      "q:main_fire=active",
+      "!flag:beat_vulkar"
+     ],
+     "say": [
+      "The Envy Forge is at the north end of the Ashen Wilds. He'll be at the great anvil.",
+      "Fire beasts flinch from water. If you have anything tidal, use it.",
+      "The way there is long: through the Ashen Wilds, then the Magma Tunnels, and down into its depths."
+     ]
+    },
+    {
+     "if": [
+      "q:main_fire=ready"
+     ],
+     "say": [
+      "You're back. And the fire... the fire is orange again.",
+      "He's alive? He's... coming home? Then I'll stop being the only smith in this town. Good. I'm tired.",
+      "Take the Heartstone. And this. It's the first thing he ever forged me, a gift I never thanked him for."
+     ],
+     "do": [
+      "done:main_fire",
+      "give:heart_fire",
+      "gold:400",
+      "give:hi_potion:2"
+     ]
+    },
+    {
+     "if": [
+      "q:main_fire=done"
+     ],
+     "say": [
+      "Vulkar and I are working the same anvil again. He still says I hold the tongs wrong.",
+      "He's right. Don't tell him."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 20,
+   "y": 8
+  },
+  {
+   "id": "kael",
+   "name": "Kael",
+   "look": {
+    "body": "man",
+    "hair": "#2a1a12",
+    "outfit": "#7a2a18",
+    "accent": "#d8c090",
+    "skin": 2,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "!member:kael"
+     ],
+     "say": [
+      "You're looking at the scars. Everyone does. I'm Kael. I fought in Emberfall's pits for eight years.",
+      "Slagjaw, the ogre who ran the pits, kept the blades of every fighter he owned. Mine's still stuck in his throne, down in Smolder Hollow.",
+      "I don't need the blade. I need to see him lose. You look like someone who's going somewhere hard."
+     ],
+     "ask": {
+      "q": "Let Kael join your party?",
+      "yes": {
+       "say": [
+        "KAEL: \"Good. I hit things. You point at what needs hitting. Simple.\"",
+        "Kael joined the party! Slagjaw lurks at the bottom of Smolder Hollow, west of the Ashen Wilds."
+       ],
+       "do": [
+        "recruit:kael",
+        "quest:comp_fire",
+        "sfx:recruit"
+       ]
+      },
+      "no": {
+       "say": [
+        "KAEL: \"Suit yourself. I'll be here. I'm good at waiting. Pit taught me that.\""
+       ]
+      }
+     }
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "cond": [
+    "!member:kael"
+   ],
+   "x": 15,
+   "y": 12
+  },
+  {
+   "id": "tamsin",
+   "name": "Tamsin",
+   "look": {
+    "body": "woman",
+    "hair": "#d8a050",
+    "outfit": "#6a4a2a",
+    "accent": "#a03020",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "q:side_fire=none"
+     ],
+     "say": [
+      "I'm Tamsin, apprentice at the great forge. Or I was. Someone stole the Great Bellows!",
+      "Without its breath the forge can't get hot enough for real steel. A scavenger with a metal arm took it. Scrapjack, he calls himself.",
+      "He's somewhere in the Ashen Wilds. If you get it back, I'll give you the mail I've been working on."
+     ],
+     "do": [
+      "quest:side_fire"
+     ]
+    },
+    {
+     "if": [
+      "q:side_fire=active",
+      "!item:forge_bellows"
+     ],
+     "say": [
+      "Scrapjack's out in the Ashen Wilds. Follow the sound of wheezing."
+     ]
+    },
+    {
+     "if": [
+      "q:side_fire=ready"
+     ],
+     "say": [
+      "THE BELLOWS! You found it! Listen to that breath...",
+      "Here. Forgeheart Mail. I quenched it in the last of the old fire. It's yours."
+     ],
+     "do": [
+      "take:forge_bellows",
+      "done:side_fire",
+      "give:gear:forgeheart_mail",
+      "sfx:chest"
+     ]
+    },
+    {
+     "if": [
+      "q:side_fire=done"
+     ],
+     "say": [
+      "The forge is roaring again. Come back when you need something sharp."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 25,
+   "y": 12
+  },
+  {
+   "id": "nan",
+   "name": "Old Nan Cinders",
+   "look": {
+    "body": "elder",
+    "hair": "#d0d0d0",
+    "outfit": "#6a2a4a",
+    "accent": "#e0b070",
+    "skin": 0,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Sit, sit. Let an old woman tell you something nobody asked about.",
+      "When I was a girl, I kept a one-horned goat. Nasty creature. Loved me, hated everyone else.",
+      "Every evening she'd stand by the cracked obelisk out in the Ashen Wilds, like she was guarding it.",
+      "Then at dusk she'd take three hops toward the sunset, and one toward the cold, and paw at the ash until dark.",
+      "I never knew why. Sentimental old goat. Anyway. That's the story. Didn't go anywhere, did it?"
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 12,
+   "y": 19
+  },
+  {
+   "id": "hesta",
+   "name": "Widow Hesta",
+   "look": {
+    "body": "elder",
+    "hair": "#5a5a5a",
+    "outfit": "#2a2a2a",
+    "accent": "#c04030",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "q:key_fire=none"
+     ],
+     "say": [
+      "My Brannoc was the smith before Ignatia. He went into Smolder Hollow for good ore and never came out.",
+      "They say you can still hear him hammering down there, when the wind's right. I just want his hammer back.",
+      "Bring it to me and I'll give you the thing he always said to keep safe. An old key, black as ash."
+     ],
+     "do": [
+      "quest:key_fire"
+     ]
+    },
+    {
+     "if": [
+      "q:key_fire=active",
+      "!item:hestas_hammer"
+     ],
+     "say": [
+      "His hammer's in Smolder Hollow. West of the Ashen Wilds. Please."
+     ]
+    },
+    {
+     "if": [
+      "q:key_fire=ready"
+     ],
+     "say": [
+      "...That's it. That's his grip, worn into the handle.",
+      "Here. The Key of Ash. Brannoc said it was half of a lock at the end of everything. Strange man. I loved him."
+     ],
+     "do": [
+      "take:hestas_hammer",
+      "done:key_fire",
+      "give:key_ash",
+      "sfx:key"
+     ]
+    },
+    {
+     "if": [
+      "q:key_fire=done"
+     ],
+     "say": [
+      "I hang his hammer over the door now. The house sounds like him again."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 28,
+   "y": 19
+  },
+  {
+   "id": "fire_f1",
+   "name": "Gossiping Smith",
+   "look": {
+    "body": "man",
+    "hair": "#1a1a1a",
+    "outfit": "#6a4a3a",
+    "accent": "#a0a0a0",
+    "skin": 2,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Everything in the Wilds is made of fire now. Ash rats, cinder knights...",
+      "They all hate water. Douse 'em and they fold like wet paper."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 17,
+   "y": 18
+  },
+  {
+   "id": "fire_f2",
+   "name": "Bored Guard",
+   "look": {
+    "body": "guard",
+    "hair": "#4a2a1a",
+    "outfit": "#8a3020",
+    "accent": "#c0c0c0",
+    "skin": 1,
+    "hat": "helm",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Ghosts in the Envy Forge? Don't bother swinging at them. Steel goes right through.",
+      "Hit 'em with magic. Learned that the hard way. Twice."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 23,
+   "y": 9
+  },
+  {
+   "id": "fire_f3",
+   "name": "Child with Soot",
+   "look": {
+    "body": "child",
+    "hair": "#3a2a1a",
+    "outfit": "#c05030",
+    "accent": "#f0d040",
+    "skin": 2,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "My mom says jealousy is like holding a coal to throw at someone. You get burned first.",
+      "I don't know what that means. I just like coal."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 11,
+   "y": 11
+  },
+  {
+   "id": "fire_f4",
+   "name": "Traveling Bard",
+   "look": {
+    "body": "man",
+    "hair": "#d0a040",
+    "outfit": "#6a2a6a",
+    "accent": "#e0e0e0",
+    "skin": 0,
+    "hat": "wide",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "!flag:beat_vulkar"
+     ],
+     "say": [
+      "They say Vulkar's flames are the green of envy. I'd write a song about it, but I'm jealous of better songwriters."
+     ]
+    },
+    {
+     "if": [],
+     "say": [
+      "The fire is orange again! I've written a song about it. It's mostly about me, though."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 30,
+   "y": 11
+  },
+  {
+   "id": "amb_fire_0",
+   "name": "Ash Miner",
+   "look": {
+    "body": "man",
+    "hair": "#8a2b14",
+    "outfit": "#4a2018",
+    "accent": "#d0a040",
+    "skin": 2,
+    "hat": "cap",
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Ore's black this deep. Black and warm."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "right",
+   "x": 3,
+   "y": 11,
+   "ambient": true,
+   "job": "mine",
+   "jface": "right"
+  },
+  {
+   "id": "amb_fire_1",
+   "name": "Ash Miner",
+   "look": {
+    "body": "man",
+    "hair": "#4a3020",
+    "outfit": "#6a3a1a",
+    "accent": "#c06030",
+    "skin": 1,
+    "hat": "cap",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Ore's black this deep. Black and warm."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "left",
+   "x": 7,
+   "y": 10,
+   "ambient": true,
+   "job": "mine",
+   "jface": "left"
+  },
+  {
+   "id": "amb_fire_2",
+   "name": "Ash Miner",
+   "look": {
+    "body": "man",
+    "hair": "#1a1010",
+    "outfit": "#3a2a24",
+    "accent": "#d0a040",
+    "skin": 1,
+    "hat": "cap",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Every swing, the mountain swings back."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "right",
+   "x": 34,
+   "y": 11,
+   "ambient": true,
+   "job": "mine",
+   "jface": "right"
+  },
+  {
+   "id": "amb_fire_3",
+   "name": "Ash Miner",
+   "look": {
+    "body": "elder",
+    "hair": "#8a2b14",
+    "outfit": "#3a2a24",
+    "accent": "#d0a040",
+    "skin": 1,
+    "hat": "cap",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Hear that knocking? That's not us.",
+      "Struck a goblin tunnel last week. Sealed it with three men inside. Not our men."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "left",
+   "x": 38,
+   "y": 10,
+   "ambient": true,
+   "job": "mine",
+   "jface": "left"
+  },
+  {
+   "id": "amb_fire_4",
+   "name": "Smith",
+   "look": {
+    "body": "man",
+    "hair": "#1a1010",
+    "outfit": "#3a2a24",
+    "accent": "#d0a040",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Steel for the walls. Steel for the gates. Steel for whoever's left."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "right",
+   "x": 1,
+   "y": 18,
+   "ambient": true,
+   "job": "smith",
+   "jface": "right"
+  },
+  {
+   "id": "amb_fire_5",
+   "name": "Smith",
+   "look": {
+    "body": "woman",
+    "hair": "#2a1a12",
+    "outfit": "#6a3a1a",
+    "accent": "#c06030",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Bring me goblin iron. It's bad iron, but it's iron.",
+      "Hold still, I'm working. Unless you've coin."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "right",
+   "x": 37,
+   "y": 18,
+   "ambient": true,
+   "job": "smith",
+   "jface": "right"
+  },
+  {
+   "id": "amb_fire_6",
+   "name": "Townsfolk",
+   "look": {
+    "body": "woman",
+    "hair": "#8a2b14",
+    "outfit": "#5a2e1e",
+    "accent": "#d0a040",
+    "skin": 0,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Market's thin. Caravans stopped coming."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 18,
+   "y": 11,
+   "ambient": true,
+   "roam": 5
+  },
+  {
+   "id": "amb_fire_7",
+   "name": "Townsfolk",
+   "look": {
+    "body": "man",
+    "hair": "#1a1010",
+    "outfit": "#4a2018",
+    "accent": "#c06030",
+    "skin": 1,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "The goblins are getting bolder."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 24,
+   "y": 9,
+   "ambient": true,
+   "roam": 5
+  },
+  {
+   "id": "amb_fire_8",
+   "name": "Townsfolk",
+   "look": {
+    "body": "man",
+    "hair": "#1a1010",
+    "outfit": "#5a2e1e",
+    "accent": "#8a6040",
+    "skin": 1,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Keep your blade close after dark.",
+      "Lovely weather. For a funeral."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 10,
+   "y": 19,
+   "ambient": true,
+   "roam": 5
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  20,
+  4
+ ],
+ "signs": [
+  {
+   "x": 8,
+   "y": 6,
+   "tile": "sign_inn"
+  },
+  {
+   "x": 33,
+   "y": 6,
+   "tile": "sign_tavern"
+  },
+  {
+   "x": 8,
+   "y": 16,
+   "tile": "sign_pawn"
+  },
+  {
+   "x": 34,
+   "y": 16,
+   "tile": "sign_items"
+  }
+ ]
+}

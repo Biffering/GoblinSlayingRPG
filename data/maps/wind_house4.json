@@ -1,0 +1,81 @@
+{
+ "id": "wind_house4",
+ "name": "Kitefall: An Old House",
+ "world": "wind",
+ "kind": "interior",
+ "w": 12,
+ "h": 9,
+ "tiles": [
+  "############",
+  "##kk##y##p##",
+  "#v_________#",
+  "#________B_#",
+  "#__ouo___B_#",
+  "#__________#",
+  "#___rrrr___#",
+  "#x__rrrr__z#",
+  "######m#####"
+ ],
+ "music": "wind_town",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 6,
+   "y": 8,
+   "to": "wind_town",
+   "tx": 26,
+   "ty": 27,
+   "face": "down"
+  },
+  {
+   "x": 1,
+   "y": 2,
+   "to": "wind_side",
+   "tx": 14,
+   "ty": 20,
+   "face": "up"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "wind_h4",
+   "name": "Belfry Keeper's Ghost? No, just Dust",
+   "look": {
+    "body": "elder",
+    "hair": "#c0c0c0",
+    "outfit": "#8a8a8a",
+    "accent": "#d0c0a0",
+    "skin": 0,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "This house is empty. The stairs go up to the old belfry. Nobody's rung that bell in years."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 7,
+   "y": 3
+  }
+ ],
+ "chests": [
+  {
+   "id": "wind_house4_c0",
+   "x": 10,
+   "y": 6,
+   "item": "gear:skyglass_monocle"
+  }
+ ],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  6,
+  7
+ ]
+}

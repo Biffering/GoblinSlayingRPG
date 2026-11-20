@@ -1,0 +1,81 @@
+{
+ "id": "void_sanctum",
+ "name": "Throne of Nothing",
+ "world": "void",
+ "kind": "sanctum",
+ "w": 19,
+ "h": 15,
+ "tiles": [
+  "###################",
+  "#######_____#######",
+  "#####______b__#####",
+  "###_____________###",
+  "##___C_______C___##",
+  "##_____________b_##",
+  "#_____b_______b___#",
+  "#__C_b_b_______C__#",
+  "#________b________#",
+  "##_______________##",
+  "##___C_______C___##",
+  "###_______b_____###",
+  "#####_________#####",
+  "#######_____#######",
+  "#########>#########"
+ ],
+ "music": "void_dungeon",
+ "bg": "void_sanctum",
+ "encounters": false,
+ "exits": [
+  {
+   "x": 9,
+   "y": 14,
+   "to": "void_dungeon2",
+   "tx": 4,
+   "ty": 4,
+   "face": "down"
+  }
+ ],
+ "npcs": [],
+ "chests": [],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "nihil",
+   "kind": "omni",
+   "x": 9,
+   "y": 5,
+   "sprite": "nihil",
+   "name": "Nihil, the Unmaker",
+   "world": "void",
+   "cond": [
+    "!flag:beat_nihil"
+   ],
+   "need": [
+    "party>=4"
+   ],
+   "need_fail": [
+    "It doesn't even notice you. You'll need four companions to stand before it."
+   ],
+   "pre": [
+    "There is nothing here. The nothing is enormous, and it notices you.",
+    "NIHIL: \"Before the first star, I was here. After the last, I will be here. You are a brief interruption.\"",
+    "NIHIL: \"Interrupt me, then. All four of you. Let me see if you are louder than nothing.\""
+   ],
+   "post": [
+    "The nothing folds up, small enough to hold.",
+    "NIHIL: \"...Louder than nothing. Well. That is something. Call, and I will unmake for you.\"",
+    "You can now summon Nihil, the Unmaker!"
+   ],
+   "win_do": [
+    "set:beat_nihil",
+    "summon:nihil",
+    "done:omni_void"
+   ],
+   "encounter": "enc_nihil"
+  }
+ ],
+ "start": [
+  9,
+  13
+ ]
+}

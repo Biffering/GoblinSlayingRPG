@@ -1,0 +1,70 @@
+{
+ "id": "wind_items",
+ "name": "Kitefall: Item Shop",
+ "world": "wind",
+ "kind": "interior",
+ "w": 14,
+ "h": 10,
+ "tiles": [
+  "##############",
+  "##i###y###y###",
+  "#qqq______qqq#",
+  "#___cccccc___#",
+  "#___________q#",
+  "#____rrrr____#",
+  "#x___rrrr___z#",
+  "#x___rrrr____#",
+  "#____________#",
+  "#######m######"
+ ],
+ "music": "wind_shop",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 7,
+   "y": 9,
+   "to": "wind_town",
+   "tx": 33,
+   "ty": 18,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "items_wind_k",
+   "name": "Tonic-Seller Hob",
+   "look": {
+    "body": "man",
+    "hair": "#8a6a3a",
+    "outfit": "#6a8a3a",
+    "accent": "#f0c040",
+    "skin": 2,
+    "hat": "cap",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Stamina tonics! Speed in a bottle! Also regular potions, if you're boring."
+     ],
+     "do": [
+      "shop:items"
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 6,
+   "y": 2
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  7,
+  8
+ ]
+}

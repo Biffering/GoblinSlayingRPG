@@ -1,0 +1,70 @@
+{
+ "id": "stone_pawn",
+ "name": "Copperdeep: Pawn Shop",
+ "world": "stone",
+ "kind": "interior",
+ "w": 14,
+ "h": 10,
+ "tiles": [
+  "##############",
+  "##y###y###y###",
+  "#jjj______jJj#",
+  "#___cccccc___#",
+  "#____________#",
+  "#j__rrrrrr__X#",
+  "#J__rrrrrr__X#",
+  "#___rrrrrr___#",
+  "#____________#",
+  "#######m######"
+ ],
+ "music": "stone_shop",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 7,
+   "y": 9,
+   "to": "stone_town",
+   "tx": 32,
+   "ty": 18,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "pawn_stone_k",
+   "name": "Pawnbroker Ingot",
+   "look": {
+    "body": "man",
+    "hair": "#c08030",
+    "outfit": "#5a5a5a",
+    "accent": "#d0a040",
+    "skin": 1,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Solid gear. Solid prices. No gold, though. We don't trust it anymore."
+     ],
+     "do": [
+      "shop:pawn_stone"
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 6,
+   "y": 2
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  7,
+  8
+ ]
+}

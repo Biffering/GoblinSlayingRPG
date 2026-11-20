@@ -1,0 +1,213 @@
+{
+ "id": "void_tavern",
+ "name": "Lastlight: The Somewhere",
+ "world": "void",
+ "kind": "interior",
+ "w": 18,
+ "h": 12,
+ "tiles": [
+  "##################",
+  "##igggy###y###p###",
+  "#_e___ec_________#",
+  "#______c_________#",
+  "#_cccccc__ouoouo_#",
+  "#________________#",
+  "#________________#",
+  "#________________#",
+  "#__ouo____ouoouo_#",
+  "#_______________x#",
+  "#X______________x#",
+  "#########m########"
+ ],
+ "music": "void_tavern",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 9,
+   "y": 11,
+   "to": "void_town",
+   "tx": 7,
+   "ty": 8,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "barkeep_void",
+   "name": "Barkeep Nobody-in-Particular",
+   "look": {
+    "body": "man",
+    "hair": "#4a4a5a",
+    "outfit": "#2a2238",
+    "accent": "#a080e0",
+    "skin": 0,
+    "hat": null,
+    "beard": false
+   },
+   "wander": false,
+   "face": "down",
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Welcome to the Somewhere. It's somewhere. Have a soup."
+     ],
+     "do": [
+      "shop:tavern_void"
+     ]
+    }
+   ],
+   "x": 4,
+   "y": 3
+  },
+  {
+   "id": "bard_void",
+   "name": "Whistler Mote",
+   "look": {
+    "body": "woman",
+    "hair": "#a0a0c0",
+    "outfit": "#3a2a5a",
+    "accent": "#c0a0ff",
+    "skin": 0,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "~ Hold the lamp and hold the line... ~",
+      "Under the island there's an underside. You can walk upside-down there. Well. It feels like it."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 15,
+   "y": 3
+  },
+  {
+   "id": "patron_void2",
+   "name": "Lamp-Oil Seller",
+   "look": {
+    "body": "elder",
+    "hair": "#c0c0d0",
+    "outfit": "#3a3a4a",
+    "accent": "#e0c050",
+    "skin": 0,
+    "hat": "wide",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "The Underside runs beneath the Drift. The Throne is past it. Don't let go of anything you love."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 5,
+   "y": 9
+  },
+  {
+   "id": "patron_void3",
+   "name": "Forgetful Regular",
+   "look": {
+    "body": "man",
+    "hair": "#3a2a3a",
+    "outfit": "#4a4060",
+    "accent": "#8080a0",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "I buried something in my house once. Or someone else did. In the corner, by the bookshelf.",
+      "I keep meaning to dig it up. I keep forgetting."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 15,
+   "y": 9
+  },
+  {
+   "id": "aldwin",
+   "name": "Lamplighter Aldwin",
+   "look": {
+    "body": "man",
+    "hair": "#d0d0d0",
+    "outfit": "#3a3050",
+    "accent": "#c090ff",
+    "skin": 0,
+    "hat": "cap",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "q:side2_void=none"
+     ],
+     "say": [
+      "The empty house on the east side. Upstairs. There's a door to a room that isn't there.",
+      "I measured it. The house is too small for that room.",
+      "Something lives in it and it wants company. Go up and tell it no for me."
+     ],
+     "do": [
+      "quest:side2_void"
+     ]
+    },
+    {
+     "if": [
+      "q:side2_void=active"
+     ],
+     "say": [
+      "Upstairs in the east house. Don't stay longer than you have to."
+     ]
+    },
+    {
+     "if": [
+      "q:side2_void=ready"
+     ],
+     "say": [
+      "You came back! People don't always, from that room.",
+      "Take this. I found it on my doorstep after. I think it's a thank-you.",
+      "Take it. (Mirror of the Room)"
+     ],
+     "do": [
+      "done:side2_void",
+      "give:gear:mirror_of_the_room",
+      "gold:300",
+      "sfx:chest"
+     ]
+    },
+    {
+     "if": [
+      "q:side2_void=done"
+     ],
+     "say": [
+      "The east house has a window now. On the room that isn't. Strange, but nicer."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 12,
+   "y": 5
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  9,
+  10
+ ]
+}

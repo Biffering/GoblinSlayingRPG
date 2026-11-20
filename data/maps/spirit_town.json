@@ -1,0 +1,807 @@
+{
+ "id": "spirit_town",
+ "name": "Hallowmere",
+ "world": "spirit",
+ "kind": "town",
+ "w": 40,
+ "h": 30,
+ "tiles": [
+  "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+  "TT.T.T..T.........TTTT..........TTTT...T",
+  "T..RRRRRRRRR.....F........\".RRRRRRRRR..T",
+  "T..RRRRRRRRR.......,O.......RRRRRRRRR..T",
+  "T..RRRRRRRRR.....\"l,,l......RRRRRRRRR..T",
+  "T.FRRRRRRRRR..\"F...,,....\".\"RRRRRRRRR..T",
+  "T..HWHWHWHWH\"F.....,,..\"....HWHWHWHWH..T",
+  "T.\"HHHHdHHHH.......,,.......HHHHdHHHH..T",
+  "T......,.....\".....,,...........,......T",
+  "T...,,,,,,,,,l,,,,,,,,,,,,l,,,,,,,,,,..T",
+  "T..ssssF......,,,,,,,,,,,,.....\"...\"...T",
+  "T..ssss.l.....,,n,,,,,,n,,.....l.......T",
+  "T.....F.\".....,,,,,,,,,,,,\".....\"...FFFT",
+  "T..RRRRRRRR...,,,,,ww,,,,,...RRRRRRRR..T",
+  "T..RRRRRRRR...,,,,,ww,,,,,...RRRRRRRR..T",
+  "T..RRRRRRRR...,,,,,,,,,,,,...RRRRRRRR..T",
+  "T..HWHWHWHW...,,,,,,,,,,,,.\".HWHWHWHW\".T",
+  "T..HHHHdHHH...,,n,,,,,,n,,...HHHHdHHH..T",
+  "T.\"....,......,,,,,,,,,,,,......\",...\".T",
+  "T.S.,,,,,,,,,l,,,,,,,,,,,,l,,,,,,,,,,\".T",
+  "T..............,..\",,.....,......\"FFF..T",
+  "T..RRRRRRR.....,...,,.....,...RRRRRRR..T",
+  "T..RRRRRRR..RRR,RR.,,\"\"RRR,RR.RRRRRRR..T",
+  "T..RRRRRRR..RRR,RR\",,..RRR,RR.RRRRRRR..T",
+  "T..HWHWHWH..RRR,RR.,,..RRR,RR.HWHWHWH..T",
+  "T..HHHdHHH..HWH,HW.,,..HWH,HW.HHHdHHH..T",
+  "T.....,.....HHHdHH.,,..HHHdHH....,.....T",
+  "T.....\".....Fff,ff.,,.....,....\".......T",
+  "T..................,,..................T",
+  "TTTTTTTTTTTTTTTTTTT,,TTTTTTTTTTTTTTTTTTT"
+ ],
+ "music": "spirit_town",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 20,
+   "y": 3,
+   "to": "nexus",
+   "tx": 4,
+   "ty": 12,
+   "face": "down"
+  },
+  {
+   "x": 7,
+   "y": 7,
+   "to": "spirit_inn",
+   "tx": 8,
+   "ty": 9,
+   "face": "up"
+  },
+  {
+   "x": 32,
+   "y": 7,
+   "to": "spirit_tavern",
+   "tx": 9,
+   "ty": 10,
+   "face": "up"
+  },
+  {
+   "x": 7,
+   "y": 17,
+   "to": "spirit_pawn",
+   "tx": 7,
+   "ty": 8,
+   "face": "up"
+  },
+  {
+   "x": 33,
+   "y": 17,
+   "to": "spirit_items",
+   "tx": 7,
+   "ty": 8,
+   "face": "up"
+  },
+  {
+   "x": 6,
+   "y": 25,
+   "to": "spirit_house1",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 33,
+   "y": 25,
+   "to": "spirit_house2",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 15,
+   "y": 26,
+   "to": "spirit_house3",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 26,
+   "y": 26,
+   "to": "spirit_house4",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 19,
+   "y": 29,
+   "to": "spirit_field",
+   "tx": 23,
+   "ty": 32,
+   "face": "up"
+  },
+  {
+   "x": 20,
+   "y": 29,
+   "to": "spirit_field",
+   "tx": 23,
+   "ty": 32,
+   "face": "up"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "clare",
+   "name": "Abbess Clare",
+   "look": {
+    "body": "elder",
+    "hair": "#f0f0f0",
+    "outfit": "#e0e0f0",
+    "accent": "#e0c050",
+    "skin": 0,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "q:main_spirit=none"
+     ],
+     "say": [
+      "Welcome to Hallowmere, where people come to become who they are meant to be.",
+      "Our saint, Iris, helped them. She saw the best self in everyone and carved it out.",
+      "But she could never see her own. So she never stopped carving. Now no one in Luminael is allowed to finish.",
+      "She is at the top of the Ascent of the Unfinished. Please. Let her rest."
+     ],
+     "do": [
+      "quest:main_spirit"
+     ]
+    },
+    {
+     "if": [
+      "q:main_spirit=active",
+      "!flag:beat_iris"
+     ],
+     "say": [
+      "The Ascent is beyond the Fields of Becoming.",
+      "Spirit and Void are each other's undoing. Bring the dark to fight the light.",
+      "The way there is long: through the Fields of Becoming, then the Lantern Stair, and down into its depths."
+     ]
+    },
+    {
+     "if": [
+      "q:main_spirit=ready"
+     ],
+     "say": [
+      "I feel... finished. For today. That's all anyone needs, isn't it? To be finished for today.",
+      "Take the Spirit Heartstone, and my blessing."
+     ],
+     "do": [
+      "done:main_spirit",
+      "give:heart_spirit",
+      "gold:500",
+      "give:elixir"
+     ]
+    },
+    {
+     "if": [
+      "q:main_spirit=done"
+     ],
+     "say": [
+      "Iris teaches sculpture now. Her students are told to stop when it's good enough."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 20,
+   "y": 8
+  },
+  {
+   "id": "sol",
+   "name": "Sol",
+   "look": {
+    "body": "man",
+    "hair": "#1a1a1a",
+    "outfit": "#e0d0a0",
+    "accent": "#c04040",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "!member:sol"
+     ],
+     "say": [
+      "Peace to you. I am Sol. At least, that is the name on my robe.",
+      "I woke one morning and could not remember who I had been trying to become. Everything I had worked toward was simply gone.",
+      "There is a mirror in the Mirror Caves that shows people their true selves. I'm afraid to look. I'd be less afraid with company."
+     ],
+     "ask": {
+      "q": "Let Sol join your party?",
+      "yes": {
+       "say": [
+        "SOL: \"Thank you. Whoever I turn out to be, I think he'd like you.\"",
+        "Sol joined the party! The Hollow Mirror waits in the Mirror Caves."
+       ],
+       "do": [
+        "recruit:sol",
+        "quest:comp_spirit",
+        "sfx:recruit"
+       ]
+      },
+      "no": {
+       "say": [
+        "SOL: \"Of course. I'll meditate on it. It's what I do instead of deciding.\""
+       ]
+      }
+     }
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "cond": [
+    "!member:sol"
+   ],
+   "x": 15,
+   "y": 12
+  },
+  {
+   "id": "maud",
+   "name": "Pilgrim Maud",
+   "look": {
+    "body": "woman",
+    "hair": "#8a6a4a",
+    "outfit": "#a09070",
+    "accent": "#f0e080",
+    "skin": 1,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "q:side_spirit=none"
+     ],
+     "say": [
+      "Pilgrims carry a lantern through the Fields of Becoming. It's the light of who they hope to be.",
+      "But a great bear has started eating them. Lanterns, not pilgrims. Mostly.",
+      "Make it stop and I'll give you the Halo Circlet. It was meant for a saint. I think you'll do."
+     ],
+     "do": [
+      "quest:side_spirit"
+     ]
+    },
+    {
+     "if": [
+      "q:side_spirit=active",
+      "!flag:beat_penitent_bear"
+     ],
+     "say": [
+      "The bear wanders the Fields of Becoming. It glows. You can't miss it."
+     ]
+    },
+    {
+     "if": [
+      "q:side_spirit=ready"
+     ],
+     "say": [
+      "The pilgrims are walking again, and their lanterns are lit.",
+      "The Halo Circlet. Wear it humbly. Or don't. It's very shiny."
+     ],
+     "do": [
+      "done:side_spirit",
+      "give:gear:halo_circlet",
+      "sfx:chest"
+     ]
+    },
+    {
+     "if": [
+      "q:side_spirit=done"
+     ],
+     "say": [
+      "Every lantern that passes is a person deciding to keep going."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 25,
+   "y": 12
+  },
+  {
+   "id": "brother_ash",
+   "name": "Brother Tobin",
+   "look": {
+    "body": "man",
+    "hair": "#6a4a2a",
+    "outfit": "#d0c0a0",
+    "accent": "#a08040",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "There is an angel statue in the Fields. She weeps, always, for someone she lost.",
+      "She faces the sunrise, because that's where he left from. She's waiting for him to come back.",
+      "Her tears run down and pool three paces in front of her face. The grass there is greener than anywhere else.",
+      "I used to sit there to pray. I found it peaceful. Something under the grass hums, I think. Probably my imagination."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 12,
+   "y": 19
+  },
+  {
+   "id": "seer_hal",
+   "name": "Blind Seer Hal",
+   "look": {
+    "body": "elder",
+    "hair": "#c0c0c0",
+    "outfit": "#4a4a8a",
+    "accent": "#f0f0f0",
+    "skin": 0,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [
+      "!item:key_memory",
+      "!item:key_breath",
+      "!flag:open_sanctum_spirit"
+     ],
+     "say": [
+      "Behind a white door in the Ascent sleeps Aeon, the Witness, which has seen every life ever lived.",
+      "The door wants two keys. One remembers. One breathes. Seek the old man of the sea and the child of the kites.",
+      "And the Witness will only open its eyes for four. Bring a full company."
+     ]
+    },
+    {
+     "if": [
+      "!flag:open_sanctum_spirit"
+     ],
+     "say": [
+      "Memory and Breath. Four companions. Then the Witness will see you."
+     ]
+    },
+    {
+     "if": [],
+     "say": [
+      "You have been seen. Few can bear it."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 28,
+   "y": 19
+  },
+  {
+   "id": "spirit_f1",
+   "name": "Meditating Monk",
+   "look": {
+    "body": "man",
+    "hair": "#1a1a1a",
+    "outfit": "#e0c080",
+    "accent": "#c04040",
+    "skin": 2,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "The Lumen creatures are made of light. Darkness undoes them. Void, if you have it."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 17,
+   "y": 18
+  },
+  {
+   "id": "spirit_f2",
+   "name": "Pilgrim",
+   "look": {
+    "body": "woman",
+    "hair": "#6a4a2a",
+    "outfit": "#8a8a6a",
+    "accent": "#f0e080",
+    "skin": 1,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Ghosts here are half-light. Swords barely scratch them. Magic, friend. Magic."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 23,
+   "y": 9
+  },
+  {
+   "id": "spirit_f3",
+   "name": "Curious Novice",
+   "look": {
+    "body": "child",
+    "hair": "#e0c070",
+    "outfit": "#e0e0e0",
+    "accent": "#a0c0f0",
+    "skin": 0,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "The Abbess says I'm becoming a monk. I think I'm becoming hungry."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 11,
+   "y": 11
+  },
+  {
+   "id": "spirit_f4",
+   "name": "Sculptor's Apprentice",
+   "look": {
+    "body": "man",
+    "hair": "#8a3a1a",
+    "outfit": "#a0a0a0",
+    "accent": "#d0d0d0",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "!flag:beat_iris"
+     ],
+     "say": [
+      "Iris told me my statue wasn't done. I've been carving the same nose for six years."
+     ]
+    },
+    {
+     "if": [],
+     "say": [
+      "I finished my statue! It's not good. But it's DONE."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 30,
+   "y": 11
+  },
+  {
+   "id": "amb_spirit_0",
+   "name": "Acolyte",
+   "look": {
+    "body": "robe",
+    "hair": "#d8d0c0",
+    "outfit": "#e8e0d0",
+    "accent": "#c0c0e0",
+    "skin": 4,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Kneel with us, if you've a moment. Or a soul."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "right",
+   "x": 1,
+   "y": 20,
+   "ambient": true,
+   "job": "pray",
+   "jface": "right"
+  },
+  {
+   "id": "amb_spirit_1",
+   "name": "Acolyte",
+   "look": {
+    "body": "woman",
+    "hair": "#d8d0c0",
+    "outfit": "#a09880",
+    "accent": "#d0a040",
+    "skin": 4,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Light keep us. Light keep us all.",
+      "Kneel with us, if you've a moment. Or a soul."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "left",
+   "x": 3,
+   "y": 20,
+   "ambient": true,
+   "job": "pray",
+   "jface": "left"
+  },
+  {
+   "id": "amb_spirit_2",
+   "name": "Acolyte",
+   "look": {
+    "body": "robe",
+    "hair": "#8a6a4a",
+    "outfit": "#e8e0d0",
+    "accent": "#c0c0e0",
+    "skin": 3,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Light keep us. Light keep us all."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "up",
+   "x": 2,
+   "y": 21,
+   "ambient": true,
+   "job": "pray",
+   "jface": "up"
+  },
+  {
+   "id": "amb_spirit_3",
+   "name": "Brother of the Garden",
+   "look": {
+    "body": "man",
+    "hair": "#8a6a4a",
+    "outfit": "#d8d0c0",
+    "accent": "#d0a040",
+    "skin": 3,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Goblins steal the turnips. Then the chickens. Then the farmer."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "right",
+   "x": 2,
+   "y": 11,
+   "ambient": true,
+   "job": "hoe",
+   "jface": "right"
+  },
+  {
+   "id": "amb_spirit_4",
+   "name": "Gardener",
+   "look": {
+    "body": "elder",
+    "hair": "#d8d0c0",
+    "outfit": "#d8d0c0",
+    "accent": "#d0a040",
+    "skin": 2,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Flowers don't care about curses. Lucky them."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "left",
+   "x": 7,
+   "y": 10,
+   "ambient": true,
+   "job": "water",
+   "jface": "left"
+  },
+  {
+   "id": "amb_spirit_5",
+   "name": "Gardener",
+   "look": {
+    "body": "woman",
+    "hair": "#f0e0a0",
+    "outfit": "#e8e0d0",
+    "accent": "#f0e0a0",
+    "skin": 3,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "A little water, a little patience.",
+      "Mind the petals, slayer."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "right",
+   "x": 35,
+   "y": 12,
+   "ambient": true,
+   "job": "water",
+   "jface": "right"
+  },
+  {
+   "id": "amb_spirit_6",
+   "name": "Gardener",
+   "look": {
+    "body": "man",
+    "hair": "#8a6a4a",
+    "outfit": "#e8e0d0",
+    "accent": "#f0e0a0",
+    "skin": 2,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "A little water, a little patience.",
+      "Flowers don't care about curses. Lucky them."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "right",
+   "x": 33,
+   "y": 20,
+   "ambient": true,
+   "job": "water",
+   "jface": "right"
+  },
+  {
+   "id": "amb_spirit_7",
+   "name": "Townsfolk",
+   "look": {
+    "body": "man",
+    "hair": "#d8d0c0",
+    "outfit": "#c0b8a0",
+    "accent": "#c0c0e0",
+    "skin": 1,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Lovely weather. For a funeral.",
+      "Market's thin. Caravans stopped coming."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 25,
+   "y": 13,
+   "ambient": true,
+   "roam": 5
+  },
+  {
+   "id": "amb_spirit_8",
+   "name": "Townsfolk",
+   "look": {
+    "body": "man",
+    "hair": "#4a3020",
+    "outfit": "#c0b8a0",
+    "accent": "#c0c0e0",
+    "skin": 3,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "The goblins are getting bolder."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 19,
+   "y": 19,
+   "ambient": true,
+   "roam": 5
+  },
+  {
+   "id": "amb_spirit_9",
+   "name": "Townsfolk",
+   "look": {
+    "body": "woman",
+    "hair": "#f0e0a0",
+    "outfit": "#e8e0d0",
+    "accent": "#d0a040",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Lovely weather. For a funeral."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 10,
+   "y": 19,
+   "ambient": true,
+   "roam": 5
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  20,
+  4
+ ],
+ "signs": [
+  {
+   "x": 8,
+   "y": 6,
+   "tile": "sign_inn"
+  },
+  {
+   "x": 33,
+   "y": 6,
+   "tile": "sign_tavern"
+  },
+  {
+   "x": 8,
+   "y": 16,
+   "tile": "sign_pawn"
+  },
+  {
+   "x": 34,
+   "y": 16,
+   "tile": "sign_items"
+  }
+ ]
+}

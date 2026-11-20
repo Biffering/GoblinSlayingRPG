@@ -1,0 +1,147 @@
+{
+ "id": "water_field",
+ "name": "Weeping Shoals",
+ "world": "water",
+ "kind": "field",
+ "w": 46,
+ "h": 34,
+ "tiles": [
+  "TT^TT^TTTTTTTT^^TTTTTTTT^T^T^^TTT^TTTTTTTTTTT^",
+  "TTTTT^TTTT^^TTT^TTTT^^TTTTTTTT^T^^T^TTTT^TTTTT",
+  "TTTTTTTTTTTT.TTTF.^\"^^...\".....^E^.....\"..\".TT",
+  "TT.TTTTT.TTTTTT...^^.^.......\".,,..TT..\"....TT",
+  "TT.TTTTT.TTTTTT\".^.^^^........,,.\"\"T.T.F....TT",
+  "T^\"^^^^^TTTTTT.\"..^^^^..T...\",,T.TTTTT...\"..TT",
+  "TT\"..^^.T.TT....\"^^^^..TTTT\".,TTFTTTTTT\"...\"T^",
+  "TT\"\".^TT.TT..\".\"\"\"\"^..TTTTT..,.TTTTTT\"......^^",
+  "T^...\".TT.~.\".......\"FTTT\"TT,,.TTT.TTT..\"...T^",
+  "^T......~~~~~.\".T..\".\"TT.FT.,...TT..T....\"TTTT",
+  "TT\"^...~~~~~~~.T.\"..\".TTTTT,,TT...T....\".T\"TTT",
+  "^T^E,,~~~~~~~~~TTTT....\"T.T,TTT...\".\"....TTTT^",
+  "^T.^.,,~~~~~.....T........T,TT.T...\"^\".\"TT..^T",
+  "^T....,,===~........\"...\".T,TT..\"F\"T^^.TTTT.T^",
+  "TTTTT.....=,,,L,...\"\"\".\"...,......T^^^^^TTTTT^",
+  "TTTTT..\"...T.\".,,,,,,,,....,..\"..^^^^^^..TTTTT",
+  "TTTTT.F...TT..,,,,,,,,,,,,,,.F..^.^^^^^^.TTTTT",
+  "TT.TT\"..\"\"\"TTTTT..........,....\"\".^^^^^^TTTTT^",
+  "T^.TT......TTTT\"..\"..T...\",...T..^^^^^^.\"T..^T",
+  "^^TT....T....T...\"..TT..\".,TTT....^^^^^.\".\".T^",
+  "TT....TTTTT.F\".....TTTTT\".,.T.......^\"\".....^T",
+  "TT.\"..TTTT\".\".F.....TTT~.,,.\".\"..\".....\"....T^",
+  "TT...TTT.TTT...\".....~~~~=T\"\".\"..\".......\"..TT",
+  "TT\"...TTTTTTT..\"....~~~~~=~T\"...\"....F......^T",
+  "^T.\"\".TTTTTT.TT\"...~~~~~==~~T\"..F.......F...^T",
+  "TT..\"..\"..TTT\"T\"....~~~~=~~T.\".F............TT",
+  "TT..\"..TTTT.TT.T.....~~~=~T.................TT",
+  "TT..F\"..T...TTT\"..\"....~,T....\".....\"...\".T.TT",
+  "T^^^....TT.TTTT....\"\"..,,...\".......\"...TTTTTT",
+  "TT^^^^^.\"\"TTTT..\"\".....,.\"....\".........TTTTTT",
+  "TT\"^^^^^\"..T....\"..\"...,....\"..T...\".\"\"T\"TTTTT",
+  "^T.^^^^.....\"F..\"\".....,....\".TTT.....T.TTTTTT",
+  "TT.^.^^.....\"....\".....,.\"\"..T.TTT.\"\"\".TT\"TT^T",
+  "TTTT^^^T^^TTTTT^TT^TTT,,T^TT^TTTTTTTTTTTTTTTTT"
+ ],
+ "music": "water_field",
+ "bg": "water_out",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 23,
+   "y": 33,
+   "to": "water_town",
+   "tx": 20,
+   "ty": 28,
+   "face": "up"
+  },
+  {
+   "x": 22,
+   "y": 33,
+   "to": "water_town",
+   "tx": 20,
+   "ty": 28,
+   "face": "up"
+  },
+  {
+   "x": 3,
+   "y": 11,
+   "to": "water_cave",
+   "tx": 12,
+   "ty": 18,
+   "face": "up"
+  },
+  {
+   "x": 32,
+   "y": 2,
+   "to": "water_area2",
+   "tx": 23,
+   "ty": 32,
+   "face": "up"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "water_field_c0",
+   "x": 35,
+   "y": 10,
+   "item": "potion:2"
+  },
+  {
+   "id": "water_field_c1",
+   "x": 20,
+   "y": 22,
+   "item": "gear:kelp_mail"
+  },
+  {
+   "id": "water_field_c2",
+   "x": 34,
+   "y": 25,
+   "item": "ether"
+  }
+ ],
+ "hidden": [
+  {
+   "x": 16,
+   "y": 15,
+   "item": "gear:pearl_of_tears",
+   "flag": "hidden_water"
+  }
+ ],
+ "entities": [
+  {
+   "id": "drowned_captain",
+   "kind": "mini",
+   "x": 22,
+   "y": 11,
+   "sprite": "ghost",
+   "name": "The Drowned Captain",
+   "world": "water",
+   "cond": [
+    "q:side_water=active",
+    "!flag:beat_drowned_captain"
+   ],
+   "pre": [
+    "A ghost in a rotted captain's coat stands at the waterline, hauling an invisible net.",
+    "CAPTAIN CORROW: \"Lost my whole crew to this sea. I'll not lose one more fish to it. Not ONE.\""
+   ],
+   "post": [
+    "The captain fades, finally letting go of the rope. The nets of the Shoals come loose."
+   ],
+   "win_do": [
+    "set:beat_drowned_captain"
+   ],
+   "encounter": "enc_drowned_captain"
+  }
+ ],
+ "start": [
+  23,
+  32
+ ],
+ "landmark": [
+  14,
+  14
+ ],
+ "habitat": [
+  "coast"
+ ]
+}

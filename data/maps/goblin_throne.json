@@ -1,0 +1,78 @@
+{
+ "id": "goblin_throne",
+ "name": "The Hoard Throne",
+ "world": "goblin",
+ "kind": "sanctum",
+ "w": 19,
+ "h": 15,
+ "tiles": [
+  "###################",
+  "#######_____#######",
+  "#####_________#####",
+  "###_____________###",
+  "##___Cb______C___##",
+  "##_b_______b_____##",
+  "#_____b________b__#",
+  "#__C_b_________C__#",
+  "#_____b_________b_#",
+  "##_______________##",
+  "##___C_______Cb__##",
+  "###_________b___###",
+  "#####_________#####",
+  "#######_____#######",
+  "#########>#########"
+ ],
+ "music": "goblin_dungeon",
+ "bg": "goblin_in",
+ "encounters": false,
+ "exits": [
+  {
+   "x": 9,
+   "y": 14,
+   "to": "goblin_warren",
+   "tx": 5,
+   "ty": 26,
+   "face": "down"
+  }
+ ],
+ "npcs": [],
+ "chests": [],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "king_goblin",
+   "kind": "boss",
+   "x": 9,
+   "y": 5,
+   "sprite": "king_goblin",
+   "name": "King Goblin",
+   "world": "void",
+   "cond": [
+    "!flag:beat_king_goblin"
+   ],
+   "music": "king_goblin",
+   "pre": [
+    "A throne of stolen treasure rises out of the dark. Atop it sits a goblin wearing six crowns, one from every world.",
+    "KING GOBLIN: \"So YOU'RE the one who keeps un-cursing my Hearths. Jealousy, grief, greed... I worked hard on those!\"",
+    "KING GOBLIN: \"A sad world is an easy world to rob. Now hold still, little Kindler. I'll add your crown to the pile.\""
+   ],
+   "post": [
+    "King Goblin topples off his throne in a landslide of stolen coins.",
+    "KING GOBLIN: \"Fine... FINE. Keep your warm, happy worlds. See if I care.\"",
+    "He scurries into a crack in the wall. The six stolen crowns roll to your feet and fade into light.",
+    "Somewhere far away, six Hearths burn a little brighter.",
+    "The people of the six worlds will tell this story for a long time. The story of the one who slew the Goblin King.",
+    "The story of the Goblin Slayer."
+   ],
+   "win_do": [
+    "set:beat_king_goblin",
+    "gold:2000"
+   ],
+   "encounter": "enc_king_goblin"
+  }
+ ],
+ "start": [
+  9,
+  13
+ ]
+}

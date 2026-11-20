@@ -1,0 +1,113 @@
+{
+ "id": "fire_cave",
+ "name": "Smolder Hollow",
+ "world": "fire",
+ "kind": "cave",
+ "w": 28,
+ "h": 20,
+ "tiles": [
+  "############################",
+  "#______###########__b__#####",
+  "#______###########_____#####",
+  "#______t#t#t##t###_____#####",
+  "#____________b__##b____#####",
+  "#______###_C__C_##t#_#######",
+  "#____C_###_C__C______#######",
+  "#______###______####_#######",
+  "###_################_#######",
+  "###_################_#######",
+  "#____###############_#######",
+  "#____###############_#######",
+  "#____________####______#####",
+  "#___b#######_####_C____#####",
+  "#___b#####____###______#####",
+  "##########b___###______#####",
+  "##########___b###_C__C_#####",
+  "##########____###______#####",
+  "############_###############",
+  "############>###############"
+ ],
+ "music": "fire_field",
+ "bg": "fire_in",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 12,
+   "y": 19,
+   "to": "fire_field",
+   "tx": 4,
+   "ty": 12,
+   "face": "right"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "fire_cave_c0",
+   "x": 11,
+   "y": 4,
+   "item": "summon:pyrestag"
+  },
+  {
+   "id": "fire_cave_c1",
+   "x": 3,
+   "y": 13,
+   "item": "hestas_hammer"
+  },
+  {
+   "id": "fire_cave_c2",
+   "x": 2,
+   "y": 5,
+   "item": "hi_potion"
+  },
+  {
+   "id": "fire_cave_c3",
+   "x": 20,
+   "y": 2,
+   "item": "gear:magma_ring"
+  }
+ ],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "slagjaw",
+   "kind": "mini",
+   "x": 20,
+   "y": 15,
+   "sprite": "ogre",
+   "name": "Slagjaw the Pit Ogre",
+   "world": "fire",
+   "cond": [
+    "q:comp_fire=active",
+    "!flag:beat_slagjaw"
+   ],
+   "need": [
+    "member:kael"
+   ],
+   "need_fail": [
+    "You sense Kael should be here for this."
+   ],
+   "pre": [
+    "A huge ogre lounges on a throne of chains. Kael's old blade is driven into it.",
+    "SLAGJAW: \"Little Kael! You came back to the pit! The crowd missed you.\"",
+    "KAEL: \"There's no crowd, Slagjaw. There never was. Just you.\""
+   ],
+   "post": [
+    "Slagjaw collapses into the chains he collected.",
+    "KAEL: \"...I thought this would feel bigger.\" He pulls the blade free.",
+    "KAEL: \"It feels lighter. Good. Let's go.\""
+   ],
+   "win_do": [
+    "set:beat_slagjaw",
+    "done:comp_fire",
+    "give:gear:pitbreaker"
+   ],
+   "encounter": "enc_slagjaw"
+  }
+ ],
+ "start": [
+  12,
+  18
+ ],
+ "habitat": []
+}

@@ -1,0 +1,108 @@
+{
+ "id": "wind_dungeon2",
+ "name": "The Gilded Aviary: Depths",
+ "world": "wind",
+ "kind": "dungeon",
+ "w": 36,
+ "h": 28,
+ "tiles": [
+  "####################################",
+  "##############______b###########t###",
+  "#####t########_S_____####________###",
+  "####______####_______####________###",
+  "####______####___________________###",
+  "####____b______S___S_####_b______###",
+  "####______####_______####________###",
+  "#######_####################_#######",
+  "###t#t#_####################_#######",
+  "##_________#______##########_#######",
+  "##_________#______########_____#####",
+  "##_________#_b____##t#####__b__#####",
+  "##b________#___________________#####",
+  "##_________#______########_____#####",
+  "#######_####____b_##########_#######",
+  "#######_####################_#######",
+  "#######_####################_#######",
+  "#######_#####t######t#######_#######",
+  "#######_#####___b____#######_#######",
+  "#######_#####_P____S_#######_t######",
+  "###________##________###______b__###",
+  "###________##________###_________###",
+  "###___________S____S_###_________###",
+  "###_b______##________###________b###",
+  "#################_##################",
+  "#################_##################",
+  "#################_##################",
+  "#################>##################"
+ ],
+ "music": "wind_dungeon",
+ "bg": "wind_in",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 17,
+   "y": 27,
+   "to": "wind_dungeon",
+   "tx": 13,
+   "ty": 23,
+   "face": "down"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "wind_dungeon2_c0",
+   "x": 6,
+   "y": 23,
+   "item": "gear:staff_of_the_open_sky"
+  },
+  {
+   "id": "wind_dungeon2_c1",
+   "x": 14,
+   "y": 1,
+   "item": "elixir"
+  },
+  {
+   "id": "wind_dungeon2_c2",
+   "x": 26,
+   "y": 13,
+   "item": "gear:updraft_mantle"
+  }
+ ],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "corvane",
+   "kind": "boss",
+   "x": 15,
+   "y": 12,
+   "sprite": "corvane",
+   "name": "Corvane, Keeper of Cages",
+   "world": "wind",
+   "cond": [
+    "q:main_wind=active",
+    "!flag:beat_corvane"
+   ],
+   "pre": [
+    "Cages hang everywhere, each one holding a trapped breeze. In the center, a man in gold armor with broken wings.",
+    "CORVANE: \"I flew once. Higher than anyone. Then I fell. Do you know how far it is to the ground? I do.\"",
+    "CORVANE: \"Nobody falls if nobody flies. I'm keeping them SAFE. Why does nobody thank me?\""
+   ],
+   "post": [
+    "The cages swing open. A thousand winds pour out, and the whole Aviary sings.",
+    "CORVANE: \"...It's loud. I forgot how loud the sky is.\" He almost smiles.",
+    "The Wind Heartstone hums like an open sky.",
+    "Beside the Heart, a crude goblin totem crumbles to dust. King Goblin's mark."
+   ],
+   "win_do": [
+    "set:beat_corvane"
+   ],
+   "encounter": "enc_corvane"
+  }
+ ],
+ "start": [
+  17,
+  26
+ ],
+ "habitat": []
+}

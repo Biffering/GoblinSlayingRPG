@@ -1,0 +1,73 @@
+{
+ "id": "stone_house1",
+ "name": "Copperdeep: A Cozy House",
+ "world": "stone",
+ "kind": "interior",
+ "w": 12,
+ "h": 9,
+ "tiles": [
+  "############",
+  "##kk##i##p##",
+  "#__________#",
+  "#________B_#",
+  "#__ouo___B_#",
+  "#__________#",
+  "#___rrrr___#",
+  "#z__rrrr__z#",
+  "######m#####"
+ ],
+ "music": "stone_town",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 6,
+   "y": 8,
+   "to": "stone_town",
+   "tx": 33,
+   "ty": 26,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "stone_h1",
+   "name": "Miner's Widow Pell",
+   "look": {
+    "body": "woman",
+    "hair": "#3a3a3a",
+    "outfit": "#5a4a3a",
+    "accent": "#c0a040",
+    "skin": 2,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "My husband kept his savings under the floor, like everyone. I never found his."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 7,
+   "y": 3
+  }
+ ],
+ "chests": [
+  {
+   "id": "stone_house1_c0",
+   "x": 10,
+   "y": 6,
+   "item": "gear:golem_core"
+  }
+ ],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  6,
+  7
+ ]
+}

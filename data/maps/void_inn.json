@@ -1,0 +1,109 @@
+{
+ "id": "void_inn",
+ "name": "Lastlight: Inn",
+ "world": "void",
+ "kind": "interior",
+ "w": 16,
+ "h": 11,
+ "tiles": [
+  "################",
+  "##y###y#p#y#####",
+  "#______________#",
+  "#_ccccc__Bu_Bu_#",
+  "#________B__B__#",
+  "#______________#",
+  "#_____rrrr_____#",
+  "#_____rrrr_____#",
+  "#_____rrrr_____#",
+  "#_z__________z_#",
+  "########m#######"
+ ],
+ "music": "void_inn",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 8,
+   "y": 10,
+   "to": "void_town",
+   "tx": 32,
+   "ty": 8,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "inn_void_k",
+   "name": "Innkeeper Hush",
+   "look": {
+    "body": "man",
+    "hair": "#4a4a5a",
+    "outfit": "#3a3a4a",
+    "accent": "#c0c0c0",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "The Anchor. We tie a string to your toe so you don't drift in your sleep."
+     ],
+     "ask": {
+      "q": "Rest for 20 gold?",
+      "yes": {
+       "say": [
+        "You sleep deeply. Everyone feels restored."
+       ],
+       "do": [
+        "inn:20"
+       ]
+      },
+      "no": {
+       "say": [
+        "Come back when you're weary."
+       ]
+      }
+     }
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 4,
+   "y": 2
+  },
+  {
+   "id": "void_guest",
+   "name": "Sleepy Traveler",
+   "look": {
+    "body": "man",
+    "hair": "#5a4a3a",
+    "outfit": "#4a5a6a",
+    "accent": "#c0b080",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Best sleep I've had in weeks. Resting here heals everyone in your party, even the ones at home."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 3,
+   "y": 7
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  8,
+  9
+ ]
+}

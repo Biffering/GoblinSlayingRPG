@@ -1,0 +1,104 @@
+{
+ "id": "spirit_side",
+ "name": "The Quiet Crypt",
+ "world": "spirit",
+ "kind": "dungeon",
+ "w": 30,
+ "h": 22,
+ "tiles": [
+  "##############################",
+  "####tt#########t##############",
+  "###______####_____##_______###",
+  "###_b____t###_____##_______###",
+  "###_______________tt_______###",
+  "###______####______________###",
+  "###______####_____##_______###",
+  "######_######_____##_____C_###",
+  "######_######_____##_______###",
+  "######_######_____####_#######",
+  "###tt#_########_######_#######",
+  "##______#######_######_#######",
+  "##_C__P_#######_######_#######",
+  "##______####____######_#######",
+  "##______####b___###_______####",
+  "##______####____###_P___C_####",
+  "##______####__b_###_______####",
+  "##_P__P_####____###_______####",
+  "##______######_####_P___P_####",
+  "##############_####_______####",
+  "##############_###############",
+  "##############>###############"
+ ],
+ "music": "spirit_dungeon",
+ "bg": "spirit_in",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 14,
+   "y": 21,
+   "to": "spirit_house3",
+   "tx": 2,
+   "ty": 2,
+   "face": "right"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "spirit_side_c0",
+   "x": 8,
+   "y": 5,
+   "item": "gear:iriss_chisel"
+  },
+  {
+   "id": "spirit_side_c1",
+   "x": 21,
+   "y": 14,
+   "item": "hi_potion:2"
+  },
+  {
+   "id": "spirit_side_c2",
+   "x": 17,
+   "y": 8,
+   "item": "gear:candle_mail"
+  },
+  {
+   "id": "spirit_side_c3",
+   "x": 23,
+   "y": 5,
+   "item": "ether:2"
+  }
+ ],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "lantern_wraith",
+   "kind": "mini",
+   "x": 5,
+   "y": 15,
+   "sprite": "lantern_wraith",
+   "name": "The Lantern Wraith",
+   "world": "spirit",
+   "cond": [
+    "!flag:beat_lantern_wraith"
+   ],
+   "pre": [
+    "A hooded wraith drifts between the tombs, carrying a lantern that burns white.",
+    "WRAITH: \"Shh. They're sleeping. They were never finished. Neither am I.\""
+   ],
+   "post": [
+    "The wraith sets its lantern down gently on a tomb, and fades.",
+    "The crypt feels warmer. Like someone finally left a light on."
+   ],
+   "win_do": [
+    "set:beat_lantern_wraith"
+   ],
+   "encounter": "enc_lantern_wraith"
+  }
+ ],
+ "start": [
+  14,
+  20
+ ],
+ "habitat": []
+}

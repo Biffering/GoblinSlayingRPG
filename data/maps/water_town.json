@@ -1,0 +1,824 @@
+{
+ "id": "water_town",
+ "name": "Saltmere",
+ "world": "water",
+ "kind": "town",
+ "w": 40,
+ "h": 30,
+ "tiles": [
+  "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+  "TTTT.TTT...TT..TTT...TT.....T.T....T...T",
+  "T..RRRRRRRRR..........\"..F..RRRRRRRRR\".T",
+  "T..RRRRRRRRR~~~~~..O,.\".....RRRRRRRRR\".T",
+  "T..RRRRRRRRR~~~~~.l,,l.\"\".\".RRRRRRRRRF.T",
+  "T.\"RRRRRRRRR.....\".,,....F..RRRRRRRRR..T",
+  "T..HWHWHWHWH.....\".,,.......HWHWHWHWH..T",
+  "T.FHHHHdHHHH.......,,....F..HHHHdHHHH..T",
+  "T.F\"...,.......\"\"..,,...\".....\".,......T",
+  "T..,,,,,,,,,,l,,,,,,,,,,,,l,,,,,,,,,...T",
+  "T..F..........,,,,,,,,,,,,.F..\"........T",
+  "T~~~~~~.l.....,,n,,,,,,n,,...\".l.~~~~~~T",
+  "T~~~~~~.......,,,,,,,,,,,,.......~~~~~~T",
+  "T.\"RRRRRRRR...,,,,,ww,,,,,F..RRRRRRRR\".T",
+  "T..RRRRRRRR..F,,,,,ww,,,,,...RRRRRRRR..T",
+  "T.\"RRRRRRRR...,,,,,,,,,,,,...RRRRRRRR..T",
+  "T..WHWHWHWH\"..,,,,,,,,,,,,...WHWHWHWH..T",
+  "T..HHHdHHHH...,,n,,,,,,n,,...HHHdHHHH..T",
+  "T.....,...\".\".,,,,,,,,,,,,......,......T",
+  "T..,,,,,,,,,,l,,,,,,,,,,,,l,,,,,,,,,...T",
+  "T........F...,.....,,...,\".........FFF.T",
+  "T..RRRRRRR.F.,.....,,...,.....RRRRRRR..T",
+  "T..RRRRRRR.RR,RRR.\",,\"RR,RRR..RRRRRRR..T",
+  "T..RRRRRRR.RR,RRR.F,,.RR,RRR..RRRRRRR..T",
+  "T..HWHWHWH.RR,RRR..,,.RR,RRR..HWHWHWH..T",
+  "T..HHHdHHH.WH,HWH..,,.WH,HWHF.HHHdHHH..T",
+  "T.....,.\"..HHdHHH.F,,.HHdHHH.....,.....T",
+  "T............,..\"..,,\"ff,Fff.....\".....T",
+  "T..................,,..................T",
+  "TTTTTTTTTTTTTTTTTTT,,TTTTTTTTTTTTTTTTTTT"
+ ],
+ "music": "water_town",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 19,
+   "y": 3,
+   "to": "nexus",
+   "tx": 21,
+   "ty": 6,
+   "face": "down"
+  },
+  {
+   "x": 32,
+   "y": 7,
+   "to": "water_inn",
+   "tx": 8,
+   "ty": 9,
+   "face": "up"
+  },
+  {
+   "x": 7,
+   "y": 7,
+   "to": "water_tavern",
+   "tx": 9,
+   "ty": 10,
+   "face": "up"
+  },
+  {
+   "x": 32,
+   "y": 17,
+   "to": "water_pawn",
+   "tx": 7,
+   "ty": 8,
+   "face": "up"
+  },
+  {
+   "x": 6,
+   "y": 17,
+   "to": "water_items",
+   "tx": 7,
+   "ty": 8,
+   "face": "up"
+  },
+  {
+   "x": 33,
+   "y": 25,
+   "to": "water_house1",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 6,
+   "y": 25,
+   "to": "water_house2",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 24,
+   "y": 26,
+   "to": "water_house3",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 13,
+   "y": 26,
+   "to": "water_house4",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 20,
+   "y": 29,
+   "to": "water_field",
+   "tx": 23,
+   "ty": 32,
+   "face": "up"
+  },
+  {
+   "x": 19,
+   "y": 29,
+   "to": "water_field",
+   "tx": 23,
+   "ty": 32,
+   "face": "up"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "quill",
+   "name": "Harbormaster Quill",
+   "look": {
+    "body": "man",
+    "hair": "#c0c0c0",
+    "outfit": "#1a3a6a",
+    "accent": "#e0d090",
+    "skin": 1,
+    "hat": "cap",
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [
+      "q:main_water=none"
+     ],
+     "say": [
+      "Harbormaster Quill. Not that there's a harbor anymore. The tide came in a year ago and never went out.",
+      "Maren, the Mother of Tides, lost her child to a storm. Since then she won't let the sea leave. Not even an inch.",
+      "Everything she can't bear to lose, she drowns. Our docks. Our boats. Our goodbyes.",
+      "Her lair is the Sunken Cradle, past the Weeping Shoals. Someone has to tell her it's time."
+     ],
+     "do": [
+      "quest:main_water"
+     ]
+    },
+    {
+     "if": [
+      "q:main_water=active",
+      "!flag:beat_maren"
+     ],
+     "say": [
+      "The Sunken Cradle is at the far end of the Weeping Shoals.",
+      "Water folk hate stone. Ask any fisherman who's hit a reef.",
+      "The way there is long: through the Weeping Shoals, then the Weeping Falls, and down into its depths."
+     ]
+    },
+    {
+     "if": [
+      "q:main_water=ready"
+     ],
+     "say": [
+      "Do you hear that? That's the tide going OUT. I'd forgotten the sound.",
+      "Here, the Water Heartstone, and some coin. The harbor will be open by morning."
+     ],
+     "do": [
+      "done:main_water",
+      "give:heart_water",
+      "gold:400",
+      "give:ether:2"
+     ]
+    },
+    {
+     "if": [
+      "q:main_water=done"
+     ],
+     "say": [
+      "Ships are leaving again. Some of them won't come back. That's how the sea works."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 19,
+   "y": 8
+  },
+  {
+   "id": "nerissa",
+   "name": "Nerissa",
+   "look": {
+    "body": "woman",
+    "hair": "#2a6a8a",
+    "outfit": "#1a4a7a",
+    "accent": "#f0f0e0",
+    "skin": 0,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "!member:nerissa"
+     ],
+     "say": [
+      "I keep the lighthouse on the point. Kept. It's been dark for a month.",
+      "Something in the Drowned Grotto stole the lens. I've seen its light moving down there, luring sailors.",
+      "I'm a healer, mostly. But I'm not afraid of the dark. Not my dark, anyway."
+     ],
+     "ask": {
+      "q": "Let Nerissa join your party?",
+      "yes": {
+       "say": [
+        "NERISSA: \"Then let's go turn the light back on.\"",
+        "Nerissa joined the party! Gloomfin lurks in the Drowned Grotto, off the Weeping Shoals."
+       ],
+       "do": [
+        "recruit:nerissa",
+        "quest:comp_water",
+        "sfx:recruit"
+       ]
+      },
+      "no": {
+       "say": [
+        "NERISSA: \"I understand. I'll keep watch from here.\""
+       ]
+      }
+     }
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "cond": [
+    "!member:nerissa"
+   ],
+   "x": 24,
+   "y": 12
+  },
+  {
+   "id": "odile",
+   "name": "Odile the Netmender",
+   "look": {
+    "body": "woman",
+    "hair": "#8a5a3a",
+    "outfit": "#3a5a5a",
+    "accent": "#d0c0a0",
+    "skin": 2,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "q:side_water=none"
+     ],
+     "say": [
+      "Every net I cast in the Shoals comes back knotted into sailor's loops. Every one!",
+      "It's Captain Corrow's ghost. He lost his crew out there and he won't stop hauling.",
+      "Set him free and I'll give you the coat I wove for my husband. He'd want it worn."
+     ],
+     "do": [
+      "quest:side_water"
+     ]
+    },
+    {
+     "if": [
+      "q:side_water=active",
+      "!flag:beat_drowned_captain"
+     ],
+     "say": [
+      "Corrow walks the waterline in the Weeping Shoals. Magic works best on ghosts."
+     ]
+    },
+    {
+     "if": [
+      "q:side_water=ready"
+     ],
+     "say": [
+      "My nets came back empty this morning. Just empty! Wonderful!",
+      "The Tideguard Coat. It's never lost a sailor. Don't be the first."
+     ],
+     "do": [
+      "done:side_water",
+      "give:gear:tideguard_coat",
+      "sfx:chest"
+     ]
+    },
+    {
+     "if": [
+      "q:side_water=done"
+     ],
+     "say": [
+      "Fish for supper tonight. First time in a year."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 14,
+   "y": 12
+  },
+  {
+   "id": "pell_m",
+   "name": "Old Mother Pell",
+   "look": {
+    "body": "elder",
+    "hair": "#e8e8e8",
+    "outfit": "#3a4a8a",
+    "accent": "#e0a0a0",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "My sweetheart proposed to me under the whale's ribs out in the Shoals, oh, sixty years ago.",
+      "He was so nervous. After I said yes, he walked two strides toward the sunrise and one toward the warm water.",
+      "Buried something there, he did. Said it was 'in case you'd said no.' A consolation prize, for himself.",
+      "We never dug it up. Didn't need to. Silly man. I miss him."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 27,
+   "y": 19
+  },
+  {
+   "id": "tobiah",
+   "name": "Old Tobiah",
+   "look": {
+    "body": "elder",
+    "hair": "#b0b0b0",
+    "outfit": "#2a3a4a",
+    "accent": "#c0a060",
+    "skin": 2,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [
+      "q:key_water=none"
+     ],
+     "say": [
+      "My girl loved the grotto. She'd sit at the bottom and wind her little music box. Three notes, over and over.",
+      "The tide took her. The box is still down there, in the Drowned Grotto.",
+      "Bring it back to me and I'll give you the key she found on the shore. She said it was 'the key to remembering.'"
+     ],
+     "do": [
+      "quest:key_water"
+     ]
+    },
+    {
+     "if": [
+      "q:key_water=active",
+      "!item:music_box"
+     ],
+     "say": [
+      "The Drowned Grotto. West of the Shoals. Mind the dark."
+     ]
+    },
+    {
+     "if": [
+      "q:key_water=ready"
+     ],
+     "say": [
+      "...Three notes. Then it stops, like it's waiting for the rest.",
+      "Here. The Key of Memory. She'd want it to open something."
+     ],
+     "do": [
+      "take:music_box",
+      "done:key_water",
+      "give:key_memory",
+      "sfx:key"
+     ]
+    },
+    {
+     "if": [
+      "q:key_water=done"
+     ],
+     "say": [
+      "I wind it every night. Three notes. I hum the rest."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 11,
+   "y": 19
+  },
+  {
+   "id": "water_f1",
+   "name": "Fisherman",
+   "look": {
+    "body": "man",
+    "hair": "#4a3a2a",
+    "outfit": "#4a6a8a",
+    "accent": "#e0e0a0",
+    "skin": 1,
+    "hat": "cap",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "The brine beasts out there? Hate rocks. Throw stone at 'em, they sink like... well, stones."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 22,
+   "y": 18
+  },
+  {
+   "id": "water_f2",
+   "name": "Lonely Sailor",
+   "look": {
+    "body": "man",
+    "hair": "#2a2a2a",
+    "outfit": "#1a2a4a",
+    "accent": "#c0c0c0",
+    "skin": 2,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "I had a boat. Then the tide came and wouldn't leave. Now I have a very wet house."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 16,
+   "y": 9
+  },
+  {
+   "id": "water_f3",
+   "name": "Girl with Shells",
+   "look": {
+    "body": "child",
+    "hair": "#c0602a",
+    "outfit": "#3a8ab0",
+    "accent": "#f0f0f0",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "I collect shells. Every shell used to be a home for something. That makes me sad and happy at the same time."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 28,
+   "y": 11
+  },
+  {
+   "id": "water_f4",
+   "name": "Lighthouse Watcher",
+   "look": {
+    "body": "woman",
+    "hair": "#3a2a2a",
+    "outfit": "#5a5a7a",
+    "accent": "#f0d060",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "!flag:beat_gloomfin"
+     ],
+     "say": [
+      "The lighthouse has been dark for weeks. Ships keep running aground on the point."
+     ]
+    },
+    {
+     "if": [],
+     "say": [
+      "The light's back on! Nerissa did it. Well, you helped."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 9,
+   "y": 11
+  },
+  {
+   "id": "amb_water_0",
+   "name": "Fisher",
+   "look": {
+    "body": "woman",
+    "hair": "#d8a050",
+    "outfit": "#5a6a7a",
+    "accent": "#d8c090",
+    "skin": 2,
+    "hat": "cap",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Pirates took my brother's boat. I took up fishing. Fair trade, I suppose.",
+      "Quiet. You'll scare them off."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 2,
+   "y": 10,
+   "ambient": true,
+   "job": "fish",
+   "jface": "down"
+  },
+  {
+   "id": "amb_water_1",
+   "name": "Fisher",
+   "look": {
+    "body": "woman",
+    "hair": "#2a1a12",
+    "outfit": "#1e3a4a",
+    "accent": "#8ab0c0",
+    "skin": 0,
+    "hat": "wide",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Pulled up a goblin's boot this morning. Foot was still in it."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 5,
+   "y": 10,
+   "ambient": true,
+   "job": "fish",
+   "jface": "down"
+  },
+  {
+   "id": "amb_water_2",
+   "name": "Fisher",
+   "look": {
+    "body": "woman",
+    "hair": "#4a3020",
+    "outfit": "#2a4a6a",
+    "accent": "#8ab0c0",
+    "skin": 4,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Quiet. You'll scare them off."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 34,
+   "y": 10,
+   "ambient": true,
+   "job": "fish",
+   "jface": "down"
+  },
+  {
+   "id": "amb_water_3",
+   "name": "Fisher",
+   "look": {
+    "body": "woman",
+    "hair": "#8a6a4a",
+    "outfit": "#1e3a4a",
+    "accent": "#d8c090",
+    "skin": 4,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Quiet. You'll scare them off."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 37,
+   "y": 10,
+   "ambient": true,
+   "job": "fish",
+   "jface": "down"
+  },
+  {
+   "id": "amb_water_4",
+   "name": "Fisher",
+   "look": {
+    "body": "elder",
+    "hair": "#8a6a4a",
+    "outfit": "#3a5a5a",
+    "accent": "#d8c090",
+    "skin": 0,
+    "hat": "cap",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Pulled up a goblin's boot this morning. Foot was still in it."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 14,
+   "y": 2,
+   "ambient": true,
+   "job": "fish",
+   "jface": "down"
+  },
+  {
+   "id": "amb_water_5",
+   "name": "Clam Digger",
+   "look": {
+    "body": "woman",
+    "hair": "#4a3020",
+    "outfit": "#2a4a6a",
+    "accent": "#c0a060",
+    "skin": 2,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Found a ring. Owner won't be needing it."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 1,
+   "y": 18,
+   "ambient": true,
+   "job": "dig",
+   "jface": "down"
+  },
+  {
+   "id": "amb_water_6",
+   "name": "Gardener",
+   "look": {
+    "body": "woman",
+    "hair": "#d8a050",
+    "outfit": "#1e3a4a",
+    "accent": "#c0a060",
+    "skin": 4,
+    "hat": "wide",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Mind the petals, slayer."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "right",
+   "x": 34,
+   "y": 20,
+   "ambient": true,
+   "job": "water",
+   "jface": "right"
+  },
+  {
+   "id": "amb_water_7",
+   "name": "Townsfolk",
+   "look": {
+    "body": "man",
+    "hair": "#2a1a12",
+    "outfit": "#2a4a6a",
+    "accent": "#c0a060",
+    "skin": 3,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Did you hear screaming last night? Me neither."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 25,
+   "y": 13,
+   "ambient": true,
+   "roam": 5
+  },
+  {
+   "id": "amb_water_8",
+   "name": "Townsfolk",
+   "look": {
+    "body": "woman",
+    "hair": "#2a1a12",
+    "outfit": "#3a5a5a",
+    "accent": "#c0a060",
+    "skin": 0,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Keep your blade close after dark.",
+      "Lovely weather. For a funeral."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 14,
+   "y": 13,
+   "ambient": true,
+   "roam": 5
+  },
+  {
+   "id": "amb_water_9",
+   "name": "Townsfolk",
+   "look": {
+    "body": "elder",
+    "hair": "#4a3020",
+    "outfit": "#1e3a4a",
+    "accent": "#8ab0c0",
+    "skin": 3,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "My uncle went to the Wilds. Came back wrong."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 10,
+   "y": 19,
+   "ambient": true,
+   "roam": 5
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  19,
+  4
+ ],
+ "signs": [
+  {
+   "x": 33,
+   "y": 6,
+   "tile": "sign_inn"
+  },
+  {
+   "x": 8,
+   "y": 6,
+   "tile": "sign_tavern"
+  },
+  {
+   "x": 33,
+   "y": 16,
+   "tile": "sign_pawn"
+  },
+  {
+   "x": 7,
+   "y": 16,
+   "tile": "sign_items"
+  }
+ ]
+}

@@ -1,0 +1,107 @@
+{
+ "id": "wind_area2",
+ "name": "Cloud Steppes",
+ "world": "wind",
+ "kind": "field",
+ "w": 46,
+ "h": 34,
+ "tiles": [
+  "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+  "TTTTTTTTTTTTTTTTT^TTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+  "TT..TTT...T\"...\"^E^.TTTTT.....\"..\".^........TT",
+  "TT.\".T^.T.TTT....,..T.TTT.\"...\"...^^.....\"..TT",
+  "TT...^^^T.TTT....,..T^TTT........^^^^^\".....TT",
+  "TT\"...^TTTT^TT.\".,TT^^^TT\".........^^.....^TTT",
+  "TT..^^^^TTTTT..\".,.^^^^TT\"......\"..^.\"...^^^TT",
+  "TT\"..^..TTTTT^...,.\"^TTTT........\"........^^TT",
+  "TT\"..^^.^^T^T.^^.,\".TTTTTT......\"........T.^TT",
+  "TT...\"^^^^^TTT^^^,..TTTTTTT..............\"T^TT",
+  "TT......^^T~T^T^^,.TTTTTTTT.\".............TTTT",
+  "TT.\"...^~~~~~~~^^,..T..TTTT.....~..........TTT",
+  "TTKKKKKVVVVVVVVVKYKKKKKKKKKKKYYVVVVKKKKKKKKKTT",
+  "TTKKKKKVVVVVVVVVKYKKKKKKKKKKKYYVVVVVKKKKKKKKTT",
+  "TT..\".~~~~~~~~~~.,,....T..T..\"\"~~~~^..\"\"..^\"TT",
+  "TT...~~~~~~~~~~~..,.....TTTTT.\".~^^^^...^TT^TT",
+  "TT\".~~~~~~~~~~~~.\",,..\"..TTTT....^.^...^^TTTTT",
+  "TT..~~~~~~~~~~~..\"\",,.\"TTT...T....^...\"^TTTTTT",
+  "TT.~~~~~~~~~~~\".....,...TTTTT.........TT^TTTTT",
+  "TT..~~~~~~~~~.\"....\",\"..T.TTT....\".....^TTTTTT",
+  "TT\"\"~~~~~\"\"~~\".....\",...\".T............TTTTTTT",
+  "TTKKKVVVVYYVKKKKKKKKYYKKKKKKKKKKKKKKKKKKKKKKTT",
+  "TTKKKKKKVYYKKKKKKKKKKYKKKKKKKKKKKKKKKKKKKKKKTT",
+  "TT.\"\".....\"..........,....\"........\"........TT",
+  "TT\"..................,,.....\".......\"...\"...TT",
+  "TT...\"........\"....\".\",.TTTTT....\"..\"....\"..TT",
+  "TT....\"\".\"........\"..\",TT.TTTT.T.T...\".\"....TT",
+  "TT.........\"...\"......,T.TTTTTTTTTTT........TT",
+  "TT...\"\"...............,.T.TTT.TTTT.T..\"\"..\".TT",
+  "TT....\".\"....\".....TTT,TTTTTTTTTTTTT........TT",
+  "TT......\"..........TTT,TT.TTTT.TTTTT....T...TT",
+  "TT.........\"....\"\"T\"..,,...TT.TTTTTT.\"TTTTT.TT",
+  "TT.\"...............TT..,..T\"\"....T....TTTT..TT",
+  "TTTTTTTTTTTTTTTTTTTTTT,,TTTTTTTTTTTTTTTTTTTTTT"
+ ],
+ "music": "wind_field",
+ "bg": "wind_out",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 23,
+   "y": 33,
+   "to": "wind_field",
+   "tx": 32,
+   "ty": 3,
+   "face": "down"
+  },
+  {
+   "x": 22,
+   "y": 33,
+   "to": "wind_field",
+   "tx": 32,
+   "ty": 3,
+   "face": "down"
+  },
+  {
+   "x": 17,
+   "y": 2,
+   "to": "wind_dungeon",
+   "tx": 24,
+   "ty": 28,
+   "face": "up"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "wind_area2_c0",
+   "x": 39,
+   "y": 25,
+   "item": "gear:wings_of_kitefall"
+  },
+  {
+   "id": "wind_area2_c1",
+   "x": 18,
+   "y": 25,
+   "item": "gear:hawk_talon"
+  },
+  {
+   "id": "wind_area2_c2",
+   "x": 8,
+   "y": 30,
+   "item": "hi_potion"
+  },
+  {
+   "id": "wind_area2_c3",
+   "x": 32,
+   "y": 26,
+   "item": "gear:kestrel_blade"
+  }
+ ],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  23,
+  32
+ ],
+ "habitat": []
+}

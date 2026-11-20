@@ -1,0 +1,70 @@
+{
+ "id": "water_items",
+ "name": "Saltmere: Item Shop",
+ "world": "water",
+ "kind": "interior",
+ "w": 14,
+ "h": 10,
+ "tiles": [
+  "##############",
+  "##i###i###i###",
+  "#qqq______qqq#",
+  "#___cccccc___#",
+  "#___________q#",
+  "#____rrrr____#",
+  "#x___rrrr___z#",
+  "#x___rrrr____#",
+  "#____________#",
+  "#######m######"
+ ],
+ "music": "water_shop",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 7,
+   "y": 9,
+   "to": "water_town",
+   "tx": 6,
+   "ty": 18,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "items_water_k",
+   "name": "Herbalist Ama",
+   "look": {
+    "body": "woman",
+    "hair": "#1a1a1a",
+    "outfit": "#2a6a5a",
+    "accent": "#f0a0c0",
+    "skin": 2,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Seaweed tonics and proper potions. The proper ones taste better."
+     ],
+     "do": [
+      "shop:items"
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 6,
+   "y": 2
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  7,
+  8
+ ]
+}

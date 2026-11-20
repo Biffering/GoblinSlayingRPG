@@ -1,0 +1,70 @@
+{
+ "id": "wind_pawn",
+ "name": "Kitefall: Pawn Shop",
+ "world": "wind",
+ "kind": "interior",
+ "w": 14,
+ "h": 10,
+ "tiles": [
+  "##############",
+  "##y###y###i###",
+  "#jjj______jJj#",
+  "#___cccccc___#",
+  "#____________#",
+  "#j__rrrrrr__X#",
+  "#J__rrrrrr__X#",
+  "#___rrrrrr___#",
+  "#____________#",
+  "#######m######"
+ ],
+ "music": "wind_shop",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 7,
+   "y": 9,
+   "to": "wind_town",
+   "tx": 7,
+   "ty": 18,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "pawn_wind_k",
+   "name": "Pawnbroker Finch",
+   "look": {
+    "body": "woman",
+    "hair": "#3a6a3a",
+    "outfit": "#5a7a6a",
+    "accent": "#e0e0e0",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Light gear for light feet. Everything here weighs less than your worries."
+     ],
+     "do": [
+      "shop:pawn_wind"
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 6,
+   "y": 2
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  7,
+  8
+ ]
+}

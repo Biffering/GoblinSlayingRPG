@@ -1,0 +1,216 @@
+{
+ "id": "fire_tavern",
+ "name": "Emberfall: The Bellows & Barrel",
+ "world": "fire",
+ "kind": "interior",
+ "w": 18,
+ "h": 12,
+ "tiles": [
+  "##################",
+  "##igggi###y###p###",
+  "#_e___ec_________#",
+  "#______c_________#",
+  "#_cccccc__ouoouo_#",
+  "#________________#",
+  "#________________#",
+  "#________________#",
+  "#__ouo____ouoouo_#",
+  "#_______________x#",
+  "#X______________x#",
+  "#########m########"
+ ],
+ "music": "fire_tavern",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 9,
+   "y": 11,
+   "to": "fire_town",
+   "tx": 32,
+   "ty": 8,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "barkeep_fire",
+   "name": "Barkeep Coal",
+   "look": {
+    "body": "man",
+    "hair": "#1a1a1a",
+    "outfit": "#8a3a1a",
+    "accent": "#f0c040",
+    "skin": 2,
+    "hat": null,
+    "beard": true
+   },
+   "wander": false,
+   "face": "down",
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Welcome to the Bellows & Barrel. Eat something hot, you'll fight hotter."
+     ],
+     "do": [
+      "shop:tavern_fire"
+     ]
+    }
+   ],
+   "x": 4,
+   "y": 3
+  },
+  {
+   "id": "bard_fire",
+   "name": "Lyre-Player Fenn",
+   "look": {
+    "body": "man",
+    "hair": "#e0a040",
+    "outfit": "#a03060",
+    "accent": "#f0e0a0",
+    "skin": 0,
+    "hat": "wide",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "~ Down below the mountain, where the red rock runs... ~",
+      "Ever notice how the best treasure's always under something? Floors. Waterfalls. People."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 15,
+   "y": 3
+  },
+  {
+   "id": "patron_fire2",
+   "name": "Sooty Miner",
+   "look": {
+    "body": "man",
+    "hair": "#3a2a1a",
+    "outfit": "#5a4a3a",
+    "accent": "#a0a0a0",
+    "skin": 2,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "The Ashen Wilds trail goes down the mountain, then under it. The Magma Tunnels.",
+      "That's the only way to the Envy Forge now. Bring water magic. Lots."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 5,
+   "y": 9
+  },
+  {
+   "id": "patron_fire3",
+   "name": "Arm-Wrestler Brunna",
+   "look": {
+    "body": "woman",
+    "hair": "#c04020",
+    "outfit": "#6a2a1a",
+    "accent": "#e0c060",
+    "skin": 2,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Monsters out there drop weapons sometimes. Their old owners', I'd guess.",
+      "Tan-glow stuff's common. Magenta's rare. Gold?",
+      "If you ever see a gold glow, hold onto it. That's legendary."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 15,
+   "y": 9
+  },
+  {
+   "id": "orrin",
+   "name": "Old Furnace-Hand Orrin",
+   "look": {
+    "body": "elder",
+    "hair": "#a0a0a0",
+    "outfit": "#5a3a2a",
+    "accent": "#e08030",
+    "skin": 2,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [
+      "q:side2_fire=none"
+     ],
+     "say": [
+      "Brannoc built a vault under his house, you know. Kept his best work down there.",
+      "Since he passed, something's moved in. Rats. Big ones. And they glow.",
+      "Hesta can't sleep for the gnawing. Her house is the one with the little garden, south side.",
+      "The cellar stairs are in the corner. Clear it out and I'll pay you in something better than gold."
+     ],
+     "do": [
+      "quest:side2_fire"
+     ]
+    },
+    {
+     "if": [
+      "q:side2_fire=active"
+     ],
+     "say": [
+      "The cellar stairs are in the corner of Hesta's house. Watch for the one with the crown."
+     ]
+    },
+    {
+     "if": [
+      "q:side2_fire=ready"
+     ],
+     "say": [
+      "The gnawing's stopped? Ha! Hesta will sleep tonight.",
+      "Brannoc wanted his best piece to go to someone who'd use it.",
+      "Take it. (Phoenix Longbow)"
+     ],
+     "do": [
+      "done:side2_fire",
+      "give:gear:phoenix_longbow",
+      "gold:300",
+      "sfx:chest"
+     ]
+    },
+    {
+     "if": [
+      "q:side2_fire=done"
+     ],
+     "say": [
+      "Brannoc's vault is quiet. Good. Some places should be."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 12,
+   "y": 5
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  9,
+  10
+ ]
+}

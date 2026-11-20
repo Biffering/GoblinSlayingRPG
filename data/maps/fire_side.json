@@ -1,0 +1,104 @@
+{
+ "id": "fire_side",
+ "name": "Brannoc's Vault",
+ "world": "fire",
+ "kind": "dungeon",
+ "w": 30,
+ "h": 22,
+ "tiles": [
+  "##############################",
+  "##############################",
+  "##############################",
+  "##t#tt########tt##############",
+  "##_______###____b_############",
+  "##_C_____###_C__C_#______#####",
+  "##_______###________P__P_#####",
+  "##___________C__C_#______#####",
+  "##_C_____###______#____P_#####",
+  "##_______##########______#####",
+  "#####_##################_#####",
+  "####____#############______###",
+  "####____####t#t##t###______###",
+  "####____###_______###______###",
+  "####____###bP___P_###______###",
+  "####____###_______###______###",
+  "####______________###______###",
+  "###########_C__b__###______###",
+  "###########_______############",
+  "##############_###############",
+  "##############_###############",
+  "##############>###############"
+ ],
+ "music": "fire_dungeon",
+ "bg": "fire_in",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 14,
+   "y": 21,
+   "to": "fire_house3",
+   "tx": 2,
+   "ty": 2,
+   "face": "right"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "fire_side_c0",
+   "x": 15,
+   "y": 4,
+   "item": "gear:eye_of_the_envious"
+  },
+  {
+   "id": "fire_side_c1",
+   "x": 20,
+   "y": 9,
+   "item": "hi_potion:2"
+  },
+  {
+   "id": "fire_side_c2",
+   "x": 4,
+   "y": 11,
+   "item": "gear:bellows_gem"
+  },
+  {
+   "id": "fire_side_c3",
+   "x": 8,
+   "y": 8,
+   "item": "ether:2"
+  }
+ ],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "ember_rat_king",
+   "kind": "mini",
+   "x": 24,
+   "y": 14,
+   "sprite": "rat_king",
+   "name": "The Ember Rat King",
+   "world": "fire",
+   "cond": [
+    "!flag:beat_ember_rat_king"
+   ],
+   "pre": [
+    "A heap of glowing rats writhes on a throne of stolen tools. It wears a thimble for a crown.",
+    "EMBER RAT KING: \"Every tool down here is MINE now. The old smith's hoard! Mine!\""
+   ],
+   "post": [
+    "The rat king scatters into a hundred tiny, fleeing embers.",
+    "Brannoc's tools lie quiet again, finally cool."
+   ],
+   "win_do": [
+    "set:beat_ember_rat_king"
+   ],
+   "encounter": "enc_ember_rat_king"
+  }
+ ],
+ "start": [
+  14,
+  20
+ ],
+ "habitat": []
+}

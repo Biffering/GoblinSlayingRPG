@@ -1,0 +1,81 @@
+{
+ "id": "spirit_sanctum",
+ "name": "Sanctum of the Witness",
+ "world": "spirit",
+ "kind": "sanctum",
+ "w": 19,
+ "h": 15,
+ "tiles": [
+  "###################",
+  "#######_____#######",
+  "#####_________#####",
+  "###_____________###",
+  "##___C_______C___##",
+  "##_______________##",
+  "#_______b__bb_____#",
+  "#__C___________C__#",
+  "#____________b____#",
+  "##_______________##",
+  "##___Cb______C___##",
+  "###b____________###",
+  "#####_______b_#####",
+  "#######_____#######",
+  "#########>#########"
+ ],
+ "music": "spirit_dungeon",
+ "bg": "spirit_sanctum",
+ "encounters": false,
+ "exits": [
+  {
+   "x": 9,
+   "y": 14,
+   "to": "spirit_dungeon2",
+   "tx": 28,
+   "ty": 3,
+   "face": "down"
+  }
+ ],
+ "npcs": [],
+ "chests": [],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "aeon",
+   "kind": "omni",
+   "x": 9,
+   "y": 5,
+   "sprite": "aeon",
+   "name": "Aeon, the Witness",
+   "world": "spirit",
+   "cond": [
+    "!flag:beat_aeon"
+   ],
+   "need": [
+    "party>=4"
+   ],
+   "need_fail": [
+    "It doesn't even notice you. You'll need four companions to stand before it."
+   ],
+   "pre": [
+    "Something vast fills the sanctum. It is mostly eyes, and all of them are kind, and all of them are looking at you.",
+    "AEON: \"I have witnessed every life that has ever been lived. I am witnessing yours now.\"",
+    "AEON: \"Show me what you have become. All four of you. Hold nothing back; I will see it anyway.\""
+   ],
+   "post": [
+    "The eyes close one by one, satisfied.",
+    "AEON: \"Seen. Fully seen. I will come when you call, little Kindler.\"",
+    "You can now summon Aeon, the Witness!"
+   ],
+   "win_do": [
+    "set:beat_aeon",
+    "summon:aeon",
+    "done:omni_spirit"
+   ],
+   "encounter": "enc_aeon"
+  }
+ ],
+ "start": [
+  9,
+  13
+ ]
+}

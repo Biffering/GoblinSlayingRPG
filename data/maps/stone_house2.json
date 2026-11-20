@@ -1,0 +1,73 @@
+{
+ "id": "stone_house2",
+ "name": "Copperdeep: A Workshop",
+ "world": "stone",
+ "kind": "interior",
+ "w": 12,
+ "h": 9,
+ "tiles": [
+  "############",
+  "##kk##i##p##",
+  "#__________#",
+  "#________B_#",
+  "#__ouo___B_#",
+  "#__________#",
+  "#___rrrr___#",
+  "#x__rrrr__Q#",
+  "######m#####"
+ ],
+ "music": "stone_town",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 6,
+   "y": 8,
+   "to": "stone_town",
+   "tx": 6,
+   "ty": 26,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "stone_h2",
+   "name": "Gem-Cutter Quill",
+   "look": {
+    "body": "man",
+    "hair": "#d0d0d0",
+    "outfit": "#3a5a3a",
+    "accent": "#80e0a0",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Geodes are ugly until you break them. People too, I find."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 7,
+   "y": 3
+  }
+ ],
+ "chests": [
+  {
+   "id": "stone_house2_c0",
+   "x": 10,
+   "y": 6,
+   "item": "hi_potion:2"
+  }
+ ],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  6,
+  7
+ ]
+}

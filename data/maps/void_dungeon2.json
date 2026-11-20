@@ -1,0 +1,134 @@
+{
+ "id": "void_dungeon2",
+ "name": "The Unmoored Keep: Depths",
+ "world": "void",
+ "kind": "dungeon",
+ "w": 36,
+ "h": 28,
+ "tiles": [
+  "####################################",
+  "##############t#####################",
+  "############_______########t###t####",
+  "#_________##_____P_########______###",
+  "#_______S_##_______########____P_###",
+  "#__________________________b_____###",
+  "#_S_____P_##_____S__#######____P_###",
+  "#_________##________#######______###",
+  "#####_#############_##########_#####",
+  "####t_###########____b########_#####",
+  "#_________#t#t###_____########_#####",
+  "#_______P_________b___########_#####",
+  "#_P_____P_#######_____#_________####",
+  "#_________#########_###_______S_####",
+  "#######_###########_###_______P_####",
+  "#######_###########_###________b####",
+  "#######_###########_#######_########",
+  "#######_###########_#####_____######",
+  "#######_#####_______#####__b__######",
+  "###___b____##b______####t_____######",
+  "###__b_____##____________b____######",
+  "###________##____b_#################",
+  "###________#####_###################",
+  "###________#####_###################",
+  "################_###################",
+  "################_###################",
+  "################_###################",
+  "################>###################"
+ ],
+ "music": "void_dungeon",
+ "bg": "void_in",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 16,
+   "y": 27,
+   "to": "void_dungeon",
+   "tx": 32,
+   "ty": 25,
+   "face": "down"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "void_dungeon2_c0",
+   "x": 12,
+   "y": 4,
+   "item": "gear:mantle_of_presence"
+  },
+  {
+   "id": "void_dungeon2_c1",
+   "x": 18,
+   "y": 12,
+   "item": "elixir"
+  },
+  {
+   "id": "void_dungeon2_c2",
+   "x": 30,
+   "y": 12,
+   "item": "gear:gloom_ring"
+  }
+ ],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "nobody",
+   "kind": "boss",
+   "x": 30,
+   "y": 5,
+   "sprite": "nobody",
+   "name": "Nobody",
+   "world": "void",
+   "cond": [
+    "q:main_void=active",
+    "!flag:beat_nobody"
+   ],
+   "pre": [
+    "A man stands at the window of the Keep, looking at nothing. You can see the room through him.",
+    "NOBODY: \"Oh. Visitors. I'd get up, but I'm not really... in here, at the moment.\"",
+    "NOBODY: \"It doesn't hurt if you're not there for it. You should try it. Let me show you.\""
+   ],
+   "post": [
+    "Nobody flickers, then fills in, like ink soaking into paper. He's a man again. He's crying.",
+    "ALDOUS: \"It hurts. Oh, it hurts. ...But I can feel the floor. I forgot there was a floor.\"",
+    "The Void Heartstone goes quiet, but it's the quiet of someone who's still there.",
+    "Beside the Heart, a crude goblin totem crumbles to dust. King Goblin's mark."
+   ],
+   "win_do": [
+    "set:beat_nobody"
+   ],
+   "encounter": "enc_nobody"
+  },
+  {
+   "id": "seal_void",
+   "kind": "seal",
+   "x": 4,
+   "y": 3,
+   "sprite": "seal_void",
+   "name": "Sealed Door",
+   "world": "void",
+   "cond": [],
+   "keys": [
+    "key_ash",
+    "key_bedrock"
+   ],
+   "flag": "open_sanctum_void",
+   "quest": "omni_void",
+   "locked": [
+    "A black door with no handle. Two keyholes: one smells of ash, one is cold as bedrock.",
+    "Scratched into it: four lines, holding each other up. A door for four, then."
+   ],
+   "open": [
+    "The Keys of Ash and Bedrock turn. The door doesn't open so much as stop existing."
+   ],
+   "to": "void_sanctum",
+   "tx": 9,
+   "ty": 13
+  }
+ ],
+ "start": [
+  16,
+  26
+ ],
+ "habitat": []
+}

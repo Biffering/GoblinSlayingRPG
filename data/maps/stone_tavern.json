@@ -1,0 +1,213 @@
+{
+ "id": "stone_tavern",
+ "name": "Copperdeep: The Honest Tankard",
+ "world": "stone",
+ "kind": "interior",
+ "w": 18,
+ "h": 12,
+ "tiles": [
+  "##################",
+  "##igggy###i###p###",
+  "#_e___ec_________#",
+  "#______c_________#",
+  "#_cccccc__ouoouo_#",
+  "#________________#",
+  "#________________#",
+  "#________________#",
+  "#__ouo____ouoouo_#",
+  "#_______________x#",
+  "#X______________x#",
+  "#########m########"
+ ],
+ "music": "stone_tavern",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 9,
+   "y": 11,
+   "to": "stone_town",
+   "tx": 7,
+   "ty": 8,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "barkeep_stone",
+   "name": "Barkeep Hollis",
+   "look": {
+    "body": "man",
+    "hair": "#5a3a1a",
+    "outfit": "#6a5a4a",
+    "accent": "#c0a040",
+    "skin": 1,
+    "hat": null,
+    "beard": true
+   },
+   "wander": false,
+   "face": "down",
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "The Honest Tankard. No gold leaf on anything. Have a pasty."
+     ],
+     "do": [
+      "shop:tavern_stone"
+     ]
+    }
+   ],
+   "x": 4,
+   "y": 3
+  },
+  {
+   "id": "bard_stone",
+   "name": "Drum-Singer Ama",
+   "look": {
+    "body": "woman",
+    "hair": "#1a1a1a",
+    "outfit": "#6a4a2a",
+    "accent": "#c0e060",
+    "skin": 3,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "~ Dig, dig, the mountain's deep... ~",
+      "Somebody in town hides their savings under the floor. Every miner does. Every one."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 15,
+   "y": 3
+  },
+  {
+   "id": "patron_stone2",
+   "name": "Tired Union Rep",
+   "look": {
+    "body": "man",
+    "hair": "#3a3a3a",
+    "outfit": "#4a5a3a",
+    "accent": "#e0c050",
+    "skin": 2,
+    "hat": "cap",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "The Old Mine Shaft runs under the Hollows. The Gilded Hall's at the bottom.",
+      "Stone things hate wind. Bring a breeze."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 5,
+   "y": 9
+  },
+  {
+   "id": "patron_stone3",
+   "name": "Pickaxe Collector",
+   "look": {
+    "body": "elder",
+    "hair": "#d0d0d0",
+    "outfit": "#5a4a3a",
+    "accent": "#a0a0a0",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Monsters down there drop iron like it's nothing. Fight a few; you'll find a pick or a bow worth keeping."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 15,
+   "y": 9
+  },
+  {
+   "id": "bram_s",
+   "name": "Foreman Gutch",
+   "look": {
+    "body": "man",
+    "hair": "#4a3a2a",
+    "outfit": "#5a5a3a",
+    "accent": "#d0a040",
+    "skin": 2,
+    "hat": "helm",
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [
+      "q:side2_stone=none"
+     ],
+     "say": [
+      "Props are going missing. Iron ones. Bitten clean through.",
+      "There's an old tunnel under the house on the south side. Whatever's eating the iron is down there.",
+      "Kill it before the whole street falls in. The union will make it worth your while."
+     ],
+     "do": [
+      "quest:side2_stone"
+     ]
+    },
+    {
+     "if": [
+      "q:side2_stone=active"
+     ],
+     "say": [
+      "The tunnel starts in the cellar of the south-side house. Mind the rust."
+     ]
+    },
+    {
+     "if": [
+      "q:side2_stone=ready"
+     ],
+     "say": [
+      "It's dead? Props are holding. You saved the street.",
+      "Union pays its debts. Take this.",
+      "Take it. (Ungilded Scepter)"
+     ],
+     "do": [
+      "done:side2_stone",
+      "give:gear:ungilded_scepter",
+      "gold:300",
+      "sfx:chest"
+     ]
+    },
+    {
+     "if": [
+      "q:side2_stone=done"
+     ],
+     "say": [
+      "Not one prop lost since. You're an honorary miner now."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 12,
+   "y": 5
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  9,
+  10
+ ]
+}

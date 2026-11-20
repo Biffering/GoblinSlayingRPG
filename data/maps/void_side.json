@@ -1,0 +1,104 @@
+{
+ "id": "void_side",
+ "name": "The Room That Isn't",
+ "world": "void",
+ "kind": "dungeon",
+ "w": 30,
+ "h": 22,
+ "tiles": [
+  "##############################",
+  "#_____########################",
+  "#_____######_____#########t###",
+  "#____b######_____######____###",
+  "#_____t#####___b_t#####____###",
+  "#_______________b__________###",
+  "#_____######_____######____###",
+  "#_____######_____######____###",
+  "#_____######_____######_######",
+  "###_###################_######",
+  "###_###################_######",
+  "###______##############_######",
+  "###______#______#######_######",
+  "###_____b#______#######_######",
+  "###______#______####______####",
+  "####_____#______#tt#_P__C_####",
+  "####_____#________________####",
+  "####_____#______####______####",
+  "##########______####____P_####",
+  "##########______####______####",
+  "#############_################",
+  "#############>################"
+ ],
+ "music": "void_dungeon",
+ "bg": "void_in",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 13,
+   "y": 21,
+   "to": "void_house4",
+   "tx": 2,
+   "ty": 2,
+   "face": "right"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "void_side_c0",
+   "x": 5,
+   "y": 1,
+   "item": "gear:staff_of_the_unmoored"
+  },
+  {
+   "id": "void_side_c1",
+   "x": 12,
+   "y": 6,
+   "item": "hi_potion:2"
+  },
+  {
+   "id": "void_side_c2",
+   "x": 20,
+   "y": 15,
+   "item": "gear:doorframe_splinter"
+  },
+  {
+   "id": "void_side_c3",
+   "x": 23,
+   "y": 3,
+   "item": "ether:2"
+  }
+ ],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "the_lingering",
+   "kind": "mini",
+   "x": 6,
+   "y": 14,
+   "sprite": "lingering",
+   "name": "The Lingering",
+   "world": "void",
+   "cond": [
+    "!flag:beat_the_lingering"
+   ],
+   "pre": [
+    "Something made of half-remembered faces fills the room. It doesn't want you to go.",
+    "THE LINGERING: \"Stay. Stay. Everyone always leaves. You stay.\""
+   ],
+   "post": [
+    "The Lingering loosens, the faces drifting off one by one like smoke.",
+    "The room is just a room now. It even has a window."
+   ],
+   "win_do": [
+    "set:beat_the_lingering"
+   ],
+   "encounter": "enc_the_lingering"
+  }
+ ],
+ "start": [
+  13,
+  20
+ ],
+ "habitat": []
+}

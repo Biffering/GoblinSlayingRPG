@@ -1,0 +1,70 @@
+{
+ "id": "water_pawn",
+ "name": "Saltmere: Pawn Shop",
+ "world": "water",
+ "kind": "interior",
+ "w": 14,
+ "h": 10,
+ "tiles": [
+  "##############",
+  "##i###i###i###",
+  "#jjj______jJj#",
+  "#___cccccc___#",
+  "#____________#",
+  "#j__rrrrrr__X#",
+  "#J__rrrrrr__X#",
+  "#___rrrrrr___#",
+  "#____________#",
+  "#######m######"
+ ],
+ "music": "water_shop",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 7,
+   "y": 9,
+   "to": "water_town",
+   "tx": 32,
+   "ty": 18,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "pawn_water_k",
+   "name": "Pawnbroker Wessel",
+   "look": {
+    "body": "man",
+    "hair": "#5a3a2a",
+    "outfit": "#2a4a6a",
+    "accent": "#e0c070",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Salvaged, polished, priced to move. Like the tide used to."
+     ],
+     "do": [
+      "shop:pawn_water"
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 6,
+   "y": 2
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  7,
+  8
+ ]
+}

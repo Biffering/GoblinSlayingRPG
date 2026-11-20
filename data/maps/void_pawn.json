@@ -1,0 +1,70 @@
+{
+ "id": "void_pawn",
+ "name": "Lastlight: Pawn Shop",
+ "world": "void",
+ "kind": "interior",
+ "w": 14,
+ "h": 10,
+ "tiles": [
+  "##############",
+  "##y###y###i###",
+  "#jjj______jJj#",
+  "#___cccccc___#",
+  "#____________#",
+  "#j__rrrrrr__X#",
+  "#J__rrrrrr__X#",
+  "#___rrrrrr___#",
+  "#____________#",
+  "#######m######"
+ ],
+ "music": "void_shop",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 7,
+   "y": 9,
+   "to": "void_town",
+   "tx": 32,
+   "ty": 18,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "pawn_void_k",
+   "name": "Pawnbroker Null",
+   "look": {
+    "body": "man",
+    "hair": "#101010",
+    "outfit": "#2a2a3a",
+    "accent": "#9050e0",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Things nobody remembers buying. Yours now. Probably."
+     ],
+     "do": [
+      "shop:pawn_void"
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 6,
+   "y": 2
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  7,
+  8
+ ]
+}

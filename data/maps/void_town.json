@@ -1,0 +1,743 @@
+{
+ "id": "void_town",
+ "name": "Lastlight",
+ "world": "void",
+ "kind": "town",
+ "w": 40,
+ "h": 30,
+ "tiles": [
+  "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+  "T..TT.T...T..T.T..T..TT...T..T..T.T..T.T",
+  "T..RRRRRRRRR............\"...RRRRRRRRR..T",
+  "T..RRRRRRRRR.......O,.......RRRRRRRRR..T",
+  "T..RRRRRRRRR......l,,l...F..RRRRRRRRR..T",
+  "T..RRRRRRRRR.....F.,,.\".....RRRRRRRRRF.T",
+  "T..HWHWHWHWH.......,,..F....HWHWHWHWH..T",
+  "T..HHHHdHHHH.......,,.......HHHHdHHHH..T",
+  "T.F....,...........,,..\"\".......,......T",
+  "T..,,,,,,,,,,l,,,,,,,,,,,,l,,,,,,,,,.\".T",
+  "T.\".....F.....,,,,,,,,,,,,.............T",
+  "T.Q.\"...l.F...,,n,,,,,,n,,.....l.M.M.M.T",
+  "T..\"\".........,,,,,,,,,,,,.............T",
+  "T..RRRRRRRRF..,,,,,ww,,,,,...RRRRRRRR..T",
+  "T..RRRRRRRR...,,,,,ww,,,,,...RRRRRRRR..T",
+  "T..RRRRRRRR...,,,,,,,,,,,,...RRRRRRRR..T",
+  "T.FWHWHWHWH...,,,,,,,,,,,,...WHWHWHWH..T",
+  "T.FHHHdHHHH.F.,,n,,,,,,n,,...HHHdHHHH..T",
+  "T....\",..\"\".\".,,,,,,,,,,,,.\"....,.F....T",
+  "T..,,,,,,,,,,l,,,,,,,,,,,,l,,,,,,,,,.\".T",
+  "TM.M\"M..\"....,.....,,..F,........\".....T",
+  "T..RRRRRRR...,.\"...,,...,.....RRRRRRR\".T",
+  "T..RRRRRRR.RR,RRR..,,.RR,RRR..RRRRRRR..T",
+  "T..RRRRRRR.RR,RRR..,,.RR,RRR..RRRRRRR..T",
+  "T..HWHWHWH.RR,RRR..,,.RR,RRR\".HWHWHWH..T",
+  "T..HHHdHHHFWH,HWH..,,.WH,HWH..HHHdHHH..T",
+  "T.....,..\".HHdHHH..,,.HHdHHH\"....,.....T",
+  "T............,...F.,,.f\",fF\".F.....\"...T",
+  "T..................,,..................T",
+  "TTTTTTTTTTTTTTTTTTT,,TTTTTTTTTTTTTTTTTTT"
+ ],
+ "music": "void_town",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 19,
+   "y": 3,
+   "to": "nexus",
+   "tx": 6,
+   "ty": 6,
+   "face": "down"
+  },
+  {
+   "x": 32,
+   "y": 7,
+   "to": "void_inn",
+   "tx": 8,
+   "ty": 9,
+   "face": "up"
+  },
+  {
+   "x": 7,
+   "y": 7,
+   "to": "void_tavern",
+   "tx": 9,
+   "ty": 10,
+   "face": "up"
+  },
+  {
+   "x": 32,
+   "y": 17,
+   "to": "void_pawn",
+   "tx": 7,
+   "ty": 8,
+   "face": "up"
+  },
+  {
+   "x": 6,
+   "y": 17,
+   "to": "void_items",
+   "tx": 7,
+   "ty": 8,
+   "face": "up"
+  },
+  {
+   "x": 33,
+   "y": 25,
+   "to": "void_house1",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 6,
+   "y": 25,
+   "to": "void_house2",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 24,
+   "y": 26,
+   "to": "void_house3",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 13,
+   "y": 26,
+   "to": "void_house4",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 20,
+   "y": 29,
+   "to": "void_field",
+   "tx": 23,
+   "ty": 32,
+   "face": "up"
+  },
+  {
+   "x": 19,
+   "y": 29,
+   "to": "void_field",
+   "tx": 23,
+   "ty": 32,
+   "face": "up"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "ines",
+   "name": "Lamplighter Ines",
+   "look": {
+    "body": "woman",
+    "hair": "#3a2a4a",
+    "outfit": "#2a2a3a",
+    "accent": "#f0c060",
+    "skin": 1,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "q:main_void=none"
+     ],
+     "say": [
+      "You can see me? Good. In Lastlight, people are starting to drift. You look at them and they're just... a little bit somewhere else.",
+      "It started with Aldous. He lost too much, too fast, so he stepped out of himself. Left his body to walk around empty.",
+      "We call what's left Nobody. And the emptiness is catching. It's in the Unmoored Keep, past The Drift.",
+      "Bring him back. Or bring us back. I don't know which one it is anymore."
+     ],
+     "do": [
+      "quest:main_void"
+     ]
+    },
+    {
+     "if": [
+      "q:main_void=active",
+      "!flag:beat_nobody"
+     ],
+     "say": [
+      "The Unmoored Keep is past The Drift. Watch for when he goes 'elsewhere' \u2014 steel can't touch him then. Magic can.",
+      "Void-touched things fear the light. Spirit undoes them.",
+      "The way there is long: through the The Drift, then the The Underside, and down into its depths."
+     ]
+    },
+    {
+     "if": [
+      "q:main_void=ready"
+     ],
+     "say": [
+      "People are... here again. All of them. Crying, laughing. Being in the room.",
+      "The Void Heartstone. Thank you for not drifting."
+     ],
+     "do": [
+      "done:main_void",
+      "give:heart_void",
+      "gold:500",
+      "give:elixir"
+     ]
+    },
+    {
+     "if": [
+      "q:main_void=done"
+     ],
+     "say": [
+      "Aldous lights the lamps with me now. Some nights are hard. He stays for them anyway."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 19,
+   "y": 8
+  },
+  {
+   "id": "vesper",
+   "name": "Vesper",
+   "look": {
+    "body": "woman",
+    "hair": "#d0d0e0",
+    "outfit": "#4a2a6a",
+    "accent": "#a060f0",
+    "skin": 0,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "!member:vesper"
+     ],
+     "say": [
+      "Huh. You're looking right at me. Most people look at where I was a second ago.",
+      "I'm Vesper. Or that's what I'm called. My real name got eaten. Literally. There's a thing in the Echo Pits that eats names.",
+      "I watch myself from about three feet away, most days. It's useful in a fight, actually. I always see it coming."
+     ],
+     "ask": {
+      "q": "Let Vesper join your party?",
+      "yes": {
+       "say": [
+        "VESPER: \"Okay. I'm in. Both of me.\"",
+        "Vesper joined the party! The Name-Eater lurks in the Echo Pits."
+       ],
+       "do": [
+        "recruit:vesper",
+        "quest:comp_void",
+        "sfx:recruit"
+       ]
+      },
+      "no": {
+       "say": [
+        "VESPER: \"Sure. I'll be over here. Ish.\""
+       ]
+      }
+     }
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "cond": [
+    "!member:vesper"
+   ],
+   "x": 24,
+   "y": 12
+  },
+  {
+   "id": "lio",
+   "name": "Lio the Singer",
+   "look": {
+    "body": "man",
+    "hair": "#c06030",
+    "outfit": "#6a3a8a",
+    "accent": "#f0e0a0",
+    "skin": 0,
+    "hat": "wide",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "q:side_void=none"
+     ],
+     "say": [
+      "  ...  ",
+      "Sorry. I was trying to sing. I can't. Nobody can. The Mute Paladin took every song in Lastlight.",
+      "He walks The Drift in black armor, wrapped in silence. If you break it, I'll give you my cloak. It's woven from rests between notes."
+     ],
+     "do": [
+      "quest:side_void"
+     ]
+    },
+    {
+     "if": [
+      "q:side_void=active",
+      "!flag:beat_mute_paladin"
+     ],
+     "say": [
+      "The Paladin is somewhere in The Drift. Listen for where it's quietest."
+     ]
+    },
+    {
+     "if": [
+      "q:side_void=ready"
+     ],
+     "say": [
+      "LA LA LAAA! Oh, it's back! It's all back! I'm going to sing for a week!",
+      "The Nullweave Cloak. Every silence in it is the good kind."
+     ],
+     "do": [
+      "done:side_void",
+      "give:gear:nullweave_cloak",
+      "sfx:chest"
+     ]
+    },
+    {
+     "if": [
+      "q:side_void=done"
+     ],
+     "say": [
+      "(Lio is singing. Loudly. Constantly. Lastlight seems to forgive him.)"
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 14,
+   "y": 12
+  },
+  {
+   "id": "whisper",
+   "name": "The Doorwatcher",
+   "look": {
+    "body": "elder",
+    "hair": "#606060",
+    "outfit": "#2a2a3a",
+    "accent": "#9060c0",
+    "skin": 1,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "In Lastlight we have a saying. 'The door opens to nowhere, so walk around it.'",
+      "There's a door out in The Drift, standing all alone. No walls. It faces us, here in town, like it's waiting for someone to come home.",
+      "Behind it, on the side it doesn't face, you take one step for every word of what you whisper to yourself on bad days.",
+      "Mine is 'I am still here.' You figure out the rest."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 27,
+   "y": 19
+  },
+  {
+   "id": "void_seer",
+   "name": "Hollow-Eyed Woman",
+   "look": {
+    "body": "woman",
+    "hair": "#202020",
+    "outfit": "#3a2a4a",
+    "accent": "#9050e0",
+    "skin": 2,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "!item:key_ash",
+      "!item:key_bedrock",
+      "!flag:open_sanctum_void"
+     ],
+     "say": [
+      "There is a throne in the Unmoored Keep with nothing sitting on it. The nothing is Nihil.",
+      "Its door takes two keys. One was burned. One was buried. A widow and a miner hold them, in other worlds.",
+      "And four must stand together before the Unmaker, or it won't even notice you."
+     ]
+    },
+    {
+     "if": [
+      "!flag:open_sanctum_void"
+     ],
+     "say": [
+      "Ash and Bedrock. Four together. Then the nothing will listen."
+     ]
+    },
+    {
+     "if": [],
+     "say": [
+      "You were louder than nothing. I heard it from here."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 11,
+   "y": 19
+  },
+  {
+   "id": "void_f1",
+   "name": "Flickering Man",
+   "look": {
+    "body": "man",
+    "hair": "#3a3a3a",
+    "outfit": "#4a4a6a",
+    "accent": "#a0a0a0",
+    "skin": 2,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Null beasts can't stand the light. Spirit, if you've got it. It makes them... more there. Then they break."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 22,
+   "y": 18
+  },
+  {
+   "id": "void_f2",
+   "name": "Anchored Guard",
+   "look": {
+    "body": "guard",
+    "hair": "#2a2a2a",
+    "outfit": "#3a2a4a",
+    "accent": "#a0a0c0",
+    "skin": 1,
+    "hat": "helm",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "If someone's silenced, they can't cast. Items still work. Keep potions handy."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 16,
+   "y": 9
+  },
+  {
+   "id": "void_f3",
+   "name": "Child Holding a String",
+   "look": {
+    "body": "child",
+    "hair": "#6a4a2a",
+    "outfit": "#5a3a7a",
+    "accent": "#f0f040",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "I hold this string so I don't float away. It's tied to my mom. She holds a string tied to me. It works."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 28,
+   "y": 11
+  },
+  {
+   "id": "void_f4",
+   "name": "Quiet Scholar",
+   "look": {
+    "body": "man",
+    "hair": "#8a8a8a",
+    "outfit": "#2a2a4a",
+    "accent": "#d0c080",
+    "skin": 0,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Every world has the same sky above it. The sun sets in the west. The cold lives in the north.",
+      "Useful if you're ever following an old story somewhere."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 9,
+   "y": 11
+  },
+  {
+   "id": "amb_void_0",
+   "name": "Medium",
+   "look": {
+    "body": "robe",
+    "hair": "#e0e0f0",
+    "outfit": "#2a1e3a",
+    "accent": "#6a4a8a",
+    "skin": 4,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "They see you, slayer. They're... afraid of you."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 2,
+   "y": 10,
+   "ambient": true,
+   "job": "seance",
+   "jface": "down"
+  },
+  {
+   "id": "amb_void_1",
+   "name": "Medium",
+   "look": {
+    "body": "robe",
+    "hair": "#3a2a4a",
+    "outfit": "#2a1e3a",
+    "accent": "#4a3a5a",
+    "skin": 3,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "They see you, slayer. They're... afraid of you.",
+      "Don't break the ring. Whatever you do, don't break the ring."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "right",
+   "x": 1,
+   "y": 11,
+   "ambient": true,
+   "job": "seance",
+   "jface": "right"
+  },
+  {
+   "id": "amb_void_2",
+   "name": "Medium",
+   "look": {
+    "body": "robe",
+    "hair": "#1a1010",
+    "outfit": "#2a1e3a",
+    "accent": "#4a3a5a",
+    "skin": 2,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Don't break the ring. Whatever you do, don't break the ring.",
+      "Shh. The circle is open."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "left",
+   "x": 3,
+   "y": 11,
+   "ambient": true,
+   "job": "seance",
+   "jface": "left"
+  },
+  {
+   "id": "amb_void_3",
+   "name": "Medium",
+   "look": {
+    "body": "woman",
+    "hair": "#2a1a12",
+    "outfit": "#1a1424",
+    "accent": "#8a6aa0",
+    "skin": 3,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Shh. The circle is open."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "up",
+   "x": 2,
+   "y": 12,
+   "ambient": true,
+   "job": "seance",
+   "jface": "up"
+  },
+  {
+   "id": "amb_void_4",
+   "name": "Gravedigger",
+   "look": {
+    "body": "man",
+    "hair": "#3a2a4a",
+    "outfit": "#2a1e3a",
+    "accent": "#4a3a5a",
+    "skin": 2,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Six deep, no fewer. They climb out otherwise."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 2,
+   "y": 21,
+   "ambient": true,
+   "job": "dig",
+   "jface": "down"
+  },
+  {
+   "id": "amb_void_5",
+   "name": "Gravedigger",
+   "look": {
+    "body": "man",
+    "hair": "#3a2a4a",
+    "outfit": "#2a1e3a",
+    "accent": "#4a3a5a",
+    "skin": 1,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Found a ring. Owner won't be needing it."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 34,
+   "y": 12,
+   "ambient": true,
+   "job": "dig",
+   "jface": "down"
+  },
+  {
+   "id": "amb_void_6",
+   "name": "Hooded Stranger",
+   "look": {
+    "body": "woman",
+    "hair": "#e0e0f0",
+    "outfit": "#2a2430",
+    "accent": "#6a4a8a",
+    "skin": 1,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Who are you? You've got the look of someone who doesn't sleep."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 17,
+   "y": 18,
+   "ambient": true,
+   "roam": 5
+  },
+  {
+   "id": "amb_void_7",
+   "name": "Hooded Stranger",
+   "look": {
+    "body": "woman",
+    "hair": "#3a2a4a",
+    "outfit": "#1a1424",
+    "accent": "#8a6aa0",
+    "skin": 2,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Did you hear screaming last night? Me neither."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 21,
+   "y": 10,
+   "ambient": true,
+   "roam": 5
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  19,
+  4
+ ],
+ "signs": [
+  {
+   "x": 33,
+   "y": 6,
+   "tile": "sign_inn"
+  },
+  {
+   "x": 8,
+   "y": 6,
+   "tile": "sign_tavern"
+  },
+  {
+   "x": 33,
+   "y": 16,
+   "tile": "sign_pawn"
+  },
+  {
+   "x": 7,
+   "y": 16,
+   "tile": "sign_items"
+  }
+ ]
+}

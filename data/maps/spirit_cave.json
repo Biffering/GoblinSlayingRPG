@@ -1,0 +1,107 @@
+{
+ "id": "spirit_cave",
+ "name": "Mirror Caves",
+ "world": "spirit",
+ "kind": "cave",
+ "w": 28,
+ "h": 20,
+ "tiles": [
+  "############################",
+  "##t##t#####_____############",
+  "##__b__####___b_############",
+  "##__b__####_____############",
+  "##______________#__b_b######",
+  "##_____####_____#_____######",
+  "##_____####___________######",
+  "####_############_____######",
+  "####_############_____######",
+  "####_################_######",
+  "####_################_t#####",
+  "##b__b####______##______####",
+  "##____##tt_C__C_##_C__C_####",
+  "##______________##______####",
+  "##____####______##__b___####",
+  "##########______##______####",
+  "##########____C_##_C_b__####",
+  "##########______##______####",
+  "#############_##############",
+  "#############>##############"
+ ],
+ "music": "spirit_field",
+ "bg": "spirit_in",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 13,
+   "y": 19,
+   "to": "spirit_field",
+   "tx": 4,
+   "ty": 11,
+   "face": "right"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "spirit_cave_c0",
+   "x": 6,
+   "y": 6,
+   "item": "summon:lanternmoth"
+  },
+  {
+   "id": "spirit_cave_c1",
+   "x": 11,
+   "y": 5,
+   "item": "hi_potion"
+  },
+  {
+   "id": "spirit_cave_c2",
+   "x": 4,
+   "y": 12,
+   "item": "gear:vigil_blade"
+  }
+ ],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "mirror_wraith",
+   "kind": "mini",
+   "x": 21,
+   "y": 14,
+   "sprite": "mirror",
+   "name": "The Hollow Mirror",
+   "world": "spirit",
+   "cond": [
+    "q:comp_spirit=active",
+    "!flag:beat_mirror_wraith"
+   ],
+   "need": [
+    "member:sol"
+   ],
+   "need_fail": [
+    "You sense Sol should be here for this."
+   ],
+   "pre": [
+    "A tall mirror stands in the dark. In it, Sol is wearing a crown and smiling coldly.",
+    "THE MIRROR: \"This is who you were going to be. Powerful. Admired. Why did you stop?\"",
+    "SOL: \"I don't know. Maybe because I didn't want to be you.\""
+   ],
+   "post": [
+    "The mirror cracks. In the pieces, a dozen different Sols, none of them crowned.",
+    "SOL: \"I don't remember who I was. But I get to choose who I am. That's better.\"",
+    "He offers you his prayer-bead staff. \"Each bead is a choice. Make good ones.\""
+   ],
+   "win_do": [
+    "set:beat_mirror_wraith",
+    "done:comp_spirit",
+    "give:gear:prayer_staff"
+   ],
+   "encounter": "enc_mirror_wraith"
+  }
+ ],
+ "start": [
+  13,
+  18
+ ],
+ "habitat": []
+}

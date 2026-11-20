@@ -1,0 +1,122 @@
+{
+ "id": "water_area2",
+ "name": "Weeping Falls",
+ "world": "water",
+ "kind": "field",
+ "w": 46,
+ "h": 34,
+ "tiles": [
+  "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+  "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT^TTTTTTTTT",
+  "TT......^^~~~TT.TT..\"....^.........^E^...\"..TT",
+  "TT.\"...\"T^~~~TTTTTT.\"........\"....\",,..\".\"..TT",
+  "TT.\"...TT^~~~TTTTT...\".........,,,,,...T...\"TT",
+  "TT......TT~~~TTTTT\"\"\".....\"\"\"..,....TTTTTT..TT",
+  "TT.....^^T~~~TTTT..^\"..........,..\"..TT\"^TT.TT",
+  "TT.\"..^^^^~~~TTTT.^^^.......\"\".,.^....T^^^TTTT",
+  "TT....^\"\"\"~~~TTTT^^^^^.......,,,^^...\"^^^^^^TT",
+  "TTKKKKKYYKVVVKKKKKKKKKKKKKKKKYKKKKKKKKKKKKKKTT",
+  "TTKKKKKYYKVZVKKKKKKKKKKKKKKKKYKKKKKKKKKKKKKKTT",
+  "TT...\"^\"\"\"UUU..\"T..........,,,...^\"TTTTT.^.^TT",
+  "TT.....^~==~~~~....\"\".....,,..\"...T.T.TT^^^^TT",
+  "TT\"...T.~~==~~~...,,,,,,,,,.....\"..TTTT.\"\"..TT",
+  "TT\"^.TTT~~~==~~...,..\".TTT.T....\"..T.TTT....TT",
+  "TT^^TTTTT\"..\"\"\"\"\"\"\",...\"TTTT.....\"...T......TT",
+  "TT^.T.TTT........\".,..TTTTTTT...~.......\"...TT",
+  "TT^TT.TTTT...\".....,\"\"\"TTTTT\"~~~~~~~T.......TT",
+  "TT^^TTTT.......~~~~==~.TTTTT~~~~~~~~~T......TT",
+  "TT..T.TTT...\".~~~~~~=~~..T..~~~~~~~~~T......TT",
+  "TT....T...\"...~~~~~~=~~.\"..~~~~~~~~~~~T.....TT",
+  "TT..\"........~~~~\"\"~=~~~.^^.~~~~~~~~~T......TT",
+  "TTKKKKKKKKKKKKVVVYYVYVVKKKKKVVVVVVVVVKKKKKKKTT",
+  "TTKKKKKKKKKKKKVVVYYVYVVKKKKKKVVVVVVVKKKKKKKKTT",
+  "TT.TTT\".\"......~~\"\"~=~.^^^......~...T.....\"TTT",
+  "TTTTTT.........\"..~^,.^^^^...\"...\"TTTTT.\"..TTT",
+  "TTTT.TT..........\"..,,.\"^.\".\"....TTTTTTT.TTTTT",
+  "TTTTT\".\"..........T..,,,....\"....TTTTTTT\".TTTT",
+  "TTTT.T...........TTT.TT,.T.......TTTT.TTT..TTT",
+  "TT.T....\"\"......TTTTTTT,.TT..\"\"\".TTTTT.T....TT",
+  "TT............\"...TTTT.,.TT.\"....TT.TTTT....TT",
+  "TT...........\"....TT...,..TT.\".....TTTT.....TT",
+  "TT\".....\"...........T..,......\".....T.\".....TT",
+  "TTTTTTTTTTTTTTTTTTTTTT,,TTTTTTTTTTTTTTTTTTTTTT"
+ ],
+ "music": "water_field",
+ "bg": "water_out",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 23,
+   "y": 33,
+   "to": "water_field",
+   "tx": 32,
+   "ty": 3,
+   "face": "down"
+  },
+  {
+   "x": 22,
+   "y": 33,
+   "to": "water_field",
+   "tx": 32,
+   "ty": 3,
+   "face": "down"
+  },
+  {
+   "x": 36,
+   "y": 2,
+   "to": "water_dungeon",
+   "tx": 23,
+   "ty": 28,
+   "face": "up"
+  },
+  {
+   "x": 11,
+   "y": 10,
+   "to": "water_side",
+   "tx": 13,
+   "ty": 20,
+   "face": "up"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "water_area2_c0",
+   "x": 29,
+   "y": 13,
+   "item": "gear:leviathan_bow"
+  },
+  {
+   "id": "water_area2_c1",
+   "x": 9,
+   "y": 28,
+   "item": "gear:kelp_mail"
+  },
+  {
+   "id": "water_area2_c2",
+   "x": 25,
+   "y": 27,
+   "item": "hi_potion"
+  },
+  {
+   "id": "water_area2_c3",
+   "x": 12,
+   "y": 21,
+   "item": "gear:pearl_rod"
+  }
+ ],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  23,
+  32
+ ],
+ "waterfall": [
+  10,
+  11,
+  12
+ ],
+ "habitat": [
+  "coast"
+ ]
+}

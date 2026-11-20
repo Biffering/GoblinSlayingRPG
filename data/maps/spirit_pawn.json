@@ -1,0 +1,70 @@
+{
+ "id": "spirit_pawn",
+ "name": "Hallowmere: Pawn Shop",
+ "world": "spirit",
+ "kind": "interior",
+ "w": 14,
+ "h": 10,
+ "tiles": [
+  "##############",
+  "##i###i###y###",
+  "#jjj______jJj#",
+  "#___cccccc___#",
+  "#____________#",
+  "#j__rrrrrr__X#",
+  "#J__rrrrrr__X#",
+  "#___rrrrrr___#",
+  "#____________#",
+  "#######m######"
+ ],
+ "music": "spirit_shop",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 7,
+   "y": 9,
+   "to": "spirit_town",
+   "tx": 7,
+   "ty": 18,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "pawn_spirit_k",
+   "name": "Pawnbroker Halcyon",
+   "look": {
+    "body": "man",
+    "hair": "#f0e0a0",
+    "outfit": "#c0c0e0",
+    "accent": "#f0f0f0",
+    "skin": 0,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Blessed blades, holy bows. Discounts for the recently enlightened."
+     ],
+     "do": [
+      "shop:pawn_spirit"
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 6,
+   "y": 2
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  7,
+  8
+ ]
+}

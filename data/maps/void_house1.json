@@ -1,0 +1,73 @@
+{
+ "id": "void_house1",
+ "name": "Lastlight: A Cozy House",
+ "world": "void",
+ "kind": "interior",
+ "w": 12,
+ "h": 9,
+ "tiles": [
+  "############",
+  "##kk##i##p##",
+  "#__________#",
+  "#________B_#",
+  "#__ouo___B_#",
+  "#__________#",
+  "#___rrrr___#",
+  "#X__rrrr__Q#",
+  "######m#####"
+ ],
+ "music": "void_town",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 6,
+   "y": 8,
+   "to": "void_town",
+   "tx": 33,
+   "ty": 26,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "void_h1",
+   "name": "Woman Who Counts",
+   "look": {
+    "body": "woman",
+    "hair": "#a0a0c0",
+    "outfit": "#3a3a5a",
+    "accent": "#c0a0ff",
+    "skin": 0,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "One, two, three... I count my things every night so they don't drift off. One, two..."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 7,
+   "y": 3
+  }
+ ],
+ "chests": [
+  {
+   "id": "void_house1_c0",
+   "x": 10,
+   "y": 6,
+   "item": "gear:nullweave_cloak"
+  }
+ ],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  6,
+  7
+ ]
+}

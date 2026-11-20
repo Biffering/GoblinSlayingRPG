@@ -1,0 +1,70 @@
+{
+ "id": "fire_pawn",
+ "name": "Emberfall: Pawn Shop",
+ "world": "fire",
+ "kind": "interior",
+ "w": 14,
+ "h": 10,
+ "tiles": [
+  "##############",
+  "##i###y###y###",
+  "#jjj______jJj#",
+  "#___cccccc___#",
+  "#____________#",
+  "#j__rrrrrr__X#",
+  "#J__rrrrrr__X#",
+  "#___rrrrrr___#",
+  "#____________#",
+  "#######m######"
+ ],
+ "music": "fire_shop",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 7,
+   "y": 9,
+   "to": "fire_town",
+   "tx": 7,
+   "ty": 18,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "pawn_fire_k",
+   "name": "Pawnbroker Dross",
+   "look": {
+    "body": "man",
+    "hair": "#3a2a1a",
+    "outfit": "#4a3a2a",
+    "accent": "#d09040",
+    "skin": 2,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Blades, bows, staves. Hot off the anvil. Literally, careful."
+     ],
+     "do": [
+      "shop:pawn_fire"
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 6,
+   "y": 2
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  7,
+  8
+ ]
+}

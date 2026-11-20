@@ -1,0 +1,339 @@
+{
+ "id": "nexus",
+ "name": "The Nexus",
+ "world": "nexus",
+ "kind": "hub",
+ "w": 28,
+ "h": 22,
+ "tiles": [
+  "TTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+  "TTTTTTTTT^^^^^^^^^^TTTTTTTTT",
+  "TTTTTT^^^,,,,,,,,,,^^^TTTTTT",
+  "TTTT^^,,,,,,,O,,,,,,,,^^TTTT",
+  "TTT^,,,,,,\"\",,,,\"\",,,,,,^TTT",
+  "TT^,,,O,,\"\"\"\",,\"\"\"\",,O,,,^TT",
+  "TT^,,,,,\"FF\"\",,\"\"FF\",,,,,^TT",
+  "T^,,,,,,,\"\"\",,,,\"\"\",,,,,,,^T",
+  "T^,,l,,,,,,,,,,,,,,,,,,l,,^T",
+  "T^,,,,,,,,,PPPPPP,,,,,,,,,^T",
+  "T^,,,,,,,,,P____P,,,,,,,,,^T",
+  "T^,,O,,,,,,P_ww_P,,,,,,O,,^T",
+  "T^,,,,,,,,,P____P,,,,,,,,,^T",
+  "T^,,,,,,,,,PP__PP,,,,,,,,,^T",
+  "T^,,l,,,,,,,,,,,,,,,,,,l,,^T",
+  "T^,,,,,,,\"\"\",,,,\"\"\",,,,,,,^T",
+  "TT^,,,,,\"FF\"\",,\"\"FF\",,,,,^TT",
+  "TT^,,,,,,\"\"\",,,,\"\"\",,,,,,^TT",
+  "TTT^,,,,,,,,,,O,,,,,,,,,^TTT",
+  "TTTT^^,,,,,,,,,,,,,,,,^^TTTT",
+  "TTTTTT^^^,,,,,,,,,,^^^TTTTTT",
+  "TTTTTTTTTTTTTTTTTTTTTTTTTTTT"
+ ],
+ "music": "nexus",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 13,
+   "y": 3,
+   "to": "fire_town",
+   "tx": 20,
+   "ty": 4,
+   "face": "down"
+  },
+  {
+   "x": 21,
+   "y": 5,
+   "to": "water_town",
+   "tx": 19,
+   "ty": 4,
+   "face": "down"
+  },
+  {
+   "x": 23,
+   "y": 11,
+   "to": "wind_town",
+   "tx": 20,
+   "ty": 4,
+   "face": "down"
+  },
+  {
+   "x": 14,
+   "y": 18,
+   "to": "stone_town",
+   "tx": 19,
+   "ty": 4,
+   "face": "down"
+  },
+  {
+   "x": 4,
+   "y": 11,
+   "to": "spirit_town",
+   "tx": 20,
+   "ty": 4,
+   "face": "down"
+  },
+  {
+   "x": 6,
+   "y": 5,
+   "to": "void_town",
+   "tx": 19,
+   "ty": 4,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "keeper",
+   "name": "The Keeper",
+   "look": {
+    "body": "elder",
+    "hair": "#f0f0f0",
+    "outfit": "#3a3a5a",
+    "accent": "#f0d060",
+    "skin": 0,
+    "hat": "hood",
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [
+      "!flag:intro_done"
+     ],
+     "say": [
+      "Ah. You're awake. Good. I was beginning to worry the portal had dropped you on your head.",
+      "This is the Nexus, the crossroads between six worlds: Fire, Water, Wind, Stone, Spirit and Void.",
+      "Each world has a Heart. And King Goblin's shamans have cursed every one of them with a feeling it can't put down.",
+      "A sad world is an easy world to rob. That's all he wants: everything shiny, everywhere.",
+      "Fire burns with jealousy. Water drowns in loss. Stone is rotting with greed. Wind is caged by fear of freedom.",
+      "Spirit can't finish becoming. And Void has stopped being present at all.",
+      "You're a Kindler. You have no element of your own, but you carry the element of whatever you wear. Weapons, armor, charms.",
+      "Wear fire and you'll glow red. Wear water and you'll glow blue. Wear many, and you'll glow many colors. The stronger you grow, the brighter.",
+      "Go through any portal, in any order. Free all six Hearts and the curses will lead us straight to King Goblin.",
+      "The worlds will rise to meet your strength. Watch out for his goblins. They're everywhere now. And pirates near the water.",
+      "Talk to people. Everyone, everywhere. You'd be surprised what a rambling story is hiding.",
+      "Press X or Esc to open your menu. Take these. And come back to rest here whenever you like."
+     ],
+     "do": [
+      "set:intro_done",
+      "give:potion:4",
+      "give:ether:2",
+      "sfx:chest",
+      "quest:main_king"
+     ]
+    },
+    {
+     "if": [
+      "hearts>=6",
+      "!flag:beat_king_goblin"
+     ],
+     "say": [
+      "Six Heartstones. Six feelings, felt all the way through and set down.",
+      "That's not defeating feelings, you know. That's what it looks like to feel them properly.",
+      "And look: every Heartstone has the same little scratch on it. A goblin's mark. They all point the same way.",
+      "King Goblin's Warren. I can open the way with the Heartstones. Get ready first: buy what you need, rest, choose your party.",
+      "He's sly, he's greedy, and he has no shame at all. Spirit cuts through his dark crown best."
+     ],
+     "ask": {
+      "q": "Enter King Goblin's Warren?",
+      "yes": {
+       "say": [
+        "The six Heartstones flare. The floor of the Nexus opens into a tunnel that smells like old cheese."
+       ],
+       "do": [
+        "warp:goblin_warren"
+       ]
+      },
+      "no": {
+       "say": [
+        "Take your time. He isn't going anywhere. Well. He might. But probably not."
+       ]
+      }
+     }
+    },
+    {
+     "if": [
+      "flag:beat_king_goblin",
+      "!flag:ending_seen"
+     ],
+     "say": [
+      "You did it. King Goblin is gone, and the six Hearths are warm again.",
+      "They have a name for you out there now, you know. The Goblin Slayer.",
+      "...Of course, the Witness and the Unmaker are still out there, if you're the sort who can't leave well enough alone."
+     ],
+     "do": [
+      "done:main_king",
+      "set:ending_seen",
+      "end"
+     ]
+    },
+    {
+     "if": [],
+     "say": [
+      "Rest whenever you need to. The Nexus is always safe.",
+      "Remember: what you wear decides what you can cast, and what you're weak and strong against."
+     ],
+     "ask": {
+      "q": "Rest at the Nexus fire? (free)",
+      "yes": {
+       "say": [
+        "The fire is warm. Everyone feels restored."
+       ],
+       "do": [
+        "inn:0"
+       ]
+      },
+      "no": {
+       "say": []
+      }
+     }
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 13,
+   "y": 12
+  },
+  {
+   "id": "nexus_shop",
+   "name": "Wandering Merchant",
+   "look": {
+    "body": "merchant",
+    "hair": "#6a4a2a",
+    "outfit": "#5a3a6a",
+    "accent": "#e0c040",
+    "skin": 1,
+    "hat": "wide",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "I sell a little of everything, everywhere. Mostly here, though."
+     ],
+     "do": [
+      "shop:nexus"
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 8,
+   "y": 8
+  },
+  {
+   "id": "nexus_compass",
+   "name": "Old Compass",
+   "look": {
+    "body": "man",
+    "hair": "#c0c0c0",
+    "outfit": "#4a5a6a",
+    "accent": "#e0e0e0",
+    "skin": 2,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Every world in the Hearths shares the same sky. The sun rises in the east and sets in the west.",
+      "The cold comes from the north. The warmth from the south. Remember that when old folks start telling stories."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 20,
+   "y": 15
+  },
+  {
+   "id": "nexus_sage",
+   "name": "Element Sage",
+   "look": {
+    "body": "woman",
+    "hair": "#3a2a1a",
+    "outfit": "#2a6a6a",
+    "accent": "#f0f0f0",
+    "skin": 1,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Water quenches Fire. Fire devours Wind. Wind erodes Stone. Stone dams Water.",
+      "Spirit and Void undo each other.",
+      "Strike a foe with what beats its element and it takes far more damage. Hit it with its own element, and it shrugs.",
+      "Wear an element and you resist it, but you'll be weaker to whatever beats it. Everything has a price."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 7,
+   "y": 15
+  },
+  {
+   "id": "nexus_vet",
+   "name": "Scarred Veteran",
+   "look": {
+    "body": "guard",
+    "hair": "#4a3a2a",
+    "outfit": "#5a5a5a",
+    "accent": "#c0a040",
+    "skin": 2,
+    "hat": "helm",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Take a beating and your Limit gauge fills. When it's full, you can unleash a Limit Break. Saved my life a dozen times.",
+      "Speed's everything in a fight. The faster you are, the more often you act."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 20,
+   "y": 8
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  14,
+  15
+ ],
+ "portal_worlds": {
+  "fire": [
+   13,
+   3
+  ],
+  "water": [
+   21,
+   5
+  ],
+  "wind": [
+   23,
+   11
+  ],
+  "stone": [
+   14,
+   18
+  ],
+  "spirit": [
+   4,
+   11
+  ],
+  "void": [
+   6,
+   5
+  ]
+ }
+}

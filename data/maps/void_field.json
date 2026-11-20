@@ -1,0 +1,145 @@
+{
+ "id": "void_field",
+ "name": "The Drift",
+ "world": "void",
+ "kind": "field",
+ "w": 46,
+ "h": 34,
+ "tiles": [
+  "TTTT^^TTTT^TTTTTTT^TTTTTTT^TTTTTTT^^^^TTT^TTTT",
+  "TTTT^T^T^TTTTTTT^TTTT^TTTTTTTTT^TTTTTT^T^TTTT^",
+  "^T......\"...\".....T.T^T^^^^^..^E^......\"....^T",
+  "TT..F.....\"...T....TTT^.^^^^...,...F\"....\"\"\"^^",
+  "TT...........TTTT..\"T^^^^^^^.,,,.........\".TTT",
+  "TT..........TT.TT...\".^^^^^.,,..T...^...\"\"T\"TT",
+  "T^\".....\"...TTTT..\"F\"\".\"...,,.......^^...\".TT^",
+  "TT..\".\"......TT.T.....\".\".,,......^^.^^\"....^T",
+  "^T.\"\"\"......TTT.T...\"....,,....\".\".^^^......TT",
+  "T^.^.\"....\"...T.TTT\"....,,.........\".....\"..TT",
+  "TT^E,,........TT\"TT..\",,,\"...........\".\"...\"TT",
+  "TT.^.,,,\"..\".TTT\"TTTTT,...\"\".\"....\"..\".\"....TT",
+  "TT..\".T,...\"..TTTTTTT,,\"\"......\"\"~.....\".\"..TT",
+  "T^TTTTT,,.\"\"\".T.TTT\"\",TT.F\"...~~~~~~~...\"\"..TT",
+  "TTTTTTT.,,T..T..T.T..,.....F~~~~~~~~~~..\"...^T",
+  "TTTTTTT.T,,\"FTT...T..,...~~~~~~~~~~~~~......TT",
+  "TTTTTTTTTT,,,,,,,,,,,,,,~~~~~~~~~~~~~~~..\"\".TT",
+  "T^.TTTTTTTT...TT.....,.,~~~~~~~~~~~~~~......TT",
+  "^T\"TTT\"\"TTTTTT.\"..\"..,.,==~~~~~~~~~~~~\"...\".TT",
+  "T^TTT\"..TT.TTTT..^...,..~=~~~~~\"~~~~~\"......T^",
+  "TT^T....TTT.TT.^^^^^\",..~==~~===~~....\".....^T",
+  "TT^^^..\"TTTT....^^^^.,,..~==~\"....\".......\".TT",
+  "^^^^...\"TTT...^^\"^.^^^,....\"=\"..\".\"\"\".....\".TT",
+  "T^.^....\"T.\"...^^^^^^^,^^.\"\",,.L...\"..\".\"T..^T",
+  "TT....F..\".....\"\".^^^^,,^\"\".\",,,....F...T\"T.TT",
+  "TT.T....\"..........^^^^,\"\".....,F\"...\"\"TTTTT^T",
+  "T^.T.T.....\"\"......^^^^\"\"^^..T......\"..\"TTTT^^",
+  "TTTTTT.\"\".\"........^^^^\"^^\"..TTT.\".....T.TT.TT",
+  "TTTT.TTT....\"\".....^^^.\"^^.^TTTT....\"\"TTTTTT^^",
+  "TTT.TTT...\".....F\"...^^\"^^T^^^TT....TT.TTTTTTT",
+  "TTTTTTF.\"...\"....\".\"..^\".^^T^^TT...T..TTTT.TTT",
+  "T^......\"..\"...\".......\"...^^TTT...T\"T.TTT..TT",
+  "TT......\"..\"...........\"\".^.^^\"...T\"TTTT.\"..TT",
+  "TTTTTTTTTTTTTTTTTTTTTT,,^TTTTTT^TTT^TTTTTTTTTT"
+ ],
+ "music": "void_field",
+ "bg": "void_out",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 23,
+   "y": 33,
+   "to": "void_town",
+   "tx": 20,
+   "ty": 28,
+   "face": "up"
+  },
+  {
+   "x": 22,
+   "y": 33,
+   "to": "void_town",
+   "tx": 20,
+   "ty": 28,
+   "face": "up"
+  },
+  {
+   "x": 3,
+   "y": 10,
+   "to": "void_cave",
+   "tx": 13,
+   "ty": 18,
+   "face": "up"
+  },
+  {
+   "x": 31,
+   "y": 2,
+   "to": "void_area2",
+   "tx": 23,
+   "ty": 32,
+   "face": "up"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "void_field_c0",
+   "x": 20,
+   "y": 15,
+   "item": "potion:2"
+  },
+  {
+   "id": "void_field_c1",
+   "x": 14,
+   "y": 24,
+   "item": "gear:gloom_ring"
+  },
+  {
+   "id": "void_field_c2",
+   "x": 35,
+   "y": 24,
+   "item": "ether"
+  }
+ ],
+ "hidden": [
+  {
+   "x": 31,
+   "y": 19,
+   "item": "gear:key_to_nowhere",
+   "flag": "hidden_void"
+  }
+ ],
+ "entities": [
+  {
+   "id": "mute_paladin",
+   "kind": "mini",
+   "x": 39,
+   "y": 14,
+   "sprite": "knight",
+   "name": "The Mute Paladin",
+   "world": "void",
+   "cond": [
+    "q:side_void=active",
+    "!flag:beat_mute_paladin"
+   ],
+   "pre": [
+    "A knight in black armor stands in the Drift, surrounded by a silence so thick you can't hear your own steps.",
+    "He raises his shield. He doesn't say anything. He can't."
+   ],
+   "post": [
+    "The paladin's helm cracks. Every song he stole spills out at once, in a joyful, chaotic chorus."
+   ],
+   "win_do": [
+    "set:beat_mute_paladin"
+   ],
+   "encounter": "enc_mute_paladin"
+  }
+ ],
+ "start": [
+  23,
+  32
+ ],
+ "landmark": [
+  31,
+  23
+ ],
+ "habitat": []
+}

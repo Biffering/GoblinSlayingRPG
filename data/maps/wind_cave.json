@@ -1,0 +1,112 @@
+{
+ "id": "wind_cave",
+ "name": "Hollow Winds Cave",
+ "world": "wind",
+ "kind": "cave",
+ "w": 28,
+ "h": 20,
+ "tiles": [
+  "############################",
+  "###____#####################",
+  "###____##############t######",
+  "###____#####t####______#####",
+  "###____##______##______#####",
+  "###____##____C_##______#####",
+  "###____________________#####",
+  "###____##_C__C_##______#####",
+  "#####_###______##______#####",
+  "#####_######_#######_#######",
+  "#####_######_#######_#######",
+  "#####_####_____##____b######",
+  "#####_####_____##b____######",
+  "#####_t###_____##_____######",
+  "####____##_____##_____######",
+  "####___b##_b___#############",
+  "####____####_###############",
+  "####_b__####_###############",
+  "############_###############",
+  "############>###############"
+ ],
+ "music": "wind_field",
+ "bg": "wind_in",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 12,
+   "y": 19,
+   "to": "wind_field",
+   "tx": 4,
+   "ty": 12,
+   "face": "right"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "wind_cave_c0",
+   "x": 18,
+   "y": 7,
+   "item": "summon:galecrown"
+  },
+  {
+   "id": "wind_cave_c1",
+   "x": 3,
+   "y": 2,
+   "item": "first_kite"
+  },
+  {
+   "id": "wind_cave_c2",
+   "x": 12,
+   "y": 6,
+   "item": "hi_potion"
+  },
+  {
+   "id": "wind_cave_c3",
+   "x": 5,
+   "y": 14,
+   "item": "gear:storm_mail"
+  }
+ ],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "rook",
+   "kind": "mini",
+   "x": 19,
+   "y": 13,
+   "sprite": "farcher",
+   "name": "Captain Rook",
+   "world": "wind",
+   "cond": [
+    "q:comp_wind=active",
+    "!flag:beat_rook"
+   ],
+   "need": [
+    "member:pip"
+   ],
+   "need_fail": [
+    "You sense Pip should be here for this."
+   ],
+   "pre": [
+    "A sky pirate in a mirrored visor lounges on a heap of stolen gliders.",
+    "ROOK: \"Pip! Little Pip, grounded at last. How's walking? Slow?\"",
+    "PIP: \"Give. Them. BACK.\""
+   ],
+   "post": [
+    "Rook bails out through a crack in the cave roof. Pip hugs her wings.",
+    "PIP: \"They're torn, but I can patch them. And here, Rook's bow. He won't miss it. Probably.\""
+   ],
+   "win_do": [
+    "set:beat_rook",
+    "done:comp_wind",
+    "give:gear:featherline_bow"
+   ],
+   "encounter": "enc_rook"
+  }
+ ],
+ "start": [
+  12,
+  18
+ ],
+ "habitat": []
+}

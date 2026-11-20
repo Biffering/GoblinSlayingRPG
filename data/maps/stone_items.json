@@ -1,0 +1,70 @@
+{
+ "id": "stone_items",
+ "name": "Copperdeep: Item Shop",
+ "world": "stone",
+ "kind": "interior",
+ "w": 14,
+ "h": 10,
+ "tiles": [
+  "##############",
+  "##i###i###i###",
+  "#qqq______qqq#",
+  "#___cccccc___#",
+  "#___________q#",
+  "#____rrrr____#",
+  "#x___rrrr___z#",
+  "#x___rrrr____#",
+  "#____________#",
+  "#######m######"
+ ],
+ "music": "stone_shop",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 7,
+   "y": 9,
+   "to": "stone_town",
+   "tx": 6,
+   "ty": 18,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "items_stone_k",
+   "name": "Chemist Lode",
+   "look": {
+    "body": "woman",
+    "hair": "#2a2a2a",
+    "outfit": "#4a6a4a",
+    "accent": "#e0e060",
+    "skin": 2,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Ironbark Draught's the local favorite. Toughens you right up."
+     ],
+     "do": [
+      "shop:items"
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 6,
+   "y": 2
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  7,
+  8
+ ]
+}

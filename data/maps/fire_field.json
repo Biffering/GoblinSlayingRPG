@@ -1,0 +1,146 @@
+{
+ "id": "fire_field",
+ "name": "Ashen Wilds",
+ "world": "fire",
+ "kind": "field",
+ "w": 46,
+ "h": 34,
+ "tiles": [
+  "TT^^TTTTTT^T^T^TTT^^TT^TTT^TTTTTTTTT^TTTTTTTTT",
+  "TTTTTTT^T^^TTTT^^TTTT^TTTTT^TTTTTTTTT^^TTT^TTT",
+  "TTTTTT\".T..TTT\"TT\".............TTTTT.^E^..T.^T",
+  "TTTT..\"TTT\"TTTTT.....\".\"\".\"...TTTTTT.,,.\"TTTTT",
+  "^TTTTT.\"TT.TTT\"TTT..\"......\"...TTTT,,,...T.TTT",
+  "TT.TTTTTT.TTTTTT..........\"....TTTT,\"TT.\"TTTTT",
+  "^T.TTTTF....TTT\"T\".....\".T\"........,T.T...T.TT",
+  "TT.\".....\".TTTTT........TT\"......,,,..T.T\"..TT",
+  "TT...\".\"\"\".\".T.....\"...TTTTT.....,.TTTTTTT..TT",
+  "T^...................\".FTTTTTTT,,,\"TT\"FTT...TT",
+  "T^.......\".....\".....\"\"..TTTT.,,TF\"TTTTTTT..TT",
+  "TT.^\"\"..F........\".\"....TT...,,T\"T.TTTTTTT..^T",
+  "TT^E,,,,,,,,,,..\".F....TT\"...,.TT..TTTTTTT..T^",
+  "TT.^....\"..\"\",,,,,,,,.TT.~..L,.~T....T.TT...T^",
+  "^^\".....\"\".....\".\"..,,TT~~...,.~~....\"T..\"..TT",
+  "TT.....\".\"\"..\".....~\",^^...,,,.~~\"......T...TT",
+  "^T..........\"..\"~~~~~===..,,,=~~~~.\"..T.T.TFTT",
+  "T^.....\"..\"...\"~~~~~~~~=,,,,.~~~~......T.TT\"^T",
+  "^T.\"....\"......~~~~~~~~~..,..~~~~....\"..TTTTTT",
+  "TT.......F\".\".~~~~~~~~~~..,..~~~......T\"TT..TT",
+  "TT.\".F...T\"\"...~~~\"\"~~~~.^,^~...\".....TTTTT.T^",
+  "TTKKKKKKKKKKKKKVVVYYVVVVKKYKKKKKKKKKKKKKKKKKTT",
+  "TTKKKKKKKKKKKKKKVVYYVVVKKKYKKKKKKKKKKKKKKKKKTT",
+  "TT\"\"\"...\"TT.......\"\"TTTT,,,..^.^^^TTT....\"..TT",
+  "^T\"\"..\".\"T.\"\"....T.TTTTT,TF.^^^^^^^TTTT.....^T",
+  "TT...\"\"...\"......\".TTT.T,..\".^^^^^^^TT.TT\".\"TT",
+  "TT.......\"........TTT.TT,..^^\"^^^^^TTTTT.T..TT",
+  "TT\"\".\".TTT.T..\".\".^.TT^T,T\".^^^^^^^T^TT.TT..T^",
+  "TT...\"TTTTT.T.F..^^^^T\"T,TT.^.^^^^TTTTT.TTT.TT",
+  "T^...\"TTT.TTT..\"..^..^^F,T\"..^^^^^^TTTTTTTT.T^",
+  "TT...TT\"T.TTT...^^\"^.^^,,.\"..\"^^^^^TT.TTTTTTTT",
+  "TT.\"..TTTTT.TFTTT^^^^..,........^TTTTTTTTTTT^T",
+  "TT......TTTTTTTTT^.^^..,.....\"\"....TT\"TTTTTTTT",
+  "TTTT^TTTTTTTTTTTTTTT^T,,TTTTTTT^TTTT^TTTTT^TTT"
+ ],
+ "music": "fire_field",
+ "bg": "fire_out",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 23,
+   "y": 33,
+   "to": "fire_town",
+   "tx": 19,
+   "ty": 28,
+   "face": "up"
+  },
+  {
+   "x": 22,
+   "y": 33,
+   "to": "fire_town",
+   "tx": 19,
+   "ty": 28,
+   "face": "up"
+  },
+  {
+   "x": 3,
+   "y": 12,
+   "to": "fire_cave",
+   "tx": 12,
+   "ty": 18,
+   "face": "up"
+  },
+  {
+   "x": 38,
+   "y": 2,
+   "to": "fire_area2",
+   "tx": 23,
+   "ty": 32,
+   "face": "up"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "fire_field_c0",
+   "x": 11,
+   "y": 8,
+   "item": "potion:2"
+  },
+  {
+   "id": "fire_field_c1",
+   "x": 21,
+   "y": 8,
+   "item": "gear:ashwood_bow"
+  },
+  {
+   "id": "fire_field_c2",
+   "x": 32,
+   "y": 19,
+   "item": "ether"
+  }
+ ],
+ "hidden": [
+  {
+   "x": 25,
+   "y": 12,
+   "item": "gear:goathorn_talisman",
+   "flag": "hidden_fire"
+  }
+ ],
+ "entities": [
+  {
+   "id": "scrapjack",
+   "kind": "mini",
+   "x": 25,
+   "y": 25,
+   "sprite": "fbum",
+   "name": "Scrapjack",
+   "world": "fire",
+   "cond": [
+    "q:side_fire=active",
+    "!flag:beat_scrapjack"
+   ],
+   "pre": [
+    "A wiry man with a robotic arm is strapped to an enormous bellows.",
+    "SCRAPJACK: \"Finders keepers! I found it in a forge. Totally abandoned. Except for the people.\""
+   ],
+   "post": [
+    "Scrapjack flees, leaving the Great Bellows behind. You'd better take it to Tamsin."
+   ],
+   "win_do": [
+    "set:beat_scrapjack",
+    "give:forge_bellows"
+   ],
+   "encounter": "enc_scrapjack"
+  }
+ ],
+ "start": [
+  23,
+  32
+ ],
+ "landmark": [
+  28,
+  13
+ ],
+ "habitat": []
+}

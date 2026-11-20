@@ -1,0 +1,73 @@
+{
+ "id": "void_house2",
+ "name": "Lastlight: A Workshop",
+ "world": "void",
+ "kind": "interior",
+ "w": 12,
+ "h": 9,
+ "tiles": [
+  "############",
+  "##kk##i##p##",
+  "#__________#",
+  "#________B_#",
+  "#__ouo___B_#",
+  "#__________#",
+  "#___rrrr___#",
+  "#z__rrrr__z#",
+  "######m#####"
+ ],
+ "music": "void_town",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 6,
+   "y": 8,
+   "to": "void_town",
+   "tx": 6,
+   "ty": 26,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "void_h2",
+   "name": "Clockless Clockmaker",
+   "look": {
+    "body": "man",
+    "hair": "#d0d0d0",
+    "outfit": "#4a3a3a",
+    "accent": "#e0c050",
+    "skin": 0,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Time doesn't pass here, exactly. I make clocks anyway. Somebody should keep it."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 7,
+   "y": 3
+  }
+ ],
+ "chests": [
+  {
+   "id": "void_house2_c0",
+   "x": 10,
+   "y": 6,
+   "item": "hi_potion:2"
+  }
+ ],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  6,
+  7
+ ]
+}

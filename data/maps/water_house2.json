@@ -1,0 +1,73 @@
+{
+ "id": "water_house2",
+ "name": "Saltmere: A Workshop",
+ "world": "water",
+ "kind": "interior",
+ "w": 12,
+ "h": 9,
+ "tiles": [
+  "############",
+  "##kk##i##p##",
+  "#__________#",
+  "#________B_#",
+  "#__ouo___B_#",
+  "#__________#",
+  "#___rrrr___#",
+  "#x__rrrr__z#",
+  "######m#####"
+ ],
+ "music": "water_town",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 6,
+   "y": 8,
+   "to": "water_town",
+   "tx": 6,
+   "ty": 26,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "water_h2",
+   "name": "Sailmaker Duff",
+   "look": {
+    "body": "man",
+    "hair": "#8a5a2a",
+    "outfit": "#e0e0d0",
+    "accent": "#2a6a9a",
+    "skin": 1,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Every sail in Saltmere came through this door. Most of them came back, too."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 7,
+   "y": 3
+  }
+ ],
+ "chests": [
+  {
+   "id": "water_house2_c0",
+   "x": 10,
+   "y": 6,
+   "item": "hi_potion:2"
+  }
+ ],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  6,
+  7
+ ]
+}

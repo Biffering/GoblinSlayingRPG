@@ -1,0 +1,108 @@
+{
+ "id": "fire_dungeon2",
+ "name": "The Envy Forge: Depths",
+ "world": "fire",
+ "kind": "dungeon",
+ "w": 36,
+ "h": 28,
+ "tiles": [
+  "####################################",
+  "############_____#########t#########",
+  "############_____##t####________####",
+  "####t##t####____________________####",
+  "###________#_____#_#####________####",
+  "###________#_____#_#####________####",
+  "###________#######_#####________####",
+  "###_______b#######_#########_#######",
+  "#####_############_#########_#######",
+  "####t_#########____bb_###t##_#######",
+  "##_______######_______###______#####",
+  "##_______######_______###______#####",
+  "##_______######_______###______#####",
+  "##______________P_____###_____b#####",
+  "##_______######_______###___b__#####",
+  "##___b___################_##########",
+  "#####_###################_##########",
+  "#####_###################_##########",
+  "#####_##t################_##########",
+  "###_b____b#############_____########",
+  "###_______###_______###_____########",
+  "###_________________###_b___########",
+  "###_______###_______________########",
+  "#############_______################",
+  "################_###################",
+  "################_###################",
+  "################_###################",
+  "################>###################"
+ ],
+ "music": "fire_dungeon",
+ "bg": "fire_in",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 16,
+   "y": 27,
+   "to": "fire_dungeon",
+   "tx": 30,
+   "ty": 25,
+   "face": "down"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "fire_dungeon2_c0",
+   "x": 30,
+   "y": 4,
+   "item": "gear:forgemasters_scepter"
+  },
+  {
+   "id": "fire_dungeon2_c1",
+   "x": 17,
+   "y": 13,
+   "item": "elixir"
+  },
+  {
+   "id": "fire_dungeon2_c2",
+   "x": 30,
+   "y": 11,
+   "item": "gear:ashwood_bow"
+  }
+ ],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "vulkar",
+   "kind": "boss",
+   "x": 14,
+   "y": 3,
+   "sprite": "vulkar",
+   "name": "Vulkar, the Green Flame",
+   "world": "fire",
+   "cond": [
+    "q:main_fire=active",
+    "!flag:beat_vulkar"
+   ],
+   "pre": [
+    "A man stands at the great anvil, hammering at nothing. His fire is green.",
+    "VULKAR: \"Did she send you? Of course she did. Everyone always does what Ignatia wants.\"",
+    "VULKAR: \"Fine. Watch me be better at something. Watch me be better at BURNING.\""
+   ],
+   "post": [
+    "The green fire gutters out. Vulkar is just a tired man with soot on his face.",
+    "VULKAR: \"...I made her first hammer, you know. When we were kids. She still uses it.\"",
+    "The Fire Heartstone cools in your hand, warm as an ordinary hearth.",
+    "Beside the Heart, a crude goblin totem crumbles to dust. King Goblin's mark."
+   ],
+   "win_do": [
+    "set:beat_vulkar"
+   ],
+   "encounter": "enc_vulkar"
+  }
+ ],
+ "start": [
+  16,
+  26
+ ],
+ "habitat": []
+}

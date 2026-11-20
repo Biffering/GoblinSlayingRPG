@@ -1,0 +1,110 @@
+{
+ "id": "water_dungeon2",
+ "name": "The Sunken Cradle: Depths",
+ "world": "water",
+ "kind": "dungeon",
+ "w": 36,
+ "h": 28,
+ "tiles": [
+  "####################################",
+  "#_________####_____#################",
+  "#_________####_____########ttt######",
+  "#_________#ttt_____####________#####",
+  "#__________________####______P_#####",
+  "#_________####_____####________#####",
+  "#_________####_____####_b____b_#####",
+  "#####_##########_##########_########",
+  "#####_##########_##########_########",
+  "##_______######_______#####_########",
+  "##_______######_S___S_#t###_########",
+  "##_______######_______#________#####",
+  "##_______######_________P______#####",
+  "######_########_S___S_#__b_____#####",
+  "######_########_______#_S____S_#####",
+  "######_################________#####",
+  "####t#_####################_########",
+  "###__b___################t#_########",
+  "###______t#ttt#t##t#####_______#####",
+  "###__________________###_______#####",
+  "###___b__###_________###_______#####",
+  "############_P_____P_###_______#####",
+  "############_________###_______#####",
+  "################_###################",
+  "################_###################",
+  "################_###################",
+  "################_###################",
+  "################>###################"
+ ],
+ "music": "water_dungeon",
+ "bg": "water_in",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 16,
+   "y": 27,
+   "to": "water_dungeon",
+   "tx": 12,
+   "ty": 23,
+   "face": "down"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "water_dungeon2_c0",
+   "x": 21,
+   "y": 10,
+   "item": "gear:heart_of_the_falls"
+  },
+  {
+   "id": "water_dungeon2_c1",
+   "x": 6,
+   "y": 9,
+   "item": "elixir"
+  },
+  {
+   "id": "water_dungeon2_c2",
+   "x": 30,
+   "y": 22,
+   "item": "gear:sirens_locket"
+  }
+ ],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "maren",
+   "kind": "boss",
+   "x": 27,
+   "y": 5,
+   "sprite": "maren",
+   "name": "Maren, Mother of Tides",
+   "world": "water",
+   "cond": [
+    "q:main_water=active",
+    "!flag:beat_maren"
+   ],
+   "pre": [
+    "A woman made of water rocks an empty cradle. The whole sea sways with her.",
+    "MAREN: \"Shh. Shh. If the tide never goes out, nothing ever gets carried away.\"",
+    "MAREN: \"You want to take the water back? Then you'll have to take everything I've lost with it.\""
+   ],
+   "post": [
+    "The cradle stops rocking. Maren looks at it for a long time.",
+    "MAREN: \"...It's empty. It's been empty for so long. I just didn't want to see.\"",
+    "She lets the tide go out. The Water Heartstone stops weeping.",
+    "Beside the Heart, a crude goblin totem crumbles to dust. King Goblin's mark."
+   ],
+   "win_do": [
+    "set:beat_maren"
+   ],
+   "encounter": "enc_maren"
+  }
+ ],
+ "start": [
+  16,
+  26
+ ],
+ "habitat": [
+  "coast"
+ ]
+}

@@ -1,0 +1,113 @@
+{
+ "id": "water_cave",
+ "name": "Drowned Grotto",
+ "world": "water",
+ "kind": "cave",
+ "w": 28,
+ "h": 20,
+ "tiles": [
+  "############################",
+  "#####t######################",
+  "###_____####____############",
+  "###_____####____############",
+  "###_____t###____###____#####",
+  "###___bb____b________b_#####",
+  "#####_######____###____#####",
+  "#####_######____###____#####",
+  "#####_######____###____#####",
+  "#####_##############_#######",
+  "#####_###______###____######",
+  "#__b__###______###____######",
+  "#_____###______###___b######",
+  "#_____###_____________######",
+  "#_____###___b__###____######",
+  "#____####_b____###____######",
+  "#____#######_###############",
+  "#____#######_###############",
+  "############_###############",
+  "############>###############"
+ ],
+ "music": "water_field",
+ "bg": "water_in",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 12,
+   "y": 19,
+   "to": "water_field",
+   "tx": 4,
+   "ty": 11,
+   "face": "right"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "water_cave_c0",
+   "x": 14,
+   "y": 3,
+   "item": "summon:marrowhale"
+  },
+  {
+   "id": "water_cave_c1",
+   "x": 4,
+   "y": 5,
+   "item": "music_box"
+  },
+  {
+   "id": "water_cave_c2",
+   "x": 22,
+   "y": 5,
+   "item": "hi_potion"
+  },
+  {
+   "id": "water_cave_c3",
+   "x": 19,
+   "y": 14,
+   "item": "gear:riptide_blade"
+  }
+ ],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "gloomfin",
+   "kind": "mini",
+   "x": 3,
+   "y": 14,
+   "sprite": "gloomfin",
+   "name": "Gloomfin",
+   "world": "water",
+   "cond": [
+    "q:comp_water=active",
+    "!flag:beat_gloomfin"
+   ],
+   "need": [
+    "member:nerissa"
+   ],
+   "need_fail": [
+    "You sense Nerissa should be here for this."
+   ],
+   "pre": [
+    "Something huge drifts in the black water. A light dangles in front of its jaws. It's the lighthouse lens.",
+    "NERISSA: \"That's my light. You've been using MY light to lure things in.\""
+   ],
+   "post": [
+    "Gloomfin sinks into the dark. The lens rolls free, still glowing.",
+    "NERISSA: \"I'll put it back where it belongs. And this, the lens frame, should be yours.\""
+   ],
+   "win_do": [
+    "set:beat_gloomfin",
+    "done:comp_water",
+    "give:gear:beacon_staff"
+   ],
+   "encounter": "enc_gloomfin"
+  }
+ ],
+ "start": [
+  12,
+  18
+ ],
+ "habitat": [
+  "coast"
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "id": "fire_items",
+ "name": "Emberfall: Item Shop",
+ "world": "fire",
+ "kind": "interior",
+ "w": 14,
+ "h": 10,
+ "tiles": [
+  "##############",
+  "##i###i###y###",
+  "#qqq______qqq#",
+  "#___cccccc___#",
+  "#___________q#",
+  "#____rrrr____#",
+  "#x___rrrr___z#",
+  "#x___rrrr____#",
+  "#____________#",
+  "#######m######"
+ ],
+ "music": "fire_shop",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 7,
+   "y": 9,
+   "to": "fire_town",
+   "tx": 33,
+   "ty": 18,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "items_fire_k",
+   "name": "Apothecary Pell",
+   "look": {
+    "body": "woman",
+    "hair": "#e0e0e0",
+    "outfit": "#3a6a3a",
+    "accent": "#e05030",
+    "skin": 0,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Potions, tonics, elixirs. The glowing ones make you glow. That's not a side effect, it's a feature."
+     ],
+     "do": [
+      "shop:items"
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 6,
+   "y": 2
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  7,
+  8
+ ]
+}

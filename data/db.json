@@ -1,0 +1,8444 @@
+{
+ "elements": [
+  "fire",
+  "water",
+  "wind",
+  "stone",
+  "spirit",
+  "void"
+ ],
+ "element_info": {
+  "fire": {
+   "name": "Fire",
+   "color": "#ff4a32",
+   "beats": "wind",
+   "prefix": "Cinder"
+  },
+  "water": {
+   "name": "Water",
+   "color": "#3a86ff",
+   "beats": "fire",
+   "prefix": "Brine"
+  },
+  "wind": {
+   "name": "Wind",
+   "color": "#36d6c3",
+   "beats": "stone",
+   "prefix": "Gale"
+  },
+  "stone": {
+   "name": "Stone",
+   "color": "#58c84e",
+   "beats": "water",
+   "prefix": "Granite"
+  },
+  "spirit": {
+   "name": "Spirit",
+   "color": "#f4f2ff",
+   "beats": "void",
+   "prefix": "Lumen"
+  },
+  "void": {
+   "name": "Void",
+   "color": "#9b4dff",
+   "beats": "spirit",
+   "prefix": "Null"
+  }
+ },
+ "characters": {
+  "hero": {
+   "name": "Wren",
+   "title": "the Kindler",
+   "innate": null,
+   "base": {
+    "hp": 64,
+    "mp": 18,
+    "str": 11,
+    "def": 9,
+    "mag": 9,
+    "mdef": 9,
+    "spd": 11,
+    "dex": 10
+   },
+   "grow": {
+    "hp": 22,
+    "mp": 4.0,
+    "str": 2.0,
+    "def": 1.6,
+    "mag": 1.8,
+    "mdef": 1.6,
+    "spd": 1.2,
+    "dex": 1.6
+   },
+   "limit": "kindlers_wrath",
+   "bio": "A Kindler: one who carries the elements of whatever they wear. Woke in the Nexus with no fire of their own."
+  },
+  "kael": {
+   "name": "Kael",
+   "title": "Ashborn",
+   "innate": "fire",
+   "world": "fire",
+   "base": {
+    "hp": 78,
+    "mp": 10,
+    "str": 14,
+    "def": 10,
+    "mag": 6,
+    "mdef": 7,
+    "spd": 10,
+    "dex": 10
+   },
+   "grow": {
+    "hp": 27,
+    "mp": 2.4,
+    "str": 2.6,
+    "def": 1.8,
+    "mag": 1.0,
+    "mdef": 1.2,
+    "spd": 1.1,
+    "dex": 1.4
+   },
+   "limit": "pit_fury",
+   "bio": "Former champion of the Emberfall fighting pits. Hits hard, thinks later."
+  },
+  "nerissa": {
+   "name": "Nerissa",
+   "title": "Lightkeeper",
+   "innate": "water",
+   "world": "water",
+   "base": {
+    "hp": 54,
+    "mp": 26,
+    "str": 7,
+    "def": 8,
+    "mag": 13,
+    "mdef": 12,
+    "spd": 10,
+    "dex": 9
+   },
+   "grow": {
+    "hp": 18,
+    "mp": 5.6,
+    "str": 1.1,
+    "def": 1.3,
+    "mag": 2.5,
+    "mdef": 2.2,
+    "spd": 1.2,
+    "dex": 1.3
+   },
+   "limit": "lighthouse_beam",
+   "bio": "Keeper of the Saltmere lighthouse, which has been dark since the tide-mother began to grieve."
+  },
+  "pip": {
+   "name": "Pip",
+   "title": "Featherline",
+   "innate": "wind",
+   "world": "wind",
+   "base": {
+    "hp": 58,
+    "mp": 16,
+    "str": 9,
+    "def": 8,
+    "mag": 8,
+    "mdef": 8,
+    "spd": 15,
+    "dex": 14
+   },
+   "grow": {
+    "hp": 20,
+    "mp": 3.6,
+    "str": 1.5,
+    "def": 1.3,
+    "mag": 1.5,
+    "mdef": 1.4,
+    "spd": 1.9,
+    "dex": 2.4
+   },
+   "limit": "thousand_feathers",
+   "bio": "The fastest courier in Kitefall, grounded since sky pirates stole her glider-wings."
+  },
+  "durga": {
+   "name": "Durga",
+   "title": "Flintmantle",
+   "innate": "stone",
+   "world": "stone",
+   "base": {
+    "hp": 86,
+    "mp": 12,
+    "str": 12,
+    "def": 14,
+    "mag": 6,
+    "mdef": 10,
+    "spd": 8,
+    "dex": 9
+   },
+   "grow": {
+    "hp": 30,
+    "mp": 2.6,
+    "str": 2.1,
+    "def": 2.6,
+    "mag": 1.0,
+    "mdef": 1.7,
+    "spd": 0.9,
+    "dex": 1.2
+   },
+   "limit": "mountains_embrace",
+   "bio": "Foreman of the Copperdeep miners. Her crew is still trapped below."
+  },
+  "sol": {
+   "name": "Sol",
+   "title": "the Unremembered",
+   "innate": "spirit",
+   "world": "spirit",
+   "base": {
+    "hp": 60,
+    "mp": 22,
+    "str": 9,
+    "def": 9,
+    "mag": 12,
+    "mdef": 13,
+    "spd": 11,
+    "dex": 10
+   },
+   "grow": {
+    "hp": 20,
+    "mp": 4.8,
+    "str": 1.5,
+    "def": 1.5,
+    "mag": 2.2,
+    "mdef": 2.3,
+    "spd": 1.3,
+    "dex": 1.4
+   },
+   "limit": "enlightenment",
+   "bio": "A monk of Hallowmere who woke one morning unable to remember who he was trying to become."
+  },
+  "vesper": {
+   "name": "Vesper",
+   "title": "Half-Faded",
+   "innate": "void",
+   "world": "void",
+   "base": {
+    "hp": 56,
+    "mp": 20,
+    "str": 9,
+    "def": 8,
+    "mag": 12,
+    "mdef": 9,
+    "spd": 14,
+    "dex": 13
+   },
+   "grow": {
+    "hp": 19,
+    "mp": 4.4,
+    "str": 1.5,
+    "def": 1.3,
+    "mag": 2.2,
+    "mdef": 1.5,
+    "spd": 1.8,
+    "dex": 2.0
+   },
+   "limit": "fade",
+   "bio": "A girl from Lastlight who watches herself from a few feet away. She can't remember her real name."
+  }
+ },
+ "limits": {
+  "kindlers_wrath": {
+   "name": "Kindler's Wrath",
+   "desc": "Strikes once for every element in your aura (at least once)."
+  },
+  "pit_fury": {
+   "name": "Pit Fury",
+   "desc": "Four savage fire strikes on random foes."
+  },
+  "lighthouse_beam": {
+   "name": "Lighthouse Beam",
+   "desc": "Water damage to all foes and heals the party."
+  },
+  "thousand_feathers": {
+   "name": "Thousand Feathers",
+   "desc": "Eight wind arrows rain on random foes."
+  },
+  "mountains_embrace": {
+   "name": "Mountain's Embrace",
+   "desc": "Party takes half damage for 3 turns; heals all."
+  },
+  "enlightenment": {
+   "name": "Enlightenment",
+   "desc": "Fully heals and revives the whole party."
+  },
+  "fade": {
+   "name": "Fade",
+   "desc": "A void strike that ignores all defenses."
+  }
+ },
+ "spells": {
+  "ember": {
+   "name": "Ember",
+   "el": "fire",
+   "kind": "dmg",
+   "target": "one",
+   "power": 1.0,
+   "mp": 5,
+   "lv": 1
+  },
+  "kindle": {
+   "name": "Kindle",
+   "el": "fire",
+   "kind": "buff",
+   "stat": "str",
+   "target": "ally",
+   "power": 0.3,
+   "mp": 8,
+   "lv": 5,
+   "desc": "Raises Strength."
+  },
+  "flare_wave": {
+   "name": "Flare Wave",
+   "el": "fire",
+   "kind": "dmg",
+   "target": "all",
+   "power": 0.72,
+   "mp": 13,
+   "lv": 10
+  },
+  "inferno": {
+   "name": "Inferno",
+   "el": "fire",
+   "kind": "dmg",
+   "target": "one",
+   "power": 2.0,
+   "mp": 22,
+   "lv": 18
+  },
+  "soothe": {
+   "name": "Soothe",
+   "el": "water",
+   "kind": "heal",
+   "target": "ally",
+   "power": 1.0,
+   "mp": 6,
+   "lv": 1
+  },
+  "splash": {
+   "name": "Splash",
+   "el": "water",
+   "kind": "dmg",
+   "target": "one",
+   "power": 1.0,
+   "mp": 5,
+   "lv": 2
+  },
+  "tidal_rush": {
+   "name": "Tidal Rush",
+   "el": "water",
+   "kind": "dmg",
+   "target": "all",
+   "power": 0.72,
+   "mp": 13,
+   "lv": 10
+  },
+  "rain_of_mercy": {
+   "name": "Rain of Mercy",
+   "el": "water",
+   "kind": "heal",
+   "target": "allies",
+   "power": 0.7,
+   "mp": 18,
+   "lv": 13
+  },
+  "maelstrom": {
+   "name": "Maelstrom",
+   "el": "water",
+   "kind": "dmg",
+   "target": "one",
+   "power": 2.0,
+   "mp": 22,
+   "lv": 18
+  },
+  "gust": {
+   "name": "Gust",
+   "el": "wind",
+   "kind": "dmg",
+   "target": "one",
+   "power": 1.0,
+   "mp": 5,
+   "lv": 1
+  },
+  "haste": {
+   "name": "Haste",
+   "el": "wind",
+   "kind": "buff",
+   "stat": "spd",
+   "target": "ally",
+   "power": 0.4,
+   "mp": 8,
+   "lv": 5,
+   "desc": "Raises Speed."
+  },
+  "cyclone": {
+   "name": "Cyclone",
+   "el": "wind",
+   "kind": "dmg",
+   "target": "all",
+   "power": 0.72,
+   "mp": 13,
+   "lv": 10
+  },
+  "tempest": {
+   "name": "Tempest",
+   "el": "wind",
+   "kind": "dmg",
+   "target": "one",
+   "power": 2.0,
+   "mp": 22,
+   "lv": 18
+  },
+  "shard": {
+   "name": "Shard",
+   "el": "stone",
+   "kind": "dmg",
+   "target": "one",
+   "power": 1.0,
+   "mp": 5,
+   "lv": 1
+  },
+  "stoneskin": {
+   "name": "Stoneskin",
+   "el": "stone",
+   "kind": "buff",
+   "stat": "def",
+   "target": "ally",
+   "power": 0.35,
+   "mp": 8,
+   "lv": 5,
+   "desc": "Raises Defense and Magic Defense."
+  },
+  "quake": {
+   "name": "Quake",
+   "el": "stone",
+   "kind": "dmg",
+   "target": "all",
+   "power": 0.72,
+   "mp": 13,
+   "lv": 10
+  },
+  "avalanche": {
+   "name": "Avalanche",
+   "el": "stone",
+   "kind": "dmg",
+   "target": "one",
+   "power": 2.0,
+   "mp": 22,
+   "lv": 18
+  },
+  "mend": {
+   "name": "Mend",
+   "el": "spirit",
+   "kind": "heal",
+   "target": "ally",
+   "power": 1.0,
+   "mp": 6,
+   "lv": 1
+  },
+  "radiance": {
+   "name": "Radiance",
+   "el": "spirit",
+   "kind": "dmg",
+   "target": "one",
+   "power": 1.0,
+   "mp": 5,
+   "lv": 3
+  },
+  "revive": {
+   "name": "Revive",
+   "el": "spirit",
+   "kind": "revive",
+   "target": "ally",
+   "power": 0.4,
+   "mp": 16,
+   "lv": 8
+  },
+  "sanctify": {
+   "name": "Sanctify",
+   "el": "spirit",
+   "kind": "dmg",
+   "target": "all",
+   "power": 0.72,
+   "mp": 13,
+   "lv": 12
+  },
+  "judgment": {
+   "name": "Judgment",
+   "el": "spirit",
+   "kind": "dmg",
+   "target": "one",
+   "power": 2.2,
+   "mp": 24,
+   "lv": 20
+  },
+  "hex": {
+   "name": "Hex",
+   "el": "void",
+   "kind": "hex",
+   "target": "one",
+   "power": 0.9,
+   "mp": 6,
+   "lv": 1,
+   "desc": "Damage and lowers Magic Defense."
+  },
+  "drain": {
+   "name": "Drain",
+   "el": "void",
+   "kind": "drain",
+   "target": "one",
+   "power": 0.9,
+   "mp": 9,
+   "lv": 5,
+   "desc": "Steals HP."
+  },
+  "null_wave": {
+   "name": "Null Wave",
+   "el": "void",
+   "kind": "dmg",
+   "target": "all",
+   "power": 0.72,
+   "mp": 13,
+   "lv": 10
+  },
+  "oblivion": {
+   "name": "Oblivion",
+   "el": "void",
+   "kind": "dmg",
+   "target": "one",
+   "power": 2.2,
+   "mp": 24,
+   "lv": 20
+  }
+ },
+ "summons": {
+  "pyrestag": {
+   "name": "Pyrestag",
+   "el": "fire",
+   "mp": 26,
+   "power": 1.6,
+   "effect": "dmg",
+   "desc": "A stag whose antlers are a forest fire. Fire damage to all foes."
+  },
+  "marrowhale": {
+   "name": "Marrowhale",
+   "el": "water",
+   "mp": 28,
+   "power": 1.4,
+   "effect": "dmg_heal",
+   "desc": "A whale made of the sea's memory. Water damage to all, heals the party."
+  },
+  "galecrown": {
+   "name": "Galecrown Roc",
+   "el": "wind",
+   "mp": 26,
+   "power": 1.5,
+   "effect": "dmg_haste",
+   "desc": "A roc crowned in storm. Wind damage to all, hastes the party."
+  },
+  "basaltus": {
+   "name": "Old Basaltus",
+   "el": "stone",
+   "mp": 28,
+   "power": 1.4,
+   "effect": "dmg_guard",
+   "desc": "A tortoise older than mountains. Stone damage to all, guards the party."
+  },
+  "lanternmoth": {
+   "name": "Lanternmoth",
+   "el": "spirit",
+   "mp": 30,
+   "power": 1.3,
+   "effect": "dmg_revive",
+   "desc": "A moth that carries lost lights home. Spirit damage, revives and heals."
+  },
+  "umbrahound": {
+   "name": "Umbra Hound",
+   "el": "void",
+   "mp": 28,
+   "power": 1.5,
+   "effect": "dmg_hex",
+   "desc": "A wolf made of a shadow's shadow. Void damage, weakens foes."
+  },
+  "aeon": {
+   "name": "Aeon, the Witness",
+   "el": "spirit",
+   "mp": 60,
+   "power": 3.2,
+   "effect": "dmg_fullheal",
+   "desc": "The eye that has watched every life. Overwhelming spirit damage, fully heals the party."
+  },
+  "nihil": {
+   "name": "Nihil, the Unmaker",
+   "el": "void",
+   "mp": 60,
+   "power": 3.6,
+   "effect": "dmg_pierce",
+   "desc": "What was here before anything. Void damage that ignores all defense."
+  }
+ },
+ "gear": {
+  "cinder_blade": {
+   "name": "Cinder Blade",
+   "kind": "blade",
+   "el": "fire",
+   "tier": "common",
+   "q": 1.06,
+   "bonus": {
+    "str": 0.06
+   },
+   "fx": {},
+   "desc": "Hammered out on a black anvil.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "ashsteel_saber": {
+   "name": "Ashsteel Saber",
+   "kind": "blade",
+   "el": "fire",
+   "tier": "common",
+   "q": 1.0,
+   "bonus": {
+    "str": 0.06
+   },
+   "fx": {},
+   "desc": "Pit fighters swear by these.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "magma_edge": {
+   "name": "Magma Edge",
+   "kind": "blade",
+   "el": "fire",
+   "tier": "rare",
+   "q": 1.25,
+   "bonus": {
+    "str": 0.09,
+    "spd": 0.11
+   },
+   "fx": {},
+   "desc": "Smells of ash and hard work.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "pitbreaker": {
+   "name": "Pitbreaker",
+   "kind": "blade",
+   "el": "fire",
+   "tier": "legendary",
+   "q": 1.44,
+   "bonus": {
+    "str": 0.14
+   },
+   "fx": {
+    "crit": 0.1,
+    "limit": 0.3
+   },
+   "desc": "Kael's old pit blade, finally unchained.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "ember_bow": {
+   "name": "Ember Bow",
+   "kind": "bow",
+   "el": "fire",
+   "tier": "common",
+   "q": 1.08,
+   "bonus": {
+    "dex": 0.06
+   },
+   "fx": {},
+   "desc": "Hammered out on a black anvil.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "smokewood_bow": {
+   "name": "Smokewood Bow",
+   "kind": "bow",
+   "el": "fire",
+   "tier": "common",
+   "q": 1.04,
+   "bonus": {
+    "dex": 0.06
+   },
+   "fx": {},
+   "desc": "Pit fighters swear by these.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "ashwood_bow": {
+   "name": "Ashwood Bow",
+   "kind": "bow",
+   "el": "fire",
+   "tier": "rare",
+   "q": 1.25,
+   "bonus": {
+    "dex": 0.09,
+    "spd": 0.09
+   },
+   "fx": {},
+   "desc": "Forged in Emberfall's lesser furnaces.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "phoenix_longbow": {
+   "name": "Phoenix Longbow",
+   "kind": "bow",
+   "el": "fire",
+   "tier": "legendary",
+   "q": 1.43,
+   "bonus": {
+    "dex": 0.14,
+    "spd": 0.06
+   },
+   "fx": {
+    "crit": 0.12,
+    "first": 30
+   },
+   "desc": "Its arrows leave a trail of rising sparks.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "pyre_staff": {
+   "name": "Pyre Staff",
+   "kind": "staff",
+   "el": "fire",
+   "tier": "common",
+   "q": 1.07,
+   "bonus": {
+    "mag": 0.06
+   },
+   "fx": {},
+   "desc": "Hammered out on a black anvil.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "kindling_rod": {
+   "name": "Kindling Rod",
+   "kind": "staff",
+   "el": "fire",
+   "tier": "common",
+   "q": 1.07,
+   "bonus": {
+    "mag": 0.06
+   },
+   "fx": {},
+   "desc": "Still faintly warm.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "brazier_staff": {
+   "name": "Brazier Staff",
+   "kind": "staff",
+   "el": "fire",
+   "tier": "rare",
+   "q": 1.23,
+   "bonus": {
+    "mag": 0.09,
+    "str": 0.11
+   },
+   "fx": {},
+   "desc": "Smells of ash and hard work.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "forgemasters_scepter": {
+   "name": "Forgemaster's Scepter",
+   "kind": "staff",
+   "el": "fire",
+   "tier": "legendary",
+   "q": 1.49,
+   "bonus": {
+    "mag": 0.14,
+    "str": 0.06
+   },
+   "fx": {
+    "spell": 0.15,
+    "drain": 0.05
+   },
+   "desc": "Ignatia's old master carved runes of every flame into it.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "scorchmail": {
+   "name": "Scorchmail",
+   "kind": "armor",
+   "el": "fire",
+   "tier": "common",
+   "q": 1.05,
+   "bonus": {
+    "dex": 0.06
+   },
+   "fx": {},
+   "desc": "Hammered out on a black anvil.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "ashcloth_tunic": {
+   "name": "Ashcloth Tunic",
+   "kind": "armor",
+   "el": "fire",
+   "tier": "common",
+   "q": 1.07,
+   "bonus": {
+    "str": 0.08
+   },
+   "fx": {},
+   "desc": "Hammered out on a black anvil.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "bellows_leather": {
+   "name": "Bellows Leather",
+   "kind": "armor",
+   "el": "fire",
+   "tier": "common",
+   "q": 1.01,
+   "bonus": {
+    "str": 0.1
+   },
+   "fx": {},
+   "desc": "Smells of ash and hard work.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "cinder_scale": {
+   "name": "Cinder Scale",
+   "kind": "armor",
+   "el": "fire",
+   "tier": "common",
+   "q": 1.02,
+   "bonus": {
+    "str": 0.08
+   },
+   "fx": {},
+   "desc": "Still faintly warm.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "forgeheart_mail": {
+   "name": "Forgeheart Mail",
+   "kind": "armor",
+   "el": "fire",
+   "tier": "rare",
+   "q": 1.24,
+   "bonus": {
+    "str": 0.06,
+    "hp": 0.06
+   },
+   "fx": {},
+   "desc": "Still warm from Emberfall's great forge.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "magma_plate": {
+   "name": "Magma Plate",
+   "kind": "armor",
+   "el": "fire",
+   "tier": "rare",
+   "q": 1.25,
+   "bonus": {
+    "hp": 0.13,
+    "dex": 0.11
+   },
+   "fx": {},
+   "desc": "Forged in Emberfall's lesser furnaces.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "emberweave_robe": {
+   "name": "Emberweave Robe",
+   "kind": "armor",
+   "el": "fire",
+   "tier": "rare",
+   "q": 1.28,
+   "bonus": {
+    "spd": 0.11,
+    "hp": 0.14
+   },
+   "fx": {},
+   "desc": "Forged in Emberfall's lesser furnaces.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "salamander_coat": {
+   "name": "Salamander Coat",
+   "kind": "armor",
+   "el": "fire",
+   "tier": "legendary",
+   "q": 1.43,
+   "bonus": {
+    "hp": 0.12,
+    "str": 0.08
+   },
+   "fx": {
+    "regen": 0.03,
+    "guard": 0.08
+   },
+   "desc": "Shed by a salamander older than the town.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "ember_ring": {
+   "name": "Ember Ring",
+   "kind": "acc",
+   "el": "fire",
+   "tier": "common",
+   "q": 1.03,
+   "bonus": {
+    "hp": 0.13
+   },
+   "fx": {},
+   "desc": "Pit fighters swear by these.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "coal_charm": {
+   "name": "Coal Charm",
+   "kind": "acc",
+   "el": "fire",
+   "tier": "common",
+   "q": 1.04,
+   "bonus": {
+    "str": 0.08
+   },
+   "fx": {},
+   "desc": "Hammered out on a black anvil.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "spark_earring": {
+   "name": "Spark Earring",
+   "kind": "acc",
+   "el": "fire",
+   "tier": "common",
+   "q": 1.07,
+   "bonus": {
+    "dex": 0.09
+   },
+   "fx": {},
+   "desc": "Still faintly warm.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "ash_bracelet": {
+   "name": "Ash Bracelet",
+   "kind": "acc",
+   "el": "fire",
+   "tier": "common",
+   "q": 1.0,
+   "bonus": {
+    "hp": 0.14
+   },
+   "fx": {},
+   "desc": "Pit fighters swear by these.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "tinder_pendant": {
+   "name": "Tinder Pendant",
+   "kind": "acc",
+   "el": "fire",
+   "tier": "common",
+   "q": 1.06,
+   "bonus": {
+    "str": 0.1
+   },
+   "fx": {},
+   "desc": "Smells of ash and hard work.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "smoke_brooch": {
+   "name": "Smoke Brooch",
+   "kind": "acc",
+   "el": "fire",
+   "tier": "common",
+   "q": 1.06,
+   "bonus": {
+    "dex": 0.09
+   },
+   "fx": {},
+   "desc": "Still faintly warm.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "warm_stone": {
+   "name": "Warm Stone",
+   "kind": "acc",
+   "el": "fire",
+   "tier": "common",
+   "q": 1.02,
+   "bonus": {
+    "str": 0.09
+   },
+   "fx": {},
+   "desc": "Forged in Emberfall's lesser furnaces.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "cinder_band": {
+   "name": "Cinder Band",
+   "kind": "acc",
+   "el": "fire",
+   "tier": "common",
+   "q": 1.07,
+   "bonus": {
+    "spd": 0.1
+   },
+   "fx": {},
+   "desc": "Hammered out on a black anvil.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "forge_token": {
+   "name": "Forge Token",
+   "kind": "acc",
+   "el": "fire",
+   "tier": "common",
+   "q": 1.04,
+   "bonus": {
+    "str": 0.09
+   },
+   "fx": {},
+   "desc": "Hammered out on a black anvil.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "pit_fighters_wrap": {
+   "name": "Pit Fighter's Wrap",
+   "kind": "acc",
+   "el": "fire",
+   "tier": "common",
+   "q": 1.07,
+   "bonus": {
+    "spd": 0.08
+   },
+   "fx": {},
+   "desc": "Hammered out on a black anvil.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "magma_ring": {
+   "name": "Magma Ring",
+   "kind": "acc",
+   "el": "fire",
+   "tier": "rare",
+   "q": 1.23,
+   "bonus": {
+    "spd": 0.09,
+    "dex": 0.09
+   },
+   "fx": {
+    "limit": 0.21
+   },
+   "desc": "Hammered out on a black anvil.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "salamander_scale": {
+   "name": "Salamander Scale",
+   "kind": "acc",
+   "el": "fire",
+   "tier": "rare",
+   "q": 1.22,
+   "bonus": {
+    "dex": 0.1,
+    "spd": 0.11
+   },
+   "fx": {
+    "first": 21
+   },
+   "desc": "Forged in Emberfall's lesser furnaces.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "blazing_sigil": {
+   "name": "Blazing Sigil",
+   "kind": "acc",
+   "el": "fire",
+   "tier": "rare",
+   "q": 1.23,
+   "bonus": {
+    "str": 0.09,
+    "hp": 0.18
+   },
+   "fx": {
+    "drain": 0.05
+   },
+   "desc": "Still faintly warm.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "furnace_heart": {
+   "name": "Furnace Heart",
+   "kind": "acc",
+   "el": "fire",
+   "tier": "rare",
+   "q": 1.28,
+   "bonus": {
+    "dex": 0.1,
+    "spd": 0.1
+   },
+   "fx": {
+    "first": 21
+   },
+   "desc": "Forged in Emberfall's lesser furnaces.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "ember_crown": {
+   "name": "Ember Crown",
+   "kind": "acc",
+   "el": "fire",
+   "tier": "rare",
+   "q": 1.26,
+   "bonus": {
+    "str": 0.08,
+    "dex": 0.08
+   },
+   "fx": {
+    "drain": 0.05
+   },
+   "desc": "Still faintly warm.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "phoenix_feather_pin": {
+   "name": "Phoenix Feather Pin",
+   "kind": "acc",
+   "el": "fire",
+   "tier": "rare",
+   "q": 1.25,
+   "bonus": {
+    "spd": 0.09,
+    "hp": 0.14
+   },
+   "fx": {
+    "crit": 0.06
+   },
+   "desc": "Still faintly warm.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "bellows_gem": {
+   "name": "Bellows Gem",
+   "kind": "acc",
+   "el": "fire",
+   "tier": "rare",
+   "q": 1.25,
+   "bonus": {
+    "str": 0.12,
+    "spd": 0.09
+   },
+   "fx": {
+    "limit": 0.21
+   },
+   "desc": "Pit fighters swear by these.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "goathorn_talisman": {
+   "name": "Goat-Horn Talisman",
+   "kind": "acc",
+   "el": "fire",
+   "tier": "legendary",
+   "q": 1.45,
+   "bonus": {
+    "str": 0.12,
+    "spd": 0.08
+   },
+   "fx": {
+    "crit": 0.1,
+    "first": 25
+   },
+   "desc": "Smells faintly of goat. Worth it.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "eye_of_the_envious": {
+   "name": "Eye of the Envious",
+   "kind": "acc",
+   "el": "fire",
+   "tier": "legendary",
+   "q": 1.43,
+   "bonus": {
+    "str": 0.1,
+    "mag": 0.1
+   },
+   "fx": {
+    "drain": 0.08,
+    "limit": 0.4
+   },
+   "desc": "Green at the center. It wants what you have.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "hearth_of_brannoc": {
+   "name": "Hearth of Brannoc",
+   "kind": "acc",
+   "el": "fire",
+   "tier": "legendary",
+   "q": 1.45,
+   "bonus": {
+    "hp": 0.12,
+    "def": 0.08
+   },
+   "fx": {
+    "regen": 0.04,
+    "gold": 0.2
+   },
+   "desc": "A smith's heart, still keeping the fire.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "tidecutter": {
+   "name": "Tidecutter",
+   "kind": "blade",
+   "el": "water",
+   "tier": "common",
+   "q": 1.02,
+   "bonus": {
+    "str": 0.06
+   },
+   "fx": {},
+   "desc": "Polished by a thousand waves.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "coral_saber": {
+   "name": "Coral Saber",
+   "kind": "blade",
+   "el": "water",
+   "tier": "common",
+   "q": 1.01,
+   "bonus": {
+    "str": 0.06
+   },
+   "fx": {},
+   "desc": "Salvaged from the drowned docks.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "riptide_blade": {
+   "name": "Riptide Blade",
+   "kind": "blade",
+   "el": "water",
+   "tier": "rare",
+   "q": 1.27,
+   "bonus": {
+    "str": 0.09,
+    "mdef": 0.08
+   },
+   "fx": {},
+   "desc": "Salvaged from the drowned docks.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "abyssal_cutlass": {
+   "name": "Abyssal Cutlass",
+   "kind": "blade",
+   "el": "water",
+   "tier": "legendary",
+   "q": 1.48,
+   "bonus": {
+    "str": 0.1,
+    "mp": 0.1
+   },
+   "fx": {
+    "mp_hit": 0.06,
+    "drain": 0.06
+   },
+   "desc": "Recovered from a ship that sank twice.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "coral_bow": {
+   "name": "Coral Bow",
+   "kind": "bow",
+   "el": "water",
+   "tier": "common",
+   "q": 1.03,
+   "bonus": {
+    "dex": 0.06
+   },
+   "fx": {},
+   "desc": "Smells like a calm morning tide.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "driftwood_longbow": {
+   "name": "Driftwood Longbow",
+   "kind": "bow",
+   "el": "water",
+   "tier": "common",
+   "q": 1.05,
+   "bonus": {
+    "dex": 0.06
+   },
+   "fx": {},
+   "desc": "Smells like a calm morning tide.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "gulls_wing_bow": {
+   "name": "Gull's Wing Bow",
+   "kind": "bow",
+   "el": "water",
+   "tier": "rare",
+   "q": 1.26,
+   "bonus": {
+    "dex": 0.09,
+    "hp": 0.19
+   },
+   "fx": {},
+   "desc": "Smells like a calm morning tide.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "leviathan_bow": {
+   "name": "Leviathan Bow",
+   "kind": "bow",
+   "el": "water",
+   "tier": "legendary",
+   "q": 1.45,
+   "bonus": {
+    "dex": 0.12,
+    "mag": 0.06
+   },
+   "fx": {
+    "mp_hit": 0.05,
+    "crit": 0.08
+   },
+   "desc": "Strung with something that still swims in your dreams.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "brine_staff": {
+   "name": "Brine Staff",
+   "kind": "staff",
+   "el": "water",
+   "tier": "common",
+   "q": 1.01,
+   "bonus": {
+    "mag": 0.06
+   },
+   "fx": {},
+   "desc": "Saltmere's fishers trade these.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "kelp_wand": {
+   "name": "Kelp Wand",
+   "kind": "staff",
+   "el": "water",
+   "tier": "common",
+   "q": 1.03,
+   "bonus": {
+    "mag": 0.06
+   },
+   "fx": {},
+   "desc": "It never quite dries.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "pearl_rod": {
+   "name": "Pearl Rod",
+   "kind": "staff",
+   "el": "water",
+   "tier": "rare",
+   "q": 1.27,
+   "bonus": {
+    "mag": 0.09,
+    "mdef": 0.1
+   },
+   "fx": {
+    "guard": 0.06
+   },
+   "desc": "Polished by a thousand waves.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "beacon_staff": {
+   "name": "Beacon Staff",
+   "kind": "staff",
+   "el": "water",
+   "tier": "legendary",
+   "q": 1.46,
+   "bonus": {
+    "mag": 0.12,
+    "mp": 0.12
+   },
+   "fx": {
+    "spell": 0.15,
+    "regen": 0.02
+   },
+   "desc": "Topped with the lighthouse's first lens.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "shellguard": {
+   "name": "Shellguard",
+   "kind": "armor",
+   "el": "water",
+   "tier": "common",
+   "q": 1.02,
+   "bonus": {
+    "mp": 0.11
+   },
+   "fx": {},
+   "desc": "Polished by a thousand waves.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "sailcloth_coat": {
+   "name": "Sailcloth Coat",
+   "kind": "armor",
+   "el": "water",
+   "tier": "common",
+   "q": 1.05,
+   "bonus": {
+    "mag": 0.07
+   },
+   "fx": {},
+   "desc": "Saltmere's fishers trade these.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "fishers_oilskin": {
+   "name": "Fisher's Oilskin",
+   "kind": "armor",
+   "el": "water",
+   "tier": "common",
+   "q": 1.01,
+   "bonus": {
+    "hp": 0.16
+   },
+   "fx": {},
+   "desc": "Salvaged from the drowned docks.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "scale_vest": {
+   "name": "Scale Vest",
+   "kind": "armor",
+   "el": "water",
+   "tier": "common",
+   "q": 1.06,
+   "bonus": {
+    "mp": 0.14
+   },
+   "fx": {},
+   "desc": "Polished by a thousand waves.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "tideguard_coat": {
+   "name": "Tideguard Coat",
+   "kind": "armor",
+   "el": "water",
+   "tier": "rare",
+   "q": 1.26,
+   "bonus": {
+    "mp": 0.08,
+    "mdef": 0.06
+   },
+   "fx": {},
+   "desc": "Woven from nets that never lost a sailor.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "kelp_mail": {
+   "name": "Kelp Mail",
+   "kind": "armor",
+   "el": "water",
+   "tier": "rare",
+   "q": 1.27,
+   "bonus": {
+    "mag": 0.1,
+    "hp": 0.16
+   },
+   "fx": {
+    "regen": 0.02
+   },
+   "desc": "Smells like a calm morning tide.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "nacre_plate": {
+   "name": "Nacre Plate",
+   "kind": "armor",
+   "el": "water",
+   "tier": "rare",
+   "q": 1.25,
+   "bonus": {
+    "mag": 0.1,
+    "mp": 0.17
+   },
+   "fx": {
+    "spell": 0.07
+   },
+   "desc": "Polished by a thousand waves.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "mantle_of_the_deep": {
+   "name": "Mantle of the Deep",
+   "kind": "armor",
+   "el": "water",
+   "tier": "legendary",
+   "q": 1.46,
+   "bonus": {
+    "mdef": 0.12,
+    "mp": 0.1
+   },
+   "fx": {
+    "regen": 0.04,
+    "guard": 0.08
+   },
+   "desc": "The weight of the whole sea, made gentle.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "pearl_ring": {
+   "name": "Pearl Ring",
+   "kind": "acc",
+   "el": "water",
+   "tier": "common",
+   "q": 1.02,
+   "bonus": {
+    "mp": 0.1
+   },
+   "fx": {},
+   "desc": "Polished by a thousand waves.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "shell_charm": {
+   "name": "Shell Charm",
+   "kind": "acc",
+   "el": "water",
+   "tier": "common",
+   "q": 1.04,
+   "bonus": {
+    "hp": 0.15
+   },
+   "fx": {},
+   "desc": "Saltmere's fishers trade these.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "sea_glass_pendant": {
+   "name": "Sea-Glass Pendant",
+   "kind": "acc",
+   "el": "water",
+   "tier": "common",
+   "q": 1.06,
+   "bonus": {
+    "mdef": 0.07
+   },
+   "fx": {},
+   "desc": "Saltmere's fishers trade these.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "anchor_pin": {
+   "name": "Anchor Pin",
+   "kind": "acc",
+   "el": "water",
+   "tier": "common",
+   "q": 1.04,
+   "bonus": {
+    "mp": 0.11
+   },
+   "fx": {},
+   "desc": "Salvaged from the drowned docks.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "tide_bracelet": {
+   "name": "Tide Bracelet",
+   "kind": "acc",
+   "el": "water",
+   "tier": "common",
+   "q": 1.08,
+   "bonus": {
+    "mp": 0.16
+   },
+   "fx": {},
+   "desc": "Smells like a calm morning tide.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "salt_crystal": {
+   "name": "Salt Crystal",
+   "kind": "acc",
+   "el": "water",
+   "tier": "common",
+   "q": 1.07,
+   "bonus": {
+    "mp": 0.11
+   },
+   "fx": {},
+   "desc": "It never quite dries.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "fishhook_earring": {
+   "name": "Fishhook Earring",
+   "kind": "acc",
+   "el": "water",
+   "tier": "common",
+   "q": 1.05,
+   "bonus": {
+    "mag": 0.07
+   },
+   "fx": {},
+   "desc": "Polished by a thousand waves.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "rope_bangle": {
+   "name": "Rope Bangle",
+   "kind": "acc",
+   "el": "water",
+   "tier": "common",
+   "q": 1.02,
+   "bonus": {
+    "mp": 0.13
+   },
+   "fx": {},
+   "desc": "Salvaged from the drowned docks.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "sailors_knot": {
+   "name": "Sailor's Knot",
+   "kind": "acc",
+   "el": "water",
+   "tier": "common",
+   "q": 1.05,
+   "bonus": {
+    "mag": 0.1
+   },
+   "fx": {},
+   "desc": "Polished by a thousand waves.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "driftwood_token": {
+   "name": "Driftwood Token",
+   "kind": "acc",
+   "el": "water",
+   "tier": "common",
+   "q": 1.03,
+   "bonus": {
+    "mdef": 0.08
+   },
+   "fx": {},
+   "desc": "Polished by a thousand waves.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "mermaids_comb": {
+   "name": "Mermaid's Comb",
+   "kind": "acc",
+   "el": "water",
+   "tier": "rare",
+   "q": 1.26,
+   "bonus": {
+    "mag": 0.11,
+    "mp": 0.14
+   },
+   "fx": {
+    "spell": 0.07
+   },
+   "desc": "Salvaged from the drowned docks.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "beacon_prism": {
+   "name": "Beacon Prism",
+   "kind": "acc",
+   "el": "water",
+   "tier": "rare",
+   "q": 1.25,
+   "bonus": {
+    "mp": 0.15,
+    "mag": 0.09
+   },
+   "fx": {
+    "mp_hit": 0.03
+   },
+   "desc": "It never quite dries.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "whalebone_charm": {
+   "name": "Whalebone Charm",
+   "kind": "acc",
+   "el": "water",
+   "tier": "rare",
+   "q": 1.25,
+   "bonus": {
+    "mp": 0.14,
+    "mag": 0.1
+   },
+   "fx": {
+    "regen": 0.02
+   },
+   "desc": "Smells like a calm morning tide.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "sirens_locket": {
+   "name": "Siren's Locket",
+   "kind": "acc",
+   "el": "water",
+   "tier": "rare",
+   "q": 1.27,
+   "bonus": {
+    "mdef": 0.12,
+    "mag": 0.08
+   },
+   "fx": {
+    "spell": 0.07
+   },
+   "desc": "It never quite dries.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "coral_crown": {
+   "name": "Coral Crown",
+   "kind": "acc",
+   "el": "water",
+   "tier": "rare",
+   "q": 1.27,
+   "bonus": {
+    "mag": 0.12,
+    "mdef": 0.1
+   },
+   "fx": {
+    "regen": 0.02
+   },
+   "desc": "It never quite dries.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "undertow_band": {
+   "name": "Undertow Band",
+   "kind": "acc",
+   "el": "water",
+   "tier": "rare",
+   "q": 1.26,
+   "bonus": {
+    "hp": 0.18,
+    "mp": 0.17
+   },
+   "fx": {
+    "spell": 0.07
+   },
+   "desc": "It never quite dries.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "tidecallers_shell": {
+   "name": "Tidecaller's Shell",
+   "kind": "acc",
+   "el": "water",
+   "tier": "rare",
+   "q": 1.25,
+   "bonus": {
+    "mag": 0.1,
+    "mp": 0.15
+   },
+   "fx": {
+    "guard": 0.06
+   },
+   "desc": "Salvaged from the drowned docks.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "pearl_of_tears": {
+   "name": "Pearl of Tears",
+   "kind": "acc",
+   "el": "water",
+   "tier": "legendary",
+   "q": 1.44,
+   "bonus": {
+    "mag": 0.12,
+    "mp": 0.12
+   },
+   "fx": {
+    "spell": 0.12,
+    "mp_hit": 0.04
+   },
+   "desc": "Formed from one tear, cried for a very long time.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "marens_lullaby": {
+   "name": "Maren's Lullaby",
+   "kind": "acc",
+   "el": "water",
+   "tier": "legendary",
+   "q": 1.46,
+   "bonus": {
+    "mdef": 0.12,
+    "hp": 0.08
+   },
+   "fx": {
+    "regen": 0.05,
+    "guard": 0.06
+   },
+   "desc": "Hum it and the hurt goes quiet.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "heart_of_the_falls": {
+   "name": "Heart of the Falls",
+   "kind": "acc",
+   "el": "water",
+   "tier": "legendary",
+   "q": 1.46,
+   "bonus": {
+    "mag": 0.1,
+    "spd": 0.08
+   },
+   "fx": {
+    "mp_hit": 0.06,
+    "first": 20
+   },
+   "desc": "Found behind the falling water, where nobody looks.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "gale_sabre": {
+   "name": "Gale Sabre",
+   "kind": "blade",
+   "el": "wind",
+   "tier": "common",
+   "q": 1.04,
+   "bonus": {
+    "str": 0.06
+   },
+   "fx": {},
+   "desc": "It hums when you run.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "feather_dirk": {
+   "name": "Feather Dirk",
+   "kind": "blade",
+   "el": "wind",
+   "tier": "common",
+   "q": 1.04,
+   "bonus": {
+    "str": 0.06
+   },
+   "fx": {},
+   "desc": "Light enough to forget you're carrying it.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "kestrel_blade": {
+   "name": "Kestrel Blade",
+   "kind": "blade",
+   "el": "wind",
+   "tier": "rare",
+   "q": 1.26,
+   "bonus": {
+    "str": 0.09,
+    "mag": 0.09
+   },
+   "fx": {
+    "first": 21
+   },
+   "desc": "Feather-light, kite-strong.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "skysplitter": {
+   "name": "Skysplitter",
+   "kind": "blade",
+   "el": "wind",
+   "tier": "legendary",
+   "q": 1.47,
+   "bonus": {
+    "spd": 0.12,
+    "str": 0.08
+   },
+   "fx": {
+    "first": 40,
+    "crit": 0.1
+   },
+   "desc": "Cuts the sky open so the light can get in.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "swift_bow": {
+   "name": "Swift Bow",
+   "kind": "bow",
+   "el": "wind",
+   "tier": "common",
+   "q": 1.0,
+   "bonus": {
+    "dex": 0.06
+   },
+   "fx": {},
+   "desc": "Feather-light, kite-strong.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "reedline_bow": {
+   "name": "Reedline Bow",
+   "kind": "bow",
+   "el": "wind",
+   "tier": "common",
+   "q": 1.06,
+   "bonus": {
+    "dex": 0.06
+   },
+   "fx": {},
+   "desc": "Light enough to forget you're carrying it.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "hawkeye_bow": {
+   "name": "Hawkeye Bow",
+   "kind": "bow",
+   "el": "wind",
+   "tier": "rare",
+   "q": 1.26,
+   "bonus": {
+    "dex": 0.09,
+    "mag": 0.11
+   },
+   "fx": {},
+   "desc": "Woven with a thread of breeze.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "featherline_bow": {
+   "name": "Featherline Bow",
+   "kind": "bow",
+   "el": "wind",
+   "tier": "legendary",
+   "q": 1.46,
+   "bonus": {
+    "spd": 0.12,
+    "dex": 0.1
+   },
+   "fx": {
+    "first": 30,
+    "dodge": 0.08
+   },
+   "desc": "Strung with a thread of the wind itself.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "sky_staff": {
+   "name": "Sky Staff",
+   "kind": "staff",
+   "el": "wind",
+   "tier": "common",
+   "q": 1.04,
+   "bonus": {
+    "mag": 0.06
+   },
+   "fx": {},
+   "desc": "Light enough to forget you're carrying it.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "pinwheel_wand": {
+   "name": "Pinwheel Wand",
+   "kind": "staff",
+   "el": "wind",
+   "tier": "common",
+   "q": 1.08,
+   "bonus": {
+    "mag": 0.06
+   },
+   "fx": {},
+   "desc": "Woven with a thread of breeze.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "cloudspire_rod": {
+   "name": "Cloudspire Rod",
+   "kind": "staff",
+   "el": "wind",
+   "tier": "rare",
+   "q": 1.28,
+   "bonus": {
+    "mag": 0.09,
+    "spd": 0.08
+   },
+   "fx": {
+    "dodge": 0.06
+   },
+   "desc": "Woven with a thread of breeze.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "staff_of_the_open_sky": {
+   "name": "Staff of the Open Sky",
+   "kind": "staff",
+   "el": "wind",
+   "tier": "legendary",
+   "q": 1.45,
+   "bonus": {
+    "mag": 0.12,
+    "spd": 0.08
+   },
+   "fx": {
+    "spell": 0.14,
+    "first": 25
+   },
+   "desc": "Corvane's own staff. It never wanted to be held.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "featherweave": {
+   "name": "Featherweave",
+   "kind": "armor",
+   "el": "wind",
+   "tier": "common",
+   "q": 1.01,
+   "bonus": {
+    "dex": 0.07
+   },
+   "fx": {},
+   "desc": "Light enough to forget you're carrying it.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "couriers_jacket": {
+   "name": "Courier's Jacket",
+   "kind": "armor",
+   "el": "wind",
+   "tier": "common",
+   "q": 1.03,
+   "bonus": {
+    "spd": 0.09
+   },
+   "fx": {},
+   "desc": "Woven with a thread of breeze.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "glider_vest": {
+   "name": "Glider Vest",
+   "kind": "armor",
+   "el": "wind",
+   "tier": "common",
+   "q": 1.07,
+   "bonus": {
+    "dex": 0.07
+   },
+   "fx": {},
+   "desc": "Feather-light, kite-strong.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "breezecloth_robe": {
+   "name": "Breezecloth Robe",
+   "kind": "armor",
+   "el": "wind",
+   "tier": "common",
+   "q": 1.05,
+   "bonus": {
+    "spd": 0.07
+   },
+   "fx": {},
+   "desc": "It hums when you run.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "storm_mail": {
+   "name": "Stormwoven Mail",
+   "kind": "armor",
+   "el": "wind",
+   "tier": "rare",
+   "q": 1.27,
+   "bonus": {
+    "spd": 0.1,
+    "dex": 0.12
+   },
+   "fx": {
+    "dodge": 0.06
+   },
+   "desc": "Woven with a thread of breeze.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "windrider_coat": {
+   "name": "Windrider Coat",
+   "kind": "armor",
+   "el": "wind",
+   "tier": "rare",
+   "q": 1.24,
+   "bonus": {
+    "dex": 0.1,
+    "spd": 0.12
+   },
+   "fx": {
+    "crit": 0.06
+   },
+   "desc": "It hums when you run.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "updraft_mantle": {
+   "name": "Updraft Mantle",
+   "kind": "armor",
+   "el": "wind",
+   "tier": "rare",
+   "q": 1.24,
+   "bonus": {
+    "dex": 0.11,
+    "spd": 0.09
+   },
+   "fx": {
+    "crit": 0.06
+   },
+   "desc": "Feather-light, kite-strong.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "wings_of_kitefall": {
+   "name": "Wings of Kitefall",
+   "kind": "armor",
+   "el": "wind",
+   "tier": "legendary",
+   "q": 1.46,
+   "bonus": {
+    "spd": 0.14,
+    "dex": 0.08
+   },
+   "fx": {
+    "dodge": 0.12,
+    "first": 25
+   },
+   "desc": "You won't fly. But you'll forget you can't.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "wind_ring": {
+   "name": "Wind Ring",
+   "kind": "acc",
+   "el": "wind",
+   "tier": "common",
+   "q": 1.04,
+   "bonus": {
+    "mag": 0.06
+   },
+   "fx": {},
+   "desc": "Woven with a thread of breeze.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "feather_charm": {
+   "name": "Feather Charm",
+   "kind": "acc",
+   "el": "wind",
+   "tier": "common",
+   "q": 1.02,
+   "bonus": {
+    "spd": 0.08
+   },
+   "fx": {},
+   "desc": "Light enough to forget you're carrying it.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "kite_string_bracelet": {
+   "name": "Kite-String Bracelet",
+   "kind": "acc",
+   "el": "wind",
+   "tier": "common",
+   "q": 1.06,
+   "bonus": {
+    "dex": 0.06
+   },
+   "fx": {},
+   "desc": "Feather-light, kite-strong.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "bell_earring": {
+   "name": "Bell Earring",
+   "kind": "acc",
+   "el": "wind",
+   "tier": "common",
+   "q": 1.0,
+   "bonus": {
+    "mag": 0.07
+   },
+   "fx": {},
+   "desc": "A Kitefall courier's favorite.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "compass_rose_pin": {
+   "name": "Compass Rose Pin",
+   "kind": "acc",
+   "el": "wind",
+   "tier": "common",
+   "q": 1.0,
+   "bonus": {
+    "spd": 0.07
+   },
+   "fx": {},
+   "desc": "It hums when you run.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "cloud_pendant": {
+   "name": "Cloud Pendant",
+   "kind": "acc",
+   "el": "wind",
+   "tier": "common",
+   "q": 1.03,
+   "bonus": {
+    "spd": 0.1
+   },
+   "fx": {},
+   "desc": "Light enough to forget you're carrying it.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "couriers_badge": {
+   "name": "Courier's Badge",
+   "kind": "acc",
+   "el": "wind",
+   "tier": "common",
+   "q": 1.08,
+   "bonus": {
+    "spd": 0.09
+   },
+   "fx": {},
+   "desc": "Woven with a thread of breeze.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "whistle_charm": {
+   "name": "Whistle Charm",
+   "kind": "acc",
+   "el": "wind",
+   "tier": "common",
+   "q": 1.01,
+   "bonus": {
+    "spd": 0.06
+   },
+   "fx": {},
+   "desc": "Light enough to forget you're carrying it.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "breeze_band": {
+   "name": "Breeze Band",
+   "kind": "acc",
+   "el": "wind",
+   "tier": "common",
+   "q": 1.05,
+   "bonus": {
+    "dex": 0.07
+   },
+   "fx": {},
+   "desc": "It hums when you run.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "pinwheel_token": {
+   "name": "Pinwheel Token",
+   "kind": "acc",
+   "el": "wind",
+   "tier": "common",
+   "q": 1.04,
+   "bonus": {
+    "dex": 0.06
+   },
+   "fx": {},
+   "desc": "A Kitefall courier's favorite.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "zephyr_band": {
+   "name": "Zephyr Band",
+   "kind": "acc",
+   "el": "wind",
+   "tier": "rare",
+   "q": 1.26,
+   "bonus": {
+    "spd": 0.12
+   },
+   "fx": {
+    "first": 21
+   },
+   "desc": "Rings softly when you move fast.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "hawk_talon": {
+   "name": "Hawk Talon",
+   "kind": "acc",
+   "el": "wind",
+   "tier": "rare",
+   "q": 1.26,
+   "bonus": {
+    "spd": 0.12,
+    "dex": 0.08
+   },
+   "fx": {
+    "dodge": 0.06
+   },
+   "desc": "A Kitefall courier's favorite.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "gale_crown": {
+   "name": "Gale Crown",
+   "kind": "acc",
+   "el": "wind",
+   "tier": "rare",
+   "q": 1.23,
+   "bonus": {
+    "dex": 0.1,
+    "spd": 0.11
+   },
+   "fx": {
+    "first": 21
+   },
+   "desc": "It hums when you run.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "storm_sigil": {
+   "name": "Storm Sigil",
+   "kind": "acc",
+   "el": "wind",
+   "tier": "rare",
+   "q": 1.25,
+   "bonus": {
+    "spd": 0.09,
+    "dex": 0.12
+   },
+   "fx": {
+    "crit": 0.06
+   },
+   "desc": "Light enough to forget you're carrying it.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "skyglass_monocle": {
+   "name": "Skyglass Monocle",
+   "kind": "acc",
+   "el": "wind",
+   "tier": "rare",
+   "q": 1.23,
+   "bonus": {
+    "mag": 0.11,
+    "dex": 0.11
+   },
+   "fx": {
+    "dodge": 0.06
+   },
+   "desc": "It hums when you run.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "updraft_feather": {
+   "name": "Updraft Feather",
+   "kind": "acc",
+   "el": "wind",
+   "tier": "rare",
+   "q": 1.24,
+   "bonus": {
+    "spd": 0.08,
+    "dex": 0.08
+   },
+   "fx": {
+    "dodge": 0.06
+   },
+   "desc": "It hums when you run.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "belfry_bell": {
+   "name": "Belfry Bell",
+   "kind": "acc",
+   "el": "wind",
+   "tier": "rare",
+   "q": 1.27,
+   "bonus": {
+    "mag": 0.12,
+    "spd": 0.09
+   },
+   "fx": {
+    "first": 21
+   },
+   "desc": "It hums when you run.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "weathervane_charm": {
+   "name": "Weathervane Charm",
+   "kind": "acc",
+   "el": "wind",
+   "tier": "legendary",
+   "q": 1.46,
+   "bonus": {
+    "spd": 0.12,
+    "dex": 0.1
+   },
+   "fx": {
+    "dodge": 0.1,
+    "crit": 0.06
+   },
+   "desc": "Always points toward somewhere better.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "cage_breakers_ring": {
+   "name": "Cage-Breaker's Ring",
+   "kind": "acc",
+   "el": "wind",
+   "tier": "legendary",
+   "q": 1.43,
+   "bonus": {
+    "spd": 0.1,
+    "str": 0.1
+   },
+   "fx": {
+    "first": 35,
+    "limit": 0.35
+   },
+   "desc": "Forged from the last lock of the Gilded Aviary.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "rocs_eye": {
+   "name": "Roc's Eye",
+   "kind": "acc",
+   "el": "wind",
+   "tier": "legendary",
+   "q": 1.49,
+   "bonus": {
+    "dex": 0.14,
+    "mag": 0.06
+   },
+   "fx": {
+    "crit": 0.12,
+    "dodge": 0.06
+   },
+   "desc": "It still sees from very high up.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "granite_axe": {
+   "name": "Granite Axe",
+   "kind": "blade",
+   "el": "stone",
+   "tier": "common",
+   "q": 1.07,
+   "bonus": {
+    "str": 0.06
+   },
+   "fx": {},
+   "desc": "Cut from ungilded rock.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "miners_pick": {
+   "name": "Miner's Pick",
+   "kind": "blade",
+   "el": "stone",
+   "tier": "common",
+   "q": 1.03,
+   "bonus": {
+    "str": 0.06
+   },
+   "fx": {},
+   "desc": "Cut from ungilded rock.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "quartz_cleaver": {
+   "name": "Quartz Cleaver",
+   "kind": "blade",
+   "el": "stone",
+   "tier": "rare",
+   "q": 1.23,
+   "bonus": {
+    "str": 0.09,
+    "def": 0.1
+   },
+   "fx": {
+    "limit": 0.21
+   },
+   "desc": "Built like a mine-prop.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "flintmantle_axe": {
+   "name": "Flintmantle Axe",
+   "kind": "blade",
+   "el": "stone",
+   "tier": "legendary",
+   "q": 1.45,
+   "bonus": {
+    "str": 0.12,
+    "def": 0.1
+   },
+   "fx": {
+    "guard": 0.08,
+    "limit": 0.3
+   },
+   "desc": "Durga's family axe. Heavy as a promise.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "flint_bow": {
+   "name": "Flint Bow",
+   "kind": "bow",
+   "el": "stone",
+   "tier": "common",
+   "q": 1.01,
+   "bonus": {
+    "dex": 0.06
+   },
+   "fx": {},
+   "desc": "Built like a mine-prop.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "ironwood_bow": {
+   "name": "Ironwood Bow",
+   "kind": "bow",
+   "el": "stone",
+   "tier": "common",
+   "q": 1.02,
+   "bonus": {
+    "dex": 0.06
+   },
+   "fx": {},
+   "desc": "Copperdeep-made. It will outlive you.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "bedrock_bow": {
+   "name": "Bedrock Bow",
+   "kind": "bow",
+   "el": "stone",
+   "tier": "rare",
+   "q": 1.24,
+   "bonus": {
+    "dex": 0.09,
+    "def": 0.12
+   },
+   "fx": {},
+   "desc": "Copperdeep-made. It will outlive you.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "mountains_spine": {
+   "name": "Mountain's Spine",
+   "kind": "bow",
+   "el": "stone",
+   "tier": "legendary",
+   "q": 1.44,
+   "bonus": {
+    "dex": 0.12,
+    "def": 0.08
+   },
+   "fx": {
+    "crit": 0.1,
+    "guard": 0.06
+   },
+   "desc": "Carved from a ridge that used to be a dragon, or so they say.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "geode_staff": {
+   "name": "Geode Staff",
+   "kind": "staff",
+   "el": "stone",
+   "tier": "common",
+   "q": 1.03,
+   "bonus": {
+    "mag": 0.06
+   },
+   "fx": {},
+   "desc": "Built like a mine-prop.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "copper_rod": {
+   "name": "Copper Rod",
+   "kind": "staff",
+   "el": "stone",
+   "tier": "common",
+   "q": 1.01,
+   "bonus": {
+    "mag": 0.06
+   },
+   "fx": {},
+   "desc": "Heavy, honest, unglamorous.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "quartz_staff": {
+   "name": "Quartz Staff",
+   "kind": "staff",
+   "el": "stone",
+   "tier": "rare",
+   "q": 1.26,
+   "bonus": {
+    "mag": 0.09,
+    "def": 0.11
+   },
+   "fx": {
+    "guard": 0.06
+   },
+   "desc": "Heavy, honest, unglamorous.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "ungilded_scepter": {
+   "name": "Ungilded Scepter",
+   "kind": "staff",
+   "el": "stone",
+   "tier": "legendary",
+   "q": 1.44,
+   "bonus": {
+    "mag": 0.12,
+    "def": 0.08
+   },
+   "fx": {
+    "spell": 0.14,
+    "gold": 0.25
+   },
+   "desc": "King Ostrum's scepter, scraped back to honest stone.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "stoneplate": {
+   "name": "Stoneplate",
+   "kind": "armor",
+   "el": "stone",
+   "tier": "common",
+   "q": 1.04,
+   "bonus": {
+    "mdef": 0.09
+   },
+   "fx": {},
+   "desc": "Copperdeep-made. It will outlive you.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "miners_coat": {
+   "name": "Miner's Coat",
+   "kind": "armor",
+   "el": "stone",
+   "tier": "common",
+   "q": 1.07,
+   "bonus": {
+    "mdef": 0.08
+   },
+   "fx": {},
+   "desc": "Built like a mine-prop.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "copper_mail": {
+   "name": "Copper Mail",
+   "kind": "armor",
+   "el": "stone",
+   "tier": "common",
+   "q": 1.08,
+   "bonus": {
+    "def": 0.09
+   },
+   "fx": {},
+   "desc": "The union stamps every one.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "tunnel_leathers": {
+   "name": "Tunnel Leathers",
+   "kind": "armor",
+   "el": "stone",
+   "tier": "common",
+   "q": 1.03,
+   "bonus": {
+    "def": 0.08
+   },
+   "fx": {},
+   "desc": "The union stamps every one.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "granite_plate": {
+   "name": "Granite Plate",
+   "kind": "armor",
+   "el": "stone",
+   "tier": "rare",
+   "q": 1.27,
+   "bonus": {
+    "str": 0.09,
+    "mdef": 0.1
+   },
+   "fx": {
+    "limit": 0.21
+   },
+   "desc": "Cut from ungilded rock.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "union_overalls": {
+   "name": "Union Overalls",
+   "kind": "armor",
+   "el": "stone",
+   "tier": "rare",
+   "q": 1.25,
+   "bonus": {
+    "str": 0.08,
+    "hp": 0.18
+   },
+   "fx": {},
+   "desc": "Heavy, honest, unglamorous.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "seamstone_mail": {
+   "name": "Seamstone Mail",
+   "kind": "armor",
+   "el": "stone",
+   "tier": "rare",
+   "q": 1.23,
+   "bonus": {
+    "hp": 0.17,
+    "def": 0.08
+   },
+   "fx": {},
+   "desc": "Cut from ungilded rock.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "mountainheart_plate": {
+   "name": "Mountainheart Plate",
+   "kind": "armor",
+   "el": "stone",
+   "tier": "legendary",
+   "q": 1.46,
+   "bonus": {
+    "def": 0.16,
+    "hp": 0.12
+   },
+   "fx": {
+    "guard": 0.12,
+    "regen": 0.03
+   },
+   "desc": "Wearing it feels like standing on bedrock.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "stone_ring": {
+   "name": "Stone Ring",
+   "kind": "acc",
+   "el": "stone",
+   "tier": "common",
+   "q": 1.04,
+   "bonus": {
+    "hp": 0.11
+   },
+   "fx": {},
+   "desc": "Copperdeep-made. It will outlive you.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "copper_bracelet": {
+   "name": "Copper Bracelet",
+   "kind": "acc",
+   "el": "stone",
+   "tier": "common",
+   "q": 1.07,
+   "bonus": {
+    "str": 0.08
+   },
+   "fx": {},
+   "desc": "Cut from ungilded rock.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "moss_charm": {
+   "name": "Moss Charm",
+   "kind": "acc",
+   "el": "stone",
+   "tier": "common",
+   "q": 1.0,
+   "bonus": {
+    "mdef": 0.07
+   },
+   "fx": {},
+   "desc": "Cut from ungilded rock.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "miners_lamp": {
+   "name": "Miner's Lamp",
+   "kind": "acc",
+   "el": "stone",
+   "tier": "common",
+   "q": 1.03,
+   "bonus": {
+    "mdef": 0.09
+   },
+   "fx": {},
+   "desc": "The union stamps every one.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "iron_nail_pendant": {
+   "name": "Iron Nail Pendant",
+   "kind": "acc",
+   "el": "stone",
+   "tier": "common",
+   "q": 1.02,
+   "bonus": {
+    "def": 0.08
+   },
+   "fx": {},
+   "desc": "The union stamps every one.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "pebble_pouch": {
+   "name": "Pebble Pouch",
+   "kind": "acc",
+   "el": "stone",
+   "tier": "common",
+   "q": 1.06,
+   "bonus": {
+    "def": 0.08
+   },
+   "fx": {},
+   "desc": "Cut from ungilded rock.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "union_badge": {
+   "name": "Union Badge",
+   "kind": "acc",
+   "el": "stone",
+   "tier": "common",
+   "q": 1.05,
+   "bonus": {
+    "hp": 0.13
+   },
+   "fx": {},
+   "desc": "Copperdeep-made. It will outlive you.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "slate_token": {
+   "name": "Slate Token",
+   "kind": "acc",
+   "el": "stone",
+   "tier": "common",
+   "q": 1.06,
+   "bonus": {
+    "str": 0.07
+   },
+   "fx": {},
+   "desc": "Built like a mine-prop.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "gravel_band": {
+   "name": "Gravel Band",
+   "kind": "acc",
+   "el": "stone",
+   "tier": "common",
+   "q": 1.05,
+   "bonus": {
+    "def": 0.07
+   },
+   "fx": {},
+   "desc": "Built like a mine-prop.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "hardhat_charm": {
+   "name": "Hardhat Charm",
+   "kind": "acc",
+   "el": "stone",
+   "tier": "common",
+   "q": 1.04,
+   "bonus": {
+    "def": 0.07
+   },
+   "fx": {},
+   "desc": "The union stamps every one.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "rootstone_ring": {
+   "name": "Rootstone Ring",
+   "kind": "acc",
+   "el": "stone",
+   "tier": "rare",
+   "q": 1.23,
+   "bonus": {
+    "def": 0.1,
+    "hp": 0.06
+   },
+   "fx": {
+    "gold": 0.15
+   },
+   "desc": "Cut from the mountain's oldest root.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "lode_compass": {
+   "name": "Lode Compass",
+   "kind": "acc",
+   "el": "stone",
+   "tier": "rare",
+   "q": 1.25,
+   "bonus": {
+    "str": 0.09,
+    "def": 0.09
+   },
+   "fx": {
+    "guard": 0.06
+   },
+   "desc": "Built like a mine-prop.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "emerald_shard": {
+   "name": "Emerald Shard",
+   "kind": "acc",
+   "el": "stone",
+   "tier": "rare",
+   "q": 1.27,
+   "bonus": {
+    "str": 0.12,
+    "hp": 0.17
+   },
+   "fx": {
+    "limit": 0.21
+   },
+   "desc": "Cut from ungilded rock.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "bedrock_sigil": {
+   "name": "Bedrock Sigil",
+   "kind": "acc",
+   "el": "stone",
+   "tier": "rare",
+   "q": 1.24,
+   "bonus": {
+    "def": 0.08,
+    "str": 0.1
+   },
+   "fx": {
+    "guard": 0.06
+   },
+   "desc": "Heavy, honest, unglamorous.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "garnet_eye": {
+   "name": "Garnet Eye",
+   "kind": "acc",
+   "el": "stone",
+   "tier": "rare",
+   "q": 1.24,
+   "bonus": {
+    "hp": 0.15,
+    "mdef": 0.11
+   },
+   "fx": {
+    "guard": 0.06
+   },
+   "desc": "Copperdeep-made. It will outlive you.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "prospectors_pan": {
+   "name": "Prospector's Pan",
+   "kind": "acc",
+   "el": "stone",
+   "tier": "rare",
+   "q": 1.27,
+   "bonus": {
+    "def": 0.12,
+    "hp": 0.15
+   },
+   "fx": {
+    "limit": 0.21
+   },
+   "desc": "Built like a mine-prop.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "golem_core": {
+   "name": "Golem Core",
+   "kind": "acc",
+   "el": "stone",
+   "tier": "rare",
+   "q": 1.26,
+   "bonus": {
+    "def": 0.09,
+    "mdef": 0.11
+   },
+   "fx": {
+    "regen": 0.02
+   },
+   "desc": "Built like a mine-prop.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "geode_heart": {
+   "name": "Geode Heart",
+   "kind": "acc",
+   "el": "stone",
+   "tier": "legendary",
+   "q": 1.49,
+   "bonus": {
+    "def": 0.12,
+    "mdef": 0.12
+   },
+   "fx": {
+    "guard": 0.1,
+    "regen": 0.03
+   },
+   "desc": "Ugly outside. Breathtaking inside.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "ungilded_crown": {
+   "name": "Ungilded Crown",
+   "kind": "acc",
+   "el": "stone",
+   "tier": "legendary",
+   "q": 1.46,
+   "bonus": {
+    "hp": 0.12,
+    "str": 0.08
+   },
+   "fx": {
+    "gold": 0.3,
+    "limit": 0.3
+   },
+   "desc": "A crown with all the greed scraped off.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "rustbiters_fang": {
+   "name": "Rustbiter's Fang",
+   "kind": "acc",
+   "el": "stone",
+   "tier": "legendary",
+   "q": 1.46,
+   "bonus": {
+    "str": 0.12,
+    "def": 0.08
+   },
+   "fx": {
+    "drain": 0.07,
+    "crit": 0.08
+   },
+   "desc": "It chewed through iron. Now it works for you.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "dawn_blade": {
+   "name": "Dawn Blade",
+   "kind": "blade",
+   "el": "spirit",
+   "tier": "common",
+   "q": 1.04,
+   "bonus": {
+    "str": 0.06
+   },
+   "fx": {},
+   "desc": "Hallowmere novices carry these.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "pilgrims_sword": {
+   "name": "Pilgrim's Sword",
+   "kind": "blade",
+   "el": "spirit",
+   "tier": "common",
+   "q": 1.0,
+   "bonus": {
+    "str": 0.06
+   },
+   "fx": {},
+   "desc": "Quietly certain of itself.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "vigil_blade": {
+   "name": "Vigil Blade",
+   "kind": "blade",
+   "el": "spirit",
+   "tier": "rare",
+   "q": 1.23,
+   "bonus": {
+    "str": 0.09,
+    "mdef": 0.11
+   },
+   "fx": {},
+   "desc": "It glows faintly at dawn.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "edge_of_becoming": {
+   "name": "Edge of Becoming",
+   "kind": "blade",
+   "el": "spirit",
+   "tier": "legendary",
+   "q": 1.43,
+   "bonus": {
+    "str": 0.1,
+    "mdef": 0.1
+   },
+   "fx": {
+    "xp": 0.2,
+    "crit": 0.08
+   },
+   "desc": "It gets a little sharper every time you grow.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "halo_bow": {
+   "name": "Halo Bow",
+   "kind": "bow",
+   "el": "spirit",
+   "tier": "common",
+   "q": 1.03,
+   "bonus": {
+    "dex": 0.06
+   },
+   "fx": {},
+   "desc": "Hallowmere novices carry these.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "candlewood_bow": {
+   "name": "Candlewood Bow",
+   "kind": "bow",
+   "el": "spirit",
+   "tier": "common",
+   "q": 1.06,
+   "bonus": {
+    "dex": 0.06
+   },
+   "fx": {},
+   "desc": "Quietly certain of itself.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "lantern_bow": {
+   "name": "Lantern Bow",
+   "kind": "bow",
+   "el": "spirit",
+   "tier": "rare",
+   "q": 1.26,
+   "bonus": {
+    "dex": 0.09,
+    "mp": 0.16
+   },
+   "fx": {},
+   "desc": "Quietly certain of itself.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "dawnbreaker": {
+   "name": "Dawnbreaker",
+   "kind": "bow",
+   "el": "spirit",
+   "tier": "legendary",
+   "q": 1.45,
+   "bonus": {
+    "dex": 0.12,
+    "mag": 0.08
+   },
+   "fx": {
+    "spell": 0.1,
+    "first": 25
+   },
+   "desc": "Every arrow is a sunrise.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "lumen_staff": {
+   "name": "Lumen Staff",
+   "kind": "staff",
+   "el": "spirit",
+   "tier": "common",
+   "q": 1.06,
+   "bonus": {
+    "mag": 0.06
+   },
+   "fx": {},
+   "desc": "It glows faintly at dawn.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "prayer_rod": {
+   "name": "Prayer Rod",
+   "kind": "staff",
+   "el": "spirit",
+   "tier": "common",
+   "q": 1.07,
+   "bonus": {
+    "mag": 0.06
+   },
+   "fx": {},
+   "desc": "Blessed by a tired pilgrim.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "choir_staff": {
+   "name": "Choir Staff",
+   "kind": "staff",
+   "el": "spirit",
+   "tier": "rare",
+   "q": 1.27,
+   "bonus": {
+    "mag": 0.09,
+    "mdef": 0.09
+   },
+   "fx": {
+    "spell": 0.07
+   },
+   "desc": "Blessed by a tired pilgrim.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "prayer_staff": {
+   "name": "Prayer-Bead Staff",
+   "kind": "staff",
+   "el": "spirit",
+   "tier": "legendary",
+   "q": 1.5,
+   "bonus": {
+    "mag": 0.12,
+    "mdef": 0.1
+   },
+   "fx": {
+    "spell": 0.15,
+    "regen": 0.03
+   },
+   "desc": "Each bead is a thing Sol chose to remember.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "pilgrim_vestments": {
+   "name": "Pilgrim Vestments",
+   "kind": "armor",
+   "el": "spirit",
+   "tier": "common",
+   "q": 1.05,
+   "bonus": {
+    "mp": 0.14
+   },
+   "fx": {},
+   "desc": "Blessed by a tired pilgrim.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "novice_robe": {
+   "name": "Novice Robe",
+   "kind": "armor",
+   "el": "spirit",
+   "tier": "common",
+   "q": 1.02,
+   "bonus": {
+    "mdef": 0.09
+   },
+   "fx": {},
+   "desc": "Blessed by a tired pilgrim.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "lantern_coat": {
+   "name": "Lantern Coat",
+   "kind": "armor",
+   "el": "spirit",
+   "tier": "common",
+   "q": 1.03,
+   "bonus": {
+    "hp": 0.14
+   },
+   "fx": {},
+   "desc": "Hallowmere novices carry these.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "chapel_mail": {
+   "name": "Chapel Mail",
+   "kind": "armor",
+   "el": "spirit",
+   "tier": "common",
+   "q": 1.05,
+   "bonus": {
+    "mag": 0.07
+   },
+   "fx": {},
+   "desc": "Quietly certain of itself.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "candle_mail": {
+   "name": "Candlelit Mail",
+   "kind": "armor",
+   "el": "spirit",
+   "tier": "rare",
+   "q": 1.22,
+   "bonus": {
+    "mp": 0.13,
+    "mag": 0.09
+   },
+   "fx": {},
+   "desc": "Hallowmere novices carry these.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "saints_mantle": {
+   "name": "Saint's Mantle",
+   "kind": "armor",
+   "el": "spirit",
+   "tier": "rare",
+   "q": 1.22,
+   "bonus": {
+    "mp": 0.18,
+    "hp": 0.14
+   },
+   "fx": {},
+   "desc": "Light, in a shape you can hold.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "abbesss_robe": {
+   "name": "Abbess's Robe",
+   "kind": "armor",
+   "el": "spirit",
+   "tier": "rare",
+   "q": 1.23,
+   "bonus": {
+    "mdef": 0.12,
+    "hp": 0.15
+   },
+   "fx": {
+    "xp": 0.12
+   },
+   "desc": "It glows faintly at dawn.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "raiment_of_the_finished": {
+   "name": "Raiment of the Finished",
+   "kind": "armor",
+   "el": "spirit",
+   "tier": "legendary",
+   "q": 1.45,
+   "bonus": {
+    "mdef": 0.14,
+    "hp": 0.1
+   },
+   "fx": {
+    "regen": 0.05,
+    "xp": 0.15
+   },
+   "desc": "It fits perfectly, today.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "spirit_ring": {
+   "name": "Spirit Ring",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "common",
+   "q": 1.03,
+   "bonus": {
+    "hp": 0.12
+   },
+   "fx": {},
+   "desc": "Blessed by a tired pilgrim.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "candle_charm": {
+   "name": "Candle Charm",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "common",
+   "q": 1.05,
+   "bonus": {
+    "mdef": 0.07
+   },
+   "fx": {},
+   "desc": "Hallowmere novices carry these.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "prayer_beads": {
+   "name": "Prayer Beads",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "common",
+   "q": 1.07,
+   "bonus": {
+    "mdef": 0.09
+   },
+   "fx": {},
+   "desc": "Quietly certain of itself.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "pilgrim_badge": {
+   "name": "Pilgrim Badge",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "common",
+   "q": 1.06,
+   "bonus": {
+    "hp": 0.11
+   },
+   "fx": {},
+   "desc": "Quietly certain of itself.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "halo_pin": {
+   "name": "Halo Pin",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "common",
+   "q": 1.03,
+   "bonus": {
+    "hp": 0.11
+   },
+   "fx": {},
+   "desc": "Quietly certain of itself.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "lantern_token": {
+   "name": "Lantern Token",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "common",
+   "q": 1.02,
+   "bonus": {
+    "mdef": 0.09
+   },
+   "fx": {},
+   "desc": "It glows faintly at dawn.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "choir_bell": {
+   "name": "Choir Bell",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "common",
+   "q": 1.06,
+   "bonus": {
+    "mdef": 0.09
+   },
+   "fx": {},
+   "desc": "Blessed by a tired pilgrim.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "white_ribbon": {
+   "name": "White Ribbon",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "common",
+   "q": 1.05,
+   "bonus": {
+    "mdef": 0.1
+   },
+   "fx": {},
+   "desc": "Hallowmere novices carry these.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "vigil_pendant": {
+   "name": "Vigil Pendant",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "common",
+   "q": 1.07,
+   "bonus": {
+    "mag": 0.09
+   },
+   "fx": {},
+   "desc": "Hallowmere novices carry these.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "dawn_band": {
+   "name": "Dawn Band",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "common",
+   "q": 1.05,
+   "bonus": {
+    "mag": 0.1
+   },
+   "fx": {},
+   "desc": "It glows faintly at dawn.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "halo_circlet": {
+   "name": "Halo Circlet",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "rare",
+   "q": 1.23,
+   "bonus": {
+    "mdef": 0.1,
+    "mp": 0.08
+   },
+   "fx": {
+    "xp": 0.12
+   },
+   "desc": "A lantern-light you can wear.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "angels_tear": {
+   "name": "Angel's Tear",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "rare",
+   "q": 1.24,
+   "bonus": {
+    "mag": 0.09,
+    "hp": 0.14
+   },
+   "fx": {
+    "spell": 0.07
+   },
+   "desc": "It glows faintly at dawn.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "saints_relic": {
+   "name": "Saint's Relic",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "rare",
+   "q": 1.23,
+   "bonus": {
+    "mp": 0.16,
+    "mdef": 0.09
+   },
+   "fx": {
+    "spell": 0.07
+   },
+   "desc": "Quietly certain of itself.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "mirror_shard": {
+   "name": "Mirror Shard",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "rare",
+   "q": 1.25,
+   "bonus": {
+    "hp": 0.17,
+    "mp": 0.18
+   },
+   "fx": {
+    "xp": 0.12
+   },
+   "desc": "Quietly certain of itself.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "lumen_sigil": {
+   "name": "Lumen Sigil",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "rare",
+   "q": 1.25,
+   "bonus": {
+    "mdef": 0.1,
+    "mag": 0.09
+   },
+   "fx": {
+    "guard": 0.06
+   },
+   "desc": "It glows faintly at dawn.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "moth_wing_pin": {
+   "name": "Moth-Wing Pin",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "rare",
+   "q": 1.28,
+   "bonus": {
+    "mdef": 0.09,
+    "hp": 0.15
+   },
+   "fx": {
+    "spell": 0.07
+   },
+   "desc": "Hallowmere novices carry these.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "abbey_crown": {
+   "name": "Abbey Crown",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "rare",
+   "q": 1.22,
+   "bonus": {
+    "mdef": 0.08,
+    "mag": 0.11
+   },
+   "fx": {
+    "xp": 0.12
+   },
+   "desc": "Quietly certain of itself.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "wing_of_dawn": {
+   "name": "Wing of Dawn",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "legendary",
+   "q": 1.48,
+   "bonus": {
+    "mag": 0.1,
+    "mdef": 0.1,
+    "hp": 0.06
+   },
+   "fx": {
+    "regen": 0.04,
+    "spell": 0.08
+   },
+   "desc": "A single feather of morning.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "iriss_chisel": {
+   "name": "Iris's Chisel",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "legendary",
+   "q": 1.46,
+   "bonus": {
+    "mag": 0.12,
+    "dex": 0.08
+   },
+   "fx": {
+    "xp": 0.25,
+    "spell": 0.1
+   },
+   "desc": "Good enough is a finished thing.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "lantern_of_the_crypt": {
+   "name": "Lantern of the Crypt",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "legendary",
+   "q": 1.49,
+   "bonus": {
+    "mdef": 0.12,
+    "mp": 0.1
+   },
+   "fx": {
+    "regen": 0.04,
+    "guard": 0.08
+   },
+   "desc": "It lights the way back up.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "null_edge": {
+   "name": "Null Edge",
+   "kind": "blade",
+   "el": "void",
+   "tier": "common",
+   "q": 1.0,
+   "bonus": {
+    "str": 0.06
+   },
+   "fx": {},
+   "desc": "It casts no shadow.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "hollow_knife": {
+   "name": "Hollow Knife",
+   "kind": "blade",
+   "el": "void",
+   "tier": "common",
+   "q": 1.08,
+   "bonus": {
+    "str": 0.06
+   },
+   "fx": {},
+   "desc": "Nobody remembers who made it.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "echo_blade": {
+   "name": "Echo Blade",
+   "kind": "blade",
+   "el": "void",
+   "tier": "rare",
+   "q": 1.27,
+   "bonus": {
+    "str": 0.09,
+    "mag": 0.11
+   },
+   "fx": {},
+   "desc": "Lastlight lamplighters swear it's real.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "edge_of_nothing": {
+   "name": "Edge of Nothing",
+   "kind": "blade",
+   "el": "void",
+   "tier": "legendary",
+   "q": 1.44,
+   "bonus": {
+    "str": 0.1,
+    "mag": 0.08
+   },
+   "fx": {
+    "drain": 0.1,
+    "crit": 0.1
+   },
+   "desc": "There's no blade. There's just the cut.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "hollow_bow": {
+   "name": "Hollow Bow",
+   "kind": "bow",
+   "el": "void",
+   "tier": "common",
+   "q": 1.01,
+   "bonus": {
+    "dex": 0.06
+   },
+   "fx": {},
+   "desc": "Lastlight lamplighters swear it's real.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "drift_bow": {
+   "name": "Drift Bow",
+   "kind": "bow",
+   "el": "void",
+   "tier": "common",
+   "q": 1.05,
+   "bonus": {
+    "dex": 0.06
+   },
+   "fx": {},
+   "desc": "It's heavier when you're not looking.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "starless_bow": {
+   "name": "Starless Bow",
+   "kind": "bow",
+   "el": "void",
+   "tier": "rare",
+   "q": 1.27,
+   "bonus": {
+    "dex": 0.09,
+    "mp": 0.16
+   },
+   "fx": {},
+   "desc": "It casts no shadow.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "unremembered_bow": {
+   "name": "Unremembered Bow",
+   "kind": "bow",
+   "el": "void",
+   "tier": "legendary",
+   "q": 1.43,
+   "bonus": {
+    "dex": 0.12,
+    "mag": 0.08
+   },
+   "fx": {
+    "dodge": 0.1,
+    "crit": 0.08
+   },
+   "desc": "Nobody remembers making it.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "abyss_staff": {
+   "name": "Abyss Staff",
+   "kind": "staff",
+   "el": "void",
+   "tier": "common",
+   "q": 1.04,
+   "bonus": {
+    "mag": 0.06
+   },
+   "fx": {},
+   "desc": "Holds on to you, a little.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "shade_rod": {
+   "name": "Shade Rod",
+   "kind": "staff",
+   "el": "void",
+   "tier": "common",
+   "q": 1.04,
+   "bonus": {
+    "mag": 0.06
+   },
+   "fx": {},
+   "desc": "It casts no shadow.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "echo_staff": {
+   "name": "Echo Staff",
+   "kind": "staff",
+   "el": "void",
+   "tier": "rare",
+   "q": 1.26,
+   "bonus": {
+    "mag": 0.09,
+    "spd": 0.11
+   },
+   "fx": {},
+   "desc": "Holds on to you, a little.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "staff_of_the_unmoored": {
+   "name": "Staff of the Unmoored",
+   "kind": "staff",
+   "el": "void",
+   "tier": "legendary",
+   "q": 1.49,
+   "bonus": {
+    "mag": 0.14,
+    "spd": 0.06
+   },
+   "fx": {
+    "spell": 0.16,
+    "drain": 0.05
+   },
+   "desc": "It floats a finger's width above your palm.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "shadeweave": {
+   "name": "Shadeweave",
+   "kind": "armor",
+   "el": "void",
+   "tier": "common",
+   "q": 1.04,
+   "bonus": {
+    "mag": 0.07
+   },
+   "fx": {},
+   "desc": "Nobody remembers who made it.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "drifters_cloak": {
+   "name": "Drifter's Cloak",
+   "kind": "armor",
+   "el": "void",
+   "tier": "common",
+   "q": 1.08,
+   "bonus": {
+    "spd": 0.07
+   },
+   "fx": {},
+   "desc": "It casts no shadow.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "anchor_coat": {
+   "name": "Anchor Coat",
+   "kind": "armor",
+   "el": "void",
+   "tier": "common",
+   "q": 1.05,
+   "bonus": {
+    "mag": 0.1
+   },
+   "fx": {},
+   "desc": "Holds on to you, a little.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "static_mail": {
+   "name": "Static Mail",
+   "kind": "armor",
+   "el": "void",
+   "tier": "common",
+   "q": 1.05,
+   "bonus": {
+    "dex": 0.07
+   },
+   "fx": {},
+   "desc": "Holds on to you, a little.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "nullweave_cloak": {
+   "name": "Nullweave Cloak",
+   "kind": "armor",
+   "el": "void",
+   "tier": "rare",
+   "q": 1.25,
+   "bonus": {
+    "mag": 0.06,
+    "spd": 0.04
+   },
+   "fx": {
+    "dodge": 0.06
+   },
+   "desc": "Woven from the silence between songs.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "starfall_robe": {
+   "name": "Starfall Robe",
+   "kind": "armor",
+   "el": "void",
+   "tier": "rare",
+   "q": 1.25,
+   "bonus": {
+    "mag": 0.1,
+    "mp": 0.15
+   },
+   "fx": {},
+   "desc": "It casts no shadow.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "hollow_plate": {
+   "name": "Hollow Plate",
+   "kind": "armor",
+   "el": "void",
+   "tier": "rare",
+   "q": 1.27,
+   "bonus": {
+    "mag": 0.09,
+    "spd": 0.09
+   },
+   "fx": {},
+   "desc": "Holds on to you, a little.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "mantle_of_presence": {
+   "name": "Mantle of Presence",
+   "kind": "armor",
+   "el": "void",
+   "tier": "legendary",
+   "q": 1.47,
+   "bonus": {
+    "mdef": 0.12,
+    "hp": 0.1
+   },
+   "fx": {
+    "dodge": 0.08,
+    "regen": 0.04
+   },
+   "desc": "Wearing it, you are very definitely here.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "void_ring": {
+   "name": "Void Ring",
+   "kind": "acc",
+   "el": "void",
+   "tier": "common",
+   "q": 1.05,
+   "bonus": {
+    "dex": 0.07
+   },
+   "fx": {},
+   "desc": "Nobody remembers who made it.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "anchor_charm": {
+   "name": "Anchor Charm",
+   "kind": "acc",
+   "el": "void",
+   "tier": "common",
+   "q": 1.0,
+   "bonus": {
+    "mag": 0.08
+   },
+   "fx": {},
+   "desc": "It's heavier when you're not looking.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "string_bracelet": {
+   "name": "String Bracelet",
+   "kind": "acc",
+   "el": "void",
+   "tier": "common",
+   "q": 1.07,
+   "bonus": {
+    "mag": 0.09
+   },
+   "fx": {},
+   "desc": "Nobody remembers who made it.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "shade_pin": {
+   "name": "Shade Pin",
+   "kind": "acc",
+   "el": "void",
+   "tier": "common",
+   "q": 1.08,
+   "bonus": {
+    "mp": 0.13
+   },
+   "fx": {},
+   "desc": "It casts no shadow.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "echo_earring": {
+   "name": "Echo Earring",
+   "kind": "acc",
+   "el": "void",
+   "tier": "common",
+   "q": 1.08,
+   "bonus": {
+    "mp": 0.1
+   },
+   "fx": {},
+   "desc": "Lastlight lamplighters swear it's real.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "dusk_token": {
+   "name": "Dusk Token",
+   "kind": "acc",
+   "el": "void",
+   "tier": "common",
+   "q": 1.02,
+   "bonus": {
+    "mag": 0.07
+   },
+   "fx": {},
+   "desc": "It's heavier when you're not looking.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "lamp_charm": {
+   "name": "Lamp Charm",
+   "kind": "acc",
+   "el": "void",
+   "tier": "common",
+   "q": 1.05,
+   "bonus": {
+    "mag": 0.06
+   },
+   "fx": {},
+   "desc": "Holds on to you, a little.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "static_band": {
+   "name": "Static Band",
+   "kind": "acc",
+   "el": "void",
+   "tier": "common",
+   "q": 1.03,
+   "bonus": {
+    "dex": 0.07
+   },
+   "fx": {},
+   "desc": "Lastlight lamplighters swear it's real.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "hollow_bead": {
+   "name": "Hollow Bead",
+   "kind": "acc",
+   "el": "void",
+   "tier": "common",
+   "q": 1.05,
+   "bonus": {
+    "mag": 0.09
+   },
+   "fx": {},
+   "desc": "Holds on to you, a little.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "quiet_pendant": {
+   "name": "Quiet Pendant",
+   "kind": "acc",
+   "el": "void",
+   "tier": "common",
+   "q": 1.02,
+   "bonus": {
+    "dex": 0.08
+   },
+   "fx": {},
+   "desc": "Lastlight lamplighters swear it's real.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "gloom_ring": {
+   "name": "Gloom Ring",
+   "kind": "acc",
+   "el": "void",
+   "tier": "rare",
+   "q": 1.25,
+   "bonus": {
+    "mag": 0.09,
+    "spd": 0.08
+   },
+   "fx": {
+    "dodge": 0.06
+   },
+   "desc": "It's heavier when you're not looking.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "name_locket": {
+   "name": "Name Locket",
+   "kind": "acc",
+   "el": "void",
+   "tier": "rare",
+   "q": 1.23,
+   "bonus": {
+    "spd": 0.11,
+    "mag": 0.11
+   },
+   "fx": {
+    "drain": 0.05
+   },
+   "desc": "It's heavier when you're not looking.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "starless_gem": {
+   "name": "Starless Gem",
+   "kind": "acc",
+   "el": "void",
+   "tier": "rare",
+   "q": 1.23,
+   "bonus": {
+    "mp": 0.19,
+    "spd": 0.12
+   },
+   "fx": {
+    "spell": 0.07
+   },
+   "desc": "It casts no shadow.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "echo_sigil": {
+   "name": "Echo Sigil",
+   "kind": "acc",
+   "el": "void",
+   "tier": "rare",
+   "q": 1.23,
+   "bonus": {
+    "mag": 0.1,
+    "dex": 0.09
+   },
+   "fx": {
+    "drain": 0.05
+   },
+   "desc": "Lastlight lamplighters swear it's real.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "anchor_crown": {
+   "name": "Anchor Crown",
+   "kind": "acc",
+   "el": "void",
+   "tier": "rare",
+   "q": 1.25,
+   "bonus": {
+    "mag": 0.08,
+    "dex": 0.12
+   },
+   "fx": {
+    "spell": 0.07
+   },
+   "desc": "It's heavier when you're not looking.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "doorframe_splinter": {
+   "name": "Doorframe Splinter",
+   "kind": "acc",
+   "el": "void",
+   "tier": "rare",
+   "q": 1.27,
+   "bonus": {
+    "dex": 0.11,
+    "mp": 0.14
+   },
+   "fx": {
+    "dodge": 0.06
+   },
+   "desc": "It's heavier when you're not looking.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "lastlight_lantern": {
+   "name": "Lastlight Lantern",
+   "kind": "acc",
+   "el": "void",
+   "tier": "rare",
+   "q": 1.26,
+   "bonus": {
+    "mp": 0.14,
+    "spd": 0.1
+   },
+   "fx": {
+    "drain": 0.05
+   },
+   "desc": "Holds on to you, a little.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "key_to_nowhere": {
+   "name": "Key to Nowhere",
+   "kind": "acc",
+   "el": "void",
+   "tier": "legendary",
+   "q": 1.47,
+   "bonus": {
+    "mag": 0.12,
+    "spd": 0.08
+   },
+   "fx": {
+    "spell": 0.12,
+    "dodge": 0.06
+   },
+   "desc": "Opens a door that isn't there.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "aldouss_mask": {
+   "name": "Aldous's Mask",
+   "kind": "acc",
+   "el": "void",
+   "tier": "legendary",
+   "q": 1.47,
+   "bonus": {
+    "mag": 0.1,
+    "mdef": 0.1
+   },
+   "fx": {
+    "drain": 0.08,
+    "guard": 0.08
+   },
+   "desc": "It remembers his face so he doesn't have to.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "mirror_of_the_room": {
+   "name": "Mirror of the Room",
+   "kind": "acc",
+   "el": "void",
+   "tier": "legendary",
+   "q": 1.43,
+   "bonus": {
+    "spd": 0.1,
+    "dex": 0.1
+   },
+   "fx": {
+    "dodge": 0.1,
+    "first": 30
+   },
+   "desc": "In it, you're standing somewhere else.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "iron_sword": {
+   "name": "Iron Sword",
+   "kind": "blade",
+   "el": null,
+   "tier": "common",
+   "q": 0.95,
+   "bonus": {},
+   "fx": {},
+   "desc": "Plain, honest steel.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "short_bow": {
+   "name": "Short Bow",
+   "kind": "bow",
+   "el": null,
+   "tier": "common",
+   "q": 0.95,
+   "bonus": {},
+   "fx": {},
+   "desc": "A hunter's first bow.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "oak_staff": {
+   "name": "Oak Staff",
+   "kind": "staff",
+   "el": null,
+   "tier": "common",
+   "q": 0.95,
+   "bonus": {},
+   "fx": {},
+   "desc": "Smells like rain on bark.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "leather_coat": {
+   "name": "Leather Coat",
+   "kind": "armor",
+   "el": null,
+   "tier": "common",
+   "q": 0.95,
+   "bonus": {},
+   "fx": {},
+   "desc": "Stitched, patched, trusted.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "copper_band": {
+   "name": "Copper Band",
+   "kind": "acc",
+   "el": null,
+   "tier": "common",
+   "q": 0.95,
+   "bonus": {
+    "hp": 0.06
+   },
+   "fx": {},
+   "desc": "Turns your finger green. Worth it.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "driftwood_sword": {
+   "name": "Driftwood Sword",
+   "kind": "blade",
+   "el": null,
+   "tier": "common",
+   "q": 0.85,
+   "bonus": {},
+   "fx": {},
+   "desc": "Washed up in the Nexus with you.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "travel_coat": {
+   "name": "Traveler's Coat",
+   "kind": "armor",
+   "el": null,
+   "tier": "common",
+   "q": 0.85,
+   "bonus": {},
+   "fx": {},
+   "desc": "It has been many places. So have you, apparently.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "hearth_pendant": {
+   "name": "Hearth Pendant",
+   "kind": "acc",
+   "el": "spirit",
+   "tier": "common",
+   "q": 0.95,
+   "bonus": {
+    "mdef": 0.05
+   },
+   "fx": {},
+   "desc": "Warm to the touch. It lets you call on Spirit.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "azoth_edge": {
+   "name": "Azoth Edge",
+   "kind": "blade",
+   "style": "blade",
+   "el": "spirit",
+   "tier": "blessed",
+   "q": 1.7,
+   "bonus": {
+    "str": 0.16,
+    "mag": 0.08
+   },
+   "fx": {
+    "pierce": 0.35,
+    "crit": 0.1
+   },
+   "desc": "The blade isn't metal. It is the idea of cutting, held still.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "calcined_arcblade": {
+   "name": "Calcined Arcblade",
+   "kind": "blade",
+   "style": "blade",
+   "el": "fire",
+   "tier": "blessed",
+   "q": 1.7,
+   "bonus": {
+    "str": 0.18,
+    "spd": 0.06
+   },
+   "fx": {
+    "pierce": 0.35,
+    "drain": 0.06
+   },
+   "desc": "Burned until only the truth was left. Then burned again.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "quicksilver_saber": {
+   "name": "Quicksilver Saber",
+   "kind": "blade",
+   "style": "blade",
+   "el": "water",
+   "tier": "blessed",
+   "q": 1.7,
+   "bonus": {
+    "str": 0.15,
+    "dex": 0.1
+   },
+   "fx": {
+    "pierce": 0.35,
+    "first": 30
+   },
+   "desc": "It runs if you set it down. Keep a hand on it.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "rubedo_lancer": {
+   "name": "Rubedo Assault Laser",
+   "kind": "bow",
+   "style": "rifle",
+   "el": "fire",
+   "tier": "blessed",
+   "q": 1.7,
+   "bonus": {
+    "dex": 0.18,
+    "str": 0.06
+   },
+   "fx": {
+    "pierce": 0.4,
+    "crit": 0.12
+   },
+   "desc": "The last color of the Work. It sings red when it fires.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "albedo_repeater": {
+   "name": "Albedo Repeater",
+   "kind": "bow",
+   "style": "rifle",
+   "el": "wind",
+   "tier": "blessed",
+   "q": 1.7,
+   "bonus": {
+    "dex": 0.16,
+    "spd": 0.1
+   },
+   "fx": {
+    "pierce": 0.4,
+    "first": 25
+   },
+   "desc": "Washed white, then fired until it forgot what it was washed of.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "nigredo_pistol": {
+   "name": "Nigredo Ray Pistol",
+   "kind": "bow",
+   "style": "pistol",
+   "el": "void",
+   "tier": "blessed",
+   "q": 1.7,
+   "bonus": {
+    "dex": 0.15,
+    "mag": 0.08
+   },
+   "fx": {
+    "pierce": 0.35,
+    "drain": 0.06
+   },
+   "desc": "Black first. It is always black first.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "cinnabar_pistol": {
+   "name": "Cinnabar Sidearm",
+   "kind": "bow",
+   "style": "pistol",
+   "el": "stone",
+   "tier": "blessed",
+   "q": 1.7,
+   "bonus": {
+    "dex": 0.14,
+    "def": 0.08
+   },
+   "fx": {
+    "pierce": 0.35,
+    "guard": 0.06
+   },
+   "desc": "Red earth tamed into a spark. The grip is still warm from another hand.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "quintessence_coil": {
+   "name": "Quintessence Coil",
+   "kind": "staff",
+   "style": "staff",
+   "el": "spirit",
+   "tier": "blessed",
+   "q": 1.7,
+   "bonus": {
+    "mag": 0.18,
+    "mp": 0.1
+   },
+   "fx": {
+    "pierce": 0.3,
+    "spell": 0.18
+   },
+   "desc": "The fifth thing. The one that sits between the other four.",
+   "type": "gear",
+   "price": 1.0
+  },
+  "athanor_staff": {
+   "name": "Athanor Staff",
+   "kind": "staff",
+   "style": "staff",
+   "el": "water",
+   "tier": "blessed",
+   "q": 1.7,
+   "bonus": {
+    "mag": 0.16,
+    "mdef": 0.08
+   },
+   "fx": {
+    "pierce": 0.3,
+    "regen": 0.03
+   },
+   "desc": "A furnace small enough to carry. It has never once gone out.",
+   "type": "gear",
+   "price": 1.0
+  }
+ },
+ "items": {
+  "potion": {
+   "name": "Potion",
+   "kind": "use",
+   "effect": "heal_pct",
+   "v": 0.35,
+   "price": 40,
+   "target": "ally",
+   "desc": "Restores 35% HP.",
+   "type": "item"
+  },
+  "hi_potion": {
+   "name": "Hi-Potion",
+   "kind": "use",
+   "effect": "heal_pct",
+   "v": 0.7,
+   "price": 120,
+   "target": "ally",
+   "desc": "Restores 70% HP.",
+   "type": "item"
+  },
+  "ether": {
+   "name": "Ether",
+   "kind": "use",
+   "effect": "mp_pct",
+   "v": 0.4,
+   "price": 110,
+   "target": "ally",
+   "desc": "Restores 40% MP.",
+   "type": "item"
+  },
+  "feather": {
+   "name": "Phoenix Feather",
+   "kind": "use",
+   "effect": "revive",
+   "v": 0.35,
+   "price": 200,
+   "target": "ally",
+   "desc": "Revives a fallen ally.",
+   "type": "item"
+  },
+  "elixir": {
+   "name": "Elixir",
+   "kind": "use",
+   "effect": "full",
+   "v": 1.0,
+   "price": 900,
+   "target": "ally",
+   "desc": "Fully restores HP and MP.",
+   "type": "item"
+  },
+  "stamina_tonic": {
+   "name": "Stamina Tonic",
+   "kind": "use",
+   "effect": "boost",
+   "stat": "spd",
+   "v": 0.3,
+   "price": 160,
+   "target": "ally",
+   "desc": "+30% Speed for 5 battles. You'll glow.",
+   "type": "item"
+  },
+  "might_elixir": {
+   "name": "Elixir of Might",
+   "kind": "use",
+   "effect": "boost",
+   "stat": "str",
+   "v": 0.3,
+   "price": 180,
+   "target": "ally",
+   "desc": "+30% Strength for 5 battles. You'll glow.",
+   "type": "item"
+  },
+  "ward_elixir": {
+   "name": "Ironbark Draught",
+   "kind": "use",
+   "effect": "boost",
+   "stat": "def",
+   "v": 0.3,
+   "price": 180,
+   "target": "ally",
+   "desc": "+30% Defense & Magic Defense for 5 battles.",
+   "type": "item"
+  },
+  "sage_elixir": {
+   "name": "Sage's Draught",
+   "kind": "use",
+   "effect": "boost",
+   "stat": "mag",
+   "v": 0.3,
+   "price": 180,
+   "target": "ally",
+   "desc": "+30% Magic for 5 battles. You'll glow.",
+   "type": "item"
+  },
+  "keen_elixir": {
+   "name": "Hawkeye Drops",
+   "kind": "use",
+   "effect": "boost",
+   "stat": "dex",
+   "v": 0.3,
+   "price": 160,
+   "target": "ally",
+   "desc": "+30% Dexterity for 5 battles. You'll glow.",
+   "type": "item"
+  },
+  "smoke_bomb": {
+   "name": "Smoke Bomb",
+   "kind": "use",
+   "effect": "flee",
+   "v": 1.0,
+   "price": 60,
+   "target": "none",
+   "desc": "Escape from a normal battle.",
+   "type": "item"
+  },
+  "ember_stew": {
+   "name": "Ember Stew",
+   "kind": "use",
+   "effect": "boost",
+   "stat": "str",
+   "v": 0.3,
+   "n": 4,
+   "price": 70,
+   "target": "ally",
+   "desc": "Spicy enough to make you brave. +30% Strength for 4 battles."
+  },
+  "cinder_cider": {
+   "name": "Cinder Cider",
+   "kind": "use",
+   "effect": "boost",
+   "stat": "spd",
+   "v": 0.3,
+   "n": 4,
+   "price": 60,
+   "target": "ally",
+   "desc": "Fizzes like sparks. +30% Speed for 4 battles."
+  },
+  "forge_pie": {
+   "name": "Forge-Baked Pie",
+   "kind": "use",
+   "effect": "full",
+   "v": 1.0,
+   "price": 150,
+   "target": "ally",
+   "desc": "Baked in the great forge. Fully restores one ally."
+  },
+  "deep_chowder": {
+   "name": "Chowder of the Deep",
+   "kind": "use",
+   "effect": "boost",
+   "stat": "mag",
+   "v": 0.3,
+   "n": 4,
+   "price": 70,
+   "target": "ally",
+   "desc": "Briny and wise. +30% Magic for 4 battles."
+  },
+  "salt_tea": {
+   "name": "Sea-Salt Tea",
+   "kind": "use",
+   "effect": "boost",
+   "stat": "def",
+   "v": 0.3,
+   "n": 4,
+   "price": 60,
+   "target": "ally",
+   "desc": "Steadies you like a keel. +30% Defense for 4 battles."
+  },
+  "captains_platter": {
+   "name": "Captain's Platter",
+   "kind": "use",
+   "effect": "full",
+   "v": 1.0,
+   "price": 150,
+   "target": "ally",
+   "desc": "A sailor's feast. Fully restores one ally."
+  },
+  "skyberry_tart": {
+   "name": "Sky-Berry Tart",
+   "kind": "use",
+   "effect": "boost",
+   "stat": "spd",
+   "v": 0.3,
+   "n": 4,
+   "price": 70,
+   "target": "ally",
+   "desc": "Light as air. +30% Speed for 4 battles."
+  },
+  "updraft_ale": {
+   "name": "Updraft Ale",
+   "kind": "use",
+   "effect": "boost",
+   "stat": "dex",
+   "v": 0.3,
+   "n": 4,
+   "price": 60,
+   "target": "ally",
+   "desc": "Sharpens the eye. +30% Dexterity for 4 battles."
+  },
+  "kite_feast": {
+   "name": "Kite-Festival Feast",
+   "kind": "use",
+   "effect": "full",
+   "v": 1.0,
+   "price": 150,
+   "target": "ally",
+   "desc": "Kitefall's holiday plate. Fully restores one ally."
+  },
+  "miner_pasty": {
+   "name": "Miner's Pasty",
+   "kind": "use",
+   "effect": "boost",
+   "stat": "def",
+   "v": 0.3,
+   "n": 4,
+   "price": 70,
+   "target": "ally",
+   "desc": "Dense enough to stop an arrow. +30% Defense for 4 battles."
+  },
+  "copper_stout": {
+   "name": "Copperdeep Stout",
+   "kind": "use",
+   "effect": "boost",
+   "stat": "str",
+   "v": 0.3,
+   "n": 4,
+   "price": 60,
+   "target": "ally",
+   "desc": "Thick, dark, honest. +30% Strength for 4 battles."
+  },
+  "lode_roast": {
+   "name": "Lode Roast",
+   "kind": "use",
+   "effect": "full",
+   "v": 1.0,
+   "price": 150,
+   "target": "ally",
+   "desc": "Slow-roasted in a mine oven. Fully restores one ally."
+  },
+  "lantern_bread": {
+   "name": "Lantern Bread",
+   "kind": "use",
+   "effect": "boost",
+   "stat": "mag",
+   "v": 0.3,
+   "n": 4,
+   "price": 70,
+   "target": "ally",
+   "desc": "Glows a little when torn. +30% Magic for 4 battles."
+  },
+  "dawn_tea": {
+   "name": "Dawn Tea",
+   "kind": "use",
+   "effect": "boost",
+   "stat": "dex",
+   "v": 0.3,
+   "n": 4,
+   "price": 60,
+   "target": "ally",
+   "desc": "Tastes like the first light. +30% Dexterity for 4 battles."
+  },
+  "pilgrim_supper": {
+   "name": "Pilgrim's Supper",
+   "kind": "use",
+   "effect": "full",
+   "v": 1.0,
+   "price": 150,
+   "target": "ally",
+   "desc": "Simple and complete. Fully restores one ally."
+  },
+  "something_soup": {
+   "name": "Soup of Something",
+   "kind": "use",
+   "effect": "boost",
+   "stat": "spd",
+   "v": 0.3,
+   "n": 4,
+   "price": 70,
+   "target": "ally",
+   "desc": "Nobody knows what's in it. +30% Speed for 4 battles."
+  },
+  "starless_nectar": {
+   "name": "Starless Nectar",
+   "kind": "use",
+   "effect": "boost",
+   "stat": "mag",
+   "v": 0.3,
+   "n": 4,
+   "price": 60,
+   "target": "ally",
+   "desc": "Dark and sweet. +30% Magic for 4 battles."
+  },
+  "remembering_meal": {
+   "name": "A Remembering Meal",
+   "kind": "use",
+   "effect": "full",
+   "v": 1.0,
+   "price": 150,
+   "target": "ally",
+   "desc": "Grandmother's recipe, probably. Fully restores one ally."
+  }
+ },
+ "key_items": {
+  "heart_fire": {
+   "name": "Fire Heartstone",
+   "desc": "Warm again. Jealousy burned out.",
+   "type": "key",
+   "kind": "key"
+  },
+  "heart_water": {
+   "name": "Water Heartstone",
+   "desc": "It no longer weeps.",
+   "type": "key",
+   "kind": "key"
+  },
+  "heart_wind": {
+   "name": "Wind Heartstone",
+   "desc": "It hums like an open sky.",
+   "type": "key",
+   "kind": "key"
+  },
+  "heart_stone": {
+   "name": "Stone Heartstone",
+   "desc": "Clean granite, no gold in it.",
+   "type": "key",
+   "kind": "key"
+  },
+  "heart_spirit": {
+   "name": "Spirit Heartstone",
+   "desc": "It is becoming something. Good.",
+   "type": "key",
+   "kind": "key"
+  },
+  "heart_void": {
+   "name": "Void Heartstone",
+   "desc": "Quiet, but present.",
+   "type": "key",
+   "kind": "key"
+  },
+  "key_ash": {
+   "name": "Key of Ash",
+   "desc": "One of two keys to the Throne of Nothing.",
+   "type": "key",
+   "kind": "key"
+  },
+  "key_bedrock": {
+   "name": "Key of Bedrock",
+   "desc": "One of two keys to the Throne of Nothing.",
+   "type": "key",
+   "kind": "key"
+  },
+  "key_memory": {
+   "name": "Key of Memory",
+   "desc": "One of two keys to the Sanctum of the Witness.",
+   "type": "key",
+   "kind": "key"
+  },
+  "key_breath": {
+   "name": "Key of Breath",
+   "desc": "One of two keys to the Sanctum of the Witness.",
+   "type": "key",
+   "kind": "key"
+  },
+  "hestas_hammer": {
+   "name": "Brannoc's Hammer",
+   "desc": "A smith's hammer, handle worn to his grip.",
+   "type": "key",
+   "kind": "key"
+  },
+  "music_box": {
+   "name": "Little Music Box",
+   "desc": "Plays three notes, then stops, like it's waiting.",
+   "type": "key",
+   "kind": "key"
+  },
+  "first_kite": {
+   "name": "Grandpa's First Kite",
+   "desc": "Paper and reed. It still wants to fly.",
+   "type": "key",
+   "kind": "key"
+  },
+  "lucky_pick": {
+   "name": "Garrick's Lucky Pick",
+   "desc": "Chipped. Lucky anyway.",
+   "type": "key",
+   "kind": "key"
+  },
+  "forge_bellows": {
+   "name": "Great Bellows",
+   "desc": "The lungs of Emberfall's forge.",
+   "type": "key",
+   "kind": "key"
+  },
+  "wind_bells": {
+   "name": "Wind-Bells of Kitefall",
+   "desc": "They ring without wind now. Strange.",
+   "type": "key",
+   "kind": "key"
+  },
+  "glider_wings": {
+   "name": "Glider-Wings",
+   "desc": "Pip's wings. Patched, but whole.",
+   "type": "key",
+   "kind": "key"
+  },
+  "lighthouse_lens": {
+   "name": "Lighthouse Lens",
+   "desc": "It catches light even in the dark.",
+   "type": "key",
+   "kind": "key"
+  },
+  "true_name": {
+   "name": "A Name, Folded Small",
+   "desc": "Vesper's name, written on paper. You don't read it.",
+   "type": "key",
+   "kind": "key"
+  }
+ },
+ "tiers": {
+  "easy": {
+   "hp": 0.55,
+   "atk": 0.72,
+   "xp": 0.6,
+   "gold": 0.6,
+   "lv": -1
+  },
+  "medium": {
+   "hp": 0.9,
+   "atk": 0.95,
+   "xp": 1.0,
+   "gold": 1.0,
+   "lv": 0
+  },
+  "hard": {
+   "hp": 1.35,
+   "atk": 1.18,
+   "xp": 1.6,
+   "gold": 1.5,
+   "lv": 1
+  },
+  "mini": {
+   "hp": 4.6,
+   "atk": 1.26,
+   "xp": 6.0,
+   "gold": 5.0,
+   "lv": 1
+  },
+  "boss": {
+   "hp": 7.0,
+   "atk": 1.36,
+   "xp": 12.0,
+   "gold": 10.0,
+   "lv": 2
+  },
+  "omni": {
+   "hp": 19.0,
+   "atk": 1.52,
+   "xp": 40.0,
+   "gold": 30.0,
+   "lv": 5
+  },
+  "king": {
+   "hp": 14.0,
+   "atk": 1.45,
+   "xp": 50.0,
+   "gold": 40.0,
+   "lv": 3
+  },
+  "blessed": {
+   "hp": 2.4,
+   "atk": 1.3,
+   "xp": 6.0,
+   "gold": 6.0,
+   "lv": 2
+  },
+  "hunt": {
+   "hp": 10.0,
+   "atk": 1.45,
+   "xp": 30.0,
+   "gold": 0.0,
+   "lv": 3
+  }
+ },
+ "species": {
+  "rat": {
+   "name": "Rat",
+   "tier": "easy",
+   "def": 0.8,
+   "mdef": 0.8,
+   "spd": 1.2,
+   "mag": 0.5,
+   "caster": false,
+   "size": "s"
+  },
+  "bum": {
+   "name": "Bum",
+   "tier": "easy",
+   "def": 0.9,
+   "mdef": 0.9,
+   "spd": 0.9,
+   "mag": 0.5,
+   "caster": false,
+   "size": "m",
+   "skills": [
+    "bottle_toss"
+   ]
+  },
+  "loiterer": {
+   "name": "Loiterer",
+   "tier": "easy",
+   "def": 0.9,
+   "mdef": 1.0,
+   "spd": 1.0,
+   "mag": 0.6,
+   "caster": false,
+   "size": "m",
+   "skills": [
+    "sucker_punch"
+   ]
+  },
+  "undead": {
+   "name": "Undead",
+   "tier": "easy",
+   "def": 1.0,
+   "mdef": 0.7,
+   "spd": 0.7,
+   "mag": 0.8,
+   "caster": true,
+   "size": "m"
+  },
+  "knight": {
+   "name": "Knight",
+   "tier": "medium",
+   "def": 1.45,
+   "mdef": 0.75,
+   "spd": 0.8,
+   "mag": 0.5,
+   "caster": false,
+   "size": "m",
+   "skills": [
+    "shield_bash"
+   ]
+  },
+  "elf": {
+   "name": "Elf",
+   "tier": "medium",
+   "def": 0.85,
+   "mdef": 1.4,
+   "spd": 1.2,
+   "mag": 1.3,
+   "caster": true,
+   "size": "m"
+  },
+  "archer": {
+   "name": "Archer",
+   "tier": "medium",
+   "def": 0.9,
+   "mdef": 1.0,
+   "spd": 1.15,
+   "mag": 0.6,
+   "caster": false,
+   "size": "m",
+   "skills": [
+    "volley"
+   ]
+  },
+  "ghost": {
+   "name": "Ghost",
+   "tier": "medium",
+   "def": 2.2,
+   "mdef": 0.7,
+   "spd": 1.0,
+   "mag": 1.1,
+   "caster": true,
+   "size": "m",
+   "note": "physical attacks barely touch it"
+  },
+  "bear": {
+   "name": "Bear",
+   "tier": "hard",
+   "def": 1.15,
+   "mdef": 0.9,
+   "spd": 0.85,
+   "mag": 0.4,
+   "caster": false,
+   "size": "l",
+   "skills": [
+    "maul"
+   ]
+  },
+  "ogre": {
+   "name": "Ogre",
+   "tier": "hard",
+   "def": 1.0,
+   "mdef": 0.8,
+   "spd": 0.7,
+   "mag": 0.5,
+   "caster": false,
+   "size": "l",
+   "skills": [
+    "club_slam"
+   ]
+  },
+  "boar": {
+   "name": "Boar",
+   "tier": "hard",
+   "def": 1.1,
+   "mdef": 0.9,
+   "spd": 1.1,
+   "mag": 0.4,
+   "caster": false,
+   "size": "l",
+   "skills": [
+    "gore"
+   ]
+  },
+  "fknight": {
+   "name": "Future Knight",
+   "tier": "hard",
+   "def": 1.6,
+   "mdef": 1.0,
+   "spd": 0.95,
+   "mag": 0.8,
+   "caster": false,
+   "size": "m",
+   "skills": [
+    "plasma_cleave"
+   ]
+  },
+  "farcher": {
+   "name": "Future Archer",
+   "tier": "hard",
+   "def": 1.0,
+   "mdef": 1.1,
+   "spd": 1.3,
+   "mag": 0.9,
+   "caster": false,
+   "size": "m",
+   "skills": [
+    "laser_volley"
+   ]
+  },
+  "goblin": {
+   "name": "Goblin",
+   "tier": "easy",
+   "def": 0.85,
+   "mdef": 0.8,
+   "spd": 1.25,
+   "mag": 0.5,
+   "caster": false,
+   "size": "s",
+   "skills": [
+    "goblin_stab"
+   ]
+  },
+  "goblin_shaman": {
+   "name": "Goblin Shaman",
+   "tier": "medium",
+   "def": 0.8,
+   "mdef": 1.3,
+   "spd": 1.05,
+   "mag": 1.35,
+   "caster": true,
+   "size": "m"
+  },
+  "goblin_brute": {
+   "name": "Goblin Brute",
+   "tier": "hard",
+   "def": 1.25,
+   "mdef": 0.85,
+   "spd": 0.9,
+   "mag": 0.4,
+   "caster": false,
+   "size": "l",
+   "skills": [
+    "brute_smash"
+   ]
+  },
+  "pirate": {
+   "name": "Pirate",
+   "tier": "medium",
+   "def": 1.0,
+   "mdef": 0.9,
+   "spd": 1.1,
+   "mag": 0.5,
+   "caster": false,
+   "size": "m",
+   "skills": [
+    "cutlass_flurry",
+    "grog_toss"
+   ],
+   "habitat": "coast"
+  },
+  "pirate_gunner": {
+   "name": "Pirate Gunner",
+   "tier": "hard",
+   "def": 1.0,
+   "mdef": 1.0,
+   "spd": 1.0,
+   "mag": 0.6,
+   "caster": false,
+   "size": "m",
+   "skills": [
+    "cannon_shot"
+   ],
+   "habitat": "coast"
+  },
+  "fbum": {
+   "name": "Future Bum",
+   "tier": "hard",
+   "def": 1.2,
+   "mdef": 1.2,
+   "spd": 1.0,
+   "mag": 1.0,
+   "caster": true,
+   "size": "m",
+   "skills": [
+    "cart_ram"
+   ]
+  }
+ },
+ "enemy_skills": {
+  "bottle_toss": {
+   "name": "Bottle Toss",
+   "power": 1.1,
+   "target": "one",
+   "kind": "phys"
+  },
+  "sucker_punch": {
+   "name": "Sucker Punch",
+   "power": 1.25,
+   "target": "one",
+   "kind": "phys"
+  },
+  "shield_bash": {
+   "name": "Shield Bash",
+   "power": 1.0,
+   "target": "one",
+   "kind": "phys",
+   "stun": 1
+  },
+  "volley": {
+   "name": "Volley",
+   "power": 0.55,
+   "target": "all",
+   "kind": "phys"
+  },
+  "maul": {
+   "name": "Maul",
+   "power": 1.5,
+   "target": "one",
+   "kind": "phys"
+  },
+  "club_slam": {
+   "name": "Club Slam",
+   "power": 0.8,
+   "target": "all",
+   "kind": "phys"
+  },
+  "gore": {
+   "name": "Gore",
+   "power": 1.6,
+   "target": "one",
+   "kind": "phys"
+  },
+  "plasma_cleave": {
+   "name": "Plasma Cleave",
+   "power": 0.75,
+   "target": "all",
+   "kind": "mag"
+  },
+  "laser_volley": {
+   "name": "Laser Volley",
+   "power": 0.6,
+   "target": "all",
+   "kind": "mag"
+  },
+  "cart_ram": {
+   "name": "Shopping Cart Ram",
+   "power": 1.4,
+   "target": "one",
+   "kind": "phys"
+  },
+  "goblin_stab": {
+   "name": "Sneaky Stab",
+   "power": 1.3,
+   "target": "one",
+   "kind": "phys"
+  },
+  "brute_smash": {
+   "name": "Brute Smash",
+   "power": 1.55,
+   "target": "one",
+   "kind": "phys"
+  },
+  "cutlass_flurry": {
+   "name": "Cutlass Flurry",
+   "power": 1.35,
+   "target": "one",
+   "kind": "phys"
+  },
+  "grog_toss": {
+   "name": "Grog Toss",
+   "power": 1.1,
+   "target": "one",
+   "kind": "phys"
+  },
+  "cannon_shot": {
+   "name": "Cannon Shot",
+   "power": 0.7,
+   "target": "all",
+   "kind": "phys"
+  },
+  "white_sweep": {
+   "name": "White Sweep",
+   "power": 0.7,
+   "target": "all",
+   "kind": "phys"
+  },
+  "lance_beam": {
+   "name": "Lance Beam",
+   "power": 0.8,
+   "target": "all",
+   "kind": "mag"
+  }
+ },
+ "uniques": {
+  "slagjaw": {
+   "name": "Slagjaw the Pit Ogre",
+   "sprite": "ogre",
+   "el": "fire",
+   "tier": "mini",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 3
+    },
+    {
+     "k": "skill",
+     "s": "club_slam",
+     "w": 2
+    },
+    {
+     "k": "buff",
+     "stat": "str",
+     "w": 1,
+     "say": "MORE! THE CROWD WANTS MORE!"
+    }
+   ],
+   "size": "xl",
+   "mdef": 0.8,
+   "spd": 0.8,
+   "def": 1.1
+  },
+  "gloomfin": {
+   "name": "Gloomfin",
+   "sprite": "gloomfin",
+   "el": "water",
+   "tier": "mini",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2
+    },
+    {
+     "k": "spell",
+     "el": "water",
+     "power": 0.8,
+     "target": "all",
+     "name": "Undertow",
+     "w": 2
+    },
+    {
+     "k": "silence",
+     "w": 1,
+     "name": "Lure-Light",
+     "say": "The lure flickers... you forget the words."
+    }
+   ],
+   "size": "xl",
+   "mdef": 1.2,
+   "spd": 1.0,
+   "def": 1.0
+  },
+  "rook": {
+   "name": "Captain Rook",
+   "sprite": "farcher",
+   "el": "wind",
+   "tier": "mini",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2
+    },
+    {
+     "k": "skill",
+     "s": "laser_volley",
+     "w": 2
+    },
+    {
+     "k": "buff",
+     "stat": "spd",
+     "w": 1,
+     "say": "Catch me if you can, groundlings!"
+    }
+   ],
+   "size": "l",
+   "mdef": 1.0,
+   "spd": 1.4,
+   "def": 0.95
+  },
+  "gravelmaw": {
+   "name": "Gravelmaw",
+   "sprite": "gravelmaw",
+   "el": "stone",
+   "tier": "mini",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2
+    },
+    {
+     "k": "spell",
+     "el": "stone",
+     "power": 0.75,
+     "target": "all",
+     "name": "Cave-In",
+     "w": 2
+    },
+    {
+     "k": "buff",
+     "stat": "def",
+     "w": 1,
+     "say": "Gravelmaw burrows into the rock and hardens."
+    }
+   ],
+   "size": "xl",
+   "mdef": 0.9,
+   "spd": 0.75,
+   "def": 1.5
+  },
+  "mirror_wraith": {
+   "name": "The Hollow Mirror",
+   "sprite": "mirror",
+   "el": "spirit",
+   "tier": "mini",
+   "ai": [
+    {
+     "k": "spell",
+     "el": "spirit",
+     "power": 1.0,
+     "target": "one",
+     "name": "Reflected Light",
+     "w": 2
+    },
+    {
+     "k": "spell",
+     "el": "void",
+     "power": 1.0,
+     "target": "one",
+     "name": "Reflected Dark",
+     "w": 2
+    },
+    {
+     "k": "dispel",
+     "w": 1,
+     "say": "\"Is that really you? Show me.\""
+    }
+   ],
+   "size": "l",
+   "mdef": 1.0,
+   "spd": 1.0,
+   "def": 2.0
+  },
+  "name_eater": {
+   "name": "The Name-Eater",
+   "sprite": "name_eater",
+   "el": "void",
+   "tier": "mini",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2
+    },
+    {
+     "k": "drain",
+     "power": 1.0,
+     "w": 2,
+     "name": "Eat a Name"
+    },
+    {
+     "k": "silence",
+     "w": 1,
+     "name": "Forget",
+     "say": "\"What were you called again?\""
+    }
+   ],
+   "size": "xl",
+   "mdef": 1.0,
+   "spd": 1.0,
+   "def": 1.0
+  },
+  "scrapjack": {
+   "name": "Scrapjack",
+   "sprite": "fbum",
+   "el": "fire",
+   "tier": "mini",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2
+    },
+    {
+     "k": "skill",
+     "s": "cart_ram",
+     "w": 2
+    },
+    {
+     "k": "steal_gold",
+     "w": 1,
+     "say": "\"Finders keepers!\""
+    }
+   ],
+   "size": "l",
+   "mdef": 1.1,
+   "spd": 1.05,
+   "def": 1.2
+  },
+  "drowned_captain": {
+   "name": "The Drowned Captain",
+   "sprite": "ghost",
+   "el": "water",
+   "tier": "mini",
+   "ai": [
+    {
+     "k": "spell",
+     "el": "water",
+     "power": 1.0,
+     "target": "one",
+     "name": "Anchor Drop",
+     "w": 2
+    },
+    {
+     "k": "summon",
+     "species": "ghost",
+     "w": 1,
+     "say": "\"All hands! ALL HANDS!\""
+    },
+    {
+     "k": "attack",
+     "w": 1
+    }
+   ],
+   "size": "l",
+   "mdef": 0.8,
+   "spd": 0.95,
+   "def": 2.2
+  },
+  "sylvane": {
+   "name": "Sylvane the Bell-Thief",
+   "sprite": "elf",
+   "el": "wind",
+   "tier": "mini",
+   "ai": [
+    {
+     "k": "spell",
+     "el": "wind",
+     "power": 1.0,
+     "target": "one",
+     "name": "Silent Gust",
+     "w": 2
+    },
+    {
+     "k": "spell",
+     "el": "wind",
+     "power": 0.7,
+     "target": "all",
+     "name": "Hush",
+     "w": 2
+    },
+    {
+     "k": "silence",
+     "w": 1,
+     "name": "Stolen Chime"
+    }
+   ],
+   "size": "l",
+   "mdef": 1.4,
+   "spd": 1.3,
+   "def": 0.9
+  },
+  "iron_overseer": {
+   "name": "The Iron Overseer",
+   "sprite": "fknight",
+   "el": "stone",
+   "tier": "mini",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2
+    },
+    {
+     "k": "skill",
+     "s": "plasma_cleave",
+     "w": 2
+    },
+    {
+     "k": "stun",
+     "w": 1,
+     "name": "Quota Lash",
+     "say": "\"Back to work.\""
+    }
+   ],
+   "size": "l",
+   "mdef": 1.0,
+   "spd": 0.9,
+   "def": 1.7
+  },
+  "penitent_bear": {
+   "name": "The Penitent Bear",
+   "sprite": "bear",
+   "el": "spirit",
+   "tier": "mini",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2
+    },
+    {
+     "k": "skill",
+     "s": "maul",
+     "w": 2
+    },
+    {
+     "k": "heal",
+     "w": 1,
+     "say": "The bear swallows a lantern and glows."
+    }
+   ],
+   "size": "xl",
+   "mdef": 1.0,
+   "spd": 0.9,
+   "def": 1.2
+  },
+  "mute_paladin": {
+   "name": "The Mute Paladin",
+   "sprite": "knight",
+   "el": "void",
+   "tier": "mini",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2
+    },
+    {
+     "k": "skill",
+     "s": "shield_bash",
+     "w": 2
+    },
+    {
+     "k": "silence",
+     "w": 1,
+     "name": "Oath of Silence"
+    }
+   ],
+   "size": "l",
+   "mdef": 0.9,
+   "spd": 0.85,
+   "def": 1.6
+  },
+  "vulkar": {
+   "name": "Vulkar, the Green Flame",
+   "sprite": "vulkar",
+   "el": "fire",
+   "tier": "boss",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2
+    },
+    {
+     "k": "spell",
+     "el": "fire",
+     "power": 1.1,
+     "target": "one",
+     "name": "Envious Brand",
+     "w": 2
+    },
+    {
+     "k": "spell",
+     "el": "fire",
+     "power": 0.75,
+     "target": "all",
+     "name": "Green Inferno",
+     "w": 2
+    },
+    {
+     "k": "dispel",
+     "w": 1,
+     "name": "Covet",
+     "say": "\"That's MINE. Everything she had should have been MINE.\""
+    }
+   ],
+   "size": "boss",
+   "mdef": 1.0,
+   "spd": 1.0,
+   "phases": [
+    {
+     "at": 0.5,
+     "say": "\"Why did they always look at HER?\" The flames turn sickly green.",
+     "buff": "str"
+    }
+   ],
+   "def": 1.1
+  },
+  "maren": {
+   "name": "Maren, Mother of Tides",
+   "sprite": "maren",
+   "el": "water",
+   "tier": "boss",
+   "ai": [
+    {
+     "k": "spell",
+     "el": "water",
+     "power": 0.75,
+     "target": "all",
+     "name": "Sorrow Tide",
+     "w": 3
+    },
+    {
+     "k": "drain",
+     "power": 1.1,
+     "w": 2,
+     "name": "Grasp of Loss"
+    },
+    {
+     "k": "attack",
+     "w": 1
+    },
+    {
+     "k": "summon",
+     "species": "ghost",
+     "w": 1,
+     "say": "\"Stay. Everyone stays. No one else leaves me.\""
+    }
+   ],
+   "size": "boss",
+   "mdef": 1.25,
+   "spd": 0.95,
+   "phases": [
+    {
+     "at": 0.5,
+     "say": "\"I kept the whole sea so I would never have to let go.\"",
+     "buff": "mag"
+    }
+   ],
+   "def": 1.0
+  },
+  "corvane": {
+   "name": "Corvane, Keeper of Cages",
+   "sprite": "corvane",
+   "el": "wind",
+   "tier": "boss",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2
+    },
+    {
+     "k": "spell",
+     "el": "wind",
+     "power": 0.75,
+     "target": "all",
+     "name": "Gale Lash",
+     "w": 2
+    },
+    {
+     "k": "stun",
+     "w": 2,
+     "name": "Gilded Cage",
+     "turns": 2,
+     "say": "\"Safer inside. Everyone is safer inside.\""
+    }
+   ],
+   "size": "boss",
+   "mdef": 1.0,
+   "spd": 1.25,
+   "phases": [
+    {
+     "at": 0.45,
+     "say": "Corvane's own cage cracks open. For a moment he looks... relieved.",
+     "buff": "spd",
+     "debuff_self": "def"
+    }
+   ],
+   "def": 1.0
+  },
+  "ostrum": {
+   "name": "King Ostrum, the Gilded",
+   "sprite": "ostrum",
+   "el": "stone",
+   "tier": "boss",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2
+    },
+    {
+     "k": "spell",
+     "el": "stone",
+     "power": 0.75,
+     "target": "all",
+     "name": "Avalanche of Coin",
+     "w": 2
+    },
+    {
+     "k": "stun",
+     "w": 1,
+     "name": "Gild",
+     "say": "\"Hold still. Gold doesn't flinch.\""
+    },
+    {
+     "k": "steal_gold",
+     "w": 1,
+     "name": "Royal Tithe"
+    },
+    {
+     "k": "buff",
+     "stat": "def",
+     "w": 1,
+     "name": "Gilded Skin"
+    }
+   ],
+   "size": "boss",
+   "mdef": 0.9,
+   "spd": 0.8,
+   "phases": [
+    {
+     "at": 0.5,
+     "say": "Gold drips from the cracks in the king. Underneath is ordinary stone.",
+     "debuff_self": "def"
+    }
+   ],
+   "def": 1.6
+  },
+  "iris": {
+   "name": "Iris, the Unfinished",
+   "sprite": "iris",
+   "el": "spirit",
+   "tier": "boss",
+   "ai": [
+    {
+     "k": "spell",
+     "el": "self",
+     "power": 1.1,
+     "target": "one",
+     "name": "Sculpt",
+     "w": 2
+    },
+    {
+     "k": "spell",
+     "el": "self",
+     "power": 0.75,
+     "target": "all",
+     "name": "Potential",
+     "w": 2
+    },
+    {
+     "k": "shift",
+     "w": 1,
+     "say": "\"Not yet. I'm not finished. I'm never finished.\" Iris becomes something else."
+    },
+    {
+     "k": "heal",
+     "w": 1
+    }
+   ],
+   "size": "boss",
+   "mdef": 1.1,
+   "spd": 1.05,
+   "shift": [
+    "spirit",
+    "void"
+   ],
+   "def": 1.0
+  },
+  "nobody": {
+   "name": "Nobody",
+   "sprite": "nobody",
+   "el": "void",
+   "tier": "boss",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2
+    },
+    {
+     "k": "spell",
+     "el": "void",
+     "power": 0.75,
+     "target": "all",
+     "name": "Static",
+     "w": 2
+    },
+    {
+     "k": "silence",
+     "w": 1,
+     "name": "Numb"
+    },
+    {
+     "k": "elsewhere",
+     "w": 1,
+     "say": "Nobody isn't here anymore. Your weapons pass through the place he was."
+    }
+   ],
+   "size": "boss",
+   "mdef": 1.0,
+   "spd": 1.1,
+   "def": 1.0
+  },
+  "aeon": {
+   "name": "Aeon, the Witness",
+   "sprite": "aeon",
+   "el": "spirit",
+   "tier": "omni",
+   "ai": [
+    {
+     "k": "spell",
+     "el": "spirit",
+     "power": 0.9,
+     "target": "all",
+     "name": "Gaze of Ages",
+     "w": 3
+    },
+    {
+     "k": "spell",
+     "el": "spirit",
+     "power": 1.5,
+     "target": "one",
+     "name": "Judgment",
+     "w": 2
+    },
+    {
+     "k": "dispel",
+     "w": 1,
+     "name": "Truth"
+    },
+    {
+     "k": "heal",
+     "w": 1,
+     "name": "Remembrance"
+    },
+    {
+     "k": "stun",
+     "w": 1,
+     "name": "Behold",
+     "say": "\"I have seen you before you were born.\""
+    }
+   ],
+   "size": "omni",
+   "mdef": 1.4,
+   "spd": 1.15,
+   "phases": [
+    {
+     "at": 0.6,
+     "say": "A thousand eyes open across the sky.",
+     "buff": "mag"
+    },
+    {
+     "at": 0.25,
+     "say": "\"You have become. Show me who.\"",
+     "buff": "spd"
+    }
+   ],
+   "def": 1.3
+  },
+  "nihil": {
+   "name": "Nihil, the Unmaker",
+   "sprite": "nihil",
+   "el": "void",
+   "tier": "omni",
+   "ai": [
+    {
+     "k": "spell",
+     "el": "void",
+     "power": 0.95,
+     "target": "all",
+     "name": "Event Horizon",
+     "w": 3
+    },
+    {
+     "k": "spell",
+     "el": "void",
+     "power": 1.6,
+     "target": "one",
+     "name": "Unmake",
+     "w": 2
+    },
+    {
+     "k": "drain",
+     "power": 1.2,
+     "w": 1,
+     "name": "Consume"
+    },
+    {
+     "k": "silence",
+     "w": 1,
+     "name": "Unspeak"
+    },
+    {
+     "k": "elsewhere",
+     "w": 1,
+     "say": "Nihil folds away from the world."
+    }
+   ],
+   "size": "omni",
+   "mdef": 1.3,
+   "spd": 1.1,
+   "phases": [
+    {
+     "at": 0.6,
+     "say": "The stars behind Nihil go out, one by one.",
+     "buff": "mag"
+    },
+    {
+     "at": 0.25,
+     "say": "\"Before you, nothing. After you, nothing. Why fight?\"",
+     "buff": "str"
+    }
+   ],
+   "def": 1.4
+  },
+  "ember_rat_king": {
+   "name": "The Ember Rat King",
+   "sprite": "rat_king",
+   "el": "fire",
+   "tier": "mini",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2
+    },
+    {
+     "k": "summon",
+     "species": "rat",
+     "w": 1,
+     "say": "\"My children! My hungry children!\""
+    },
+    {
+     "k": "spell",
+     "el": "fire",
+     "power": 0.7,
+     "target": "all",
+     "name": "Cinder Swarm",
+     "w": 2
+    }
+   ],
+   "size": "xl",
+   "mdef": 0.9,
+   "spd": 1.1,
+   "def": 1.1
+  },
+  "falls_guardian": {
+   "name": "The Falls Guardian",
+   "sprite": "falls_guardian",
+   "el": "water",
+   "tier": "mini",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2
+    },
+    {
+     "k": "spell",
+     "el": "water",
+     "power": 0.75,
+     "target": "all",
+     "name": "Cascade",
+     "w": 2
+    },
+    {
+     "k": "buff",
+     "stat": "def",
+     "w": 1,
+     "say": "Water pours over the guardian's stone shell."
+    }
+   ],
+   "size": "xl",
+   "mdef": 1.1,
+   "spd": 0.8,
+   "def": 1.5
+  },
+  "storm_harpy": {
+   "name": "The Storm Harpy",
+   "sprite": "storm_harpy",
+   "el": "wind",
+   "tier": "mini",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2
+    },
+    {
+     "k": "spell",
+     "el": "wind",
+     "power": 0.75,
+     "target": "all",
+     "name": "Bell-Shriek",
+     "w": 2
+    },
+    {
+     "k": "steal_gold",
+     "w": 1,
+     "say": "\"Shiny! Mine!\""
+    }
+   ],
+   "size": "l",
+   "mdef": 1.0,
+   "spd": 1.45,
+   "def": 0.9
+  },
+  "rustbiter": {
+   "name": "Rustbiter",
+   "sprite": "rustbiter",
+   "el": "stone",
+   "tier": "mini",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2
+    },
+    {
+     "k": "drain",
+     "power": 1.0,
+     "w": 2,
+     "name": "Iron Hunger"
+    },
+    {
+     "k": "skill",
+     "s": "club_slam",
+     "w": 1
+    }
+   ],
+   "size": "xl",
+   "mdef": 0.8,
+   "spd": 0.85,
+   "def": 1.7
+  },
+  "lantern_wraith": {
+   "name": "The Lantern Wraith",
+   "sprite": "lantern_wraith",
+   "el": "spirit",
+   "tier": "mini",
+   "ai": [
+    {
+     "k": "spell",
+     "el": "spirit",
+     "power": 1.0,
+     "target": "one",
+     "name": "Pale Flame",
+     "w": 2
+    },
+    {
+     "k": "silence",
+     "w": 1,
+     "name": "Hush of the Crypt"
+    },
+    {
+     "k": "heal",
+     "w": 1,
+     "say": "The wraith's lantern brightens."
+    }
+   ],
+   "size": "l",
+   "mdef": 1.4,
+   "spd": 1.05,
+   "def": 1.0
+  },
+  "the_lingering": {
+   "name": "The Lingering",
+   "sprite": "lingering",
+   "el": "void",
+   "tier": "mini",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 1
+    },
+    {
+     "k": "drain",
+     "power": 1.0,
+     "w": 2,
+     "name": "Hold On"
+    },
+    {
+     "k": "spell",
+     "el": "void",
+     "power": 0.75,
+     "target": "all",
+     "name": "Never Leave",
+     "w": 2
+    }
+   ],
+   "size": "xl",
+   "mdef": 1.2,
+   "spd": 1.0,
+   "def": 1.1
+  },
+  "king_goblin": {
+   "name": "King Goblin",
+   "sprite": "king_goblin",
+   "el": "void",
+   "tier": "king",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2
+    },
+    {
+     "k": "skill",
+     "s": "brute_smash",
+     "w": 2
+    },
+    {
+     "k": "spell",
+     "el": "void",
+     "power": 0.8,
+     "target": "all",
+     "name": "Crown of Spite",
+     "w": 2
+    },
+    {
+     "k": "summon",
+     "species": "goblin",
+     "w": 1,
+     "say": "\"GUARDS! Somebody stab the hero!\""
+    },
+    {
+     "k": "steal_gold",
+     "w": 1,
+     "name": "Royal Pilfer",
+     "say": "\"Everything shiny belongs to the KING.\""
+    },
+    {
+     "k": "buff",
+     "stat": "str",
+     "w": 1,
+     "say": "King Goblin gulps down a jar of something green."
+    }
+   ],
+   "size": "boss",
+   "mdef": 1.15,
+   "spd": 1.1,
+   "phases": [
+    {
+     "at": 0.5,
+     "say": "\"You broke my curses. ALL SIX. Do you know how long those took?!\" The crown blazes.",
+     "buff": "mag"
+    },
+    {
+     "at": 0.2,
+     "say": "\"No, no, no... a goblin king doesn't lose to some... some SLAYER!\"",
+     "buff": "spd"
+    }
+   ],
+   "def": 1.25
+  },
+  "blessed_warden": {
+   "name": "Blessed Warden",
+   "sprite": "blessed_blade",
+   "el": "spirit",
+   "tier": "blessed",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 3,
+     "name": "Arc Cut"
+    },
+    {
+     "k": "blink",
+     "w": 1
+    },
+    {
+     "k": "skill",
+     "s": "white_sweep",
+     "w": 2
+    }
+   ],
+   "blessed": true,
+   "style": "blade",
+   "size": "m",
+   "mdef": 1.25,
+   "spd": 1.25,
+   "def": 1.25
+  },
+  "blessed_lancer": {
+   "name": "Blessed Lancer",
+   "sprite": "blessed_rifle",
+   "el": "fire",
+   "tier": "blessed",
+   "ai": [
+    {
+     "k": "skill",
+     "s": "lance_beam",
+     "w": 3
+    },
+    {
+     "k": "attack",
+     "w": 1,
+     "name": "Burst Fire"
+    },
+    {
+     "k": "blink",
+     "w": 1
+    }
+   ],
+   "blessed": true,
+   "style": "rifle",
+   "size": "m",
+   "mdef": 1.15,
+   "spd": 1.15,
+   "def": 1.0
+  },
+  "blessed_seraph": {
+   "name": "Blessed Seraph",
+   "sprite": "blessed_staff",
+   "el": "spirit",
+   "tier": "blessed",
+   "ai": [
+    {
+     "k": "spell",
+     "el": "spirit",
+     "power": 1.0,
+     "target": "one",
+     "name": "White Lance",
+     "w": 2
+    },
+    {
+     "k": "heal",
+     "w": 1,
+     "say": "A ring of light closes over the Blessed's wounds."
+    },
+    {
+     "k": "blink",
+     "w": 1
+    }
+   ],
+   "blessed": true,
+   "style": "staff",
+   "size": "m",
+   "mdef": 1.5,
+   "spd": 1.1,
+   "caster": true,
+   "def": 0.95
+  },
+  "quickfang": {
+   "name": "Quickfang",
+   "el": "wind",
+   "sprite": "quickfang",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 3,
+     "name": "Blur Bite"
+    },
+    {
+     "k": "attack",
+     "w": 2,
+     "name": "Thousand Nips"
+    },
+    {
+     "k": "buff",
+     "stat": "spd",
+     "w": 1,
+     "say": "Quickfang darts in circles, faster and faster."
+    }
+   ],
+   "size": "l",
+   "mdef": 0.5,
+   "spd": 3.2,
+   "hp_mul": 0.12,
+   "atk_mul": 0.85,
+   "tier": "hunt",
+   "hunt": "biscuit",
+   "def": 0.5
+  },
+  "ironshell": {
+   "name": "The Ironshell",
+   "el": "stone",
+   "sprite": "ironshell",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2,
+     "name": "Crushing Bite"
+    },
+    {
+     "k": "skill",
+     "s": "club_slam",
+     "w": 1
+    },
+    {
+     "k": "doze",
+     "w": 2,
+     "say": "The Ironshell blinks, very slowly. It seems to have forgotten what it was doing."
+    }
+   ],
+   "size": "xl",
+   "mdef": 0.35,
+   "spd": 0.22,
+   "hp_mul": 1.1,
+   "atk_mul": 1.5,
+   "tier": "hunt",
+   "hunt": "music_box",
+   "def": 4.0
+  },
+  "glass_wyrm": {
+   "name": "The Glass Wyrm",
+   "el": "water",
+   "sprite": "glass_wyrm",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2,
+     "name": "Shatterfang"
+    },
+    {
+     "k": "skill",
+     "s": "brute_smash",
+     "w": 2
+    },
+    {
+     "k": "spell",
+     "el": "water",
+     "power": 1.0,
+     "target": "all",
+     "name": "Prism Spray",
+     "w": 1
+    }
+   ],
+   "size": "xl",
+   "mdef": 0.3,
+   "spd": 1.3,
+   "hp_mul": 0.55,
+   "atk_mul": 2.4,
+   "tier": "hunt",
+   "hunt": "ring",
+   "def": 0.12
+  },
+  "gilded_mimic": {
+   "name": "The Gilded Mimic",
+   "el": "wind",
+   "sprite": "gilded_mimic",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2,
+     "name": "Lid Slam"
+    },
+    {
+     "k": "steal_gold",
+     "w": 1,
+     "name": "Gobble",
+     "say": "\"MINE,\" says the chest."
+    },
+    {
+     "k": "skill",
+     "s": "brute_smash",
+     "w": 2
+    },
+    {
+     "k": "buff",
+     "stat": "def",
+     "w": 1,
+     "say": "The Mimic snaps its lid shut and hunkers down."
+    }
+   ],
+   "size": "l",
+   "mdef": 2.0,
+   "spd": 0.9,
+   "hp_mul": 1.2,
+   "atk_mul": 1.2,
+   "weak_mult": 3.5,
+   "tier": "hunt",
+   "hunt": "doll",
+   "weak_el": "fire",
+   "def": 2.6
+  },
+  "mirror_moth": {
+   "name": "The Mirror Moth",
+   "el": "spirit",
+   "sprite": "mirror_moth",
+   "ai": [
+    {
+     "k": "spell",
+     "el": "spirit",
+     "power": 1.1,
+     "target": "all",
+     "name": "Moon Dust",
+     "w": 2
+    },
+    {
+     "k": "silence",
+     "w": 1,
+     "name": "Silver Glare"
+    },
+    {
+     "k": "attack",
+     "w": 1,
+     "name": "Wing Slap"
+    }
+   ],
+   "size": "xl",
+   "mdef": 4.5,
+   "spd": 1.2,
+   "hp_mul": 0.9,
+   "atk_mul": 1.4,
+   "tier": "hunt",
+   "hunt": "hat",
+   "def": 0.28
+  },
+  "woolgorger": {
+   "name": "The Woolgorger",
+   "el": "stone",
+   "sprite": "woolgorger",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2,
+     "name": "Gulp"
+    },
+    {
+     "k": "skill",
+     "s": "brute_smash",
+     "w": 1
+    },
+    {
+     "k": "heal",
+     "w": 1,
+     "say": "The Woolgorger chews something woolly and looks very pleased."
+    },
+    {
+     "k": "doze",
+     "w": 3,
+     "say": "The Woolgorger yawns enormously... and falls asleep."
+    }
+   ],
+   "size": "xl",
+   "mdef": 1.4,
+   "spd": 0.8,
+   "hp_mul": 1.6,
+   "atk_mul": 2.0,
+   "tier": "hunt",
+   "hunt": "flock",
+   "def": 1.6
+  },
+  "lamp_shade": {
+   "name": "The Lantern Thief",
+   "el": "void",
+   "sprite": "lamp_shade",
+   "ai": [
+    {
+     "k": "attack",
+     "w": 2,
+     "name": "Night Claw"
+    },
+    {
+     "k": "spell",
+     "el": "void",
+     "power": 1.2,
+     "target": "all",
+     "name": "Swallow the Light",
+     "w": 2
+    },
+    {
+     "k": "drain",
+     "power": 1.0,
+     "w": 1,
+     "name": "Snuff"
+    }
+   ],
+   "size": "xl",
+   "mdef": 1.3,
+   "spd": 2.0,
+   "hp_mul": 0.8,
+   "atk_mul": 1.8,
+   "weak_mult": 3.5,
+   "tier": "hunt",
+   "hunt": "lantern",
+   "weak_el": "spirit",
+   "def": 1.3
+  }
+ },
+ "pools": {
+  "field": {
+   "easy": 6,
+   "medium": 4,
+   "hard": 0,
+   "size": [
+    1,
+    3
+   ]
+  },
+  "cave": {
+   "easy": 3,
+   "medium": 5,
+   "hard": 2,
+   "size": [
+    2,
+    3
+   ]
+  },
+  "dungeon": {
+   "easy": 1,
+   "medium": 5,
+   "hard": 4,
+   "size": [
+    2,
+    4
+   ]
+  }
+ },
+ "shop_items": [
+  "potion",
+  "hi_potion",
+  "ether",
+  "feather",
+  "smoke_bomb",
+  "stamina_tonic",
+  "might_elixir",
+  "ward_elixir",
+  "sage_elixir",
+  "keen_elixir"
+ ],
+ "world_gear": {
+  "fire": [
+   "cinder_blade",
+   "ember_bow",
+   "pyre_staff",
+   "scorchmail",
+   "ember_ring"
+  ],
+  "water": [
+   "tidecutter",
+   "coral_bow",
+   "brine_staff",
+   "shellguard",
+   "pearl_ring"
+  ],
+  "wind": [
+   "gale_sabre",
+   "swift_bow",
+   "sky_staff",
+   "featherweave",
+   "wind_ring"
+  ],
+  "stone": [
+   "granite_axe",
+   "flint_bow",
+   "geode_staff",
+   "stoneplate",
+   "stone_ring"
+  ],
+  "spirit": [
+   "dawn_blade",
+   "halo_bow",
+   "lumen_staff",
+   "pilgrim_vestments",
+   "spirit_ring"
+  ],
+  "void": [
+   "null_edge",
+   "hollow_bow",
+   "abyss_staff",
+   "shadeweave",
+   "void_ring"
+  ]
+ },
+ "world_gear_lists": {
+  "fire": {
+   "weapons": [
+    "cinder_blade",
+    "ashsteel_saber",
+    "magma_edge",
+    "pitbreaker",
+    "ember_bow",
+    "smokewood_bow",
+    "ashwood_bow",
+    "phoenix_longbow",
+    "pyre_staff",
+    "kindling_rod",
+    "brazier_staff",
+    "forgemasters_scepter"
+   ],
+   "armor": [
+    "scorchmail",
+    "ashcloth_tunic",
+    "bellows_leather",
+    "cinder_scale",
+    "forgeheart_mail",
+    "magma_plate",
+    "emberweave_robe",
+    "salamander_coat"
+   ],
+   "acc": [
+    "ember_ring",
+    "coal_charm",
+    "spark_earring",
+    "ash_bracelet",
+    "tinder_pendant",
+    "smoke_brooch",
+    "warm_stone",
+    "cinder_band",
+    "forge_token",
+    "pit_fighters_wrap",
+    "magma_ring",
+    "salamander_scale",
+    "blazing_sigil",
+    "furnace_heart",
+    "ember_crown",
+    "phoenix_feather_pin",
+    "bellows_gem",
+    "goathorn_talisman",
+    "eye_of_the_envious",
+    "hearth_of_brannoc"
+   ]
+  },
+  "water": {
+   "weapons": [
+    "tidecutter",
+    "coral_saber",
+    "riptide_blade",
+    "abyssal_cutlass",
+    "coral_bow",
+    "driftwood_longbow",
+    "gulls_wing_bow",
+    "leviathan_bow",
+    "brine_staff",
+    "kelp_wand",
+    "pearl_rod",
+    "beacon_staff"
+   ],
+   "armor": [
+    "shellguard",
+    "sailcloth_coat",
+    "fishers_oilskin",
+    "scale_vest",
+    "tideguard_coat",
+    "kelp_mail",
+    "nacre_plate",
+    "mantle_of_the_deep"
+   ],
+   "acc": [
+    "pearl_ring",
+    "shell_charm",
+    "sea_glass_pendant",
+    "anchor_pin",
+    "tide_bracelet",
+    "salt_crystal",
+    "fishhook_earring",
+    "rope_bangle",
+    "sailors_knot",
+    "driftwood_token",
+    "mermaids_comb",
+    "beacon_prism",
+    "whalebone_charm",
+    "sirens_locket",
+    "coral_crown",
+    "undertow_band",
+    "tidecallers_shell",
+    "pearl_of_tears",
+    "marens_lullaby",
+    "heart_of_the_falls"
+   ]
+  },
+  "wind": {
+   "weapons": [
+    "gale_sabre",
+    "feather_dirk",
+    "kestrel_blade",
+    "skysplitter",
+    "swift_bow",
+    "reedline_bow",
+    "hawkeye_bow",
+    "featherline_bow",
+    "sky_staff",
+    "pinwheel_wand",
+    "cloudspire_rod",
+    "staff_of_the_open_sky"
+   ],
+   "armor": [
+    "featherweave",
+    "couriers_jacket",
+    "glider_vest",
+    "breezecloth_robe",
+    "storm_mail",
+    "windrider_coat",
+    "updraft_mantle",
+    "wings_of_kitefall"
+   ],
+   "acc": [
+    "wind_ring",
+    "feather_charm",
+    "kite_string_bracelet",
+    "bell_earring",
+    "compass_rose_pin",
+    "cloud_pendant",
+    "couriers_badge",
+    "whistle_charm",
+    "breeze_band",
+    "pinwheel_token",
+    "zephyr_band",
+    "hawk_talon",
+    "gale_crown",
+    "storm_sigil",
+    "skyglass_monocle",
+    "updraft_feather",
+    "belfry_bell",
+    "weathervane_charm",
+    "cage_breakers_ring",
+    "rocs_eye"
+   ]
+  },
+  "stone": {
+   "weapons": [
+    "granite_axe",
+    "miners_pick",
+    "quartz_cleaver",
+    "flintmantle_axe",
+    "flint_bow",
+    "ironwood_bow",
+    "bedrock_bow",
+    "mountains_spine",
+    "geode_staff",
+    "copper_rod",
+    "quartz_staff",
+    "ungilded_scepter"
+   ],
+   "armor": [
+    "stoneplate",
+    "miners_coat",
+    "copper_mail",
+    "tunnel_leathers",
+    "granite_plate",
+    "union_overalls",
+    "seamstone_mail",
+    "mountainheart_plate"
+   ],
+   "acc": [
+    "stone_ring",
+    "copper_bracelet",
+    "moss_charm",
+    "miners_lamp",
+    "iron_nail_pendant",
+    "pebble_pouch",
+    "union_badge",
+    "slate_token",
+    "gravel_band",
+    "hardhat_charm",
+    "rootstone_ring",
+    "lode_compass",
+    "emerald_shard",
+    "bedrock_sigil",
+    "garnet_eye",
+    "prospectors_pan",
+    "golem_core",
+    "geode_heart",
+    "ungilded_crown",
+    "rustbiters_fang"
+   ]
+  },
+  "spirit": {
+   "weapons": [
+    "dawn_blade",
+    "pilgrims_sword",
+    "vigil_blade",
+    "edge_of_becoming",
+    "halo_bow",
+    "candlewood_bow",
+    "lantern_bow",
+    "dawnbreaker",
+    "lumen_staff",
+    "prayer_rod",
+    "choir_staff",
+    "prayer_staff"
+   ],
+   "armor": [
+    "pilgrim_vestments",
+    "novice_robe",
+    "lantern_coat",
+    "chapel_mail",
+    "candle_mail",
+    "saints_mantle",
+    "abbesss_robe",
+    "raiment_of_the_finished"
+   ],
+   "acc": [
+    "spirit_ring",
+    "candle_charm",
+    "prayer_beads",
+    "pilgrim_badge",
+    "halo_pin",
+    "lantern_token",
+    "choir_bell",
+    "white_ribbon",
+    "vigil_pendant",
+    "dawn_band",
+    "halo_circlet",
+    "angels_tear",
+    "saints_relic",
+    "mirror_shard",
+    "lumen_sigil",
+    "moth_wing_pin",
+    "abbey_crown",
+    "wing_of_dawn",
+    "iriss_chisel",
+    "lantern_of_the_crypt"
+   ]
+  },
+  "void": {
+   "weapons": [
+    "null_edge",
+    "hollow_knife",
+    "echo_blade",
+    "edge_of_nothing",
+    "hollow_bow",
+    "drift_bow",
+    "starless_bow",
+    "unremembered_bow",
+    "abyss_staff",
+    "shade_rod",
+    "echo_staff",
+    "staff_of_the_unmoored"
+   ],
+   "armor": [
+    "shadeweave",
+    "drifters_cloak",
+    "anchor_coat",
+    "static_mail",
+    "nullweave_cloak",
+    "starfall_robe",
+    "hollow_plate",
+    "mantle_of_presence"
+   ],
+   "acc": [
+    "void_ring",
+    "anchor_charm",
+    "string_bracelet",
+    "shade_pin",
+    "echo_earring",
+    "dusk_token",
+    "lamp_charm",
+    "static_band",
+    "hollow_bead",
+    "quiet_pendant",
+    "gloom_ring",
+    "name_locket",
+    "starless_gem",
+    "echo_sigil",
+    "anchor_crown",
+    "doorframe_splinter",
+    "lastlight_lantern",
+    "key_to_nowhere",
+    "aldouss_mask",
+    "mirror_of_the_room"
+   ]
+  }
+ },
+ "drop_table": {
+  "easy": [
+   0.05,
+   [
+    90,
+    10,
+    0
+   ]
+  ],
+  "medium": [
+   0.08,
+   [
+    78,
+    20,
+    2
+   ]
+  ],
+  "hard": [
+   0.12,
+   [
+    60,
+    35,
+    5
+   ]
+  ],
+  "mini": [
+   0.65,
+   [
+    25,
+    63,
+    12
+   ]
+  ],
+  "boss": [
+   1.0,
+   [
+    0,
+    70,
+    30
+   ]
+  ],
+  "omni": [
+   1.0,
+   [
+    0,
+    0,
+    100
+   ]
+  ]
+ },
+ "quests": {
+  "main_fire": {
+   "title": "The Green Flame",
+   "world": "fire",
+   "kind": "main",
+   "giver": "Ignatia",
+   "desc": "Ignatia's brother Vulkar has become a monster of green fire in the Envy Forge, north of the Ashen Wilds.",
+   "objective": "flag:beat_vulkar"
+  },
+  "comp_fire": {
+   "title": "Chains of the Pit",
+   "world": "fire",
+   "kind": "companion",
+   "giver": "Kael",
+   "desc": "Slagjaw, the ogre who owned Kael, still guards Kael's old blade deep in Smolder Hollow.",
+   "objective": "flag:beat_slagjaw"
+  },
+  "side_fire": {
+   "title": "The Bellows Thief",
+   "world": "fire",
+   "kind": "side",
+   "giver": "Tamsin",
+   "desc": "A scavenger called Scrapjack stole the Great Bellows. He was last seen in the Ashen Wilds.",
+   "objective": "item:forge_bellows"
+  },
+  "key_fire": {
+   "title": "The Widow's Hammer",
+   "world": "fire",
+   "kind": "key",
+   "giver": "Hesta",
+   "desc": "Hesta's late husband Brannoc lost his hammer in Smolder Hollow. She wants it back.",
+   "objective": "item:hestas_hammer"
+  },
+  "main_water": {
+   "title": "The Tide That Won't Go Out",
+   "world": "water",
+   "kind": "main",
+   "giver": "Harbormaster Quill",
+   "desc": "Maren, the Mother of Tides, grieves at the bottom of the Sunken Cradle, east of the Weeping Shoals.",
+   "objective": "flag:beat_maren"
+  },
+  "comp_water": {
+   "title": "The Dark Lighthouse",
+   "world": "water",
+   "kind": "companion",
+   "giver": "Nerissa",
+   "desc": "The lighthouse lens was swallowed by Gloomfin, a huge angler fish in the Drowned Grotto.",
+   "objective": "flag:beat_gloomfin"
+  },
+  "side_water": {
+   "title": "Nets of the Drowned",
+   "world": "water",
+   "kind": "side",
+   "giver": "Odile",
+   "desc": "The ghost of Captain Corrow haunts the Weeping Shoals and tangles every net.",
+   "objective": "flag:beat_drowned_captain"
+  },
+  "key_water": {
+   "title": "Three Notes",
+   "world": "water",
+   "kind": "key",
+   "giver": "Tobiah",
+   "desc": "Old Tobiah's daughter left a music box in the Drowned Grotto before the tide took her.",
+   "objective": "item:music_box"
+  },
+  "main_wind": {
+   "title": "The Keeper of Cages",
+   "world": "wind",
+   "kind": "main",
+   "giver": "Windspeaker Aloe",
+   "desc": "Corvane has caged the winds of Skyreach in the Gilded Aviary, beyond the Whistling Heights.",
+   "objective": "flag:beat_corvane"
+  },
+  "comp_wind": {
+   "title": "Stolen Wings",
+   "world": "wind",
+   "kind": "companion",
+   "giver": "Pip",
+   "desc": "Captain Rook and his sky pirates stole Pip's glider-wings. Rook nests in the Hollow Winds Cave.",
+   "objective": "flag:beat_rook"
+  },
+  "side_wind": {
+   "title": "The Silent Bells",
+   "world": "wind",
+   "kind": "side",
+   "giver": "Bellkeeper Amsel",
+   "desc": "Sylvane the Bell-Thief stole Kitefall's wind-bells. She hides in the Whistling Heights.",
+   "objective": "item:wind_bells"
+  },
+  "key_wind": {
+   "title": "Grandpa's First Kite",
+   "world": "wind",
+   "kind": "key",
+   "giver": "Lark",
+   "desc": "Lark's grandfather lost his first kite in the Hollow Winds Cave.",
+   "objective": "item:first_kite"
+  },
+  "main_stone": {
+   "title": "The Gilded King",
+   "world": "stone",
+   "kind": "main",
+   "giver": "Union Elder Marta",
+   "desc": "King Ostrum sold the mountain's heart for gold and turned to gilded stone. He rules from the Gilded Throne.",
+   "objective": "flag:beat_ostrum"
+  },
+  "comp_stone": {
+   "title": "The Buried Crew",
+   "world": "stone",
+   "kind": "companion",
+   "giver": "Durga",
+   "desc": "Durga's mining crew is trapped below the Glimmering Seam by Gravelmaw, a beast of the deep rock.",
+   "objective": "flag:beat_gravelmaw"
+  },
+  "side_stone": {
+   "title": "Rust in the Veins",
+   "world": "stone",
+   "kind": "side",
+   "giver": "Breck",
+   "desc": "The Iron Overseer runs a forced dig in Rustvein Canyon. Breck wants him gone.",
+   "objective": "flag:beat_iron_overseer"
+  },
+  "key_stone": {
+   "title": "Garrick's Lucky Pick",
+   "world": "stone",
+   "kind": "key",
+   "giver": "Garrick",
+   "desc": "Old Garrick dropped his lucky pick in the Glimmering Seam.",
+   "objective": "item:lucky_pick"
+  },
+  "main_spirit": {
+   "title": "The Unfinished",
+   "world": "spirit",
+   "kind": "main",
+   "giver": "Abbess Clare",
+   "desc": "Iris, a saint who could never finish becoming herself, reshapes everyone in the Ascent of the Unfinished.",
+   "objective": "flag:beat_iris"
+  },
+  "comp_spirit": {
+   "title": "The Hollow Mirror",
+   "world": "spirit",
+   "kind": "companion",
+   "giver": "Sol",
+   "desc": "In the Mirror Caves, a mirror shows Sol a self that isn't his. He has to face it.",
+   "objective": "flag:beat_mirror_wraith"
+  },
+  "side_spirit": {
+   "title": "The Pilgrim's Lantern",
+   "world": "spirit",
+   "kind": "side",
+   "giver": "Pilgrim Maud",
+   "desc": "A great bear eats the lanterns pilgrims carry through the Fields of Becoming.",
+   "objective": "flag:beat_penitent_bear"
+  },
+  "omni_spirit": {
+   "title": "The Witness",
+   "world": "spirit",
+   "kind": "omni",
+   "giver": "the sealed door",
+   "desc": "Behind a door in the Ascent waits Aeon, the Witness. It needs the Keys of Memory and Breath, and four of you.",
+   "objective": "flag:beat_aeon"
+  },
+  "main_void": {
+   "title": "Nobody Home",
+   "world": "void",
+   "kind": "main",
+   "giver": "Lamplighter Ines",
+   "desc": "A man named Aldous stepped out of himself to escape his pain. What's left, Nobody, haunts the Unmoored Keep.",
+   "objective": "flag:beat_nobody"
+  },
+  "comp_void": {
+   "title": "The Name-Eater",
+   "world": "void",
+   "kind": "companion",
+   "giver": "Vesper",
+   "desc": "Vesper's true name was eaten by the Name-Eater in the Echo Pits.",
+   "objective": "flag:beat_name_eater"
+  },
+  "side_void": {
+   "title": "Echo of a Song",
+   "world": "void",
+   "kind": "side",
+   "giver": "Lio",
+   "desc": "The Mute Paladin stole every song in Lastlight. He walks The Drift.",
+   "objective": "flag:beat_mute_paladin"
+  },
+  "omni_void": {
+   "title": "The Throne of Nothing",
+   "world": "void",
+   "kind": "omni",
+   "giver": "the sealed door",
+   "desc": "Behind a door in the Unmoored Keep sits Nihil, the Unmaker. It needs the Keys of Ash and Bedrock, and four of you.",
+   "objective": "flag:beat_nihil"
+  },
+  "side2_fire": {
+   "title": "The Smith's Vault",
+   "world": "fire",
+   "kind": "side",
+   "giver": "Old Furnace-Hand Orrin",
+   "desc": "Something gnaws beneath Widow Hesta's house. Brannoc's old vault has been taken by a king of ember rats.",
+   "objective": "flag:beat_ember_rat_king"
+  },
+  "side2_water": {
+   "title": "Behind the Water",
+   "world": "water",
+   "kind": "side",
+   "giver": "Fisher Linnea",
+   "desc": "A door hides behind the Weeping Falls. A stone guardian has kept it for a century.",
+   "objective": "flag:beat_falls_guardian"
+  },
+  "side2_wind": {
+   "title": "The Belfry Thief",
+   "world": "wind",
+   "kind": "side",
+   "giver": "Kite-Maker Tess",
+   "desc": "A harpy has made the old bell tower her nest and steals every kite that flies past.",
+   "objective": "flag:beat_storm_harpy"
+  },
+  "side2_stone": {
+   "title": "Something Eats the Props",
+   "world": "stone",
+   "kind": "side",
+   "giver": "Foreman Gutch",
+   "desc": "Mine props keep vanishing. Something under the old house is eating iron, and the tunnel will collapse.",
+   "objective": "flag:beat_rustbiter"
+  },
+  "side2_spirit": {
+   "title": "The Quiet Crypt",
+   "world": "spirit",
+   "kind": "side",
+   "giver": "Sister Ysolde",
+   "desc": "Beneath the chapter house is a crypt nobody visits. Lately, a light walks there at night.",
+   "objective": "flag:beat_lantern_wraith"
+  },
+  "side2_void": {
+   "title": "The Room That Isn't",
+   "world": "void",
+   "kind": "side",
+   "giver": "Lamplighter Aldwin",
+   "desc": "There's a door upstairs in an empty house that opens onto a room that shouldn't exist.",
+   "objective": "flag:beat_the_lingering"
+  },
+  "main_king": {
+   "title": "Origin of the Goblin Slayer",
+   "world": "nexus",
+   "kind": "main",
+   "giver": "The Keeper",
+   "desc": "King Goblin cursed all six Hearths. Free them, then enter his Warren from the Nexus.",
+   "objective": "flag:beat_king_goblin"
+  }
+ },
+ "shops": {
+  "items": {
+   "name": "Item Shop",
+   "items": [
+    "potion",
+    "hi_potion",
+    "ether",
+    "feather",
+    "smoke_bomb",
+    "stamina_tonic",
+    "might_elixir",
+    "ward_elixir",
+    "sage_elixir",
+    "keen_elixir"
+   ],
+   "gear": []
+  },
+  "nexus": {
+   "name": "Wandering Merchant",
+   "items": [
+    "potion",
+    "ether",
+    "feather",
+    "smoke_bomb"
+   ],
+   "gear": [
+    "iron_sword",
+    "short_bow",
+    "oak_staff",
+    "leather_coat",
+    "copper_band"
+   ]
+  },
+  "pawn_fire": {
+   "name": "Pawn Shop",
+   "items": [],
+   "gear": [
+    "cinder_blade",
+    "ashsteel_saber",
+    "ember_bow",
+    "smokewood_bow",
+    "pyre_staff",
+    "kindling_rod",
+    "scorchmail",
+    "ashcloth_tunic",
+    "bellows_leather",
+    "cinder_scale",
+    "ember_ring",
+    "coal_charm",
+    "spark_earring",
+    "ash_bracelet",
+    "tinder_pendant",
+    "smoke_brooch",
+    "warm_stone",
+    "cinder_band",
+    "forge_token",
+    "pit_fighters_wrap",
+    "iron_sword",
+    "short_bow",
+    "oak_staff"
+   ]
+  },
+  "pawn_water": {
+   "name": "Pawn Shop",
+   "items": [],
+   "gear": [
+    "tidecutter",
+    "coral_saber",
+    "coral_bow",
+    "driftwood_longbow",
+    "brine_staff",
+    "kelp_wand",
+    "shellguard",
+    "sailcloth_coat",
+    "fishers_oilskin",
+    "scale_vest",
+    "pearl_ring",
+    "shell_charm",
+    "sea_glass_pendant",
+    "anchor_pin",
+    "tide_bracelet",
+    "salt_crystal",
+    "fishhook_earring",
+    "rope_bangle",
+    "sailors_knot",
+    "driftwood_token",
+    "iron_sword",
+    "short_bow",
+    "oak_staff"
+   ]
+  },
+  "pawn_wind": {
+   "name": "Pawn Shop",
+   "items": [],
+   "gear": [
+    "gale_sabre",
+    "feather_dirk",
+    "swift_bow",
+    "reedline_bow",
+    "sky_staff",
+    "pinwheel_wand",
+    "featherweave",
+    "couriers_jacket",
+    "glider_vest",
+    "breezecloth_robe",
+    "wind_ring",
+    "feather_charm",
+    "kite_string_bracelet",
+    "bell_earring",
+    "compass_rose_pin",
+    "cloud_pendant",
+    "couriers_badge",
+    "whistle_charm",
+    "breeze_band",
+    "pinwheel_token",
+    "iron_sword",
+    "short_bow",
+    "oak_staff"
+   ]
+  },
+  "pawn_stone": {
+   "name": "Pawn Shop",
+   "items": [],
+   "gear": [
+    "granite_axe",
+    "miners_pick",
+    "flint_bow",
+    "ironwood_bow",
+    "geode_staff",
+    "copper_rod",
+    "stoneplate",
+    "miners_coat",
+    "copper_mail",
+    "tunnel_leathers",
+    "stone_ring",
+    "copper_bracelet",
+    "moss_charm",
+    "miners_lamp",
+    "iron_nail_pendant",
+    "pebble_pouch",
+    "union_badge",
+    "slate_token",
+    "gravel_band",
+    "hardhat_charm",
+    "iron_sword",
+    "short_bow",
+    "oak_staff"
+   ]
+  },
+  "pawn_spirit": {
+   "name": "Pawn Shop",
+   "items": [],
+   "gear": [
+    "dawn_blade",
+    "pilgrims_sword",
+    "halo_bow",
+    "candlewood_bow",
+    "lumen_staff",
+    "prayer_rod",
+    "pilgrim_vestments",
+    "novice_robe",
+    "lantern_coat",
+    "chapel_mail",
+    "spirit_ring",
+    "candle_charm",
+    "prayer_beads",
+    "pilgrim_badge",
+    "halo_pin",
+    "lantern_token",
+    "choir_bell",
+    "white_ribbon",
+    "vigil_pendant",
+    "dawn_band",
+    "iron_sword",
+    "short_bow",
+    "oak_staff"
+   ]
+  },
+  "pawn_void": {
+   "name": "Pawn Shop",
+   "items": [],
+   "gear": [
+    "null_edge",
+    "hollow_knife",
+    "hollow_bow",
+    "drift_bow",
+    "abyss_staff",
+    "shade_rod",
+    "shadeweave",
+    "drifters_cloak",
+    "anchor_coat",
+    "static_mail",
+    "void_ring",
+    "anchor_charm",
+    "string_bracelet",
+    "shade_pin",
+    "echo_earring",
+    "dusk_token",
+    "lamp_charm",
+    "static_band",
+    "hollow_bead",
+    "quiet_pendant",
+    "iron_sword",
+    "short_bow",
+    "oak_staff"
+   ]
+  },
+  "tavern_fire": {
+   "name": "The Bellows & Barrel",
+   "items": [
+    "ember_stew",
+    "cinder_cider",
+    "forge_pie",
+    "potion",
+    "ether"
+   ],
+   "gear": []
+  },
+  "tavern_water": {
+   "name": "The Salted Gull",
+   "items": [
+    "deep_chowder",
+    "salt_tea",
+    "captains_platter",
+    "potion",
+    "ether"
+   ],
+   "gear": []
+  },
+  "tavern_wind": {
+   "name": "The Tangled String",
+   "items": [
+    "skyberry_tart",
+    "updraft_ale",
+    "kite_feast",
+    "potion",
+    "ether"
+   ],
+   "gear": []
+  },
+  "tavern_stone": {
+   "name": "The Honest Tankard",
+   "items": [
+    "miner_pasty",
+    "copper_stout",
+    "lode_roast",
+    "potion",
+    "ether"
+   ],
+   "gear": []
+  },
+  "tavern_spirit": {
+   "name": "The Last Candle",
+   "items": [
+    "lantern_bread",
+    "dawn_tea",
+    "pilgrim_supper",
+    "potion",
+    "ether"
+   ],
+   "gear": []
+  },
+  "tavern_void": {
+   "name": "The Somewhere",
+   "items": [
+    "something_soup",
+    "starless_nectar",
+    "remembering_meal",
+    "potion",
+    "ether"
+   ],
+   "gear": []
+  }
+ },
+ "encounters": {
+  "enc_scrapjack": {
+   "enemies": [
+    "scrapjack"
+   ],
+   "music": "boss",
+   "bg": "fire_out",
+   "flee": false
+  },
+  "enc_slagjaw": {
+   "enemies": [
+    "slagjaw"
+   ],
+   "music": "boss",
+   "bg": "fire_in",
+   "flee": false
+  },
+  "enc_vulkar": {
+   "enemies": [
+    "vulkar"
+   ],
+   "music": "boss",
+   "bg": "fire_in",
+   "flee": false
+  },
+  "enc_ember_rat_king": {
+   "enemies": [
+    "ember_rat_king"
+   ],
+   "music": "boss",
+   "bg": "fire_in",
+   "flee": false
+  },
+  "enc_drowned_captain": {
+   "enemies": [
+    "drowned_captain"
+   ],
+   "music": "boss",
+   "bg": "water_out",
+   "flee": false
+  },
+  "enc_gloomfin": {
+   "enemies": [
+    "gloomfin"
+   ],
+   "music": "boss",
+   "bg": "water_in",
+   "flee": false
+  },
+  "enc_maren": {
+   "enemies": [
+    "maren"
+   ],
+   "music": "boss",
+   "bg": "water_in",
+   "flee": false
+  },
+  "enc_falls_guardian": {
+   "enemies": [
+    "falls_guardian"
+   ],
+   "music": "boss",
+   "bg": "water_in",
+   "flee": false
+  },
+  "enc_sylvane": {
+   "enemies": [
+    "sylvane"
+   ],
+   "music": "boss",
+   "bg": "wind_out",
+   "flee": false
+  },
+  "enc_rook": {
+   "enemies": [
+    "rook"
+   ],
+   "music": "boss",
+   "bg": "wind_in",
+   "flee": false
+  },
+  "enc_corvane": {
+   "enemies": [
+    "corvane"
+   ],
+   "music": "boss",
+   "bg": "wind_in",
+   "flee": false
+  },
+  "enc_storm_harpy": {
+   "enemies": [
+    "storm_harpy"
+   ],
+   "music": "boss",
+   "bg": "wind_in",
+   "flee": false
+  },
+  "enc_iron_overseer": {
+   "enemies": [
+    "iron_overseer"
+   ],
+   "music": "boss",
+   "bg": "stone_out",
+   "flee": false
+  },
+  "enc_gravelmaw": {
+   "enemies": [
+    "gravelmaw"
+   ],
+   "music": "boss",
+   "bg": "stone_in",
+   "flee": false
+  },
+  "enc_ostrum": {
+   "enemies": [
+    "ostrum"
+   ],
+   "music": "boss",
+   "bg": "stone_in",
+   "flee": false
+  },
+  "enc_rustbiter": {
+   "enemies": [
+    "rustbiter"
+   ],
+   "music": "boss",
+   "bg": "stone_in",
+   "flee": false
+  },
+  "enc_penitent_bear": {
+   "enemies": [
+    "penitent_bear"
+   ],
+   "music": "boss",
+   "bg": "spirit_out",
+   "flee": false
+  },
+  "enc_mirror_wraith": {
+   "enemies": [
+    "mirror_wraith"
+   ],
+   "music": "boss",
+   "bg": "spirit_in",
+   "flee": false
+  },
+  "enc_iris": {
+   "enemies": [
+    "iris"
+   ],
+   "music": "boss",
+   "bg": "spirit_in",
+   "flee": false
+  },
+  "enc_aeon": {
+   "enemies": [
+    "aeon"
+   ],
+   "music": "omni",
+   "bg": "spirit_sanctum",
+   "flee": false
+  },
+  "enc_lantern_wraith": {
+   "enemies": [
+    "lantern_wraith"
+   ],
+   "music": "boss",
+   "bg": "spirit_in",
+   "flee": false
+  },
+  "enc_mute_paladin": {
+   "enemies": [
+    "mute_paladin"
+   ],
+   "music": "boss",
+   "bg": "void_out",
+   "flee": false
+  },
+  "enc_name_eater": {
+   "enemies": [
+    "name_eater"
+   ],
+   "music": "boss",
+   "bg": "void_in",
+   "flee": false
+  },
+  "enc_nobody": {
+   "enemies": [
+    "nobody"
+   ],
+   "music": "boss",
+   "bg": "void_in",
+   "flee": false
+  },
+  "enc_nihil": {
+   "enemies": [
+    "nihil"
+   ],
+   "music": "omni",
+   "bg": "void_sanctum",
+   "flee": false
+  },
+  "enc_the_lingering": {
+   "enemies": [
+    "the_lingering"
+   ],
+   "music": "boss",
+   "bg": "void_in",
+   "flee": false
+  },
+  "enc_king_goblin": {
+   "enemies": [
+    "king_goblin"
+   ],
+   "music": "king_goblin",
+   "bg": "goblin_in",
+   "flee": false
+  }
+ },
+ "worlds": {
+  "fire": {
+   "name": "Cinderreach",
+   "town": "Emberfall",
+   "field": "Ashen Wilds",
+   "cave": "Smolder Hollow",
+   "dungeon": "The Envy Forge",
+   "landmark": "a cracked obelisk",
+   "area2": "Magma Tunnels",
+   "side": "Brannoc's Vault",
+   "tavern": "The Bellows & Barrel"
+  },
+  "water": {
+   "name": "Maretide",
+   "town": "Saltmere",
+   "field": "Weeping Shoals",
+   "cave": "Drowned Grotto",
+   "dungeon": "The Sunken Cradle",
+   "landmark": "a whale's bleached ribs",
+   "area2": "Weeping Falls",
+   "side": "Grotto Behind the Falls",
+   "tavern": "The Salted Gull"
+  },
+  "wind": {
+   "name": "Skyreach",
+   "town": "Kitefall",
+   "field": "Whistling Heights",
+   "cave": "Hollow Winds Cave",
+   "dungeon": "The Gilded Aviary",
+   "landmark": "a lone windmill",
+   "area2": "Cloud Steppes",
+   "side": "The Old Belfry",
+   "tavern": "The Tangled String"
+  },
+  "stone": {
+   "name": "Gravenhold",
+   "town": "Copperdeep",
+   "field": "Rustvein Canyon",
+   "cave": "Glimmering Seam",
+   "dungeon": "The Gilded Throne",
+   "landmark": "a giant split geode",
+   "area2": "Old Mine Shaft",
+   "side": "The Forgotten Tunnel",
+   "tavern": "The Honest Tankard"
+  },
+  "spirit": {
+   "name": "Luminael",
+   "town": "Hallowmere",
+   "field": "Fields of Becoming",
+   "cave": "Mirror Caves",
+   "dungeon": "Ascent of the Unfinished",
+   "landmark": "a weeping angel statue",
+   "area2": "Lantern Stair",
+   "side": "The Quiet Crypt",
+   "tavern": "The Last Candle"
+  },
+  "void": {
+   "name": "The Hollow",
+   "town": "Lastlight",
+   "field": "The Drift",
+   "cave": "Echo Pits",
+   "dungeon": "The Unmoored Keep",
+   "landmark": "a door standing alone",
+   "area2": "The Underside",
+   "side": "The Room That Isn't",
+   "tavern": "The Somewhere"
+  }
+ },
+ "world_order": [
+  "fire",
+  "water",
+  "wind",
+  "stone",
+  "spirit",
+  "void"
+ ],
+ "combos": [
+  {
+   "a": "hero",
+   "b": "kael",
+   "name": "Ember Cross",
+   "el": "fire",
+   "power": 2.4,
+   "target": "one",
+   "mp": 6
+  },
+  {
+   "a": "hero",
+   "b": "nerissa",
+   "name": "Tidal Blade",
+   "el": "water",
+   "power": 2.3,
+   "target": "one",
+   "mp": 6
+  },
+  {
+   "a": "hero",
+   "b": "pip",
+   "name": "Gale Rush",
+   "el": "wind",
+   "power": 1.4,
+   "target": "all",
+   "mp": 8
+  },
+  {
+   "a": "hero",
+   "b": "durga",
+   "name": "Rockbreaker",
+   "el": "stone",
+   "power": 2.6,
+   "target": "one",
+   "mp": 6
+  },
+  {
+   "a": "hero",
+   "b": "sol",
+   "name": "Dawn Strike",
+   "el": "spirit",
+   "power": 2.4,
+   "target": "one",
+   "mp": 7
+  },
+  {
+   "a": "hero",
+   "b": "vesper",
+   "name": "Night Fang",
+   "el": "void",
+   "power": 1.5,
+   "target": "all",
+   "mp": 8
+  },
+  {
+   "a": "kael",
+   "b": "durga",
+   "name": "Mountain Fall",
+   "el": "stone",
+   "power": 2.9,
+   "target": "one",
+   "mp": 6
+  },
+  {
+   "a": "kael",
+   "b": "pip",
+   "name": "Firestorm",
+   "el": "fire",
+   "power": 1.5,
+   "target": "all",
+   "mp": 9
+  },
+  {
+   "a": "nerissa",
+   "b": "sol",
+   "name": "Healing Tide",
+   "el": "water",
+   "power": 1.1,
+   "target": "allies",
+   "mp": 9,
+   "heal": true
+  },
+  {
+   "a": "nerissa",
+   "b": "vesper",
+   "name": "Moon Tide",
+   "el": "water",
+   "power": 1.6,
+   "target": "all",
+   "mp": 9
+  },
+  {
+   "a": "pip",
+   "b": "vesper",
+   "name": "Shadow Volley",
+   "el": "void",
+   "power": 1.6,
+   "target": "all",
+   "mp": 8
+  },
+  {
+   "a": "durga",
+   "b": "sol",
+   "name": "Holy Quake",
+   "el": "spirit",
+   "power": 1.5,
+   "target": "all",
+   "mp": 9
+  },
+  {
+   "a": "kael",
+   "b": "vesper",
+   "name": "Black Flame",
+   "el": "fire",
+   "power": 2.6,
+   "target": "one",
+   "mp": 7
+  },
+  {
+   "a": "nerissa",
+   "b": "pip",
+   "name": "Typhoon",
+   "el": "wind",
+   "power": 1.5,
+   "target": "all",
+   "mp": 9
+  },
+  {
+   "a": "sol",
+   "b": "vesper",
+   "name": "Twilight",
+   "el": "spirit",
+   "power": 1.6,
+   "target": "all",
+   "mp": 9
+  }
+ ],
+ "blessed_gear": [
+  "azoth_edge",
+  "calcined_arcblade",
+  "quicksilver_saber",
+  "rubedo_lancer",
+  "albedo_repeater",
+  "nigredo_pistol",
+  "cinnabar_pistol",
+  "quintessence_coil",
+  "athanor_staff"
+ ],
+ "blessed_lines": {
+  "appear": [
+   "The white figures don't speak. Their lenses turn toward you, one after another.",
+   "A smell of salt and hot brass. Something hums under the white cloth.",
+   "\"Lead remembers what it was.\"",
+   "\"The Work is unfinished. You are part of the unfinished.\"",
+   "\"Black. White. Red. Then gold.\"",
+   "\"Solve. Coagula.\"",
+   "They flicker, here and then a step to the left, as if the world can't decide where they stand.",
+   "\"We were the base matter once. Be still. It hurts less.\""
+  ],
+  "first": [
+   "Three figures in white step out of nothing. Where they stand, the grass bleaches pale.",
+   "One of them lifts a weapon of brass and glass. It hums like a held breath."
+  ],
+  "salvage": [
+   "Among the white cloth there's a weapon still humming. It's warm, and it fits your hand too well.",
+   "The white cloth is empty. Only a brass weapon remains, its glass still lit from inside.",
+   "Their weapon doesn't break when they do. It waits, as if it had been waiting for you."
+  ]
+ },
+ "hunts": {
+  "biscuit": {
+   "seekers": [
+    "Bram",
+    "Tilly"
+   ],
+   "looks": [
+    {
+     "body": "child",
+     "hair": "#8a5a2a",
+     "outfit": "#5a6a3a",
+     "accent": "#d8c090",
+     "skin": 1
+    },
+    {
+     "body": "child",
+     "hair": "#d8a050",
+     "outfit": "#a04040",
+     "accent": "#f0e0a0",
+     "skin": 1
+    }
+   ],
+   "story": [
+    "TILLY: \"Mister! Have you seen a ferret? White, with one brown ear? His name's Biscuit.\"",
+    "BRAM: \"Something took him. It came down the hill so fast the grass didn't even bend. Just a blur and a squeal.\"",
+    "TILLY: \"I hit it with my slingshot. Just once. It screamed like I'd cut it in half and dropped Biscuit's collar.\"",
+    "BRAM: \"It's living in the old fox den. There's a treasure pile in there too, we saw it glinting. Shiny stuff, real shiny.\""
+   ],
+   "ask": "Help Bram and Tilly get Biscuit back? (They'll split the treasure with you.)",
+   "accept": [
+    "BRAM: \"Really?! It's out here somewhere. Look for where the grass is all flattened.\"",
+    "TILLY: \"You don't have to hit it hard. Just hit it.\""
+   ],
+   "decline": [
+    "TILLY: \"...Okay. We'll keep looking ourselves.\""
+   ],
+   "pre": [
+    "A white weasel the size of a wolf, eyes like wet glass. A ferret's collar hangs from its teeth.",
+    "It's gone before you can blink. Then it's behind you."
+   ],
+   "post": [
+    "Quickfang squeals and folds up like a wet rag. A white ferret scrambles out of the den, very annoyed."
+   ],
+   "thanks": [
+    "TILLY: \"BISCUIT!\" The ferret climbs up her sleeve and sulks.",
+    "BRAM: \"The treasure's all yours, mister. Well, half. Okay, MOST. Biscuit's all we wanted.\""
+   ],
+   "boss": "quickfang"
+  },
+  "music_box": {
+   "seekers": [
+    "Odo",
+    "Merrin"
+   ],
+   "looks": [
+    {
+     "body": "elder",
+     "hair": "#e0e0e0",
+     "outfit": "#4a5a6a",
+     "accent": "#c0a060",
+     "skin": 0,
+     "beard": true
+    },
+    {
+     "body": "elder",
+     "hair": "#f0f0f0",
+     "outfit": "#7a4a5a",
+     "accent": "#e0c0a0",
+     "skin": 0
+    }
+   ],
+   "story": [
+    "MERRIN: \"Fifty years, our music box played us to sleep. Odo carved it for me the week we married.\"",
+    "ODO: \"A great shelled beast swallowed it whole. Then our cart. Then most of the fence.\"",
+    "MERRIN: \"It's the slowest creature alive. We walked away from it eating breakfast, and it still hadn't reached us by lunch.\"",
+    "ODO: \"I hit it with my hammer. The hammer broke. But when Merrin sang the old spell-songs at it, it groaned and its shell went soft.\"",
+    "MERRIN: \"It sleeps on a hoard. Old soldiers' gear, coins, a whole lifetime of shiny things it ate.\""
+   ],
+   "ask": "Help Odo and Merrin get their music box back? (They'll split the hoard with you.)",
+   "accept": [
+    "ODO: \"Don't hurry. It certainly won't.\"",
+    "MERRIN: \"Sing to it, dear. Magic, I mean. Swords just annoy it.\""
+   ],
+   "decline": [
+    "MERRIN: \"Of course. We'll wait. We've gotten good at waiting.\""
+   ],
+   "pre": [
+    "A tortoise as big as a house, shell plated with swallowed iron. Somewhere inside it, faintly, a music box is playing."
+   ],
+   "post": [
+    "The Ironshell sighs, a long tired sound, and coughs up a fence post, a cart wheel... and a small carved box."
+   ],
+   "thanks": [
+    "MERRIN: \"Oh, listen, Odo. It still plays.\"",
+    "ODO: \"Take the rest. We've got all we need now.\""
+   ],
+   "boss": "ironshell"
+  },
+  "ring": {
+   "seekers": [
+    "Hal",
+    "Junie"
+   ],
+   "looks": [
+    {
+     "body": "man",
+     "hair": "#2a1a12",
+     "outfit": "#5a3a2a",
+     "accent": "#c0a060",
+     "skin": 3
+    },
+    {
+     "body": "woman",
+     "hair": "#4a3020",
+     "outfit": "#e0d0b0",
+     "accent": "#a04040",
+     "skin": 2
+    }
+   ],
+   "story": [
+    "JUNIE: \"We were going to be married at the spring festival. Hal saved two years for the ring.\"",
+    "HAL: \"A glittering serpent took it right off the table. It bit straight through my shield like it was bread.\"",
+    "JUNIE: \"But Hal threw a rock at it and its whole tail chipped off. It's made of glass, I swear. Gorgeous and awful.\"",
+    "HAL: \"It keeps a nest of stolen jewelry. If you help, we'll share it. I just want the ring.\""
+   ],
+   "ask": "Help Hal and Junie get their ring back? (They'll share the nest's treasure.)",
+   "accept": [
+    "HAL: \"Don't let it bite you. It will hurt. A lot.\"",
+    "JUNIE: \"Hit it first, and hit it hard.\""
+   ],
+   "decline": [
+    "HAL: \"Yeah. I wouldn't fight it either.\""
+   ],
+   "pre": [
+    "A serpent of clear glass, light breaking into colors along its coils. A gold ring glints deep in its belly."
+   ],
+   "post": [
+    "The Glass Wyrm cracks from tail to fang and falls apart like a dropped chandelier. A gold ring rolls to your boots."
+   ],
+   "thanks": [
+    "JUNIE: \"Hal. Hal, it's not even scratched.\"",
+    "HAL: \"The festival's back on. Take your share, you've earned the whole nest.\""
+   ],
+   "boss": "glass_wyrm"
+  },
+  "doll": {
+   "seekers": [
+    "Nim",
+    "Pell"
+   ],
+   "looks": [
+    {
+     "body": "child",
+     "hair": "#2a1a12",
+     "outfit": "#3a5a7a",
+     "accent": "#f0e0a0",
+     "skin": 4
+    },
+    {
+     "body": "child",
+     "hair": "#c04030",
+     "outfit": "#6a4a2a",
+     "accent": "#e0c0a0",
+     "skin": 0
+    }
+   ],
+   "story": [
+    "NIM: \"My doll's name is Lady Button. She has one eye and a very good hat.\"",
+    "PELL: \"She was in a treasure chest we found. Except the chest had teeth. And it ate her.\"",
+    "NIM: \"We camped by it all night, crying. When the campfire popped and a spark hit it, it SCREAMED and ran off on little legs.\"",
+    "PELL: \"It's full of treasure. Real treasure. And Lady Button. Mostly Lady Button.\""
+   ],
+   "ask": "Help Nim and Pell rescue Lady Button? (They'll share whatever's inside the chest.)",
+   "accept": [
+    "PELL: \"It's tough. Really, really tough. Our sticks just went boing.\"",
+    "NIM: \"But it hates fire. Remember the fire.\""
+   ],
+   "decline": [
+    "NIM: \"...Lady Button will understand.\""
+   ],
+   "pre": [
+    "A treasure chest on spider legs, gilded and grinning. A small one-eyed doll peers out from between its teeth."
+   ],
+   "post": [
+    "The Gilded Mimic bursts open in a shower of coins and splinters. Lady Button lands hat-first in the grass."
+   ],
+   "thanks": [
+    "NIM: \"Lady Button! Your hat's fine!\"",
+    "PELL: \"You can have the treasure. All of it. We just wanted her back.\""
+   ],
+   "boss": "gilded_mimic"
+  },
+  "hat": {
+   "seekers": [
+    "Gorrin",
+    "Wil"
+   ],
+   "looks": [
+    {
+     "body": "elder",
+     "hair": "#c0c0c0",
+     "outfit": "#5a4a3a",
+     "accent": "#8a6a4a",
+     "skin": 2,
+     "hat": "wide"
+    },
+    {
+     "body": "man",
+     "hair": "#8a5a2a",
+     "outfit": "#4a5a4a",
+     "accent": "#c0a060",
+     "skin": 2
+    }
+   ],
+   "story": [
+    "WIL: \"My grandpa's lucky hat. He's worn it through three wars and a bad marriage.\"",
+    "GORRIN: \"A big silver moth came down out of the moon and took it. Took it right off my head!\"",
+    "WIL: \"I'm a fair hand at spells. Every one I threw bounced straight back and singed my own eyebrows off.\"",
+    "GORRIN: \"So I whacked it with a frying pan, and it fell right out of the air. Moths. Soft as butter, under all that shine.\"",
+    "WIL: \"It's got a nest full of shiny things. Bring the hat home and you can have the rest.\""
+   ],
+   "ask": "Help Gorrin and Wil get the lucky hat back? (They'll give you the rest of the nest.)",
+   "accept": [
+    "GORRIN: \"Leave the magic at home. Bring a pan.\"",
+    "WIL: \"Or a sword. A sword's basically a sharp pan.\""
+   ],
+   "decline": [
+    "GORRIN: \"Hmph. Luck's gone anyway, I suppose.\""
+   ],
+   "pre": [
+    "A moth with mirror-bright wings wide as a barn door. A battered old hat is stuck to one of its legs."
+   ],
+   "post": [
+    "The Mirror Moth's wings crack like ice on a pond. The hat drifts down and lands perfectly on Gorrin's head."
+   ],
+   "thanks": [
+    "GORRIN: \"Ha! Luck's back!\"",
+    "WIL: \"Take the rest, please. And thank you for saving my eyebrows. What's left of them.\""
+   ],
+   "boss": "mirror_moth"
+  },
+  "flock": {
+   "seekers": [
+    "Corin",
+    "Dale"
+   ],
+   "looks": [
+    {
+     "body": "man",
+     "hair": "#d8a050",
+     "outfit": "#7a6a3a",
+     "accent": "#d8c090",
+     "skin": 1,
+     "hat": "wide"
+    },
+    {
+     "body": "man",
+     "hair": "#d8a050",
+     "outfit": "#6a5a3a",
+     "accent": "#a08040",
+     "skin": 1,
+     "beard": true
+    }
+   ],
+   "story": [
+    "CORIN: \"Forty sheep we had. Now we've got eleven, a dog, and nightmares.\"",
+    "DALE: \"Something huge and woolly eats them whole. We should run, but it doesn't even chase. It just eats, and then it naps.\"",
+    "CORIN: \"Naps right in the middle of a fight. I watched it fall asleep with a ewe halfway in its mouth.\"",
+    "DALE: \"It gets fatter and meaner with every one. But it takes its sweet time between bites.\"",
+    "CORIN: \"There's a lot of coin and gear from the shepherds who tried before us. Help us, and it's yours to share.\""
+   ],
+   "ask": "Help Corin and Dale stop the beast eating their flock? (They'll share what the other shepherds left.)",
+   "accept": [
+    "DALE: \"Hit it while it sleeps. That's what I'd do, if I were brave.\"",
+    "CORIN: \"You'll want to finish it fast. It heals while it eats.\""
+   ],
+   "decline": [
+    "CORIN: \"Eleven sheep. Ten by tomorrow, probably.\""
+   ],
+   "pre": [
+    "A mountain of dirty wool with a mouth. Bells from a dozen lost sheep clank around its neck."
+   ],
+   "post": [
+    "The Woolgorger sags over with a final enormous snore and doesn't get up. Somewhere underneath, a sheep bleats."
+   ],
+   "thanks": [
+    "DALE: \"We're down to eleven sheep, but we've got eleven sheep!\"",
+    "CORIN: \"Take the shepherds' gear. They'd want it used.\""
+   ],
+   "boss": "woolgorger"
+  },
+  "lantern": {
+   "seekers": [
+    "Ama",
+    "Ivy"
+   ],
+   "looks": [
+    {
+     "body": "woman",
+     "hair": "#1a1010",
+     "outfit": "#3a2a4a",
+     "accent": "#e0c060",
+     "skin": 3
+    },
+    {
+     "body": "child",
+     "hair": "#1a1010",
+     "outfit": "#4a3a5a",
+     "accent": "#f0e0a0",
+     "skin": 3
+    }
+   ],
+   "story": [
+    "IVY: \"Our little brother made a lantern for the night market. It was the brightest one there.\"",
+    "AMA: \"A shadow took it. A real shadow, standing up on its own, with yellow eyes. It moves faster than you can turn your head.\"",
+    "IVY: \"It hits so hard. But when Ama lit a prayer candle, it flinched like the light was burning it.\"",
+    "AMA: \"It hoards every light it steals. Lanterns, lamps, gold, glass. Help us, and you can share whatever's in its dark.\""
+   ],
+   "ask": "Help Ama and Ivy get their brother's lantern back? (They'll share the shadow's hoard.)",
+   "accept": [
+    "AMA: \"Bring light. Holy light, if you have it.\"",
+    "IVY: \"And don't let it hit you first.\""
+   ],
+   "decline": [
+    "IVY: \"He made it out of paper and a jam jar. He'll make another. ...He'll cry first.\""
+   ],
+   "pre": [
+    "A shadow stands up out of the ground, taller than any man. In its claws, a little paper lantern still glows."
+   ],
+   "post": [
+    "The Lantern Thief comes apart like smoke in sunlight. A paper lantern bobs gently to the ground, still lit."
+   ],
+   "thanks": [
+    "IVY: \"It's still lit. It's still LIT!\"",
+    "AMA: \"Take the rest of the hoard. We only came for this one light.\""
+   ],
+   "boss": "lamp_shade"
+  }
+ },
+ "hunt_reward": {
+  "gold": [
+   999,
+   9999
+  ],
+  "weapons": 1,
+  "armor": 1,
+  "acc": 1,
+  "items": [
+   [
+    "elixir",
+    2
+   ],
+   [
+    "hi_potion",
+    3
+   ],
+   [
+    "ether",
+    2
+   ]
+  ]
+ }
+}

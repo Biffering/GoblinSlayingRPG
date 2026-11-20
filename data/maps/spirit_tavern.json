@@ -1,0 +1,212 @@
+{
+ "id": "spirit_tavern",
+ "name": "Hallowmere: The Last Candle",
+ "world": "spirit",
+ "kind": "interior",
+ "w": 18,
+ "h": 12,
+ "tiles": [
+  "##################",
+  "##ygggy###y###p###",
+  "#_e___ec_________#",
+  "#______c_________#",
+  "#_cccccc__ouoouo_#",
+  "#________________#",
+  "#________________#",
+  "#________________#",
+  "#__ouo____ouoouo_#",
+  "#_______________x#",
+  "#X______________x#",
+  "#########m########"
+ ],
+ "music": "spirit_tavern",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 9,
+   "y": 11,
+   "to": "spirit_town",
+   "tx": 32,
+   "ty": 8,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "barkeep_spirit",
+   "name": "Barkeep Celestine",
+   "look": {
+    "body": "woman",
+    "hair": "#f0e0a0",
+    "outfit": "#e0d0f0",
+    "accent": "#c0a040",
+    "skin": 0,
+    "hat": null,
+    "beard": false
+   },
+   "wander": false,
+   "face": "down",
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "The Last Candle. We never put it out. Bread's warm."
+     ],
+     "do": [
+      "shop:tavern_spirit"
+     ]
+    }
+   ],
+   "x": 4,
+   "y": 3
+  },
+  {
+   "id": "bard_spirit",
+   "name": "Hymn-Hummer Brother Abe",
+   "look": {
+    "body": "robe",
+    "hair": "#4a3a2a",
+    "outfit": "#c0b080",
+    "accent": "#8080e0",
+    "skin": 1,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "~ Light a lamp, and climb the stair... ~",
+      "The Lantern Stair climbs forever. Every landing has a little shrine. Some have more."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 15,
+   "y": 3
+  },
+  {
+   "id": "patron_spirit2",
+   "name": "Weary Pilgrim",
+   "look": {
+    "body": "man",
+    "hair": "#6a4a2a",
+    "outfit": "#a0a0c0",
+    "accent": "#f0f0f0",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "The Lantern Stair leads up from the fields to the Atelier. That's where Iris works."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 5,
+   "y": 9
+  },
+  {
+   "id": "patron_spirit3",
+   "name": "Novice Tam",
+   "look": {
+    "body": "child",
+    "hair": "#d0a060",
+    "outfit": "#f0f0ff",
+    "accent": "#a0a0f0",
+    "skin": 0,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "The abbess has a secret in her house! I heard her say 'under the rug.' I didn't look. Much."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 15,
+   "y": 9
+  },
+  {
+   "id": "ysolde",
+   "name": "Sister Ysolde",
+   "look": {
+    "body": "robe",
+    "hair": "#2a2a2a",
+    "outfit": "#e0e0f0",
+    "accent": "#d0b050",
+    "skin": 1,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "q:side2_spirit=none"
+     ],
+     "say": [
+      "There's a crypt under the chapter house. We stopped going down years ago.",
+      "Now a light walks there at night. The novices are frightened.",
+      "Will you go down and see what it wants? The stairs are in the house south of the plaza."
+     ],
+     "do": [
+      "quest:side2_spirit"
+     ]
+    },
+    {
+     "if": [
+      "q:side2_spirit=active"
+     ],
+     "say": [
+      "The crypt stairs are in the south house. Bring something bright."
+     ]
+    },
+    {
+     "if": [
+      "q:side2_spirit=ready"
+     ],
+     "say": [
+      "It's quiet now. Thank you for being gentle with it.",
+      "This was on the altar for a hundred years. It wants to go with you.",
+      "Take it. (Edge of Becoming)"
+     ],
+     "do": [
+      "done:side2_spirit",
+      "give:gear:edge_of_becoming",
+      "gold:300",
+      "sfx:chest"
+     ]
+    },
+    {
+     "if": [
+      "q:side2_spirit=done"
+     ],
+     "say": [
+      "I went down today and lit a candle. It felt right."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 12,
+   "y": 5
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  9,
+  10
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "id": "fire_house1",
+ "name": "Emberfall: A Cozy House",
+ "world": "fire",
+ "kind": "interior",
+ "w": 12,
+ "h": 9,
+ "tiles": [
+  "############",
+  "##kk##y##p##",
+  "#__________#",
+  "#________B_#",
+  "#__ouo___B_#",
+  "#__________#",
+  "#___rrrr___#",
+  "#z__rrrr__z#",
+  "######m#####"
+ ],
+ "music": "fire_town",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 6,
+   "y": 8,
+   "to": "fire_town",
+   "tx": 6,
+   "ty": 26,
+   "face": "down"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "fire_h1",
+   "name": "Retired Pit-Fighter",
+   "look": {
+    "body": "man",
+    "hair": "#6a6a6a",
+    "outfit": "#6a2a1a",
+    "accent": "#c0c0c0",
+    "skin": 2,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "I won forty fights in Slagjaw's pit. Lost one. That's the one I remember."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 7,
+   "y": 3
+  }
+ ],
+ "chests": [
+  {
+   "id": "fire_house1_c0",
+   "x": 10,
+   "y": 6,
+   "item": "gear:emberweave_robe"
+  }
+ ],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  6,
+  7
+ ]
+}

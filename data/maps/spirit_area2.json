@@ -1,0 +1,107 @@
+{
+ "id": "spirit_area2",
+ "name": "Lantern Stair",
+ "world": "spirit",
+ "kind": "field",
+ "w": 46,
+ "h": 34,
+ "tiles": [
+  "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+  "TTTTTTTTTTTTTTTTT^TTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+  "TT..\".........\".^E^........T........\"......\"TT",
+  "TT\"\".....\".\".....,,......\"TTTT\"..\"..........TT",
+  "TT................,,....\"..TTT..............TT",
+  "TT.\"......\"...\"....,,...TTTTTTT......\"..\"...TT",
+  "TT\"......\"......\"\"..,,..TTTTTTT......\".\".\"..TT",
+  "TT\"....\".............,\".TTTTTTT...~.\".......TT",
+  "TT......\"............,.TTTTTT~TT~~~~~..\"....TT",
+  "TT.\"...........\"....\",~.TT~~~~~~~~~~~~^^\"...TT",
+  "TT\".................~=~~~~~~~~~~~~~~~~~^^\"..TT",
+  "TT..\"\".........\"...~~=~~~~~~~~~\"\"~~~~~T^^...TT",
+  "TTKKKKKKKKKKKKKKKKVVKYKKKVVVVVVYYVVVVKKKKKKKTT",
+  "TTKKKKKKKKKKKKKKKKKVKYKKKVVVVVVYYVVKKKKKKKKKTT",
+  "TT\"\".......\".........,,..~~~~~~\"\"~TT^TTT^...TT",
+  "TT...^T.\"..........T..,..T~~~~~~~T.TTTTT....TT",
+  "TT\"^^^^^..............,..TT..~...T\".T^T.T^..TT",
+  "TT^^^^T^^...\"...\"..T.T,TTTTT...\"..\"TT.TT^T^.TT",
+  "TT^^^^^^^.........\".TT,TTT.....\"T.\"TTTTTT^TTTT",
+  "TT^^^^^.^^.....\"..\".TT,TTTT...T.TT...TTTTTT.TT",
+  "TT^.^^^^\"..........TT\",TTT.T.TTTTTT...TTTTTTTT",
+  "TTKKKKKKKKKKKKKKKKKKKYYKKKKKKKKKKKKKKKKKKKKKTT",
+  "TTKKKKKKKKKKKKKKKKKKKYYKKKKKKKKKKKKKKKKKKKKKTT",
+  "TT^^^^^^..\".\"\"......T\",TTTTTTTTTT.TT...TTT.TTT",
+  "TT^^^^^.^...\".........,,.T.TTTTTTTTT..TTTTTTTT",
+  "TT^^^^^^\".\"......\"..\".T,^TTT.TTTTTT\"...TTT.TTT",
+  "TT^^^^.^...\"\"...\".....^,...T.....\".....TTT.TTT",
+  "TT^..^..\"..\"\"...^....^.,^^\"^...^........TTTTTT",
+  "TTTT...\"....\"..^^^...^^,^^^^..^^^....\"....T.TT",
+  "TTTT...\"....\".^^.^^.^.^,^^^^^^^^^.\"..\"......TT",
+  "TTT^.\".........^^^...^^,^^^^.\"^^^...\".\".....TT",
+  "TT^.\".....\"..\"..^.....\",..^^.TT^TT.........\"TT",
+  "TT^.................\"..,..^.\"TTT.T......\"...TT",
+  "TTTTTTTTTTTTTTTTTTTTTT,,TTTTTTTTTTTTTTTTTTTTTT"
+ ],
+ "music": "spirit_field",
+ "bg": "spirit_out",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 23,
+   "y": 33,
+   "to": "spirit_field",
+   "tx": 38,
+   "ty": 3,
+   "face": "down"
+  },
+  {
+   "x": 22,
+   "y": 33,
+   "to": "spirit_field",
+   "tx": 38,
+   "ty": 3,
+   "face": "down"
+  },
+  {
+   "x": 17,
+   "y": 2,
+   "to": "spirit_dungeon",
+   "tx": 23,
+   "ty": 28,
+   "face": "up"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "spirit_area2_c0",
+   "x": 15,
+   "y": 24,
+   "item": "gear:lantern_of_the_crypt"
+  },
+  {
+   "id": "spirit_area2_c1",
+   "x": 19,
+   "y": 30,
+   "item": "gear:choir_staff"
+  },
+  {
+   "id": "spirit_area2_c2",
+   "x": 9,
+   "y": 25,
+   "item": "hi_potion"
+  },
+  {
+   "id": "spirit_area2_c3",
+   "x": 4,
+   "y": 8,
+   "item": "gear:lumen_sigil"
+  }
+ ],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  23,
+  32
+ ],
+ "habitat": []
+}

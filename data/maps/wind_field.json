@@ -1,0 +1,146 @@
+{
+ "id": "wind_field",
+ "name": "Whistling Heights",
+ "world": "wind",
+ "kind": "field",
+ "w": 46,
+ "h": 34,
+ "tiles": [
+  "TTTTTTT^TTTTT^TTTT^TTT^TTTTT^TT^T^TTTTTTTTTTTT",
+  "T^TTT^TT^TTTT^T^TTT^^TTTTTTT^TTT^TTTTTTTT^^TTT",
+  "^T\"^....\"..........\".\"TT.TT\"T\".^E^.\".....\"..TT",
+  "T^.^.\".......\".........TT.TT...,,...\".......T^",
+  "TT......\"...~..\"\"\".\"T..TTTT.\",,,\".\".\"..\"....TT",
+  "TT.....\".~~~~~~~...TTT......\",..\"\"\".....T\"..TT",
+  "TTT\"....~~~~~~~~~.TT.TT.....,,...\".....TTTT.^T",
+  "^TTT....~~~~~~~~~..........,,.\"..\"\"\"\"..TTTT.TT",
+  "^TTTT..~~~~~~~~~~~..T.....,,.....\"\"..TTTT.T.TT",
+  "TTTT....~~~~~~~~~.F\"\"..\"\",,\".....^^^\".TTTTT.TT",
+  "^T......~~~~~~~~~\"....T.,,......~^^^\".TTT.T.TT",
+  "TTKKKKKKKVVVVVVVKKKKKKKYYKKKKVVVVVVVYYKKKKKKT^",
+  "TTKEYKKKKKKKVKKKKKKKKKKYKKKKVVVVVVVVYYKKKKKKTT",
+  "^T.^,,,,^^^TTTTTTTTTTT.,T...~~~~~~~~\"\"^^^^..TT",
+  "^^....T,,,,\"TTTTTTTTT,,,T\"......~~~~~~^T^TT.T^",
+  "TTTTT.^.^^,,,,,TTT...,.TT.\".....~~~~~.^^.T.TTT",
+  "TTTTTTT.^.\"\"..,,,,..,,...\"...L..~=\"~~.^TT\"TTTT",
+  "^TT.TT\"........TT,,,,..\"........==~~^^^^^TTTT^",
+  "TTTT.\".....F\".\"T\"...,,,,,,,,,,.\"=..^^^^^^^T.TT",
+  "^TT..\".......\"\".TT..,.\".......\"\"...^^\"..^.\"\"^T",
+  "T^T\".\".\"....\".....T.,.\".\"T....\"...^^^^^^^...TT",
+  "TT..\"........\"\"....\",.\"T.T..\"\"\"\"...^^^^^^^..TT",
+  "^T\"\"....\"...\"\"..F..T,.\"\"TTT\"\"\"....\"^^^^^^^\".T^",
+  "TT.....\".......TTT\".,.TT.T\"\"T..\".....^^^^...TT",
+  "TT...\".\"......TTTTT\",..TT\"\"T..\".......^.\"..TTT",
+  "TTFF....TTTT...TT.TT,..\"\"\"TT.........\"...TTTTT",
+  "TT\"....TTT.TTT..T..T,.T\".T..F..T..\".\"...T.T\"TT",
+  "^T.\"...TTTTTTT.\".T..,,,\"T.T\".T.\"T\"......TT.\"T^",
+  "^T.......T.TTTT.T\"T..T,\"TT\"T.TTTTT...\".TTTTTTT",
+  "TT..\".\"TT.TTTT..TTT.TT,\"TTTTTTTT.TTF....TTT\"TT",
+  "T^.\"..\"TTTTTTT\".TTT\".T,\"\"TTTTTTT.TTT.\"..TTTT^T",
+  "TT.......T..\"...\"T.....\"...TTTTTTTT...\"..TTT^T",
+  "T^\".......T....\".....\".\"..T.T.T.TTT..\".....TTT",
+  "TTTT^TTTTTTTTTTTTTTT^T,,TTTTTTTTTT^TTTTT^TTTT^"
+ ],
+ "music": "wind_field",
+ "bg": "wind_out",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 23,
+   "y": 33,
+   "to": "wind_town",
+   "tx": 19,
+   "ty": 28,
+   "face": "up"
+  },
+  {
+   "x": 22,
+   "y": 33,
+   "to": "wind_town",
+   "tx": 19,
+   "ty": 28,
+   "face": "up"
+  },
+  {
+   "x": 3,
+   "y": 12,
+   "to": "wind_cave",
+   "tx": 12,
+   "ty": 18,
+   "face": "up"
+  },
+  {
+   "x": 32,
+   "y": 2,
+   "to": "wind_area2",
+   "tx": 23,
+   "ty": 32,
+   "face": "up"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "wind_field_c0",
+   "x": 37,
+   "y": 27,
+   "item": "potion:2"
+  },
+  {
+   "id": "wind_field_c1",
+   "x": 14,
+   "y": 25,
+   "item": "gear:kestrel_blade"
+  },
+  {
+   "id": "wind_field_c2",
+   "x": 30,
+   "y": 9,
+   "item": "ether"
+  }
+ ],
+ "hidden": [
+  {
+   "x": 34,
+   "y": 16,
+   "item": "gear:weathervane_charm",
+   "flag": "hidden_wind"
+  }
+ ],
+ "entities": [
+  {
+   "id": "sylvane",
+   "kind": "mini",
+   "x": 10,
+   "y": 4,
+   "sprite": "elf",
+   "name": "Sylvane the Bell-Thief",
+   "world": "wind",
+   "cond": [
+    "q:side_wind=active",
+    "!flag:beat_sylvane"
+   ],
+   "pre": [
+    "An elf sits on a rock, cradling a bundle of silver bells. They don't make a sound.",
+    "SYLVANE: \"The bells told everyone when the wind was free. Corvane pays well for silence.\""
+   ],
+   "post": [
+    "Sylvane drops the bells and vanishes on a breeze. The bells ring at once, loud and bright."
+   ],
+   "win_do": [
+    "set:beat_sylvane",
+    "give:wind_bells"
+   ],
+   "encounter": "enc_sylvane"
+  }
+ ],
+ "start": [
+  23,
+  32
+ ],
+ "landmark": [
+  29,
+  16
+ ],
+ "habitat": []
+}

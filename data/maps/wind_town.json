@@ -1,0 +1,846 @@
+{
+ "id": "wind_town",
+ "name": "Kitefall",
+ "world": "wind",
+ "kind": "town",
+ "w": 40,
+ "h": 30,
+ "tiles": [
+  "TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+  "TT.T..T.....T...T.....T.TTT......T.....T",
+  "T..RRRRRRRRR..........\".....RRRRRRRRR..T",
+  "T..RRRRRRRRR..\"....,O.....F.RRRRRRRRR..T",
+  "T.\"RRRRRRRRR......l,,l......RRRRRRRRR..T",
+  "T..RRRRRRRRR.......,,.......RRRRRRRRR..T",
+  "T..HWHWHWHWH.......,,F......HWHWHWHWH..T",
+  "T..HHHHdHHHH.ssss..,,.......HHHHdHHHH..T",
+  "T......,...F\"ssss..,,...........,......T",
+  "T...,,,,,,,,,l,,,,,,,,,,,,l,,,,,,,,,,..T",
+  "T.\"ssss\"....\".,,,,,,,,,,,,........ssss.T",
+  "T..ssss.l.....,,n,,,,,,n,,.....l..ssss.T",
+  "T.......\"\"..F.,,,,,,,,,,,,.\"\"\"...\".....T",
+  "T..RRRRRRRR...,,,,,ww,,,,,.\".RRRRRRRR..T",
+  "T..RRRRRRRR..\",,,,,ww,,,,,...RRRRRRRR..T",
+  "T..RRRRRRRR...,,,,,,,,,,,,.\".RRRRRRRR..T",
+  "T..HWHWHWHW...,,,,,,,,,,,,...HWHWHWHW..T",
+  "T..HHHHdHHH..\",,n,,,,,,n,,...HHHHdHHH..T",
+  "T.G\"...,......,,,,,,,,,,,,.......,.....T",
+  "T...,,,,,,,,,l,,,,,,,,,,,,l,,,,,,,,,,..T",
+  "T...\"..........,...,,.\"...,.........FFFT",
+  "T..RRRRRRR.....,...,,.....,...RRRRRRR..T",
+  "T..RRRRRRR..RRR,RR.,,..RRR,RR.RRRRRRR..T",
+  "T..RRRRRRR..RRR,RR.,,..RRR,RR.RRRRRRR..T",
+  "T.\"HWHWHWH.\"RRR,RR.,,..RRR,RR.HWHWHWH..T",
+  "T..HHHdHHH..HWH,HW.,,.\"HWH,HW.HHHdHHH\".T",
+  "T.....,.....HHHdHH.,,..HHHdHH.\"..,.....T",
+  "T........\"\"\"fff,ff.,,.....,..\".\".......T",
+  "T..................,,..................T",
+  "TTTTTTTTTTTTTTTTTTT,,TTTTTTTTTTTTTTTTTTT"
+ ],
+ "music": "wind_town",
+ "bg": null,
+ "encounters": false,
+ "exits": [
+  {
+   "x": 20,
+   "y": 3,
+   "to": "nexus",
+   "tx": 23,
+   "ty": 12,
+   "face": "down"
+  },
+  {
+   "x": 7,
+   "y": 7,
+   "to": "wind_inn",
+   "tx": 8,
+   "ty": 9,
+   "face": "up"
+  },
+  {
+   "x": 32,
+   "y": 7,
+   "to": "wind_tavern",
+   "tx": 9,
+   "ty": 10,
+   "face": "up"
+  },
+  {
+   "x": 7,
+   "y": 17,
+   "to": "wind_pawn",
+   "tx": 7,
+   "ty": 8,
+   "face": "up"
+  },
+  {
+   "x": 33,
+   "y": 17,
+   "to": "wind_items",
+   "tx": 7,
+   "ty": 8,
+   "face": "up"
+  },
+  {
+   "x": 6,
+   "y": 25,
+   "to": "wind_house1",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 33,
+   "y": 25,
+   "to": "wind_house2",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 15,
+   "y": 26,
+   "to": "wind_house3",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 26,
+   "y": 26,
+   "to": "wind_house4",
+   "tx": 6,
+   "ty": 7,
+   "face": "up"
+  },
+  {
+   "x": 19,
+   "y": 29,
+   "to": "wind_field",
+   "tx": 23,
+   "ty": 32,
+   "face": "up"
+  },
+  {
+   "x": 20,
+   "y": 29,
+   "to": "wind_field",
+   "tx": 23,
+   "ty": 32,
+   "face": "up"
+  }
+ ],
+ "npcs": [
+  {
+   "id": "aloe",
+   "name": "Windspeaker Aloe",
+   "look": {
+    "body": "elder",
+    "hair": "#f0f0f0",
+    "outfit": "#2a8a7a",
+    "accent": "#f0e080",
+    "skin": 0,
+    "hat": "hood",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "q:main_wind=none"
+     ],
+     "say": [
+      "Listen. Do you hear anything? No wind. In Skyreach. That should frighten you.",
+      "Corvane was our greatest flier until he fell. Now he cages every breeze so no one else can fall.",
+      "Kitefall has no wind for its kites, and its people have stopped looking up.",
+      "His Gilded Aviary is past the Whistling Heights. Free the winds. Free us."
+     ],
+     "do": [
+      "quest:main_wind"
+     ]
+    },
+    {
+     "if": [
+      "q:main_wind=active",
+      "!flag:beat_corvane"
+     ],
+     "say": [
+      "The Gilded Aviary is at the top of the Whistling Heights.",
+      "Wind creatures fear fire. Fire eats air; it's that simple.",
+      "The way there is long: through the Whistling Heights, then the Cloud Steppes, and down into its depths."
+     ]
+    },
+    {
+     "if": [
+      "q:main_wind=ready"
+     ],
+     "say": [
+      "THERE it is. Feel that? Every kite in Kitefall is up at once.",
+      "Take the Wind Heartstone. You gave us back the sky."
+     ],
+     "do": [
+      "done:main_wind",
+      "give:heart_wind",
+      "gold:400",
+      "give:stamina_tonic:2"
+     ]
+    },
+    {
+     "if": [
+      "q:main_wind=done"
+     ],
+     "say": [
+      "Corvane runs the kite school now. He makes everyone wear three helmets. Progress."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 20,
+   "y": 8
+  },
+  {
+   "id": "pip",
+   "name": "Pip",
+   "look": {
+    "body": "child",
+    "hair": "#e0b030",
+    "outfit": "#2a9a8a",
+    "accent": "#f05030",
+    "skin": 1,
+    "hat": "cap",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "!member:pip"
+     ],
+     "say": [
+      "Hi! I'm Pip! Fastest courier in Kitefall! Well. Fastest walking courier now.",
+      "Captain Rook's sky pirates stole my glider-wings. They hide in the Hollow Winds Cave, off the Whistling Heights.",
+      "I'm really good with a bow, though. Really, really good. Want to see?"
+     ],
+     "ask": {
+      "q": "Let Pip join your party?",
+      "yes": {
+       "say": [
+        "PIP: \"YES! Okay! Let's go! Which way? I'll race you!\"",
+        "Pip joined the party! Captain Rook nests in the Hollow Winds Cave."
+       ],
+       "do": [
+        "recruit:pip",
+        "quest:comp_wind",
+        "sfx:recruit"
+       ]
+      },
+      "no": {
+       "say": [
+        "PIP: \"Aw. Okay! I'll be right here! Running in circles!\""
+       ]
+      }
+     }
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "cond": [
+    "!member:pip"
+   ],
+   "x": 15,
+   "y": 12
+  },
+  {
+   "id": "amsel",
+   "name": "Bellkeeper Amsel",
+   "look": {
+    "body": "man",
+    "hair": "#a0a0a0",
+    "outfit": "#4a6a5a",
+    "accent": "#d0c060",
+    "skin": 1,
+    "hat": "wide",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "q:side_wind=none"
+     ],
+     "say": [
+      "The wind-bells! Someone stole the wind-bells! Kitefall has rung them for three hundred years!",
+      "An elf called Sylvane. She's selling silence to Corvane. She's out in the Whistling Heights.",
+      "Bring them home and you'll have my Zephyr Band. It rings when you run."
+     ],
+     "do": [
+      "quest:side_wind"
+     ]
+    },
+    {
+     "if": [
+      "q:side_wind=active",
+      "!item:wind_bells"
+     ],
+     "say": [
+      "Sylvane is somewhere in the Whistling Heights. Follow the silence."
+     ]
+    },
+    {
+     "if": [
+      "q:side_wind=ready"
+     ],
+     "say": [
+      "Ohhh. Hear them? Even without wind, they're trying. Bless you.",
+      "Here's the Zephyr Band. Run often."
+     ],
+     "do": [
+      "take:wind_bells",
+      "done:side_wind",
+      "give:gear:zephyr_band",
+      "sfx:chest"
+     ]
+    },
+    {
+     "if": [
+      "q:side_wind=done"
+     ],
+     "say": [
+      "The bells ring every hour now. Some neighbors complain. I ring them louder."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 25,
+   "y": 12
+  },
+  {
+   "id": "wick",
+   "name": "Wick",
+   "look": {
+    "body": "child",
+    "hair": "#2a1a0a",
+    "outfit": "#c0a040",
+    "accent": "#3a6ab0",
+    "skin": 2,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Do you know about shadows? I know everything about shadows.",
+      "At the end of the day, the shadow of the lone windmill out in the Heights gets SO long.",
+      "I paced it once. Five whole steps from the bottom of the windmill to the end of the shadow!",
+      "And right at the end of the shadow there was something sparkly in the ground. I was too scared to dig. It might have been a bug."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 12,
+   "y": 19
+  },
+  {
+   "id": "lark",
+   "name": "Lark",
+   "look": {
+    "body": "child",
+    "hair": "#d06030",
+    "outfit": "#8a5ab0",
+    "accent": "#f0e0a0",
+    "skin": 0,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [
+      "q:key_wind=none"
+     ],
+     "say": [
+      "My grandpa made the very first kite in Kitefall. He flew it into the Hollow Winds Cave and it never came out.",
+      "He says it doesn't matter, but he looks at the cave every day.",
+      "If you find it, I'll give you grandpa's key! He says it opens 'a door that breathes.' Weird, right?"
+     ],
+     "do": [
+      "quest:key_wind"
+     ]
+    },
+    {
+     "if": [
+      "q:key_wind=active",
+      "!item:first_kite"
+     ],
+     "say": [
+      "The Hollow Winds Cave is west of the Whistling Heights!"
+     ]
+    },
+    {
+     "if": [
+      "q:key_wind=ready"
+     ],
+     "say": [
+      "That's IT! Grandpa! GRANDPA!",
+      "Here's the Key of Breath. Grandpa says thank you. He's crying a little. He says it's the wind."
+     ],
+     "do": [
+      "take:first_kite",
+      "done:key_wind",
+      "give:key_breath",
+      "sfx:key"
+     ]
+    },
+    {
+     "if": [
+      "q:key_wind=done"
+     ],
+     "say": [
+      "Grandpa flies his kite every day now. It has a lot of patches. It still flies."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 28,
+   "y": 19
+  },
+  {
+   "id": "wind_f1",
+   "name": "Kite Flier",
+   "look": {
+    "body": "man",
+    "hair": "#c0a060",
+    "outfit": "#3a8aaa",
+    "accent": "#f0f0f0",
+    "skin": 0,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Gale beasts are all air and speed. Burn 'em. Fire eats wind."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 17,
+   "y": 18
+  },
+  {
+   "id": "wind_f2",
+   "name": "Retired Guard",
+   "look": {
+    "body": "guard",
+    "hair": "#6a6a6a",
+    "outfit": "#3a6a6a",
+    "accent": "#c0c0c0",
+    "skin": 1,
+    "hat": "helm",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Fast enemies get more turns. Simple as that. If they're quicker than you, drink a Stamina Tonic."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 23,
+   "y": 9
+  },
+  {
+   "id": "wind_f3",
+   "name": "Dreamy Child",
+   "look": {
+    "body": "child",
+    "hair": "#f0d080",
+    "outfit": "#e080a0",
+    "accent": "#ffffff",
+    "skin": 0,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "When I grow up I'm going to be a bird. Mom says that's not a job. Birds don't have jobs. That's the point."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 11,
+   "y": 11
+  },
+  {
+   "id": "wind_f4",
+   "name": "Grumpy Farmer",
+   "look": {
+    "body": "man",
+    "hair": "#4a4a2a",
+    "outfit": "#7a6a3a",
+    "accent": "#a0a0a0",
+    "skin": 2,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "No wind, no windmills. No windmills, no flour. No flour, no bread. I'm hungry and it's Corvane's fault."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "down",
+   "x": 30,
+   "y": 11
+  },
+  {
+   "id": "amb_wind_0",
+   "name": "Farmer",
+   "look": {
+    "body": "man",
+    "hair": "#d8a050",
+    "outfit": "#5a6a3a",
+    "accent": "#a08040",
+    "skin": 2,
+    "hat": "wide",
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Goblins steal the turnips. Then the chickens. Then the farmer.",
+      "Soil's sour. Nothing grows right since the curse."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "right",
+   "x": 2,
+   "y": 11,
+   "ambient": true,
+   "job": "hoe",
+   "jface": "right"
+  },
+  {
+   "id": "amb_wind_1",
+   "name": "Gardener",
+   "look": {
+    "body": "man",
+    "hair": "#f0e0a0",
+    "outfit": "#7a6a3a",
+    "accent": "#d8c090",
+    "skin": 1,
+    "hat": "wide",
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Flowers don't care about curses. Lucky them."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "left",
+   "x": 7,
+   "y": 10,
+   "ambient": true,
+   "job": "water",
+   "jface": "left"
+  },
+  {
+   "id": "amb_wind_2",
+   "name": "Farmer",
+   "look": {
+    "body": "elder",
+    "hair": "#4a3020",
+    "outfit": "#5a6a3a",
+    "accent": "#c0b070",
+    "skin": 2,
+    "hat": "wide",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Dig, plant, pray. Dig, plant, pray."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "right",
+   "x": 33,
+   "y": 11,
+   "ambient": true,
+   "job": "hoe",
+   "jface": "right"
+  },
+  {
+   "id": "amb_wind_3",
+   "name": "Gardener",
+   "look": {
+    "body": "elder",
+    "hair": "#8a5a2a",
+    "outfit": "#4a5a2a",
+    "accent": "#d8c090",
+    "skin": 1,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Mind the petals, slayer."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "left",
+   "x": 38,
+   "y": 10,
+   "ambient": true,
+   "job": "water",
+   "jface": "left"
+  },
+  {
+   "id": "amb_wind_4",
+   "name": "Farmer",
+   "look": {
+    "body": "woman",
+    "hair": "#4a3020",
+    "outfit": "#7a6a3a",
+    "accent": "#a08040",
+    "skin": 2,
+    "hat": "wide",
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Dig, plant, pray. Dig, plant, pray."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "right",
+   "x": 12,
+   "y": 8,
+   "ambient": true,
+   "job": "hoe",
+   "jface": "right"
+  },
+  {
+   "id": "amb_wind_5",
+   "name": "Gardener",
+   "look": {
+    "body": "man",
+    "hair": "#d8a050",
+    "outfit": "#8a7a5a",
+    "accent": "#c0b070",
+    "skin": 4,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "A little water, a little patience.",
+      "Flowers don't care about curses. Lucky them."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "left",
+   "x": 17,
+   "y": 7,
+   "ambient": true,
+   "job": "water",
+   "jface": "left"
+  },
+  {
+   "id": "amb_wind_6",
+   "name": "Woodcutter",
+   "look": {
+    "body": "man",
+    "hair": "#d8a050",
+    "outfit": "#5a6a3a",
+    "accent": "#c0b070",
+    "skin": 1,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Firewood for the night watch. Nights are longer now."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "right",
+   "x": 1,
+   "y": 18,
+   "ambient": true,
+   "job": "chop",
+   "jface": "right"
+  },
+  {
+   "id": "amb_wind_7",
+   "name": "Gardener",
+   "look": {
+    "body": "woman",
+    "hair": "#4a3020",
+    "outfit": "#7a6a3a",
+    "accent": "#c0b070",
+    "skin": 0,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Flowers don't care about curses. Lucky them.",
+      "A little water, a little patience."
+     ]
+    }
+   ],
+   "wander": false,
+   "face": "right",
+   "x": 35,
+   "y": 20,
+   "ambient": true,
+   "job": "water",
+   "jface": "right"
+  },
+  {
+   "id": "amb_wind_8",
+   "name": "Townsfolk",
+   "look": {
+    "body": "man",
+    "hair": "#8a5a2a",
+    "outfit": "#7a6a3a",
+    "accent": "#c0b070",
+    "skin": 4,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Who are you? You've got the look of someone who doesn't sleep."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 23,
+   "y": 19,
+   "ambient": true,
+   "roam": 5
+  },
+  {
+   "id": "amb_wind_9",
+   "name": "Townsfolk",
+   "look": {
+    "body": "man",
+    "hair": "#f0e0a0",
+    "outfit": "#7a6a3a",
+    "accent": "#c0b070",
+    "skin": 4,
+    "hat": null,
+    "beard": false
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "My uncle went to the Wilds. Came back wrong."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 14,
+   "y": 13,
+   "ambient": true,
+   "roam": 5
+  },
+  {
+   "id": "amb_wind_10",
+   "name": "Townsfolk",
+   "look": {
+    "body": "man",
+    "hair": "#4a3020",
+    "outfit": "#5a6a3a",
+    "accent": "#d8c090",
+    "skin": 2,
+    "hat": null,
+    "beard": true
+   },
+   "script": [
+    {
+     "if": [],
+     "say": [
+      "Market's thin. Caravans stopped coming."
+     ]
+    }
+   ],
+   "wander": true,
+   "face": "down",
+   "x": 6,
+   "y": 19,
+   "ambient": true,
+   "roam": 5
+  }
+ ],
+ "chests": [],
+ "hidden": [],
+ "entities": [],
+ "start": [
+  20,
+  4
+ ],
+ "signs": [
+  {
+   "x": 8,
+   "y": 6,
+   "tile": "sign_inn"
+  },
+  {
+   "x": 33,
+   "y": 6,
+   "tile": "sign_tavern"
+  },
+  {
+   "x": 8,
+   "y": 16,
+   "tile": "sign_pawn"
+  },
+  {
+   "x": 34,
+   "y": 16,
+   "tile": "sign_items"
+  }
+ ]
+}

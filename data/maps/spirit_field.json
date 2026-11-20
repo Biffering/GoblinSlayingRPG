@@ -1,0 +1,147 @@
+{
+ "id": "spirit_field",
+ "name": "Fields of Becoming",
+ "world": "spirit",
+ "kind": "field",
+ "w": 46,
+ "h": 34,
+ "tiles": [
+  "^TT^T^TTT^^TT^TTTTTTTTT^TTTTTTT^TT^TTT^^TTTTTT",
+  "TTT^TTTTTTTTTTT^^TTTTTTTTTT^TTTT^TT^T^^TTTTTTT",
+  "^T.\".TT\"TTTTT^.^.^....TTTTTT...\"...\".^E^.TT^TT",
+  "^T...TTT.TTT\"^^.^^....TTTTT...\"..\"\"\".,,..^^^TT",
+  "T^....TT\"^TT.^^~^^^...TTTTT.....\"\".\".,...^T^T^",
+  "TT..\".TTT^^.~~~~~~~...T\"T...\"\".....,,,^^^..^T^",
+  "TT.\"\".\"^T^^~~~~~~~~~.T.......\"....,,.^^F^^^^TT",
+  "TT.\"\".\"...^~~~~~~~~~TTT.T\"..\"\"...,,.\".^^^^^^TT",
+  "TT.\"\"\"...^~~~~~~~~~~~TTTTT.....\",,TTT\"..^^^.TT",
+  "TT\"..\"\"..\".~~~~~~~~~\"TTT.T\"\"\".\",,.TTTT\"^^^..TT",
+  "T^.^......T~~\"\"~~~~~TTT.TTT..,,,TTTTTT...TTTTT",
+  "TTKEYYYKKKKKVYYVVVVKKKKKKKKKKYKKKKKKKKKKKKKKTT",
+  "^TKKKKYKKKKKKYYVKKKKKKKKKKKKYYKKKKKKKKKKKKKK^T",
+  "TT....,,,TTT..\"T..TTT.TTT\".,,..TTTTTTT\"TTTTTTT",
+  "TT.....T,TT...TT..TTTTTT.,,,...^TTT.T.\".\"TF.TT",
+  "TT......,,T..TTTTTTTTTTTT,T..^.^^^T.T..F\"..\"TT",
+  "TT.\"\"..TT,,T.\".\"TTTTT.T.T,T.F^^^^^TT.TT.....^T",
+  "TTF\"\"...TT,,..TT..T.T\"..,,...\"....TTTT\"T..\".T^",
+  "TT......~T.,,..TT.TT....,.\"\"......TTTTTT\"\"..TT",
+  "TT.F.~~~~~~~,,,,,,,,,,,,,,,,,,.L..\"\"TTTTT\"..^T",
+  "TT..~~~~~~~~~\"...\".....,..\"\".,,...T\"TTT\"....TT",
+  "^T..~~~~~~~~~...\"\".....,....\".,,....TTTTFF..T^",
+  "T^\"~~~~~~~~~~~....\".FTT,TT.......\"T.TTT..\"\"\"TT",
+  "TT\"\"~~~~~~~~~...T..\".\"T,T\".....\"...\"T\"......T^",
+  "T^..~~~~~~~~~.TT\"TT..\".,.\"\"\"....\".\".......^\"TT",
+  "T^...~~~~~~~..TTTTT....,.......\"........^^^^T^",
+  "T^......~..F.TTTTTTT..\",...\".\"\".\".....\"\"T^T^T^",
+  "^T..F......\".\"TTT.T....,\"...\".....\"..\".^T^^TTT",
+  "T^............TTFTT\"..T,...F.....F\".\"\"..T^^^T^",
+  "TT........\"\"....T.\".TTT,.\"F.............^^^^TT",
+  "TT.....\"\"........\".TTT.,TT.....\"\".\"\"......^TTT",
+  "TT............\"\"\".\"T...,......\"............TTT",
+  "TT........\".\"\"....T.T..,.........\"..\"...\"\"..TT",
+  "^TT^^^^TTT^TTTTTTTT^TT,,TT^TTTTTTTT^^TTTTTTT^^"
+ ],
+ "music": "spirit_field",
+ "bg": "spirit_out",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 23,
+   "y": 33,
+   "to": "spirit_town",
+   "tx": 19,
+   "ty": 28,
+   "face": "up"
+  },
+  {
+   "x": 22,
+   "y": 33,
+   "to": "spirit_town",
+   "tx": 19,
+   "ty": 28,
+   "face": "up"
+  },
+  {
+   "x": 3,
+   "y": 11,
+   "to": "spirit_cave",
+   "tx": 13,
+   "ty": 18,
+   "face": "up"
+  },
+  {
+   "x": 38,
+   "y": 2,
+   "to": "spirit_area2",
+   "tx": 23,
+   "ty": 32,
+   "face": "up"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "spirit_field_c0",
+   "x": 7,
+   "y": 7,
+   "item": "potion:2"
+  },
+  {
+   "id": "spirit_field_c1",
+   "x": 35,
+   "y": 30,
+   "item": "gear:candle_mail"
+  },
+  {
+   "id": "spirit_field_c2",
+   "x": 6,
+   "y": 26,
+   "item": "ether"
+  }
+ ],
+ "hidden": [
+  {
+   "x": 34,
+   "y": 19,
+   "item": "gear:wing_of_dawn",
+   "flag": "hidden_spirit"
+  }
+ ],
+ "entities": [
+  {
+   "id": "penitent_bear",
+   "kind": "mini",
+   "x": 21,
+   "y": 26,
+   "sprite": "bear",
+   "name": "The Penitent Bear",
+   "world": "spirit",
+   "cond": [
+    "q:side_spirit=active",
+    "!flag:beat_penitent_bear"
+   ],
+   "pre": [
+    "A great bear glows from the inside, its belly full of swallowed lanterns.",
+    "It looks sorry. It eats another lantern anyway."
+   ],
+   "post": [
+    "The bear coughs up a dozen lanterns and pads away, lighter and dimmer and somehow happier."
+   ],
+   "win_do": [
+    "set:beat_penitent_bear"
+   ],
+   "encounter": "enc_penitent_bear"
+  }
+ ],
+ "start": [
+  23,
+  32
+ ],
+ "landmark": [
+  31,
+  19
+ ],
+ "habitat": [
+  "coast"
+ ]
+}

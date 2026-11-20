@@ -1,0 +1,107 @@
+{
+ "id": "void_cave",
+ "name": "Echo Pits",
+ "world": "void",
+ "kind": "cave",
+ "w": 28,
+ "h": 20,
+ "tiles": [
+  "############################",
+  "####################____####",
+  "#########______#####____####",
+  "#####t###_C__C_#####____####",
+  "####____#_______________####",
+  "####____#______#####____####",
+  "####______C____#####____####",
+  "####____#_____b#####____####",
+  "####____##############_#####",
+  "######_###############_#####",
+  "######_#############____####",
+  "##_____#######t#####____####",
+  "##_____###______####____####",
+  "##____b###_____b_____b__####",
+  "##______________####____####",
+  "##b____###______####__b_####",
+  "##_____###______####____####",
+  "##_____######_##############",
+  "#############_##############",
+  "#############>##############"
+ ],
+ "music": "void_field",
+ "bg": "void_in",
+ "encounters": true,
+ "exits": [
+  {
+   "x": 13,
+   "y": 19,
+   "to": "void_field",
+   "tx": 4,
+   "ty": 10,
+   "face": "right"
+  }
+ ],
+ "npcs": [],
+ "chests": [
+  {
+   "id": "void_cave_c0",
+   "x": 5,
+   "y": 11,
+   "item": "summon:umbrahound"
+  },
+  {
+   "id": "void_cave_c1",
+   "x": 5,
+   "y": 7,
+   "item": "hi_potion"
+  },
+  {
+   "id": "void_cave_c2",
+   "x": 20,
+   "y": 6,
+   "item": "gear:echo_staff"
+  }
+ ],
+ "hidden": [],
+ "entities": [
+  {
+   "id": "name_eater",
+   "kind": "mini",
+   "x": 12,
+   "y": 5,
+   "sprite": "name_eater",
+   "name": "The Name-Eater",
+   "world": "void",
+   "cond": [
+    "q:comp_void=active",
+    "!flag:beat_name_eater"
+   ],
+   "need": [
+    "member:vesper"
+   ],
+   "need_fail": [
+    "You sense Vesper should be here for this."
+   ],
+   "pre": [
+    "Something made of crumpled paper and teeth crouches in the pit, chewing.",
+    "THE NAME-EATER: \"Mmm. Vesper. That's not your name. That's what you're called. Different taste.\"",
+    "VESPER: \"Give it back. I want to know who's been walking around in my body.\""
+   ],
+   "post": [
+    "The Name-Eater unravels into a thousand scraps of names. One flutters to Vesper. She folds it small.",
+    "VESPER: \"...I'm not going to read it yet. Just knowing I have it is enough.\"",
+    "She presses a bow into your hands. \"Found it in the pit. Nobody remembers whose. Fitting.\""
+   ],
+   "win_do": [
+    "set:beat_name_eater",
+    "done:comp_void",
+    "give:gear:unremembered_bow"
+   ],
+   "encounter": "enc_name_eater"
+  }
+ ],
+ "start": [
+  13,
+  18
+ ],
+ "habitat": []
+}
